@@ -29,7 +29,12 @@ try{
  for(let n=1;n<cues.length;n++){
    await ev(`window.ASTRA.go(${n})`);await wait(cues[n].scene==='calendar'?1300:900);
    const s=await ev('window.ASTRA.getState()');assert.equal(s.cue,n);
-   const absent=await ev('[...document.images].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)');assert.deepEqual(absent,[]);
+   const absent=await ev('[...document.images,...[...document.querySelectorAll("iframe")].flatMap(f=>[...f.contentDocument.images])].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)');assert.deepEqual(absent,[]);
+   if(cues[n].scene==='demo'){
+     const inside=await ev('document.querySelector("#product").contentWindow.DEMO.getState()');
+     const wanted=await ev(`window.PITCH.demoSteps[${cues[n].step}]`);
+     assert.equal(inside.scene,wanted[0]);assert.equal(inside.step,wanted[1]);
+   }
    const name=`${String(n).padStart(2,'0')}-${cues[n].scene}-${cues[n].step}`;
    await shot(name);report.cues.push({n,...cues[n]});console.log(slug,name);
  }
@@ -39,6 +44,15 @@ try{
  await key('s');const soundOff=await ev('window.ASTRA.getState().sfx');await key('s');assert.notEqual(await ev('window.ASTRA.getState().sfx'),soundOff);
  await key('p');const paused=await ev('window.ASTRA.getState()');await wait(450);assert.equal((await ev('window.ASTRA.getState()')).elapsed,paused.elapsed);
  await key('p');await key('\uE011');assert.equal((await ev('window.ASTRA.getState()')).elapsed,0);assert.equal(await ev('document.querySelector("#launch").hidden'),false);
+ const progressCue=await ev('window.PITCH.demoSteps ? window.ASTRA.cues.findIndex(c=>c.scene==="demo"&&window.PITCH.demoSteps[c.step][0]===11) : -1');
+ if(progressCue>=0){
+   await ev(`window.ASTRA.go(${progressCue})`);await wait(400);await ev('window.ASTRA.pause(true)');await wait(80);
+   const pct=await ev('document.querySelector("#product").contentDocument.querySelector("#pct").textContent');
+   await wait(450);assert.equal(await ev('document.querySelector("#product").contentDocument.querySelector("#pct").textContent'),pct);
+   await ev('window.ASTRA.pause(false)');await wait(400);
+   assert.notEqual(await ev('document.querySelector("#product").contentDocument.querySelector("#pct").textContent'),pct);
+   await ev('window.ASTRA.reset()');report.checks.push('Embedded product timers pause and resume');
+ }
  report.checks.push('All cues render','All image assets load','Previous navigation','Notes toggle','Optional sound toggle','Pause freezes cue clock','Home resets launcher');
  report.consoleErrors=logs.filter(e=>e.method==='log.entryAdded'&&e.params.level==='error').map(e=>e.params.text);
  assert.deepEqual(report.consoleErrors,[]);report.result='passed';

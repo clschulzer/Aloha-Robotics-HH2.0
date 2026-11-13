@@ -1,0 +1,234 @@
+{
+  "version": "02-christian",
+  "kind": "Native playback; real-time 180-second rehearsal",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "film",
+      "step": 0,
+      "elapsed": 1.445666,
+      "filmTime": 1.486333
+    },
+    {
+      "cue": 1,
+      "scene": "intro",
+      "step": 0,
+      "elapsed": 31.967667000000006,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 2,
+      "scene": "statement",
+      "step": 0,
+      "elapsed": 37.51866700000023,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 3,
+      "scene": "demo",
+      "step": 0,
+      "elapsed": 42.40266700000045,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 4,
+      "scene": "demo",
+      "step": 1,
+      "elapsed": 47.4026670000007,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 5,
+      "scene": "demo",
+      "step": 2,
+      "elapsed": 52.485667000000966,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 6,
+      "scene": "demo",
+      "step": 3,
+      "elapsed": 57.48566700000128,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 7,
+      "scene": "demo",
+      "step": 4,
+      "elapsed": 62.46866700000149,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 8,
+      "scene": "cut",
+      "step": 0,
+      "elapsed": 67.40266700000164,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 9,
+      "scene": "demo",
+      "step": 5,
+      "elapsed": 70.5026670000017,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 10,
+      "scene": "demo",
+      "step": 6,
+      "elapsed": 76.41866700000175,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 11,
+      "scene": "demo",
+      "step": 7,
+      "elapsed": 80.4356670000018,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 12,
+      "scene": "demo",
+      "step": 8,
+      "elapsed": 85.41866700000193,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 13,
+      "scene": "demo",
+      "step": 9,
+      "elapsed": 89.43466700000207,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 14,
+      "scene": "demo",
+      "step": 10,
+      "elapsed": 93.4516670000023,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 15,
+      "scene": "demo",
+      "step": 11,
+      "elapsed": 98.45166700000235,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 16,
+      "scene": "demo",
+      "step": 12,
+      "elapsed": 102.51866700000252,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 17,
+      "scene": "demo",
+      "step": 13,
+      "elapsed": 106.41166700000261,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 18,
+      "scene": "demo",
+      "step": 14,
+      "elapsed": 110.43566700000275,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 19,
+      "scene": "demo",
+      "step": 15,
+      "elapsed": 115.45266700000288,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 20,
+      "scene": "demo",
+      "step": 16,
+      "elapsed": 122.52266700000297,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 21,
+      "scene": "demo",
+      "step": 17,
+      "elapsed": 127.41866700000305,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 22,
+      "scene": "demo",
+      "step": 18,
+      "elapsed": 132.4196670000019,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 23,
+      "scene": "demo",
+      "step": 19,
+      "elapsed": 136.43466700000076,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 24,
+      "scene": "demo",
+      "step": 20,
+      "elapsed": 140.45166699999982,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 25,
+      "scene": "demo",
+      "step": 21,
+      "elapsed": 144.43566699999857,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 26,
+      "scene": "demo",
+      "step": 22,
+      "elapsed": 147.50166699999752,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 27,
+      "scene": "demo",
+      "step": 23,
+      "elapsed": 152.4026669999959,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 28,
+      "scene": "demo",
+      "step": 24,
+      "elapsed": 157.5196669999944,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 29,
+      "scene": "pillars",
+      "step": 0,
+      "elapsed": 164.50166699999235,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 30,
+      "scene": "outro",
+      "step": 0,
+      "elapsed": 170.45166699999072,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 31,
+      "scene": "outro",
+      "step": 1,
+      "elapsed": 176.48666699998878,
+      "filmTime": 30.442666
+    }
+  ],
+  "averageFps": 57.6477804609833,
+  "wallSeconds": 181.056664381,
+  "consoleErrors": [],
+  "result": "passed"
+}

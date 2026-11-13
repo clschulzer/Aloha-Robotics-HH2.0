@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <title>ALOHA / In good hands — ASTRA 02</title>
+  <link rel="stylesheet" href="stage.css">
+</head>
+<body>
+  <main id="stage" aria-label="Aloha Robotics presentation">
+    <section class="scene film-scene" data-scene="film"><video id="film" playsinline preload="auto" src="../../assets/video/chaos_intro.mp4"></video></section>
+    <section class="scene intro-scene" data-scene="intro"></section>
+    <section class="scene mood-scene" data-scene="moods"></section>
+    <section class="scene cut-scene" data-scene="cut"><h1 class="cut-word">Now<span>.</span></h1><div class="cut-sub">INVISIBLE CONNECTIVITY</div></section>
+    <section class="scene calendar-scene" data-scene="calendar"></section>
+    <section class="scene workflow-scene" data-scene="workflow"></section>
+    <section class="scene statement-scene" data-scene="statement"></section><section class="scene demo-scene" data-scene="demo"><iframe id="product" title="Christian’s C-ARMAGOTCHI product demonstration" src="demo/?embed=astra&auto=0&speed=1.6"></iframe><div class="demo-caption"></div></section><section class="scene pillars-scene" data-scene="pillars"></section><section class="scene outro-scene" data-scene="outro"></section>
+    <canvas id="fx-cv"></canvas>
+    <div id="launch" class="launch"><div class="launch-top">ALOHA ROBOTICS <span>ASTRA 02 / IN GOOD HANDS</span></div><div class="launch-body"><small>THE THREE-MINUTE PITCH</small><h1>Care.<br><em>Coordinated.</em></h1><div class="launch-actions"><button id="start">Present live <span>↗</span></button><button id="preview">Watch 3-minute preview <span>▶</span></button></div><label class="sound-choice"><input type="checkbox" id="sfx-choice" checked> Sound design after the film</label><p>The original film plays with sound. Press → for the next cue.</p></div><img src="../../assets/characters/manic.webp" alt="Original manic C-arm character"></div>
+    <div id="notes" hidden><small id="cue-label"></small><p id="cue-note"></p></div>
+    <div id="blackout" hidden></div>
+    <div id="help" hidden><h2>Ready for the stage.</h2><p>→ / Space advance &nbsp; ← back &nbsp; F fullscreen<br>P pause &nbsp; T timed preview &nbsp; N notes<br>S effects on/off &nbsp; B blackout &nbsp; Home restart</p><p>The complete film is protected from ordinary navigation.</p><button id="help-close">Back to the pitch</button></div>
+  </main>
+  <nav id="controls" aria-label="Presenter controls"><a href="../">All versions</a><button id="prev" aria-label="Previous cue">←</button><button id="next" aria-label="Next cue">→</button><span id="time">0:00</span><button id="pause">Pause</button><button id="sound">SFX ON</button><button id="note-toggle">Notes</button><button id="full">Fullscreen</button></nav>
+  <script src="runtime/core.js"></script>
+  <script src="runtime/embers.js"></script>
+  <script src="../../team/data.js"></script><script src="../../team/planner.js"></script>
+  <script src="model.js"></script><script src="config.js"></script>
+  <script type="module" src="presentation.mjs"></script>
+<script type="module" src="christian.mjs"></script></body>
+</html>

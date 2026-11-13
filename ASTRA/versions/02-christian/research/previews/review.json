@@ -1,0 +1,297 @@
+{
+  "version": "02-christian",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/02-christian/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 30.442667,
+      "scene": "intro",
+      "step": 0,
+      "title": "Introducing",
+      "note": "[Let the true-story joke and title land.]",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 36,
+      "scene": "statement",
+      "step": 0,
+      "title": "The invisible helpers",
+      "note": "We build for the invisible people who keep hospitals running. Technology they love to use.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 41,
+      "scene": "demo",
+      "step": 0,
+      "title": "Cio",
+      "note": "Meet Cio. Disconnected. Feeling ghosted.",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 46,
+      "scene": "demo",
+      "step": 1,
+      "title": "Hungry",
+      "note": "Patch overdue. Suddenly, very needy.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 51,
+      "scene": "demo",
+      "step": 2,
+      "title": "Happy",
+      "note": "Connected and current. A different personality.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 56,
+      "scene": "demo",
+      "step": 3,
+      "title": "Responsibility",
+      "note": "The bond matters. Somebody feels responsible for this machine.",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 61,
+      "scene": "demo",
+      "step": 4,
+      "title": "Priority",
+      "note": "Its state tells us what needs care first. Hospital data tells us when.",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 66,
+      "scene": "cut",
+      "step": 0,
+      "title": "Now",
+      "note": "[Let the dark transition land.]",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 69,
+      "scene": "demo",
+      "step": 5,
+      "title": "The opportunity",
+      "note": "The operating plan changes. An evening case is cancelled.",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 75,
+      "scene": "demo",
+      "step": 6,
+      "title": "Plan",
+      "note": "Medical physics asks for a plan.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 79,
+      "scene": "demo",
+      "step": 7,
+      "title": "Search",
+      "note": "The scheduler combines cancellations, use history, device state and available resources.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 84,
+      "scene": "demo",
+      "step": 8,
+      "title": "Found",
+      "note": "A suitable window becomes a proposal.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 88,
+      "scene": "demo",
+      "step": 9,
+      "title": "Publish",
+      "note": "Medical physics reviews and publishes it.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 92,
+      "scene": "demo",
+      "step": 10,
+      "title": "A small request",
+      "note": "Lena gets one small request: Cio needs a hand.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 97,
+      "scene": "demo",
+      "step": 11,
+      "title": "No guilt",
+      "note": "Not today? No guilt. It asks someone else.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 101,
+      "scene": "demo",
+      "step": 12,
+      "title": "Ask the circle",
+      "note": "Nobody nearby is available.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 105,
+      "scene": "demo",
+      "step": 13,
+      "title": "The helper",
+      "note": "So we send the invisible helper.",
+      "i": 17
+    },
+    {
+      "n": 18,
+      "at": 109,
+      "scene": "demo",
+      "step": 14,
+      "title": "Check",
+      "note": "Our mission demo checks the package, battery and equipment.",
+      "i": 18
+    },
+    {
+      "n": 19,
+      "at": 114,
+      "scene": "demo",
+      "step": 15,
+      "title": "Find",
+      "note": "It checks the last known position, then finds Cio at another parking spot.",
+      "i": 19
+    },
+    {
+      "n": 20,
+      "at": 121,
+      "scene": "demo",
+      "step": 16,
+      "title": "Connect",
+      "note": "The docking concept supplies power and approved data, with device identity checked.",
+      "i": 20
+    },
+    {
+      "n": 21,
+      "at": 126,
+      "scene": "demo",
+      "step": 17,
+      "title": "Safe to ask",
+      "note": "It checks readiness before requesting a human decision.",
+      "i": 21
+    },
+    {
+      "n": 22,
+      "at": 131,
+      "scene": "demo",
+      "step": 18,
+      "title": "Request a start",
+      "note": "Lena could not make the trip. She can still review the request.",
+      "i": 22
+    },
+    {
+      "n": 23,
+      "at": 135,
+      "scene": "demo",
+      "step": 19,
+      "title": "Review",
+      "note": "Right time. Clear surroundings.",
+      "i": 23
+    },
+    {
+      "n": 24,
+      "at": 139,
+      "scene": "demo",
+      "step": 20,
+      "title": "A human decides",
+      "note": "A human starts every update through an approved service path.",
+      "i": 24
+    },
+    {
+      "n": 25,
+      "at": 143,
+      "scene": "demo",
+      "step": 21,
+      "title": "Authorized",
+      "note": "The decision is recorded.",
+      "i": 25
+    },
+    {
+      "n": 26,
+      "at": 146,
+      "scene": "demo",
+      "step": 22,
+      "title": "Watch",
+      "note": "Then it watches. [Time-compressed demonstration.]",
+      "i": 26
+    },
+    {
+      "n": 27,
+      "at": 151,
+      "scene": "demo",
+      "step": 23,
+      "title": "Report",
+      "note": "Results and exceptions go back to the responsible team.",
+      "i": 27
+    },
+    {
+      "n": 28,
+      "at": 156,
+      "scene": "demo",
+      "step": 24,
+      "title": "Thanks",
+      "note": "The loop closes with fresh data—and a thank-you.",
+      "i": 28
+    },
+    {
+      "n": 29,
+      "at": 163,
+      "scene": "pillars",
+      "step": 0,
+      "title": "One system",
+      "note": "Emotional connection. Intelligent coordination. Physical help. One useful system.",
+      "i": 29
+    },
+    {
+      "n": 30,
+      "at": 169,
+      "scene": "outro",
+      "step": 0,
+      "title": "IA",
+      "note": "From artificial intelligence to invisible autonomy.",
+      "i": 30
+    },
+    {
+      "n": 31,
+      "at": 175,
+      "scene": "outro",
+      "step": 1,
+      "title": "Visible care",
+      "note": "Less chasing machines. More time for care. [Hold.]",
+      "i": 31
+    }
+  ],
+  "checks": [
+    "Embedded product timers pause and resume",
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}
