@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#091923"><meta name="description" content="C-ARMAGOTCHI — a theatrical, interactive, offline-capable hackathon pitch about invisible connectivity and C-arm maintenance.">
+<title>C-ARMAGOTCHI — The Pitch</title>
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<div id="stage" aria-label="C-ARMAGOTCHI presentation">
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="brand-chrome" aria-hidden="true"><b>C-ARMAGOTCHI</b><span>HEALTHCARE HACKATHON 2026&nbsp; / &nbsp;CHALLENGE 04</span><small>UNOFFICIAL CONCEPT</small></div>
+
+  <!-- 01: COLD OPEN -->
+  <section class="slide s-opening active" data-title="C-ARMAGOTCHI" data-steps="3" data-note="[0:00–0:18] Begin deadpan. 'This is C-ARMAGOTCHI. A very advanced surgical imaging device. It has one small problem: it hasn't been connected in a while.' Advance. [Let the character grin.] 'He needs an update.' Pause for laugh. 'And maybe some supervision.' This is an unofficial hackathon character, not a Siemens product interface.">
+    <div class="eyebrow fx" data-step="0">01 / THE COLD OPEN</div>
+    <div class="opening-text">
+      <div class="overline fx" data-step="0">A PERFECTLY NORMAL MEDICAL DEVICE</div>
+      <h1 class="xl-heading fx" data-step="0">C-ARM<span class="teal">AGOTCHI</span><span class="orange">.</span></h1>
+      <p class="subline fx" data-step="1">A little <b>too</b> excited about maintenance.</p>
+      <div class="warning-tile fx" data-step="2"><span class="led blink"></span><strong>SOFTWARE UPDATE AVAILABLE</strong><span>PERSONALITY v0.9 / UNSTABLE</span></div>
+    </div>
+    <img class="char open-char" src="assets/manic.webp" alt="Cartoon C-arm with a manic grin and a Siemens-inspired teal-and-orange appearance">
+    <div class="stamp fx" data-step="2">PLEASE<br>PLUG ME IN ♡</div>
+  </section>
+
+  <!-- 02: DRAMA -->
+  <section class="slide s-dialogue" data-title="OR CHAOS" data-steps="5" data-note="[0:18–0:42] Two teammates act this out. Surgeon: 'We have a patient.' Radiographer: 'The C-arm has been parked and disconnected.' IT voice: 'It's due for maintenance.' Surgeon: 'Who takes care of the C-arm? Not me.' Make the timing theatrical, not accusatory. This slide is dramatization, not a recorded true clinical incident. End: this is how devices become invisible until they fail.">
+    <div class="eyebrow">02 / A HOSPITAL HAS OTHER PRIORITIES</div>
+    <h2 class="big-title top-title">WHO'S TAKING CARE<br>OF THE <span class="orange">C-ARM?</span></h2>
+    <div class="dialogue-stack">
+      <div class="speech fx" data-step="0"><div class="speaker-icon">✚</div><div><small>SURGEON</small><p>“We have a patient to operate on.”</p></div></div>
+      <div class="speech alt fx" data-step="1"><div class="speaker-icon">⌁</div><div><small>RADIOGRAPHER</small><p>“It's parked somewhere. And switched off.”</p></div></div>
+      <div class="speech fx" data-step="2"><div class="speaker-icon">⌘</div><div><small>HOSPITAL IT</small><p>“It needs an update. And the logs.”</p></div></div>
+      <div class="speech punch fx" data-step="3"><div class="speaker-icon">!</div><div><small>SURGEON</small><p>“Who deals with that? <em>NOT ME.</em>”</p></div></div>
+    </div>
+    <div class="bottom-thesis fx" data-step="4">EVERYONE OWNS THE PATIENT. <strong>NO ONE OWNS THE CABLE.</strong></div>
+  </section>
+
+  <!-- 03: REALITY -->
+  <section class="slide s-notmb" data-title="WHAT AN UPDATE REALLY IS" data-steps="6" data-note="[0:42–1:04] Explain the observation from Siemens, not an invented benchmark. The challenge is not simply download speed. Some updates require parameter backup, software installation, restoring the device-specific configuration, and verification. Restoring parameters can fail when compatibility changes. Motion sensor calibration can require an engineer to make sure nobody is in the movement zone. Do not promise unattended mechanical calibration. This motivates preflight checks and technician exceptions.">
+    <div class="eyebrow">03 / THE ENGINEERING REALITY</div>
+    <h2 class="giant-left">AN UPDATE IS <span class="dim">NOT</span><br>A <span class="orange">DOWNLOAD.</span></h2>
+    <div class="process-line">
+      <div class="process-card fx" data-step="1"><div class="proc-num">01</div><b>BACK UP</b><small>Device parameters</small></div>
+      <div class="process-arrow fx" data-step="2">→</div>
+      <div class="process-card fx" data-step="2"><div class="proc-num">02</div><b>INSTALL</b><small>Functional changes</small></div>
+      <div class="process-arrow fx" data-step="3">→</div>
+      <div class="process-card fx" data-step="3"><div class="proc-num">03</div><b>RESTORE</b><small>Compatibility matters</small></div>
+      <div class="process-arrow fx" data-step="4">→</div>
+      <div class="process-card fx" data-step="4"><div class="proc-num">04</div><b>VERIFY</b><small>Safe release to use</small></div>
+    </div>
+    <div class="fault-strip fx" data-step="5"><span class="fault-icon">⚠</span>BACKUP PARAMETERS ≠ NEW SOFTWARE <strong>→ ERROR / TECHNICIAN</strong></div>
+    <div class="microcopy">ILLUSTRATIVE SERVICE WORKFLOW · UPDATE PROCEDURES DEPEND ON THE MODEL</div>
+  </section>
+
+  <!-- 04: DISCONNECTED -->
+  <section class="slide s-gap" data-title="INVISIBLE CONNECTIVITY" data-steps="4" data-note="[1:04–1:20] The Siemens brief: devices travel between rooms and are frequently off or disconnected when parked. Radiographers have complex clinical responsibilities; connectivity adds friction without a clear personal benefit. Don't call all of this a technology problem. We need a service workflow that goes to the parked device and is as invisible as possible to clinical staff. Not all hospitals or C-arm models have identical network features.">
+    <div class="eyebrow">04 / THE ACTUAL GAP</div>
+    <h2 class="big-title">THE MACHINE MOVES.<br><span class="teal">THE CONNECTION DOESN'T.</span></h2>
+    <div class="hospital-map">
+      <div class="floor room-a"><span>OPERATING ROOM 1</span><b>● IN USE</b></div>
+      <div class="floor room-b"><span>OPERATING ROOM 2</span><b>● IN USE</b></div>
+      <div class="floor hall"><span>CORRIDOR / PARKING BAY</span><div class="floor-dashline"></div></div>
+      <img src="assets/lonely.webp" alt="Lonely disconnected C-arm character" class="gap-char"/>
+      <div class="no-wifi fx" data-step="1">⌁ <span>DISCONNECTED</span></div>
+      <div class="gap-callout fx" data-step="2">NO TIME<br><small>for yet another IT task</small></div>
+      <div class="gap-callout right fx" data-step="3">NO VISIBILITY<br><small>of logs, status, or service needs</small></div>
+    </div>
+  </section>
+
+  <!-- 05: SOLUTION REVEAL -->
+  <section class="slide s-ketty" data-title="ENTER KETTYBOT" data-steps="4" data-note="[1:20–1:39] Big theatrical interruption. 'Beep… beep… beep…' Let the KettyBot prop or illustration enter. Optionally have the teammate who looks like Palmer Luckey walk across the stage in silence: 'I heard you needed autonomous systems.' This is a lookalike gag, NOT Palmer himself. The robot is the hands; IT is the brain. Play the physical-connector double entendre gently: 'I heard somebody needed a connection.' This is a proposed service concept, not a real KettyBot capability.">
+    <div class="eyebrow">05 / AN UNNECESSARILY DRAMATIC ENTRANCE</div>
+    <div class="beep fx" data-step="0">BEEP<span>.</span> BEEP<span>.</span> BEEP<span>.</span></div>
+    <div class="ketty-copy fx" data-step="1"><small>INTRODUCING</small><h2>KETTY<span class="teal">BOT.</span></h2><p>The little service robot that <b>actually shows up.</b></p></div>
+    <img class="char ketty-enter" src="assets/ketty.webp" alt="Chibi service robot carrying a maintenance connector and coiled rope"/>
+    <div class="ketty-line fx" data-step="2">“DID SOMEBODY NEED A CONNECTION?” <span>♡</span></div>
+    <div class="cameo fx" data-step="3"><b>OPTIONAL LIVE CAMEO</b><span>“I HEARD YOU NEEDED AUTONOMOUS SYSTEMS.”</span><small>Played by our suspiciously Palmer-Luckey-looking teammate. Not the real Palmer Luckey.</small></div>
+  </section>
+
+  <!-- 06: ONE IDEA -->
+  <section class="slide s-idea" data-title="THE SERVICE COMES TO YOU" data-steps="4" data-note="[1:39–1:56] State the value proposition in one line. Hospital IT or a Siemens technician manages service tasks and device identities centrally. A mobile assistant goes to a parked C-arm with the right approved physical interface. It establishes authorized connectivity, exchanges service logs, and prepares the safe part of the update process. It does not hack patient data, bypass a device login, or replace the service engineer for supervised calibration.">
+    <div class="eyebrow">06 / THE IDEA IN ONE SENTENCE</div>
+    <h2 class="one-idea">STOP TAKING PEOPLE<br>TO THE MACHINE<span class="orange">.</span><br><span class="teal">BRING SERVICE TO IT.</span></h2>
+    <div class="idea-chain">
+      <div class="idea-node fx" data-step="1"><div class="node-icon">▤</div><b>DASHBOARD</b><small>Brain / inventory & missions</small></div>
+      <div class="idea-link fx" data-step="2">→</div>
+      <div class="idea-node fx" data-step="2"><div class="node-icon">✦</div><b>ROBOT</b><small>Hands / navigate & connect</small></div>
+      <div class="idea-link fx" data-step="3">→</div>
+      <div class="idea-node fx" data-step="3"><div class="node-icon">♡</div><b>C-ARMAGOTCHI</b><small>Personality / simple feedback</small></div>
+    </div>
+    <div class="microcopy">THE ROBOT IS A PROPOSED PHYSICAL SERVICE ASSISTANT · ALL INTEGRATIONS SIMULATED</div>
+  </section>
+
+  <!-- 07: DASHBOARD -->
+  <section class="slide s-brain" data-title="THE BRAIN" data-steps="4" data-note="[1:56–2:14] This is the proposed service dashboard. We record a C-arm's device identity, version, last successful synchronization, location, and service requirements; everything shown is synthetic demo data. IT schedules tasks centrally. A robot visits where the patient does not have to. Press 'Dispatch KettyBot' for a small in-slide simulation if it helps the rehearsal. This is not connected to Siemens systems.">
+    <div class="eyebrow">07 / THE BRAIN</div>
+    <h2 class="big-title">IT KNOWS <span class="teal">WHAT</span>.<br>THE ROBOT KNOWS <span class="orange">WHERE</span>.</h2>
+    <div class="fake-dashboard fx" data-step="1">
+      <div class="dash-header"><b>◈ SERVICE OPERATIONS</b><span>● SIMULATION / SYNTHETIC DATA</span><small>HEALTHCARE CAMPUS — DEMO</small></div>
+      <div class="dash-metrics"><div><small>REGISTERED DEVICES</small><b>04</b></div><div><small>READY FOR SERVICE</small><b>02</b></div><div><small>UNSENT LOGS</small><b>01</b></div><div><small>ROBOT STATUS</small><b class="teal">IDLE</b></div></div>
+      <div class="device-list-head"><span>DEVICE</span><span>LOCATION</span><span>VERSION</span><span>SERVICE STATUS</span><span>ACTION</span></div>
+      <div class="device-row target"><span><b>CARM-042</b><small>Mobile C-arm</small></span><span>Parking bay B</span><span>v2.4.1</span><span><i class="status-dot orange-dot"></i>Logs pending</span><button id="dispatch" type="button">DISPATCH KETTYBOT ↗</button></div>
+      <div class="device-row"><span><b>CARM-038</b><small>Mobile C-arm</small></span><span>Operating room 1</span><span>v2.4.2</span><span><i class="status-dot green-dot"></i>Clinical use</span><span class="muted">—</span></div>
+      <div class="device-row"><span><b>CARM-015</b><small>Mobile C-arm</small></span><span>Parking bay A</span><span>v2.4.2</span><span><i class="status-dot green-dot"></i>Up to date</span><span class="muted">—</span></div>
+      <div class="dispatch-receipt" id="dispatch-receipt" aria-live="polite">MISSION PREPARED → DEVICE CHECK → AUTHORIZATION REQUIRED</div>
+    </div>
+    <div class="dash-corner fx" data-step="2">DEVICE IDENTITY<br><span>+</span> VERSION HISTORY</div>
+    <div class="dash-caption fx" data-step="3">NO MORE <b>“WHERE IS THAT MACHINE?”</b></div>
+  </section>
+
+  <!-- 08: ROUTE -->
+  <section class="slide s-route" data-title="THE HANDS" data-steps="5" data-note="[2:14–2:34] This is the animated proof of concept, not real robotics integration. Step 0: device is waiting. Step 1: robot gets a mission and drives to the parked C-arm. Step 2: technician-approved secure connection. Step 3: logs synced and update package prepared only when device is powered/eligible; don't pretend a machine turned off is magically online. Step 4: update classification and the right person takes ownership. The robot is the hands of the service process.">
+    <div class="eyebrow">08 / THE HANDS — LIVE CONCEPT DEMO</div>
+    <h2 class="route-heading">PARKED. FOUND. <span class="teal">CONNECTED.</span></h2>
+    <div class="route-stage" id="route-stage">
+      <div class="route-track"><div class="route-track-dash"></div></div>
+      <div class="route-slot left"><small>SERVICE BAY</small></div><div class="route-slot right"><small>PARKING BAY B</small></div>
+      <img class="route-bot" src="assets/ketty.webp" alt="Robot travelling toward a parked C-arm"/>
+      <img class="route-carm" src="assets/lonely.webp" alt="Parked C-arm awaiting connection"/>
+      <svg class="connect-cable" viewBox="0 0 1160 300" aria-hidden="true"><path d="M 545 225 C 650 260 700 245 795 186" fill="none" stroke="#31DDCF" stroke-width="9" stroke-linecap="round" stroke-dasharray="16 10"/><circle cx="795" cy="186" r="12" fill="#FB782F"/></svg>
+      <div class="route-tip route-tip-start">AWAITING DISPATCH</div>
+      <div class="route-tip route-tip-drive">MISSION ACTIVE</div>
+      <div class="route-tip route-tip-dock">AUTHORIZED LINK</div>
+      <div class="route-tip route-tip-sync">LOGS SYNCED ✓</div>
+    </div>
+    <div class="route-steps"><span class="route-pill" data-p="0">01 IDENTIFY</span><span class="route-pill" data-p="1">02 NAVIGATE</span><span class="route-pill" data-p="2">03 AUTHENTICATE</span><span class="route-pill" data-p="3">04 SYNC</span><span class="route-pill" data-p="4">05 HAND OFF</span></div>
+    <div class="safety-caption">PHYSICAL CONNECTION / SAFE TASK HANDOFF ARE THE HACKATHON HYPOTHESIS, NOT VALIDATED CAPABILITIES.</div>
+  </section>
+
+  <!-- 09: HUMAN IN LOOP -->
+  <section class="slide s-boundary" data-title="THE SAFETY BOUNDARY" data-steps="4" data-note="[2:34–2:52] Make the safety distinction explicit. The robot may automate low-risk repeatable handling such as reaching a parked device and connecting an approved service cable. Secure remote services handle eligible logs and updates. A human must still supervise operations such as movement-sensor recalibration, ensure a clear room, and authorize release to clinical use. Authenticating and patient data access must follow hospital and Siemens policies. We don't claim unsupervised movement or a new update engine.">
+    <div class="eyebrow">09 / WE KNOW WHEN TO STOP</div>
+    <h2 class="big-title">AUTOMATE THE <span class="teal">CHORE.</span><br>NOT THE <span class="orange">RESPONSIBILITY.</span></h2>
+    <div class="safety-grid">
+      <div class="safety-box ok fx" data-step="1"><small>ROBOT + APPROVED SERVICES</small><h3>ROUTINE</h3><p>Find parked devices<br>Authenticate an approved connection<br>Transfer logs / status<br>Prepare eligible updates</p><div class="safety-icon">✓</div></div>
+      <div class="safety-box no fx" data-step="2"><small>TECHNICIAN / CLINICAL AUTHORITY</small><h3>SUPERVISED</h3><p>Room-clearance checks<br>Mechanical recalibration<br>Failed parameter restoration<br>Clinical release to service</p><div class="safety-icon">!</div></div>
+    </div>
+    <div class="boundary-tag fx" data-step="3">SECURE BY DESIGN. <span>HUMAN IN CONTROL.</span></div>
+  </section>
+
+  <!-- 10: UPDATE/BLISS -->
+  <section class="slide s-update" data-title="THE FIRMWARE EXPERIMENT" data-steps="5" data-note="[2:52–3:15] This is the fun climax. We use the character to explain the real update sequence. Step 0: desperate v0.9. Step 1: update begins; backup and install. Step 2: suspiciously blissful v1.0—'Ahhh, operating within approved parameters.' Let it breathe for a laugh. Step 3: restoration fails; old parameters may not match. Step 4: rollback. The joke comes from an actual failure mode described in the conversation, but the character's feelings are fiction. Say the robot reports the exception, not that it magically repairs the device.">
+    <div class="eyebrow">10 / SOFTWARE UPDATE AVAILABLE — EMOTIONALLY STABLE EDITION</div>
+    <div class="update-theatre">
+      <div class="update-art">
+        <img class="update-char" data-mood="0" src="assets/manic.webp" alt="Chaotic C-arm"/>
+        <img class="update-char" data-mood="1" src="assets/update.webp" alt="C-arm installing update"/>
+        <img class="update-char" data-mood="2" src="assets/bliss.webp" alt="Blissful C-arm"/>
+        <img class="update-char" data-mood="3" src="assets/failure.webp" alt="C-arm update failure"/>
+        <img class="update-char" data-mood="4" src="assets/rollback.webp" alt="C-arm rolling back"/>
+      </div>
+      <div class="update-panel"><div class="u-tag">PERSONALITY MANAGEMENT / DEMONSTRATION</div><div class="u-index" id="u-index">v0.9</div><h2 id="u-title">CRITICALLY<br>UNSTABLE.</h2><p id="u-line">“PLEASE PLUG ME IN. I'LL BE GOOD.”</p><div class="u-progress"><div class="u-progress-inner" id="u-progress"></div></div><div class="u-state" id="u-state">SERVICE REQUESTED</div></div>
+    </div>
+  </section>
+
+  <!-- 11: PLOT TWIST -->
+  <section class="slide s-failure" data-title="THE PLOT TWIST" data-steps="3" data-note="[3:15–3:27] 'ERROR: backup personality incompatible with firmware.' Let the glitch hit. [Pause] 'The grin returns.' Important: this is our joke illustrating why a maintenance workflow must detect, stop, and escalate failures. We are not claiming the robot will autonomously recover from arbitrary failed updates. This is the perfect bridge to our safety argument.">
+    <div class="eyebrow">11 / PLOT TWIST</div>
+    <div class="failure-hero fx" data-step="0">RESTORE<span class="red">.</span></div>
+    <div class="failure-overlay fx" data-step="1"><div>ERROR 0xCARM</div><b>BACKUP PARAMETERS<br>INCOMPATIBLE.</b><p>HALT • NOTIFY • ESCALATE</p></div>
+    <img src="assets/rollback.webp" class="failure-character" alt="Glitching C-arm character during rollback"/>
+    <h2 class="failure-tag fx" data-step="2">THE GRIN RETURNS<span class="pink">.</span></h2>
+  </section>
+
+  <!-- 12: BUSINESS AND DEPLOYMENT -->
+  <section class="slide s-business" data-title="REALITY CHECK" data-steps="4" data-note="[3:27–3:47] The business model is a proposed value-added Siemens Customer Services offering, not an existing commercial product. Larger hospitals with many devices may justify a roaming robot. Smaller hospitals with decentralized IT might benefit more from a simple dedicated dock or software-only scheduling. Our MVP metrics would be connectivity events, successful log syncs, operator touches, and exception detection. We haven't measured savings. That is what the next pilot must validate.">
+    <div class="eyebrow">12 / FROM HACKATHON GAG TO SERVICE CONCEPT</div>
+    <h2 class="big-title">ONE SERVICE IDEA.<br><span class="teal">THREE DEPLOYMENT LEVELS.</span></h2>
+    <div class="tiers">
+      <div class="tier fx" data-step="1"><div class="tier-index">01</div><h3>SOFTWARE</h3><p>Fleet inventory + maintenance planning.</p><small>LOWER-INFRASTRUCTURE HOSPITALS</small></div>
+      <div class="tier fx" data-step="2"><div class="tier-index">02</div><h3>DOCKING</h3><p>A reliable place and ritual to connect.</p><small>DEFINED SERVICE ZONES</small></div>
+      <div class="tier feature fx" data-step="3"><div class="tier-index">03</div><h3>ROBOT</h3><p>A mobile assistant brings service to the device.</p><small>LARGE MULTI-DEVICE FLEETS</small></div>
+    </div>
+    <div class="bottom-thesis business-bottom">MVP MEASURE: <strong>SYNC COVERAGE · STAFF TOUCHES · SERVICE EXCEPTIONS</strong></div>
+  </section>
+
+  <!-- 13: END -->
+  <section class="slide s-end" data-title="LET CLINICIANS CARE FOR PATIENTS" data-steps="3" data-note="[3:47–4:00] Bring cast back. Start with: 'Dashboard is the brain.' Click. 'Robot is the hands.' Click. 'Tamagotchi is the personality.' Final line: 'Let clinicians care for patients. Let service come to the machine.' Optional final surgeon line after a beat: 'We can get drinks AFTER the shift.' Don't overdo the joke. This is a concept for the hackathon, and a real device implementation would require authorization, technical verification, and clinical safety review.">
+    <div class="eyebrow">13 / THE END</div>
+    <div class="end-kicker fx" data-step="0">DASHBOARD = BRAIN. &nbsp; ROBOT = HANDS. &nbsp; TAMAGOTCHI = PERSONALITY.</div>
+    <h2 class="end-title fx" data-step="1">LET CLINICIANS<br>CARE FOR <span class="teal">PATIENTS.</span></h2>
+    <h3 class="end-cta fx" data-step="2">LET SERVICE COME TO THE <span class="orange">MACHINE.</span></h3>
+    <img src="assets/manic.webp" class="end-manic" alt="Grinning C-arm mascot"/>
+    <img src="assets/ketty.webp" class="end-ketty" alt="Service robot mascot"/>
+    <div class="end-credit">C-ARMAGOTCHI · UNOFFICIAL HACKATHON CONCEPT · SERVICE WORKFLOW DEMO</div>
+  </section>
+
+  <!-- APPENDIX 01: technically sober -->
+  <section class="slide s-appendix" data-appendix="true" data-title="SYSTEM ARCHITECTURE" data-steps="3" data-note="Technical Q&A appendix: Proposed architecture, not a claim of any actual device API. Local device identity and service intent would be checked before approaching. Approved authentication and remote services needed. Logs and updates restricted to permitted roles. The robot operates as a physical assistant; safety-critical update execution stays in manufacturer-controlled service workflows.">
+    <div class="eyebrow">APPENDIX A / TECHNICAL ARCHITECTURE</div>
+    <h2 class="big-title">THE <span class="teal">SERVICE LOOP.</span></h2>
+    <div class="arch-flow">
+      <div class="arch-box fx" data-step="0"><b>IT / SERVICE DASHBOARD</b><small>Device IDs · software versions · schedules · approvals</small></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-box fx" data-step="1"><b>ROBOT / SERVICE ENDPOINT</b><small>Navigate · identify · approved physical connection</small></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-box fx" data-step="1"><b>DEVICE + APPROVED REMOTE SERVICES</b><small>Logs · diagnostics · eligible update preparation</small></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-box exception fx" data-step="2"><b>SAFETY GATE / HUMAN HANDOFF</b><small>Mechanical recalibration · backup mismatches · clinical release</small></div>
+    </div>
+  </section>
+  <section class="slide s-appendix" data-appendix="true" data-title="ASSUMPTIONS & EXPERIMENT" data-steps="3" data-note="Q&A: Before any real-world pilot, verify C-arm model, supported connectivity options, physical port design, power state constraints, cybersecurity certification, hospital permissions, staff workflow, navigational clearance and cost/benefit. The current mock dashboard contains synthetic records. Success criteria should be tested, not assumed.">
+    <div class="eyebrow">APPENDIX B / WHAT WE WOULD VALIDATE NEXT</div>
+    <h2 class="big-title">WHAT WE <span class="orange">DON'T</span> KNOW. <span class="teal">YET.</span></h2>
+    <div class="unknown-list">
+      <p class="fx" data-step="0"><span>01</span> Which C-arm models support the required interface?</p>
+      <p class="fx" data-step="0"><span>02</span> Can a parked, powered-off device be contacted at all?</p>
+      <p class="fx" data-step="1"><span>03</span> Does navigation / docking save more time than a fixed dock?</p>
+      <p class="fx" data-step="1"><span>04</span> What approvals, calibration checks and data-access controls apply?</p>
+      <p class="fx" data-step="2"><span>05</span> What is the cost per successfully serviced device?</p>
+    </div>
+    <div class="microcopy">THESE ARE EXPERIMENT QUESTIONS, NOT CLAIMED RESULTS.</div>
+  </section>
+
+  <div class="progress-chrome" aria-hidden="true"><div id="progress-line"></div></div>
+  <div class="deck-footer"><span id="deck-position">01 / 13</span><span>→ ADVANCE &nbsp;&nbsp; F FULLSCREEN &nbsp;&nbsp; N NOTES &nbsp;&nbsp; A TECHNICAL Q&A &nbsp;&nbsp; ? HELP</span></div>
+</div>
+<div id="notes-panel" role="status" aria-live="polite"><header><b>SPEAKER NOTES</b><span>PRESS N TO HIDE</span></header><p id="notes-text"></p></div>
+<div id="black-screen"><div>BLANK SCREEN <small>PRESS B TO RETURN</small></div></div>
+<div id="help-panel" role="dialog" aria-label="Presentation shortcuts"><div class="help-card"><button type="button" id="help-close" aria-label="Close help">✕</button><h2>DECK CONTROLS</h2><div class="help-grid"><div><kbd>→</kbd> / <kbd>Space</kbd> / click</div><span>Next animation step</span><div><kbd>←</kbd> / <kbd>Backspace</kbd></div><span>Previous step</span><div><kbd>F</kbd></div><span>Fullscreen</span><div><kbd>N</kbd></div><span>Speaker notes</span><div><kbd>A</kbd></div><span>Technical Q&A appendix</span><div><kbd>B</kbd></div><span>Blank projector</span><div><kbd>Home</kbd> / <kbd>End</kbd></div><span>First / last main slide</span><div><kbd>R</kbd></div><span>Restart</span><div><kbd>U</kbd></div><span>Toggle after-hours joke</span><div><kbd>?</kbd> / <kbd>Esc</kbd></div><span>Help / close</span></div><p>Works offline. Open teleprompter in another browser tab to follow the presenter automatically (when supported by your browser).</p></div></div>
+<div id="late-night">AFTER-HOURS MODE · “WHO THE F*** IS UPDATING MY C-ARM?”</div>
+<script src="deck.js"></script>
+</body>
+</html>
