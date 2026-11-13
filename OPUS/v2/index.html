@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Aloha Robotics — 3-minute pitch · OPUS v2</title>
+<meta name="description" content="Aloha Robotics · Healthcare Hackathon Bavaria, Erlangen 2026 · Siemens Healthineers Challenge 04: Invisible Connectivity for mobile C-arms. OPUS version 2.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%23ec6602%22/%3E%3Ctext x=%2232%22 y=%2243%22 font-size=%2232%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22white%22%3EA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/v2.css">
+</head>
+<body class="nocursor">
+<div id="stage" data-theme="dark" role="application" aria-label="Aloha Robotics three-minute pitch">
+
+  <!-- 0 · STANDBY -->
+  <section class="scene" id="s-standby" aria-hidden="true"><i class="ready-dot"></i></section>
+
+  <!-- 1 · FILM (the team's film, untouched; shared with OPUS v1 so it is stored once) -->
+  <section class="scene" id="s-film" aria-hidden="true">
+    <video id="film" preload="auto" playsinline src="../assets/video/aloha_intro.mp4"></video>
+    <button id="film-play" class="film-play" type="button" aria-label="Play film">▶</button>
+  </section>
+
+  <!-- 2 · INTRO: BASED ON A TRUE STORY → INTRODUCING ALOHA ROBOTICS (drawn on #fx-cv) -->
+  <section class="scene" id="s-intro" aria-hidden="true"></section>
+
+  <!-- 3 · TAMAGOTCHI: one face, one meaning, next -->
+  <section class="scene" id="s-tama" aria-hidden="true">
+    <div class="tm-slide" id="tm-slide">
+    <div class="tm-halo" id="tm-halo"></div>
+    <div class="tm-spin" id="tm-spin"><svg viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="372"/></svg></div>
+    <div class="tm-char" id="tm-char"><img class="cur" alt="" src="assets/characters/lonely.webp"><img alt="" src="assets/characters/lonely.webp"></div>
+    <div class="tm-text" id="tm-text">
+      <div class="tm-pips" id="tm-pips"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="tm-head" id="tm-head">Lonely<b>.</b></h2>
+      <p class="tm-means" id="tm-means">Parked in a hallway. No socket, no network.</p>
+    </div>
+    </div>
+    <div class="tm-brand">C-ARMAGOTCHI</div>
+    <!-- the toy: drops in, beeps, and its screen becomes the slide -->
+    <div class="tm-egg" id="tm-egg" aria-hidden="true">
+      <svg id="tm-eggsvg" viewBox="-700 -220 1920 1080" width="1920" height="1080">
+        <defs>
+          <radialGradient id="eggShell" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#ffd9bd"/><stop offset=".55" stop-color="#ff9d63"/><stop offset="1" stop-color="#e2611d"/></radialGradient>
+          <linearGradient id="eggRim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3e8"/><stop offset="1" stop-color="#f4c9a6"/></linearGradient>
+          <mask id="lcdHole" maskUnits="userSpaceOnUse" x="-40" y="-40" width="600" height="680"><rect x="-40" y="-40" width="600" height="680" fill="#fff"/><rect x="150" y="196" width="220" height="198" rx="18" fill="#000"/></mask>
+        </defs>
+        <g mask="url(#lcdHole)">
+          <ellipse cx="260" cy="44" rx="34" ry="30" fill="none" stroke="#c9ccd2" stroke-width="10"/>
+          <path d="M260 60 C 420 60 490 250 488 360 C 486 490 390 570 260 570 C 130 570 34 490 32 360 C 30 250 100 60 260 60 Z" fill="url(#eggShell)"/>
+          <path d="M300 74 C 420 96 474 230 482 330" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="12" stroke-linecap="round"/>
+          <rect x="120" y="170" width="280" height="250" rx="44" fill="url(#eggRim)"/>
+          <text x="260" y="148" text-anchor="middle" font-family="Silkscreen, monospace" font-size="24" fill="#7a2d06" letter-spacing="2">C-ARMAGOTCHI</text>
+          <circle cx="180" cy="478" r="22" fill="#fff4ea"/><circle cx="260" cy="500" r="22" fill="#fff4ea"/><circle cx="340" cy="478" r="22" fill="#fff4ea"/>
+        </g>
+      </svg>
+      <div class="tm-lcdbg" id="tm-lcdbg"><canvas id="tm-lcd" width="74" height="66"></canvas></div>
+    </div>
+  </section>
+
+  <!-- 4 · NOW. / WHEN? — the joke is over -->
+  <section class="scene" id="s-now" aria-hidden="true">
+    <h1 class="nw-word" id="nw-now">Now<b>.</b></h1>
+    <h1 class="nw-word" id="nw-when">When<b>?</b></h1>
+    <div class="nw-cond" id="nw-cond"><span>2 hours</span><i>·</i><span>plugged in</span><i>·</i><span>not needed</span><i>·</i><span>a human presses start</span></div>
+  </section>
+
+  <!-- 5 · CALENDAR: a real surgical day, a swarm of agents, one golden window -->
+  <section class="scene" id="s-calendar" aria-hidden="true">
+    <header class="cl-head">
+      <h1 id="cl-title"><span class="cur">When<b>?</b></span><span></span></h1>
+      <div class="cl-sub">6 mobile C-arms · one surgical day · synthetic data</div>
+    </header>
+    <div class="cl-grid" id="cl-grid"></div>
+    <canvas id="cl-cv"></canvas>
+    <div class="cl-caption" id="cl-caption"></div>
+    <div class="cl-banner" id="cl-banner"><b>⚠ POLYTRAUMA INCOMING</b><span>the trauma team keeps its C-arms</span></div>
+    <div class="cl-flash" id="cl-flash"></div>
+    <div class="cl-dim" id="cl-dim"></div>
+    <div class="phone" id="cl-phone">
+      <div class="ph-top"><span>15:27</span><span>IT ON CALL</span></div>
+      <div class="ph-card">
+        <div class="ph-app"><i>A</i>ALOHA<span>now</span></div>
+        <div class="ph-q">Update <b>Bogdan</b> tonight, 22:20?</div>
+        <div class="ph-ctx">2 h · 94 % undisturbed · backup ready</div>
+        <div class="ph-btns"><div class="ph-yes" id="ph-yes">Approve<i class="ripple" id="ph-ripple"></i></div><div class="ph-no">Not tonight</div></div>
+      </div>
+      <div class="ph-after" id="ph-after">✓ Approved · logged</div>
+    </div>
+    <div class="finger" id="ph-finger"></div>
+  </section>
+
+  <!-- 6 · FLOW: how it works, grown from the golden window -->
+  <section class="scene" id="s-flow" aria-hidden="true">
+    <canvas id="fl-cv"></canvas>
+    <header class="fl-head"><h1 id="fl-title"><span class="cur">How<b>?</b></span><span></span></h1></header>
+    <div id="fl-nodes"></div>
+    <div class="fl-loop" id="fl-loop">logs come home · tomorrow’s plan gets better</div>
+    <div class="fl-caption" id="fl-caption">no Wi-Fi in the OR · no changes to the C-arm · no patient data</div>
+  </section>
+
+  <!-- 7 · OUTRO -->
+  <section class="scene" id="s-outro" aria-hidden="true">
+    <div class="ou-block" id="ou-a"><h1>Every C-arm<b>.</b></h1><h1 class="t">Always ready<b>.</b></h1></div>
+    <div class="ou-block" id="ou-b"><h1>Nobody babysits<br>a C-arm again<b>.</b></h1></div>
+    <img class="ou-bliss" id="ou-bliss" alt="" src="assets/characters/bliss.webp">
+    <div class="ou-logo" id="ou-logo">ALOHA <span>ROBOTICS</span></div>
+    <div class="ou-tag" id="ou-tag">INVISIBLE CONNECTIVITY</div>
+    <div class="ou-q" id="ou-q">Any <b>technical</b> questions?</div>
+    <div class="ou-ketty" id="ou-ketty"><img class="open" alt="KettyBot" src="assets/characters/ketty.webp"><img class="wink" alt="" src="assets/characters/ketty_wink.webp"></div>
+    <div class="ou-foot" id="ou-foot">HEALTHCARE HACKATHON BAVARIA · ERLANGEN 2026 · SIEMENS HEALTHINEERS CHALLENGE 04 · CONCEPT &amp; SYNTHETIC DATA</div>
+  </section>
+
+  <!-- APPENDIX (press A) -->
+  <section class="scene appx" id="s-app-score" aria-hidden="true">
+    <div class="ap-wrap">
+      <div class="eyebrow">Q&amp;A · 1 / 3</div>
+      <h1>How the golden window is chosen.</h1>
+      <div class="ap-formula">P(undisturbed) = <b>P(no unplanned use)</b> × <b>e<sup>−λ<sub>emergency</sub>·pull·Δt</sup></b> × <b>(1 − P(previous case overruns))</b><br>golden window = argmax P over every <b>legal</b> window · ties → earlier</div>
+      <div class="ap-grid">
+        <div class="ap-card"><h3>1 · HARD RULES (CODE)</h3><ul><li>never touches a case (20 min handover, 30 min rollback buffer)</li><li>never a motion update remotely</li><li>no guess on thin data</li><li>a human on duty to confirm</li><li>backup C-arm free · robot not double-booked</li></ul></div>
+        <div class="ap-card"><h3>2 · PROBABILITY (MODEL)</h3><ul><li>unplanned use per hour from device logs</li><li>emergency arrival rate × share that would pull this C-arm</li><li>overrun risk of the case before</li><li>re-planned on every alarm, in milliseconds</li></ul></div>
+        <div class="ap-card"><h3>3 · HUMANS (ALWAYS)</h3><ul><li>the on-duty role approves the window</li><li>IT / physics confirms the start remotely after “area clear”</li><li>the OR nurse is never asked to decide</li><li>every decision is logged</li></ul></div>
+      </div>
+    </div>
+    <div class="ap-foot">OPUS/v2/js/model/golden.js · 12 tests · built on the team rule core planner.js · 15 tests · all data synthetic</div>
+  </section>
+  <section class="scene appx" id="s-app-real" aria-hidden="true">
+    <div class="ap-wrap">
+      <div class="eyebrow">Q&amp;A · 2 / 3</div>
+      <h1>What is real today — and what we would test next.</h1>
+      <div class="ap-grid">
+        <div class="ap-card"><h3>BUILT THIS WEEKEND</h3><ul><li>rule core <code>planner.js</code> · 15 tests</li><li>golden-window scorer · 12 tests</li><li>clickable platform prototype (planning board, device file, robot cockpit, guardian)</li><li>the calendar swarm on stage runs the scorer live</li></ul></div>
+        <div class="ap-card"><h3>ASSUMED · TO VALIDATE</h3><ul><li>remote-start path (≈99 % of security patches are remote-capable, per Siemens)</li><li>power draw during a 2 h install</li><li>package hand-over by cable</li><li>OR-plan feed without patient data</li></ul></div>
+        <div class="ap-card"><h3>PILOT · ONE HOSPITAL</h3><ul><li>one C-arm fleet, real logs, scheduler in shadow mode</li><li>companion box first, KettyBot second</li><li>measure: days to install, calls per update, dead-on-arrival rate, logs received</li></ul></div>
+      </div>
+    </div>
+    <div class="ap-foot">Concept demonstrator · not a Siemens Healthineers or PUDU product · no patient data · no medical device</div>
+  </section>
+  <section class="scene appx" id="s-app-robot" aria-hidden="true">
+    <div class="ap-wrap">
+      <div class="eyebrow">Q&amp;A · 3 / 3</div>
+      <h1>The hands: KettyBot and the companion.</h1>
+      <div class="ap-grid">
+        <div class="ap-card"><h3>KETTYBOT (PUDU)</h3><ul><li>30 kg payload · LiDAR + vision SLAM</li><li>1.2 m/s · ~9 h battery · one floor today</li><li>carries a medical-grade battery pack, Schuko + LAN cable</li><li>reports “area clear” — never stores images</li></ul></div>
+        <div class="ap-card"><h3>WHAT IT DOES</h3><ul><li>drives to the parked C-arm, plugs power + network</li><li>hands over the signed package, guards the install</li><li>notices a device that doesn’t come back</li><li>brings the logs home on every visit</li></ul></div>
+        <div class="ap-card"><h3>WHAT IT NEVER DOES</h3><ul><li>start an update (a human does)</li><li>move a C-arm or enter an OR</li><li>run motion / calibration updates</li><li>stay in the way: on alarm it parks at the wall</li></ul></div>
+      </div>
+    </div>
+    <div class="ap-foot">Companion = the same job without wheels: a battery box beside the C-arm (the challenge owners’ favourite idea) for hospitals without a robot.</div>
+  </section>
+
+  <canvas id="fx-cv"></canvas>
+  <div id="hud"></div>
+  <div id="notes"><div id="notes-cue"></div><div id="notes-body"></div></div>
+  <div id="toast"></div>
+  <div id="blackout"></div>
+  <div id="help"><div class="box">
+    <h2>Aloha Robotics · pitch controls</h2>
+    <div class="grid">
+      <div><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd> next beat</div><div><kbd>←</kbd> <kbd>PgUp</kbd> previous (settles instantly)</div>
+      <div><kbd>F</kbd> fullscreen (also unlocks sound)</div><div><kbd>P</kbd> open presenter view</div>
+      <div><kbd>N</kbd> script overlay</div><div><kbd>T</kbd> timer HUD</div>
+      <div><kbd>M</kbd> mute sound effects</div><div><kbd>B</kbd> blackout</div>
+      <div><kbd>A</kbd> Q&amp;A appendix</div><div><kbd>R</kbd> restart to black</div>
+      <div><kbd>1</kbd>–<kbd>8</kbd> jump to scene</div><div><kbd>C</kbd> pause / resume clock</div>
+    </div>
+    <p style="margin-top:22px;color:#8aa">The black screen is standby: press → to start the film. During the film, press → twice to skip it.</p>
+  </div></div>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/model/planner.js"></script>
+<script src="js/model/golden.js"></script>
+<script src="js/data/day.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/scenes/embers.js"></script>
+<script src="js/scenes/film.js"></script>
+<script src="js/scenes/tama.js"></script>
+<script src="js/scenes/now.js"></script>
+<script src="js/scenes/calendar.js"></script>
+<script src="js/scenes/flow.js"></script>
+<script src="js/scenes/outro.js"></script>
+<script src="js/scenes/appendix.js"></script>
+<script>
+  Promise.race([Promise.all(['800 150px Manrope', '300 40px Manrope', '600 20px "JetBrains Mono"', '700 40px Silkscreen'].map((f) => document.fonts.load(f))), new Promise((r) => setTimeout(r, 1500))]).then(() => OPUS.boot());
+</script>
+</body>
+</html>
