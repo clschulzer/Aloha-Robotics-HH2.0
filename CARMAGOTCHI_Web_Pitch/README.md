@@ -1,3 +1,47 @@
+# C-ARMAGOTCHI — 3-Minute Encore (v3)
+
+**Default presentation: the nine-scene, three-minute website encore.** This is designed for the judges **after** they have already seen our full solution presentation. The original 14-scene v2.1 deck remains intact under `pitch/`.
+
+## Launch the three-minute pitch
+
+From the extracted `CARMAGOTCHI_Web_Pitch/` folder, open `index.html` and choose **LAUNCH 3-MINUTE PITCH**. Or open `encore/index.html` directly. It is a static 16:9 HTML/CSS/JS deck, deliberately modeled on the TALOS *presentation approach* (not a copy of their code or design).
+
+For best video/audio playback and synchronized presenter notes:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000/encore/` on the projector and `http://localhost:8000/encore-prompter/` for the presenter. The original full deck is still at `/pitch/`, with its own notes at `/teleprompter/`.
+
+### Actual run of show (180-second target)
+
+| Scene | Target |
+|---|---|
+| Team + Siemens challenge 04 | 0:00–0:07 |
+| Chaotic user-provided video, edited to 30 seconds | 0:07–0:37 |
+| Palmer-lookalike gag + 3-person slam | 0:37–0:47 |
+| **C-ARMAGOTCHI character transformations (NO PHONE)** | 0:47–1:18 |
+| Serious tone cut / Invisible Connectivity | 1:18–1:25 |
+| Three agent roles + animated workflow lines | 1:25–1:52 |
+| Synthetic theatre schedule → golden candidate | 1:52–2:14 |
+| KettyBot drives, authenticates, connects; love ascension | 2:14–2:40 |
+| IAI reveal and KettyBot wink | 2:40–3:00 |
+
+For the full script, click-by-click timing, stage cues, and factual boundaries, read [`THREE_MINUTE_RUN_OF_SHOW.md`](THREE_MINUTE_RUN_OF_SHOW.md). The exported 30-second film is in `encore/media/chaos_30s.mp4`: **replace this one file** with your own final 30-second cut when ready. The untouched 40-second source stays in `pitch/media/chaos_intro.mp4`.
+
+### Controls and design
+
+`→` or Space = next beat, `←` = back, `F` = fullscreen, `N` = speaker notes, `A` = technical Q&A appendix, `?` = help, `P` = film play/pause, `S` = sound, `V` = replay, `B` = blackout, `R` = restart. Direct links are possible, such as `encore/index.html#8.5` (KettyBot's emotional payoff).
+
+The 3-minute cut reuses the approved character frames and v2.1 styling; there is **no phone UI**, no repeated deep technical walkthrough, and no additional dependencies. The simulator, robot connection, schedule, numerical emergency scenarios, and proposed agent roles are all **conceptual or synthetic**. There is no real Siemens or PUDU connection or clinically verified prediction.
+
+---
+
+## Original full 14-scene pitch (archived in this same project)
+
+Everything below describes the preserved v2.1 full-length deck—not the new three-minute encore.
+
 # C-ARMAGOTCHI — Interactive Website Pitch (v2)
 
 **Healthcare Hackathon Bayern 2026 · Siemens Healthineers Challenge 04 · Invisible Connectivity for Mobile C-arms**

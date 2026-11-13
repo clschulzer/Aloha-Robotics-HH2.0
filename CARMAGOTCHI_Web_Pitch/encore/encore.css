@@ -1,0 +1,56 @@
+/* Three-minute cut / focused overrides. Original v2.1 character/workflow animations remain intact. */
+/* The parent pitch owns original artwork, no assets duplicated. */
+.scene-encore-team{background:#090d0f;}
+.encore-stripes{position:absolute;inset:0;background:linear-gradient(118deg,transparent 61%,rgba(255,255,255,.04) 61.1%,transparent 62%),repeating-linear-gradient(105deg,transparent 0 205px,#e54a3c13 206px 232px,transparent 233px 420px);}
+.encore-screech{position:absolute;left:110px;top:240px;font-size:190px;font-weight:950;letter-spacing:-.09em;line-height:.9;color:#f1f6ed;white-space:nowrap;transform:translateX(-135px) scaleX(.90);filter:blur(4px);transition:opacity .13s,transform .48s cubic-bezier(.12,.8,.14,1),filter .44s;}
+.encore-screech.on{transform:translateX(0) scaleX(1);filter:none;}
+.encore-screech span{color:var(--orange)}
+.encore-america{position:absolute;left:112px;top:415px;font-size:108px;font-weight:900;letter-spacing:-.07em;color:var(--orange);transform:translateX(100px) scale(1.1);filter:blur(6px);transition:opacity .12s,transform .35s cubic-bezier(.12,1.1,.23,1),filter .31s;}
+.encore-america.on{transform:translateX(0) scale(1);filter:none;}
+.encore-america span{color:var(--white)}.encore-america small{display:block;font:800 20px 'Courier New',monospace;letter-spacing:.15em;color:#f5e5d6;margin-top:15px;}
+.encore-team-stage{position:absolute;left:112px;right:112px;top:635px;display:flex;gap:22px;height:270px;transform:translateY(115px);filter:blur(6px);transition:transform .6s cubic-bezier(.12,.89,.18,1.05),opacity .14s,filter .45s;}
+.encore-team-stage.on{transform:translateY(0);filter:blur(0)}
+.encore-member{flex:1;position:relative;background:#17252b;border-top:8px solid var(--teal);padding:26px 28px;box-shadow:0 18px 0 #02070a55;}
+.encore-member:nth-child(2){border-color:var(--orange)}.encore-member.cameo{border-color:#d2b68d}
+.encore-member b{font:900 20px 'Courier New',monospace;color:var(--teal-light)}.encore-member strong{display:block;font-size:50px;line-height:.96;margin-top:18px;letter-spacing:-.06em}.encore-member span{position:absolute;left:28px;bottom:24px;font:700 16px 'Courier New',monospace;color:#91a9ab}
+.encore-team-foot{position:absolute;left:112px;bottom:108px;font:700 20px 'Courier New',monospace;letter-spacing:.07em;color:#dce7e2;}
+.encore-cameo-disclaimer{position:absolute;right:114px;top:135px;text-align:right;font:700 12px 'Courier New',monospace;color:#718181;letter-spacing:.07em}
+.scene-encore-team[data-step="2"] .encore-screech{opacity:.12;transform:translateY(-100px) scale(.9)}
+.scene-encore-team[data-step="2"] .encore-america{opacity:.12;transform:translateY(-115px)}
+/* Cinematic hard switch: long jokes on paper, quiet clinical text after a dark cut. */
+.scene-cut .cut-head{font-size:143px;white-space:nowrap}.scene-cut .cut-real{font-size:127px}
+/* Reuse the exact loved character crossfades, but enlarge the character, tighten side copy. */
+.scene-moods .mood-art{left:0;top:95px;width:1090px;height:900px}
+.scene-moods .mood-copy{left:1100px;top:277px;width:730px}
+.scene-moods .mood-copy h2{font-size:87px}
+/* Concise agent slide — same animated signal lines, reduced headline height. */
+.scene-brain .brain-head{top:195px;font-size:106px}
+/* Schedule is intentionally a brief synthesis of the detailed pitch. */
+.scene-schedule .schedule-head{font-size:84px}
+/* Physical gag and emotional payoff: rise only AFTER successful sync state. */
+.service-map{isolation:isolate}
+.robot-hearts{position:absolute;pointer-events:none;z-index:6;right:315px;top:128px;width:230px;height:205px;opacity:0;}
+.robot-hearts span{position:absolute;font-size:93px;line-height:1;color:#fa5488;font-weight:900;text-shadow:0 3px 0 #f7d9e3,0 2px 18px #fb87b699;opacity:0;}
+.robot-hearts span:nth-child(1){left:8px;bottom:0}.robot-hearts span:nth-child(2){left:90px;bottom:40px;font-size:67px}.robot-hearts span:nth-child(3){left:141px;bottom:4px;font-size:55px}
+.service-map[data-action="4"] .robot-hearts{opacity:1}
+.service-map[data-action="4"] .robot-hearts span{animation:loveAscends 2.4s ease-out infinite}
+.service-map[data-action="4"] .robot-hearts span:nth-child(2){animation-delay:.38s}
+.service-map[data-action="4"] .robot-hearts span:nth-child(3){animation-delay:.83s}
+@keyframes loveAscends{0%{opacity:0;transform:translateY(45px) scale(.6) rotate(-13deg)}15%{opacity:1}75%{opacity:.95}100%{opacity:0;transform:translateY(-140px) scale(1.2) rotate(12deg)}}
+.robot-relief{position:absolute;right:130px;top:30px;background:#fef5f7;border-left:6px solid #ff6f9c;padding:12px 19px;color:#a33661;font:800 21px 'Courier New',monospace;opacity:0;transform:translateY(13px);transition:opacity .48s,transform .6s cubic-bezier(.18,.8,.2,1);z-index:5;}
+.service-map[data-action="4"] .robot-relief{opacity:1;transform:translateY(0)}
+/* The 20-second close is a single build rather than three unrelated cards. */
+.scene-final .final-line{top:184px;font-size:94px}
+.scene-final .final-contrast{top:451px;font-size:32px;color:#91aba6}
+.scene-final .final-iai{top:519px}.scene-final .final-iai strong{font-size:226px}.scene-final .final-iai p{font-size:31px}
+.scene-final .final-thanks{bottom:141px;max-width:1100px;font-size:43px}
+.scene-final .final-thanks span{font-size:29px;margin-left:9px}
+.scene-final .final-ketty{right:10px;bottom:85px;width:570px;height:680px}
+/* Preserve bottom safety lines in cinema/clicker mode. */
+.scene-robot .service-disclaimer{font-size:12px}
+@media(prefers-reduced-motion:reduce){.robot-hearts span{animation:none!important;opacity:1!important}}
+/* Let the 30-second supplied movie breathe: the film, not our caption, is the punchline. */
+.scene-video .film-caption{display:none}
+.scene-video .film-controls{bottom:74px;left:110px;right:110px;opacity:.55;transform:scale(.78);transform-origin:bottom left;transition:opacity .2s ease}
+.scene-video .film-controls:hover,.scene-video .film-controls:focus-within{opacity:1}
+.scene-video .video-label{font-size:18px;padding:11px 14px}
