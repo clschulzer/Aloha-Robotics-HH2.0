@@ -99,8 +99,7 @@ Every version is preserved across multiple layers (Git tags, GitHub branches, an
 | **V1** | Initial presentation baseline (13 scenes) | `v1`, `v1.0-presentation`, `v0-presentation-baseline` | `backup/presentation-v1`, `backup/presentation-original` | `backups/presentation_original_v0/` |
 | **V2** | 14 scenes + chaos intro film & sound effects | `v2`, `v2.0-presentation` | `backup/presentation-v2` | `backups/presentation_v2/` |
 | **V3** | Refined 14-scene CSS, JS & teleprompter data | `v3`, `v3.0-presentation` | `backup/presentation-v3` | `backups/presentation_v3/` |
-| **V4** | 3-minute encore (`encore/`), 3-min prompter, run-of-show | `v4`, `v4.0-presentation` | `backup/presentation-v4` | `backups/presentation_v4/` |
-| **V5 (Latest)** | Cinematic ember-to-INTRODUCING bridge patch (`ember_intro.js/css`) | `v5`, `v5.0-presentation`, `latest` | `main`, `backup/presentation-v5` | `backups/presentation_v5/` |
+| **V4 (Latest)** | 3-minute encore (`encore/`), 3-min prompter, run-of-show | `v4`, `v4.0-presentation`, `latest` | `main`, `backup/presentation-v4` | `backups/presentation_v4/` |
 
 ---
 
@@ -129,17 +128,10 @@ git commit -m "Rollback to Version 3"
 git push origin main
 ```
 
-### To roll back to Version 4:
+### To restore the latest Version 4:
 ```bash
 git checkout v4 -- CARMAGOTCHI_Web_Pitch/
-git commit -m "Rollback to Version 4"
-git push origin main
-```
-
-### To restore the latest Version 5:
-```bash
-git checkout v5 -- CARMAGOTCHI_Web_Pitch/
-git commit -m "Restore Version 5"
+git commit -m "Restore Version 4"
 git push origin main
 ```
 
