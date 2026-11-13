@@ -269,7 +269,20 @@
       }
       if (i === 4) { if (!alarmDone) settle(3); const go = () => { if (phase !== 4) return; if (mode === 'done') approve(false); else setTimeout(go, 120); }; go(); }
     },
-    leave() { if (stopBuzz) { stopBuzz(0.3); stopBuzz = null; } mode = 'idle'; return 0; },
+    leave(ctx) {
+      if (stopBuzz) { stopBuzz(0.3); stopBuzz = null; } mode = 'idle';
+      // the golden nugget becomes the seed of the platform in the next scene
+      if (ctx.forward && ctx.to === 'arch' && gold.classList.contains('show') && !ctx.instant) {
+        const x = parseFloat(gold.style.left) + parseFloat(gold.style.width) * 0.42, y = parseFloat(gold.style.top) + 26;
+        const seed = document.createElement('div'); seed.className = 'seed'; document.getElementById('stage').appendChild(seed);
+        seed.animate([{ left: x + 'px', top: y + 'px', transform: 'translate(-50%,-50%) scale(1.6)', opacity: 1 },
+                      { left: '960px', top: '455px', transform: 'translate(-50%,-50%) scale(.9)', opacity: 1, offset: 0.82 },
+                      { left: '960px', top: '455px', transform: 'translate(-50%,-50%) scale(5)', opacity: 0 }],
+                     { duration: 1250, easing: 'cubic-bezier(.6,0,.25,1)', fill: 'forwards' }).onfinish = () => seed.remove();
+        OPUS.audio.sfx.whoosh(0.9, 0.14, true);
+      }
+      return 0;
+    },
     frame(dt, T) {
       if (mode === 'idle' && !shards.length && !ghosts.length && !gold.classList.contains('show')) { updateStats(); return; }
       modeT += dt;

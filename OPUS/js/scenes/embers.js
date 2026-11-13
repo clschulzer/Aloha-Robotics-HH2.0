@@ -205,7 +205,8 @@
     }
     if (S.intro > 0) { g.font = INTRO_FONT; g.fillStyle = `rgba(238,230,216,${0.82 * S.intro * S.alpha})`; drawSpaced(g, INTRO, 960, INTRO_Y + (1 - M.easeOut(S.intro)) * 10, INTRO_SP); }
     if (S.title > 0) drawTitle(S.alpha);
-    if (S.sub > 0) { g.font = SUB_FONT; g.fillStyle = `rgba(168,190,196,${S.sub * S.alpha})`; drawSpaced(g, SUB, 960, SUB_Y, SUB_SP); g.fillStyle = `rgba(236,102,2,${0.8 * S.sub * S.alpha})`; g.fillRect(960 - 40, SUB_Y - 52, 80, 2); }
+    if (S.sub > 0) { g.font = SUB_FONT; g.fillStyle = `rgba(168,190,196,${S.sub * S.alpha})`; drawSpaced(g, SUB, 960, SUB_Y, SUB_SP); g.fillStyle = `rgba(236,102,2,${0.8 * S.sub * S.alpha})`; g.fillRect(960 - 40, SUB_Y - 52, 80, 2);
+      const team = OPUS.TEAM || []; if (team.length) { g.font = '600 24px Manrope'; g.textAlign = 'center'; g.fillStyle = `rgba(230,224,214,${0.85 * S.sub * S.alpha})`; g.fillText(team.join('   ·   '), 960, SUB_Y + 58); g.textAlign = 'start'; } }
     // particles (additive)
     g.globalCompositeOperation = 'lighter';
     for (const p of P) {

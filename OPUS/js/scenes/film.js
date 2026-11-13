@@ -9,6 +9,8 @@
   let lastPress = 0, embersStarted = false, filmActive = false;
 
   video.addEventListener('canplaythrough', () => standby.classList.add('ready'));
+  const arm = () => standby.classList.add('armed');            // a keypress/click on THIS window allows sound
+  window.addEventListener('keydown', arm, { capture: true }); window.addEventListener('pointerdown', arm, { capture: true });
   video.addEventListener('ended', () => { if (filmActive) OPUS.next(true); });
   playBtn.addEventListener('click', (e) => { e.stopPropagation(); video.play().then(() => playBtn.classList.remove('show')).catch(() => {}); });
 

@@ -81,4 +81,6 @@ A suggested split: **Speaker A** (warm, funny) does Act I and the outro. **Speak
 - In the outro, slow down by 20 %. Pause before "invisible" and before "We're Aloha Robotics".
 
 ## Controls (deck)
+Before you start: press `F` **on the projector window** once (fullscreen + unlocks the film's sound; the standby dot turns green).
+
 `→` / `Space` / `PgDn` next · `←` back (settles instantly) · `F` fullscreen · `P` presenter view · `N` script overlay · `T` timer HUD · `M` mute sound effects · `B` blackout · `A` Q&A appendix · `R` restart to black · `C` pause clock · `1–8` jump to a scene. During the film, press `→` **twice** to skip it.

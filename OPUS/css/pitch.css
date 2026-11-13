@@ -45,7 +45,8 @@ canvas { display: block; position: absolute; left: 0; top: 0; pointer-events: no
 /* ---------- 0 standby ---------- */
 #s-standby { background: #000; }
 .ready-dot { position: absolute; right: 26px; bottom: 24px; width: 6px; height: 6px; border-radius: 50%; background: #1b1b1b; transition: background .4s; }
-#s-standby.ready .ready-dot { background: #12331f; }
+#s-standby.ready .ready-dot { background: #3a2a0c; }
+#s-standby.ready.armed .ready-dot { background: #12331f; }
 
 /* ---------- 1 film ---------- */
 #s-film { background: #000; }
@@ -318,3 +319,8 @@ canvas { display: block; position: absolute; left: 0; top: 0; pointer-events: no
 
 .slabel.side-r { transform: translate(0,-50%); }
 .slabel.side-l { transform: translate(-100%,-50%); }
+
+/* scene-to-scene continuity */
+.seed { position: absolute; z-index: 30; width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle, #fff 0 18%, #ffd27a 36%, rgba(255,199,74,.0) 72%); box-shadow: 0 0 40px 12px rgba(255,199,74,.55); pointer-events: none; }
+#s-arch.collapse { animation: collapse .9s cubic-bezier(.6,0,.3,1) forwards; transform-origin: 960px 455px; background: transparent; }
+@keyframes collapse { 0% { transform: none; filter: none; opacity: 1; } 100% { transform: scale(.08); filter: blur(6px) brightness(2); opacity: 0; } }

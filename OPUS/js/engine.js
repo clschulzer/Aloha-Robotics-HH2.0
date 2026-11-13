@@ -116,7 +116,8 @@
   try { channel = new BroadcastChannel(CHANNEL); } catch (_) {}
   function snapshot() {
     const sc = cur();
-    return { type: 'state', id: sc.id, index: st.index, beat: st.beat, beats: sc.beats, total: st.list.length, appendix: st.inAppendix, elapsed: clock.elapsed, running: clock.running, muted: OPUS.audio.muted, ids: st.list.map((s) => s.id), at: Date.now() };
+    const armed = !!(OPUS.audio.ctx && OPUS.audio.ctx.state === 'running') || !!(navigator.userActivation && navigator.userActivation.hasBeenActive);
+    return { type: 'state', id: sc.id, index: st.index, beat: st.beat, beats: sc.beats, total: st.list.length, appendix: st.inAppendix, elapsed: clock.elapsed, running: clock.running, muted: OPUS.audio.muted, armed, ids: st.list.map((s) => s.id), at: Date.now() };
   }
   function broadcast() { const s = snapshot(); try { channel && channel.postMessage(s); } catch (_) {} try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (_) {} }
   function render() {

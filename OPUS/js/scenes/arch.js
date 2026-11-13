@@ -185,12 +185,18 @@
   function at(h, s) { const f = s * (h.len - 1), i = Math.floor(f), t = f - i; const a = h.pts[M.clamp(i, 0, h.len - 1)], b = h.pts[M.clamp(i + 1, 0, h.len - 1)]; return [M.lerp(a[0], b[0], t), M.lerp(a[1], b[1], t)]; }
 
   OPUS.scene({ id: 'arch', el, beats: 5, theme: 'dark',
-    enter(ctx) { resetAll(); beat = 0; if (ctx.instant) { show(0, true); return; } show(0, false); A.sfx.heartbeat(0.3); },
+    enter(ctx) {
+      resetAll(); beat = 0; el.classList.remove('collapse');
+      if (ctx.instant) { show(0, true); return; }
+      const seeded = ctx.from === 'swarm';
+      setTimeout(() => { if (beat === 0) { show(0, false); A.sfx.heartbeat(0.3); } }, seeded ? 1020 : 0);
+    },
     beat(i, ctx) {
       if (ctx.instant) { resetAll(); show(i, true); beat = i; return; }
+      if (!core.classList.contains('show')) show(0, false);
       beat = i; show(i, false);
     },
-    leave() { return 0; },
+    leave(ctx) { if (ctx.forward && ctx.to === 'outro' && !ctx.instant) { el.classList.add('collapse'); return 900; } el.classList.remove('collapse'); return 0; },
     frame(dt) {
       T += dt;
       gg.lineCap = 'round'; gg.lineJoin = 'round';

@@ -54,7 +54,7 @@
       ['ou-logo', 'ou-q', 'ou-ketty', 'ou-foot'].forEach((id) => $(id).classList.toggle('show', i >= 3));
       return;
     }
-    if (i === 0) LINES.forEach((ln, k) => { if (ln.beat === 0) later(ln.d * 1000, () => (ln.go = 1)); });
+    if (i === 0) LINES.forEach((ln, k) => { if (ln.beat === 0) later((ln.d + (S.offset || 0)) * 1000, () => (ln.go = 1)); });
     if (i === 1) LINES.forEach((ln, k) => { if (ln.beat === 1) later(ln.d * 1000, () => { ln.go = 1; A.sfx.tick(0.05, 900); }); });
     if (i === 2) {
       LINES.forEach((ln, k) => { if (ln.beat <= 1) { ln.go = 0; S.lineA[k] = 1; } });
@@ -75,7 +75,7 @@
   }
 
   OPUS.scene({ id: 'outro', el, beats: 4, theme: 'dark',
-    enter(ctx) { reset(); LINES.forEach((ln) => (ln.go = 0)); go(0, ctx.instant); },
+    enter(ctx) { reset(); S.offset = ctx.forward && ctx.from === 'arch' && !ctx.instant ? 0.75 : 0; go(0, ctx.instant); },
     beat(i, ctx) { if (ctx.instant) { reset(); go(i, true); return; } go(i, false); },
     leave() { clearTimers(); return 0; },
     frame(dt, T) {

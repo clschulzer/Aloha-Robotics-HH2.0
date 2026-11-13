@@ -5,6 +5,8 @@
 (function () {
   'use strict';
   const OPUS = (window.OPUS = window.OPUS || {});
+  /* Optional: presenter names shown small under ALOHA ROBOTICS in the intro, e.g. ['Christian', 'Marc', 'Siddhant']. Empty = hidden. */
+  OPUS.TEAM = [];
   OPUS.NOTES = {
     standby: [
       { at: null, cue: 'STANDBY · black screen', say: 'Black screen. When the jury is ready: press → (or the clicker). The film starts with sound. Do not speak.' },

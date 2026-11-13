@@ -112,7 +112,7 @@ footer { padding: 14px 24px 18px; border-top: 1px solid var(--line); }
     if (st) { const i = beats.findIndex((x) => x.id === st.id && x.b === st.beat); const cur = beats[i]; if (cur && cur.n.at != null && st.running) { const d = el - cur.n.at; $('delta').textContent = (d >= 0 ? '+' : '') + d.toFixed(0) + ' s vs plan'; $('delta').style.color = Math.abs(d) < 4 ? 'var(--teal)' : d > 0 ? 'var(--red)' : 'var(--gold)'; } else $('delta').textContent = st.running ? '' : 'clock starts with the film'; }
     requestAnimationFrame(tick);
   }
-  function onState(m) { if (!m || m.type !== 'state') return; st = m; lastAt = Date.now(); $('sync').textContent = '● synced to deck'; $('sync').className = 'on'; render(); }
+  function onState(m) { if (!m || m.type !== 'state') return; st = m; lastAt = Date.now(); $('sync').textContent = m.armed === false && m.id === 'standby' ? '⚠ synced · press F on the projector window once (unlocks film sound)' : '● synced to deck'; $('sync').className = m.armed === false && m.id === 'standby' ? '' : 'on'; render(); }
   if (ch) ch.onmessage = (e) => onState(e.data);
   window.addEventListener('storage', (e) => { if (e.key === 'aloha-opus-state' && e.newValue) try { onState(JSON.parse(e.newValue)); } catch (_) {} });
   try { const v = JSON.parse(localStorage.getItem('aloha-opus-state') || 'null'); if (v) onState(v); } catch (_) {}

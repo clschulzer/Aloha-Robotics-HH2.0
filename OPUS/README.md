@@ -26,6 +26,10 @@ python3 OPUS/serve.py          # from the repo root → http://localhost:8000/OP
 
 Then press **F** for fullscreen on the projector and **P** to open the presenter view (script, next beat, clock, ± vs plan) on the laptop screen. Both windows stay in sync.
 
+> **Sound:** browsers only allow sound after a key or click *in that window*. Pressing **F** on the projector window does it. The tiny dot on the black standby screen turns from amber to green, and the presenter view shows "⚠ press F on the projector window" until it has happened. Driving the deck only from the presenter view without that one keypress plays the film silent.
+
+Team names under the title: put them in `OPUS.TEAM` at the top of `js/notes.js` (e.g. `['Christian', 'Marc', 'Siddhant']`). Leave it empty for no names.
+
 - After merge, GitHub Pages serves it at `https://clschulzer.github.io/Aloha-Robotics-HH2.0/OPUS/`.
 - Double-clicking `index.html` also works (fonts are embedded). Use `serve.py` rather than `python -m http.server`, which can't seek in video.
 - Chrome or Edge recommended. The film starts **with sound** on your first click.

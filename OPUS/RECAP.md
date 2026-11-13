@@ -132,10 +132,10 @@ The full spoken script is in [`SCRIPT.md`](SCRIPT.md), and the presenter view (`
 ## 8. Day-of checklist
 
 1. Chrome or Edge, laptop on power, notifications off, sound to the room.
-2. `python3 OPUS/serve.py`, then open `localhost:8000/OPUS/` on the projector and press **F**. Press **P** to open the presenter view on the laptop screen.
+2. `python3 OPUS/serve.py`, then open `localhost:8000/OPUS/` on the projector and press **F** there (this also unlocks the film's sound: the standby dot turns green). Press **P** to open the presenter view on the laptop screen.
 3. Press **R** to make sure you're on the black standby screen. Speaker ready, clicker tested (→ / PgDn).
 4. Run it once. Check the volume on the explosion and the title hit (**M** mutes only our sound effects, not the film).
-5. Fill in the team names if you want them on screen (ask me), and decide who speaks Act I and who speaks Act II.
+5. Team names on screen: add them to `OPUS.TEAM` in `js/notes.js` (empty = no names). Decide who speaks Act I and who speaks Act II.
 
 ## 9. Open items for the team
 - The **names** of the presenters and whether to show them (currently not shown).
