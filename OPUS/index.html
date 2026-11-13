@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Aloha Robotics — Invisible Connectivity · 3-minute pitch</title>
+<meta name="description" content="Aloha Robotics · Healthcare Hackathon Bavaria, Erlangen 2026 · Siemens Healthineers Challenge 04: Invisible Connectivity for mobile C-arms.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%23ec6602%22/%3E%3Ctext x=%2232%22 y=%2243%22 font-size=%2232%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22white%22%3EA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/pitch.css">
+</head>
+<body class="nocursor">
+<div id="stage" data-theme="dark" role="application" aria-label="Aloha Robotics three-minute pitch">
+
+  <!-- 0 · STANDBY: pure black until the jury is ready -->
+  <section class="scene" id="s-standby" aria-hidden="true"><i class="ready-dot"></i></section>
+
+  <!-- 1 · FILM: the team's AI film, untouched, full sound -->
+  <section class="scene" id="s-film" aria-hidden="true">
+    <video id="film" preload="auto" playsinline src="assets/video/aloha_intro.mp4"></video>
+    <button id="film-play" class="film-play" type="button" aria-label="Play film">▶</button>
+  </section>
+
+  <!-- 2 · INTRO: explosion → embers → BASED ON A TRUE STORY → INTRODUCING ALOHA ROBOTICS (drawn on #fx-cv) -->
+  <section class="scene" id="s-intro" aria-hidden="true"></section>
+
+  <!-- 3 · TAMAGOTCHI: the unhinged C-arm, one face per real problem -->
+  <section class="scene" id="s-tama" aria-hidden="true">
+    <div class="dots"></div>
+    <header class="tama-head">
+      <div class="eyebrow">Act I · Meet the patient</div>
+      <h1>The world’s most expensive <span class="px">TAMAGOTCHI.</span></h1>
+    </header>
+    <div class="ring" id="tama-ring">
+      <svg class="ring-svg" viewBox="0 0 900 900" aria-hidden="true">
+        <circle class="ring-track" cx="450" cy="450" r="300"/>
+        <circle class="ring-ticks" cx="450" cy="450" r="330"/>
+        <circle class="ring-prog" id="ring-prog" cx="450" cy="450" r="300"/>
+      </svg>
+      <div class="burst" id="tama-burst"><svg viewBox="-100 -100 200 200" aria-hidden="true"><polygon fill="currentColor" opacity=".55" points=""/><polygon fill="currentColor" opacity=".35" points=""/></svg></div>
+      <div class="char" id="tama-char"><img class="cur" alt="" src="assets/characters/lonely.webp"><img alt="" src="assets/characters/lonely.webp"></div>
+      <div class="marker" id="tama-marker"></div>
+      <div class="sfx" id="tama-sfx">sniff…</div>
+      <div class="lcd" id="tama-lcd">1:59:59</div>
+    </div>
+    <div class="panel">
+      <div class="count" id="tama-count"><b>01</b> / 06</div>
+      <h2 class="state-name" id="tama-name">LONELY.</h2>
+      <div class="bubble" id="tama-quote">“Nobody has plugged me in for 43 days.”</div>
+      <div class="reality" id="tama-real"><small>What it really means</small><p id="tama-real-p"></p></div>
+      <div class="vitals" id="tama-vitals">
+        <span>⚡ POWER</span><span class="hearts row-pow"></span>
+        <span>⇅ NETWORK</span><span class="hearts row-net"></span>
+        <span>↻ UP TO DATE</span><span class="hearts row-upd"></span>
+      </div>
+    </div>
+    <footer class="tama-foot">Facts from the Siemens Healthineers challenge owners · kick-off pitch &amp; interviews, 12–13 Nov 2026</footer>
+  </section>
+
+  <!-- 4 · CUT: the screen dies, the tone changes -->
+  <section class="scene" id="s-cut" aria-hidden="true">
+    <div class="grain"></div>
+    <div class="cut-eyebrow eyebrow">Act II · The solution</div>
+    <p class="cut-l1">The update isn’t the problem.</p>
+    <p class="cut-l2">Finding the <span class="goldtext">window</span> is.</p>
+  </section>
+
+  <!-- 5 · SWARM: agentic scheduler hunting the golden window on a real-looking day -->
+  <section class="scene" id="s-swarm" aria-hidden="true">
+    <header class="sw-head">
+      <div class="eyebrow">Act II · The brain — agentic scheduler</div>
+      <h1>Hunting the golden window.</h1>
+    </header>
+    <div class="sw-legend">
+      <span><i class="lg-case"></i>SURGERY</span><span><i class="lg-agent"></i>AGENT</span><span><i class="lg-gold"></i>GOLDEN WINDOW</span>
+      <span><i class="lg-em"></i>EMERGENCY ODDS</span><span><i class="lg-night"></i>NOBODY TO CONFIRM</span><span><i class="lg-lock"></i>ALARM LOCK</span>
+    </div>
+    <div class="sw-chart" id="sw-chart"></div>
+    <canvas id="sw-cv"></canvas>
+    <div class="sw-log" id="sw-log"></div>
+    <div class="sw-stats">
+      <div>AGENTS<b id="st-agents">0</b></div>
+      <div>WINDOWS TESTED<b id="st-tested">0</b></div>
+      <div>LEGAL<b id="st-legal">0</b></div>
+      <div class="best">BEST SO FAR<b id="st-best">—</b></div>
+    </div>
+    <div class="sw-banner" id="sw-banner">⚠ <b>POLYTRAUMA PRE-ALERT</b> · 15:26 · trauma C-arms locked<small>DISPATCH CENTRE → HOSPITAL ALARM → ALOHA</small></div>
+    <div class="sw-flash" id="sw-flash"></div>
+    <div class="sw-dim" id="sw-dim"></div>
+    <div class="phone" id="sw-phone">
+      <div class="app"><i>A</i>ALOHA<span>now</span></div>
+      <div class="who" id="ph-who">MEDICAL PHYSICS · ONE QUESTION</div>
+      <div class="q" id="ph-q">Install the security patch on C-02 tonight at 22:20?</div>
+      <div class="ctx" id="ph-ctx"></div>
+      <div class="btns"><div class="btn yes" id="ph-yes">Approve<i class="ripple" id="ph-ripple"></i></div><div class="btn nope">Not tonight</div></div>
+      <div class="after" id="ph-after"></div>
+    </div>
+    <div class="finger" id="ph-finger"></div>
+  </section>
+
+  <!-- 6 · ARCHITECTURE: the platform grows like mycelium -->
+  <section class="scene" id="s-arch" aria-hidden="true">
+    <canvas id="ar-grow"></canvas>
+    <canvas id="ar-fx"></canvas>
+    <header class="ar-head">
+      <div class="eyebrow">Act II · Under the hood</div>
+      <h1><span class="t1">One brain. Many hands.</span><span class="t2">Agents propose<i>.</i> Rules constrain<i>.</i> Humans decide<i>.</i></span></h1>
+    </header>
+    <div id="ar-layer"></div>
+  </section>
+
+  <!-- 7 · OUTRO: their words, three withouts, invisible, IAI, Aloha -->
+  <section class="scene" id="s-outro" aria-hidden="true">
+    <canvas id="ou-cv"></canvas>
+    <div class="ou-logo" id="ou-logo">ALOHA <span>ROBOTICS</span></div>
+    <div class="ou-q" id="ou-q">Any <b>technical</b> questions?</div>
+    <div class="ou-ketty" id="ou-ketty"><img class="open" alt="KettyBot" src="assets/characters/ketty.webp"><img class="wink" alt="" src="assets/characters/ketty_wink.webp"></div>
+    <div class="ou-foot" id="ou-foot">HEALTHCARE HACKATHON BAVARIA · ERLANGEN 2026 · SIEMENS HEALTHINEERS CHALLENGE 04 · CONCEPT &amp; SYNTHETIC DATA</div>
+  </section>
+
+  <!-- APPENDIX (press A) -->
+  <section class="scene appx" id="s-app-score" aria-hidden="true">
+    <div class="ap-wrap">
+      <div class="eyebrow">Q&amp;A · 1 / 3</div>
+      <h1>How the golden window is chosen.</h1>
+      <div class="ap-formula">P(undisturbed) = <b>P(no unplanned use)</b> × <b>e<sup>−λ<sub>emergency</sub>·pull·Δt</sup></b> × <b>(1 − P(previous case overruns))</b><br>golden window = argmax P over every <b>legal</b> window · ties → earlier</div>
+      <div class="ap-grid">
+        <div class="ap-card"><h3>1 · HARD RULES (CODE)</h3><ul><li>never touches a case (20 min handover, 30 min rollback buffer)</li><li>never a motion update remotely</li><li>no guess on thin data</li><li>a human on duty to confirm</li><li>backup C-arm free · robot not double-booked</li></ul></div>
+        <div class="ap-card"><h3>2 · PROBABILITY (MODEL)</h3><ul><li>unplanned use per hour from device logs</li><li>emergency arrival rate × share that would pull this C-arm</li><li>overrun risk of the case before</li><li>re-planned on every alarm, in milliseconds</li></ul></div>
+        <div class="ap-card"><h3>3 · HUMANS (ALWAYS)</h3><ul><li>medical physics approves the window</li><li>IT / physics confirms the start remotely after “area clear”</li><li>the OR nurse is never asked to decide</li><li>every decision is logged</li></ul></div>
+      </div>
+    </div>
+    <div class="ap-foot">OPUS/js/lib/golden.js · 12 tests · built on the team rule core planner.js · 15 tests · all data synthetic</div>
+  </section>
+  <section class="scene appx" id="s-app-real" aria-hidden="true">
+    <div class="ap-wrap">
+      <div class="eyebrow">Q&amp;A · 2 / 3</div>
+      <h1>What is real today — and what we would test next.</h1>
+      <div class="ap-grid">
+        <div class="ap-card"><h3>BUILT THIS WEEKEND</h3><ul><li>rule core <code>planner.js</code> · 15 tests</li><li>golden-window scorer · 12 tests</li><li>clickable platform prototype (planning board, device file, robot cockpit, guardian)</li><li>this live swarm, running the scorer</li></ul></div>
+        <div class="ap-card"><h3>ASSUMED · TO VALIDATE</h3><ul><li>remote-start path (≈99 % of security patches are remote-capable, per Siemens)</li><li>power draw during a 2 h install</li><li>package hand-over by cable</li><li>OR-plan feed without patient data</li></ul></div>
+        <div class="ap-card"><h3>PILOT · ONE HOSPITAL</h3><ul><li>one C-arm fleet, real logs, scheduler in shadow mode</li><li>companion box first, KettyBot second</li><li>measure: days to install, calls per update, dead-on-arrival rate, logs received</li></ul></div>
+      </div>
+    </div>
+    <div class="ap-foot">Concept demonstrator · not a Siemens Healthineers or PUDU product · no patient data · no medical device</div>
+  </section>
+  <section class="scene appx" id="s-app-robot" aria-hidden="true">
+    <div class="ap-wrap">
+      <div class="eyebrow">Q&amp;A · 3 / 3</div>
+      <h1>The hands: KettyBot and the companion.</h1>
+      <div class="ap-grid">
+        <div class="ap-card"><h3>KETTYBOT (PUDU)</h3><ul><li>30 kg payload · LiDAR + vision SLAM</li><li>1.2 m/s · ~9 h battery · one floor today</li><li>carries a medical-grade battery pack, Schuko + LAN cable</li><li>reports “area clear” — never stores images</li></ul></div>
+        <div class="ap-card"><h3>WHAT IT DOES</h3><ul><li>drives to the parked C-arm, plugs power + network</li><li>hands over the signed package, guards the install</li><li>notices a device that doesn’t come back</li><li>brings the logs home on every visit</li></ul></div>
+        <div class="ap-card"><h3>WHAT IT NEVER DOES</h3><ul><li>start an update (a human does)</li><li>move a C-arm or enter an OR</li><li>run motion / calibration updates</li><li>stay in the way: on alarm it parks at the wall</li></ul></div>
+      </div>
+    </div>
+    <div class="ap-foot">Companion = the same job without wheels: a battery box beside the C-arm (the challenge owners’ favourite idea) for hospitals without a robot.</div>
+  </section>
+
+  <canvas id="fx-cv"></canvas>
+  <div id="hud"></div>
+  <div id="notes"><div id="notes-cue"></div><div id="notes-body"></div></div>
+  <div id="toast"></div>
+  <div id="blackout"></div>
+  <div id="help"><div class="box">
+    <h2>Aloha Robotics · pitch controls</h2>
+    <div class="grid">
+      <div><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd> next beat</div><div><kbd>←</kbd> <kbd>PgUp</kbd> previous (settles instantly)</div>
+      <div><kbd>F</kbd> fullscreen</div><div><kbd>P</kbd> open presenter view</div>
+      <div><kbd>N</kbd> script overlay</div><div><kbd>T</kbd> timer HUD</div>
+      <div><kbd>M</kbd> mute sound effects</div><div><kbd>B</kbd> blackout</div>
+      <div><kbd>A</kbd> Q&amp;A appendix</div><div><kbd>R</kbd> restart to black</div>
+      <div><kbd>1</kbd>–<kbd>8</kbd> jump to scene</div><div><kbd>C</kbd> pause / resume clock</div>
+    </div>
+    <p style="margin-top:22px;color:#8aa">During the film, press → twice to skip it. The film ends straight into the title — no click needed.</p>
+  </div></div>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/lib/planner.js"></script>
+<script src="js/lib/golden.js"></script>
+<script src="js/data/day.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/scenes/embers.js"></script>
+<script src="js/scenes/film.js"></script>
+<script src="js/scenes/tama.js"></script>
+<script src="js/scenes/cut.js"></script>
+<script src="js/scenes/swarm.js"></script>
+<script src="js/scenes/arch.js"></script>
+<script src="js/scenes/outro.js"></script>
+<script src="js/scenes/appendix.js"></script>
+<script>
+  // wait for the embedded fonts (canvas typography samples them), but never longer than 1.5 s
+  Promise.race([Promise.all(['800 150px Manrope', '300 40px Manrope', '600 20px "JetBrains Mono"', '700 40px Silkscreen'].map((f) => document.fonts.load(f))), new Promise((r) => setTimeout(r, 1500))]).then(() => OPUS.boot());
+</script>
+</body>
+</html>
