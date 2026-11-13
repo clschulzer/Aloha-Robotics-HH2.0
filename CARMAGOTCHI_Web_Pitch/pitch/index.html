@@ -59,7 +59,7 @@
     <div class="phone-explain">A SMALL WINDOW INTO A VERY BIG SERVICE PROBLEM.<br><b>NOT ANOTHER CLINICAL TASK.</b></div>
     <div class="phone-shell" id="phone-shell"><div class="phone-top">◉ &nbsp; 09:41 <span>●●● ▮</span></div><div class="phone-viewport">
       <div class="phone-apphead"><span>C—A<span class="orange-text">.</span></span><small>DEVICE CRM—041</small></div>
-      <div class="phone-image"><img id="phone-mascot" src="assets/lonely.webp" alt="Lonely C-arm needing a connection"></div>
+      <div class="phone-image" id="phone-image"><img class="phone-layer current" id="phone-mascot-a" src="assets/lonely.webp" alt="C-arm device personality"><img class="phone-layer" id="phone-mascot-b" src="assets/lonely.webp" alt="" aria-hidden="true"></div>
       <div class="phone-status"><i id="phone-dot"></i><span id="phone-state">NO CONTACT FOR 43 DAYS</span></div>
       <div class="phone-quote" id="phone-quote">“Have you forgotten about me?”</div>
       <div class="phone-meta"><span>LAST SYNC <b id="phone-sync">43 DAYS AGO</b></span><span>POWER <b>UNKNOWN</b></span></div>
@@ -87,7 +87,7 @@
   <!-- 07 / TONE CUT -->
   <section class="slide scene-cut theme-dark" data-title="NOW THE REAL PROBLEM" data-steps="2" data-note="[SHIFT IN TONE, 7 seconds] Leave a small silence after the last manic pose. No jokes here. First step: 'That was entertaining.' Second: 'But here is the real problem.' Let the room feel the switch. The remaining presentation is evidence-driven: clinical scheduling, secure connectivity, isolated testing, risk controls and human responsibility. This is the hinge from brand mascot to serious service design.">
     <div class="cut-ruler"></div><div class="cut-kicker">THE ENTERTAINMENT ENDS HERE.</div>
-    <h2 class="cut-head"><span class="reveal" data-at="0">NOW.</span><br><span class="reveal" data-at="1">THE <em>REAL</em> PROBLEM.</span></h2>
+    <h2 class="cut-head"><span class="reveal cut-now" data-at="0">NOW.</span><br><span class="reveal cut-real" data-at="1">THE <em>REAL</em> PROBLEM.</span></h2>
     <div class="cut-foot reveal" data-at="1">INVISIBLE CONNECTIVITY / NOT INVISIBLE RESPONSIBILITY.</div>
   </section>
 
@@ -115,8 +115,16 @@
     <div class="brain-diagram">
       <div class="brain-inputs reveal" data-at="1"><div class="tiny">TRUSTED INPUTS</div><b>OR SCHEDULE</b><b>DEVICE INVENTORY</b><b>MAINTENANCE RULES</b></div>
       <div class="brain-swarm"><div class="swarm-caption">SPECIALIST ANALYSIS</div><div class="swarm-agent a-schedule reveal" data-at="2"><small>A1</small><b>SCHEDULE<br>SCOUT</b><span>IDLE WINDOWS</span></div><div class="swarm-agent a-risk reveal" data-at="2"><small>A2</small><b>RISK<br>SENTINEL</b><span>EMERGENCY BUFFER</span></div><div class="swarm-agent a-preflight reveal" data-at="3"><small>A3</small><b>PREFLIGHT<br>AGENT</b><span>SHADOW TESTS</span></div></div>
-      <svg class="brain-lines" viewBox="0 0 1700 450" preserveAspectRatio="none" aria-hidden="true"><path d="M346 227 H404 M404 136 V390 M404 136 H462 M404 263 H462 M404 390 H462 M684 136 H891 L1006 227 M684 263 H950 L1006 227 M684 390 H891 L1006 227 M1321 227 H1370" fill="none" stroke="#4ed5c9" stroke-width="3" stroke-dasharray="8 10"/></svg>
-      <div class="brain-core reveal" data-at="3"><small>DECISION LAYER</small><strong>ORCHESTRATOR</strong><span>RECOMMENDATION ≠ AUTHORIZATION</span></div>
+      <svg class="brain-lines" viewBox="0 0 1700 450" preserveAspectRatio="none" aria-hidden="true">
+      <path class="signal-path input-path" pathLength="100" d="M346 227 H405" />
+      <path class="signal-path fan-path" pathLength="100" d="M405 136 V390 M405 136 H462 M405 263 H462 M405 390 H462" />
+      <path class="signal-path analysis-path" pathLength="100" d="M684 136 H891 L1006 227 M684 263 H950 L1006 227 M684 390 H891 L1006 227" />
+      <path class="signal-path approval-path" pathLength="100" d="M1321 227 H1370" />
+      <circle class="signal-packet pkt-a" cx="405" cy="136" r="6" />
+      <circle class="signal-packet pkt-b" cx="405" cy="263" r="6" />
+      <circle class="signal-packet pkt-c" cx="405" cy="390" r="6" />
+    </svg>
+    <div class="brain-core reveal" data-at="3"><small>DECISION LAYER</small><strong>ORCHESTRATOR</strong><span>RECOMMENDATION ≠ AUTHORIZATION</span></div>
       <div class="brain-output reveal" data-at="4"><small>HUMAN + POLICY GATE</small><b>APPROVE<br>MISSION</b><span>OR BLOCK</span></div>
     </div>
     <div class="brain-caption reveal" data-at="4">AGENTS PROPOSE. RULES CONSTRAIN. PEOPLE AUTHORIZE.</div>
@@ -127,7 +135,7 @@
     <div class="eyebrow dark">05 / FINDING THE GOLDEN WINDOW</div>
     <h2 class="schedule-head">NOT EVERY EMPTY SLOT<br>IS AN <em>OPPORTUNITY.</em></h2>
     <div class="schedule-workbench">
-      <div class="schedule-chart"><div class="schedule-header"><span>THEATRE / DEVICE</span><div id="schedule-hours"></div></div><div id="schedule-lanes"></div><div class="schedule-legend"><i></i> BOOKED SURGERY <i></i> IDLE <i></i> CANDIDATE <i></i> APPROVAL REQUIRED</div></div>
+      <div class="schedule-chart"><div class="schedule-header"><span>THEATRE / DEVICE</span><div id="schedule-hours"></div></div><div id="schedule-lanes"></div><div class="sched-scanbeam" aria-hidden="true"></div><div class="schedule-legend"><i></i> BOOKED SURGERY <i></i> IDLE <i></i> CANDIDATE <i></i> APPROVAL REQUIRED</div></div>
       <aside class="schedule-insights"><div class="insights-index">ANALYSIS <span id="insight-number">00 / 04</span></div><div class="insight-name" id="insight-name">FULL THEATRE DAY</div><p id="insight-summary">Five C-arms, overlapping cases, uncertainty and a maintenance backlog.</p><div class="insight-mini" id="insight-mini">AWAITING ANALYSIS</div><div class="candidate-box"><small>HIGHEST-RANKED ELIGIBLE WINDOW</small><div class="candidate-time" id="candidate-time">—</div><div class="candidate-desc" id="candidate-desc">No recommendation before constraints are checked.</div></div><div class="insight-disclaimer">SYNTHETIC DATA · HEURISTIC SCORES FOR DEMONSTRATION ONLY</div></aside>
     </div>
     <div class="schedule-foot">AVAILABILITY <span>×</span> RISK <span>×</span> READINESS <span>×</span> SUPERVISION</div>
@@ -139,7 +147,7 @@
     <h2 class="sandbox-head">A DRY RUN IS<br>CHEAPER THAN <em>DOWNTIME.</em></h2>
     <div class="sandbox-workbench"><div class="live-device"><div class="window-bar"><i></i><span>CLINICAL DEVICE / CRM—041</span><small>ISOLATED</small></div><div class="live-graphic"><div class="device-ring"></div><span>IN SERVICE</span></div><div class="live-note">NO UPDATE EXECUTED HERE UNTIL APPROVAL.</div></div>
       <div class="sandbox-arrow"><svg viewBox="0 0 110 80"><path d="M0 40 H96 M78 22 L96 40 L78 58" fill="none" stroke="currentColor" stroke-width="6"/></svg><b>SNAPSHOT</b></div>
-      <div class="shadow-device"><div class="window-bar"><i></i><span>ISOLATED PREFLIGHT / SHADOW ENVIRONMENT</span><small>SIMULATED</small></div><div class="shadow-log"><div class="log-line reveal" data-at="0"><code>01</code><span>Load approved configuration snapshot</span><b>READY</b></div><div class="log-line reveal" data-at="1"><code>02</code><span>Check package identity &amp; signature</span><b>PASS*</b></div><div class="log-line reveal" data-at="2"><code>03</code><span>Test parameter restoration</span><b class="error">CONFLICT</b></div><div class="log-line reveal" data-at="3"><code>04</code><span>Prevent deployment, escalate ticket</span><b class="hold">HALT</b></div></div><div class="shadow-status" id="shadow-status">SANDBOX AWAITS TEST SEQUENCE</div></div>
+      <div class="shadow-device"><div class="window-bar"><i></i><span>ISOLATED PREFLIGHT / SHADOW ENVIRONMENT</span><small>SIMULATED</small></div><div class="shadow-log"><div class="log-line reveal" data-at="0"><code>01</code><span>Load approved configuration snapshot</span><b>READY</b></div><div class="log-line reveal" data-at="1"><code>02</code><span>Check package identity &amp; signature</span><b>PASS*</b></div><div class="log-line reveal" data-at="2"><code>03</code><span>Test parameter restoration</span><b class="error">CONFLICT</b></div><div class="log-line reveal" data-at="3"><code>04</code><span>Prevent deployment, escalate ticket</span><b class="hold">HALT</b></div></div><div class="shadow-status" id="shadow-status">SANDBOX AWAITS TEST SEQUENCE</div><div class="sandbox-progress"><i></i></div></div>
     </div><div class="sandbox-foot reveal" data-at="3">THE SAFE OUTCOME OF A FAILED PREFLIGHT IS <strong>NO DEPLOYMENT.</strong></div>
   </section>
 
@@ -148,9 +156,9 @@
     <div class="eyebrow dark">07 / THE MISSION — NO CLINICAL INTERRUPTION</div><h2 class="robot-head">SERVICE COMES<br>TO THE MACHINE.</h2>
     <div class="service-map" id="service-map">
       <div class="map-floor-lines" aria-hidden="true"></div><div class="map-room-label">PARKING BAY / MAINTENANCE-ELIGIBLE DEVICE</div>
-      <div class="map-device"><img src="assets/lonely.webp" alt="Illustrated parked C-arm"/></div><div class="map-ketty" id="map-ketty"><img src="assets/ketty.webp" alt="Illustrated maintenance robot"/></div>
+      <div class="map-device"><img class="service-carm-lonely" src="assets/lonely.webp" alt="Illustrated parked C-arm"><img class="service-carm-happy" src="assets/bliss.webp" alt="C-arm after completed routine service"></div><div class="map-auth-tag" aria-live="polite"><span>DEVICE CRM—041</span><b>IDENTITY VERIFIED · AUTHORIZED</b></div><div class="map-ketty" id="map-ketty"><img src="assets/ketty.webp" alt="Illustrated maintenance robot"/></div>
       <svg class="map-connection" viewBox="0 0 1694 420" preserveAspectRatio="none" aria-hidden="true"><path class="map-cable" d="M 737 211 C 879 220 1022 325 1255 286" stroke="#00a89e" stroke-width="9" fill="none" stroke-linecap="round"/><circle cx="1255" cy="286" r="13" fill="#fa7b39"/></svg>
-      <div class="map-status" id="map-status">AWAITING AN APPROVED MISSION</div>
+      <div class="map-status" id="map-status" aria-live="polite">AWAITING AN APPROVED MISSION</div>
     </div>
     <div class="service-pipeline"><div class="mission-step" data-mission="0">01 / IDENTIFY</div><div class="mission-step" data-mission="1">02 / DISPATCH</div><div class="mission-step" data-mission="2">03 / AUTHENTICATE</div><div class="mission-step" data-mission="3">04 / SYNCHRONIZE</div><div class="mission-step" data-mission="4">05 / HANDOFF</div></div>
     <div class="service-disclaimer">PHYSICAL DOCKING &amp; INTERFACES ARE A PROTOTYPE HYPOTHESIS, NOT A VERIFIED DEVICE CAPABILITY.</div>
@@ -171,7 +179,7 @@
     <div class="final-contrast reveal" data-at="1">AI IS EVERYWHERE.</div>
     <div class="final-iai reveal" data-at="2"><small>IT IS TIME FOR</small><strong>I<span>A</span>I.</strong><p>INVISIBLE AGENTIC INTELLIGENCE</p></div>
     <div class="final-thanks reveal" data-at="3">THANK YOU. <span>ANY <b>TECHNICAL</b> QUESTIONS?</span></div>
-    <div class="final-ketty reveal" data-at="3"><img src="assets/ketty.webp" alt="KettyBot mascot winking"><div class="wink-light" aria-hidden="true">♡</div></div>
+    <div class="final-ketty reveal" data-at="3"><img src="assets/ketty.webp" alt="KettyBot mascot looking toward the audience"><span class="ketty-eye-wink" aria-hidden="true"></span><div class="wink-light" aria-hidden="true">♡</div></div>
     <div class="final-credit">C-ARMAGOTCHI / UNOFFICIAL CONCEPT / NO DEVICE CONNECTION OR CLINICAL CLAIMS</div>
   </section>
 

@@ -75,24 +75,46 @@
     const state=scheduleStates[clamp(s,0,4)];
     ['insight-number','insight-name','insight-summary','insight-mini','candidate-time','candidate-desc'].forEach((id,i)=>{document.getElementById(id).textContent=state[i];});
     $('#schedule-lanes').querySelectorAll('.sched-row').forEach((row,i)=>{
+      row.classList.toggle('scan-on',s>=1);
       row.classList.toggle('scout',s>=1 && i===1);
       row.classList.toggle('risk',s>=2 && (i===0||i===3));
       row.classList.toggle('recommended',s>=3 && i===1);
     });
     $('.schedule-insights').dataset.mode=String(s);
+    $('.schedule-chart').dataset.scan=String(s);
   }
   const phoneStates=[
     ['lonely.webp','NO CONTACT FOR 43 DAYS','“Have you forgotten about me?”','43 DAYS AGO','REQUEST A SERVICE VISIT ↗','idle'],
     ['lonely.webp','IDENTITY CONFIRMED','“You found me. CRM—041.”','43 DAYS AGO','CHECK AVAILABLE SERVICE ↗','checking'],
     ['manic.webp','SERVICE REQUEST SENT','“OH. SOMEONE IS COMING.”','PENDING','VIEW SERVICE STATUS ↗','queued'],
-    ['bliss.webp','MISSION ACCEPTED','“Ahh… a connection at last.”','PENDING SYNC','MISSION QUEUED ✓','connected']
+    ['bliss.webp','SERVICE VISIT CONFIRMED','“Ahh… help is on its way.”','AWAITING SYNC','MISSION QUEUED ✓','connected']
   ];
+  let phoneShown = -1;
+  let activePhoneLayer = 0;
   function phoneStep(s){
     const v=phoneStates[clamp(s,0,phoneStates.length-1)];
-    $('#phone-mascot').src=`assets/${v[0]}`;
+    if (phoneShown !== s) {
+      const current=document.getElementById(activePhoneLayer===0?'phone-mascot-a':'phone-mascot-b');
+      const next=document.getElementById(activePhoneLayer===0?'phone-mascot-b':'phone-mascot-a');
+      const target=`assets/${v[0]}`;
+      const sameImage=current.getAttribute('src')===target;
+      if (!sameImage) {
+        next.setAttribute('src',target);
+        next.classList.add('current');current.classList.remove('current');
+        activePhoneLayer=1-activePhoneLayer;
+      }
+      if (phoneShown>=0 && !reduced) {
+        const textElements=['phone-state','phone-quote','phone-sync','phone-action'];
+        for(const id of textElements){document.getElementById(id).animate([
+          {opacity:.30,transform:'translateY(7px)'},
+          {opacity:1,transform:'translateY(0)'}
+        ],{duration:430,fill:'none',easing:'cubic-bezier(.2,.8,.2,1)'});}
+      }
+    }
     $('#phone-state').textContent=v[1];$('#phone-quote').textContent=v[2];
     $('#phone-sync').textContent=v[3];$('#phone-action').textContent=v[4];
     $('#phone-shell').dataset.mode=v[5];
+    phoneShown=s;
   }
   const moodStates=[
     ['GHOSTED BY<br>THE NETWORK.','“It’s been 43 days since someone connected me.”','STATE / DISCONNECTED',0],
@@ -109,7 +131,7 @@
     $('#mood-count').textContent=`0${s+1} / 06`;
     document.querySelectorAll('.update-char').forEach((el,i)=>el.classList.toggle('on',i===s));
   }
-  const routeStates=['AWAITING AN APPROVED MISSION','ROBOT DISPATCHED / ROUTE AUTHORIZED','DEVICE ID VERIFIED / SECURE CONNECT','SERVICE LOG TRANSFER / SIMULATED','HANDOFF COMPLETE / EXCEPTIONS TO ENGINEER'];
+  const routeStates=['AWAITING AN APPROVED MISSION','ROBOT DISPATCHED / ROUTE AUTHORIZED','DOCKED / DEVICE IDENTIFIED + AUTHENTICATED','SERVICE LOG TRANSFER / SIMULATED','HANDOFF COMPLETE / EXCEPTIONS TO ENGINEER'];
   function robotStep(s){
     $('#service-map').dataset.action=String(s);
     $('#map-status').textContent=routeStates[clamp(s,0,routeStates.length-1)];
@@ -118,6 +140,7 @@
   function sandboxStep(s){
     const txt=['SNAPSHOT PREPARED / NO DEVICE CHANGE','IDENTITY + PACKAGE GATE / MOCK PASS','CONFIGURATION CONFLICT DETECTED IN SHADOW TEST','STOPPED / NOTIFY AUTHORIZED TECHNICIAN'];
     $('#shadow-status').textContent=txt[clamp(s,0,3)];
+    $('.shadow-device').dataset.check=String(s);
   }
 
   function sendState(){
@@ -150,6 +173,23 @@
   $('#video-sound').addEventListener('click',e=>{e.stopPropagation();filmSoundOn=!filmSoundOn;film.muted=!filmSoundOn;updateVideoControls();});
   $('#phone-action').addEventListener('click',e=>{e.stopPropagation();if(slide()?.classList.contains('scene-phone'))advance();});
 
+  // Short, actionable presenter cues follow the CURRENT click; the full paragraph remains below.
+  const beatCues = {
+    1:['INTRO / TEAM + CHALLENGE','TAGLINE / THE DEVICE NEEDS SERVICE'],
+    2:['LET THE FILM PLAY / DO NOT NARRATE'],
+    3:['DEADPAN: AUTONOMY','SHOUT: AMERICAAA','CUE LOOKALIKE CAMEO / CUT HARD'],
+    4:['HOLD AN EMPTY STAGE','SLAM TEAM MEMBER 1','SLAM TEAM MEMBER 2','SLAM TEAM MEMBER 3'],
+    5:['OPEN THE PHONE','VERIFY DEVICE ID','REQUEST SERVICE','CONFIRM VISIT (NOT YET CONNECTED)'],
+    6:['LONELY','CRITICALLY UNSTABLE','INSTALLING','BLISSFULLY STABLE','PARAMETER RESTORE FAILED','ROLLBACK / HOLD THE GRIN'],
+    7:['HARD SILENCE: NOW','THE REAL PROBLEM / BE SERIOUS'],
+    8:['THE DEVICE IS A TOOL','STAFF HAVE NO SPARE TIME','POWER AND NETWORK ARE PHYSICAL CONSTRAINTS','INSTALLATION IS NOT A SMALL DOWNLOAD'],
+    9:['PROPOSED ARCHITECTURE','SHOW TRUSTED INPUTS','SPECIALISTS SCOUT + PRICE UNCERTAINTY','PREFLIGHT + ORCHESTRATION','HUMAN POLICY GATE'],
+    10:['FULL SYNTHETIC CASELOAD','SCOUT SHORTLIST','RISK REJECTION','DEVICE READINESS','PROPOSAL ONLY, PENDING APPROVAL'],
+    11:['SNAPSHOT READY','SIGNATURE / IDENTITY CHECK','RESTORE CONFLICT DETECTED','BLOCK THE DEPLOYMENT'],
+    12:['APPROVED MISSION IS QUEUED','ROBOT TRAVELS','IDENTITY VERIFIED AT PARKING BAY','DOCK + SYNCHRONIZE LOGS','HAND OFF EXCEPTIONS'],
+    13:['CLINICAL CONTROL IS NON-NEGOTIABLE','ROUTINE CONNECTIVITY ONLY','CALIBRATION AND RELEASE NEED HUMANS'],
+    14:['SURGEONS NEED TIME','AI IS EVERYWHERE','IAI: INVISIBLE AGENTIC INTELLIGENCE','KETTYBOT WINK / TECHNICAL QUESTIONS']
+  };
   function render({forward=false,instant=false,hash=true,broadcast=true}={}){
     index=clamp(index,0,deck().length-1);step=clamp(step,0,steps(slide())-1);
     const el=slide(); const justEntered=currentSlideId!==el;
@@ -179,7 +219,8 @@
     $('#chrome-section').textContent=appendix?'TECHNICAL APPENDIX / Q&A':(index<6?'HEALTHCARE HACKATHON 2026 / CHALLENGE 04':'INVISIBLE CONNECTIVITY / SYSTEM DESIGN');
     const progress=(index+(step+1)/steps(el))/deck().length*100;
     $('#progress-line').style.width=progress+'%';
-    $('#notes-text').textContent=el.dataset.note||'';
+    const beat = !appendix ? beatCues[index+1]?.[step] : null;
+    $('#notes-text').textContent=(beat ? `CURRENT CLICK: ${beat}\n\n` : '')+(el.dataset.note||'');
     $('#notes-panel').classList.toggle('show',notes);
     if(forward && !reduced){
       if(el.classList.contains('scene-team') && step>0)sound('impact-sound',.34);

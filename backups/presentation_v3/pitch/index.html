@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090c0e">
+<meta name="description" content="C-ARMAGOTCHI — interactive hackathon pitch: invisible connectivity for mobile C-arms.">
+<title>C-ARMAGOTCHI / Invisible Connectivity</title>
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<div id="stage" role="application" aria-label="C-ARMAGOTCHI interactive presentation">
+  <div class="chrome"><span class="chrome-brand">C—A<span class="brand-dot">.</span></span><span id="chrome-section">HEALTHCARE HACKATHON 2026 / CHALLENGE 04</span><span class="chrome-index" id="deck-position">01 / 14</span></div>
+
+  <!-- 01 / COVER -->
+  <section class="slide scene-cover active theme-dark" data-title="C-ARMAGOTCHI / TEAM INTRO" data-steps="2" data-note="[LIVE, 10 seconds] The opening needs to feel as considered as TALOS: give the project and challenge a proper introduction. Say: 'We're team C-ARMAGOTCHI. Challenge four: Invisible Connectivity for Mobile C-arms, presented by Siemens Healthineers.' These are placeholder team slots—replace them with actual team member names before the final. Then: 'We have a short case study.' Advance directly into the supplied video, without explaining the joke.">
+    <div class="cover-grid" aria-hidden="true"></div>
+    <div class="eyebrow white">HEALTHCARE HACKATHON BAYERN 2026 <i></i> SIEMENS HEALTHINEERS</div>
+    <div class="cover-main"><div class="microhead">TEAM / 01—03 <span>WORKING TITLE</span></div><h1>C-ARM<span class="outline">AGOTCHI</span><em>.</em></h1><div class="cover-subline">INVISIBLE CONNECTIVITY<br>FOR MOBILE C-ARMS.</div></div>
+    <div class="cover-bottom reveal" data-at="1"><span>BRING THE SERVICE TO THE DEVICE.</span><b>01 / ENGINEERING A BETTER CONNECTION</b></div>
+    <div class="cover-side" aria-hidden="true">CHALLENGE <b>04</b></div>
+  </section>
+
+  <!-- 02 / USER VIDEO -->
+  <section class="slide scene-video theme-dark" data-title="CHAOS / THE PROBLEM IN 40 SECONDS" data-steps="1" data-note="[FULL 40-second supplied video] This is a deliberately exaggerated creative film, not actual clinical footage or a claim that medical devices behave this way. Do not narrate over it. The clip is deliberately allowed to be absurd. On the last frame, pause for one beat, then advance to the Palmer-inspired interruption. If autoplay with sound is blocked, click the PLAY FILM button; S toggles sound, P pauses, V replays.">
+    <div class="video-label">EXHIBIT A <span>UNOFFICIAL CONCEPT FILM</span></div>
+    <video id="chaos-video" class="chaos-film" playsinline preload="auto" poster="assets/manic_white.webp"><source src="media/chaos_intro.mp4" type="video/mp4">This browser cannot play the attached video.</video>
+    <div class="film-vignette" aria-hidden="true"></div>
+    <div class="film-controls"><button class="film-button" id="video-play" type="button">▶ PLAY FILM</button><button class="film-secondary" id="video-sound" type="button">SOUND ON</button><span id="video-time">00:00 / 00:41</span></div>
+    <div class="film-caption">THAT WAS NOT A WORKFLOW. THAT WAS A CRY FOR HELP.</div>
+  </section>
+
+  <!-- 03 / AMERICA INTERRUPT -->
+  <section class="slide scene-america theme-dark" data-title="THE PALMER LUCKEY INTERRUPTION" data-steps="3" data-note="[LIVE COMEDY, 9 seconds] Completely straight face. Advance one click and yell: 'AUTONOMY!' Advance again: 'AMERICAAAA!' Optionally play the intentionally terrible synthetic eagle screech, if audio is enabled. Your teammate who looks like Palmer Luckey can enter unexpectedly for one second and say: 'I heard you needed autonomous systems.' That is a teammate lookalike—NOT Palmer Luckey, and not an Anduril endorsement. Next click cuts from the joke into the team introductions. No explanation. The subtitle is intentionally tiny because the joke lives on stage.">
+    <div class="us-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="america-topline">AN ENTIRELY UNNECESSARY AUTONOMY INTERVENTION</div>
+    <div class="america-word a1 reveal" data-at="0">AUTONOMY<span>.</span></div>
+    <div class="america-word a2 reveal" data-at="1">AMERICAAA<span>!</span></div>
+    <div class="america-foot reveal" data-at="2"><strong>SCREEEEEECH—</strong><span>THE PALMER LOOKALIKE HAS ENTERED THE ROOM.</span></div>
+    <svg class="america-star" viewBox="0 0 320 320" aria-hidden="true"><path d="M160 14 L186 121 L307 128 L216 192 L243 307 L158 238 L67 308 L97 193 L11 128 L131 120 Z" fill="none" stroke="currentColor" stroke-width="7"/></svg>
+    <div class="disclaimer-min">TEAMMATE CAMEO ONLY · NO ANDURIL / PALMER LUCKEY AFFILIATION</div>
+  </section>
+
+  <!-- 04 / TEAM SLAM -->
+  <section class="slide scene-team theme-dark" data-title="THE TEAM / THREE ENTRANCES" data-steps="4" data-note="[LIVE, 15 seconds] Three names are placeholders. Replace text in this slide and (optionally) SVG avatars with your actual names or photos. Hit each right arrow with the team member entering or posing in sync; each card slams into position with a sharp screen impact. 'Our team. Three people. One problem.' Each person states just their role or a short joke, then the final click tightens into the promise: 'We'll make maintenance feel invisible.' Do not spend more than 15 seconds on biography.">
+    <div class="eyebrow white">BEHIND THE VERY SERIOUS SCIENCE</div>
+    <h2 class="team-heading">MEET THE<br><span>UNLIKELY</span> TEAM.</h2>
+    <div class="team-stage">
+      <article class="team-member member-1 reveal slam" data-at="1"><div class="member-portrait surgical"><svg viewBox="0 0 350 390" aria-hidden="true"><path d="M71 382 Q76 264 155 254 L217 254 Q290 275 302 382Z" fill="#1eb3ac" stroke="#06161a" stroke-width="9"/><path d="M138 267 L174 316 L210 267" fill="none" stroke="#e8f7f4" stroke-width="13"/><ellipse cx="177" cy="164" rx="79" ry="89" fill="#e3b59c" stroke="#06161a" stroke-width="9"/><path d="M99 131 Q101 61 179 50 Q269 63 259 133 Q186 110 99 131" fill="#1b8b8b" stroke="#06161a" stroke-width="9"/><rect x="108" y="174" width="136" height="54" rx="20" fill="#e8f7f4" stroke="#06161a" stroke-width="7"/><path d="M87 108 Q180 80 268 107" stroke="#e7f9f5" stroke-width="8" fill="none"/><circle cx="133" cy="345" r="17" fill="#fb7f49"/></svg></div><div class="member-copy"><small>01 / CLINICAL CHAOS</small><b>TEAMMATE 01</b><span>THE OR INSIDER</span></div></article>
+      <article class="team-member member-2 reveal slam" data-at="2"><div class="member-portrait tech"><svg viewBox="0 0 350 390" aria-hidden="true"><path d="M40 380 Q58 280 133 261 L241 262 Q312 283 322 380Z" fill="#ff7c3e" stroke="#06161a" stroke-width="9"/><rect x="121" y="270" width="116" height="112" rx="22" fill="#1a272b"/><path d="M111 155 Q111 75 184 70 Q260 70 263 157 L261 207 Q244 271 187 267 Q132 271 111 210Z" fill="#deb097" stroke="#06161a" stroke-width="9"/><path d="M110 143 Q99 45 187 47 Q266 47 267 146 L231 129 L211 96 L153 139Z" fill="#0c1720"/><rect x="104" y="165" width="154" height="30" rx="14" fill="none" stroke="#06161a" stroke-width="10"/><path d="M120 181 L257 181" stroke="#28ddcf" stroke-width="5"/><circle cx="183" cy="317" r="24" fill="#27d2c6"/></svg></div><div class="member-copy"><small>02 / ENGINEERING</small><b>TEAMMATE 02</b><span>THE SYSTEMS BUILDER</span></div></article>
+      <article class="team-member member-3 reveal slam" data-at="3"><div class="member-portrait cameo"><svg viewBox="0 0 350 390" aria-hidden="true"><path d="M47 383 Q64 261 162 252 L241 252 Q293 271 310 383Z" fill="#c4b58f" stroke="#06161a" stroke-width="9"/><ellipse cx="183" cy="154" rx="79" ry="95" fill="#e8c3a3" stroke="#06161a" stroke-width="9"/><path d="M104 123 Q82 43 182 51 Q278 37 262 124 Q233 98 197 94 Q153 99 104 123" fill="#b38e62"/><path d="M109 151 L258 151 M137 151 L141 176 M225 151 L220 176" stroke="#06161a" stroke-width="12"/><rect x="124" y="147" width="54" height="31" rx="12" fill="#21363a"/><rect x="201" y="147" width="51" height="31" rx="12" fill="#21363a"/><path d="M155 218 Q181 240 213 216" fill="none" stroke="#682d28" stroke-width="7" stroke-linecap="round"/></svg></div><div class="member-copy"><small>03 / AUTONOMY</small><b>TEAMMATE 03</b><span>NOT PALMER LUCKEY</span></div></article>
+    </div>
+    <div class="team-punch reveal" data-at="3">THREE HUMANS. <em>ONE DEVICE THAT NEEDS HELP.</em></div>
+  </section>
+
+  <!-- 05 / PHONE LIVE DEMO -->
+  <section class="slide scene-phone theme-paper" data-title="C-ARMAGOTCHI / THE APP" data-steps="4" data-note="[DEMO, 20 seconds] Play this as a genuine product demonstration. 'The C-arm has a state the staff can understand.' The app uses a phone-like form factor only as an interface concept; no real hospital device is connected. Step through: disconnected / check equipment ID / request service / mission queued. Click the phone button or use the clicker. The interface intentionally communicates only essential states. Say: 'Our actual innovation isn't an app that makes radiographers play Tamagotchi. It's removing friction so the device can ask for help without demanding new clinical work.'">
+    <div class="eyebrow dark">01 / THE CHARACTERS ARE FUN. THE SIGNAL IS USEFUL.</div>
+    <h2 class="phone-head">MEET YOUR<br><em>TAMAGOTCHI.</em></h2>
+    <div class="phone-explain">A SMALL WINDOW INTO A VERY BIG SERVICE PROBLEM.<br><b>NOT ANOTHER CLINICAL TASK.</b></div>
+    <div class="phone-shell" id="phone-shell"><div class="phone-top">◉ &nbsp; 09:41 <span>●●● ▮</span></div><div class="phone-viewport">
+      <div class="phone-apphead"><span>C—A<span class="orange-text">.</span></span><small>DEVICE CRM—041</small></div>
+      <div class="phone-image" id="phone-image"><img class="phone-layer current" id="phone-mascot-a" src="assets/lonely.webp" alt="C-arm device personality"><img class="phone-layer" id="phone-mascot-b" src="assets/lonely.webp" alt="" aria-hidden="true"></div>
+      <div class="phone-status"><i id="phone-dot"></i><span id="phone-state">NO CONTACT FOR 43 DAYS</span></div>
+      <div class="phone-quote" id="phone-quote">“Have you forgotten about me?”</div>
+      <div class="phone-meta"><span>LAST SYNC <b id="phone-sync">43 DAYS AGO</b></span><span>POWER <b>UNKNOWN</b></span></div>
+      <button type="button" class="phone-action" id="phone-action">REQUEST A SERVICE VISIT ↗</button>
+      <div class="phone-note">SYNTHETIC DEVICE · CONCEPT APP</div>
+    </div><div class="phone-bottom"></div></div>
+    <div class="phone-edge-label">THE DASHBOARD IS THE BRAIN.<br>THE APP IS JUST A VOICE.</div>
+  </section>
+
+  <!-- 06 / CHARACTER MORPH -->
+  <section class="slide scene-moods theme-paper" data-title="THE PERSONALITY STATES" data-steps="6" data-note="[DEMO, 20 seconds] Keep the original image crossfade behavior; these are the character expressions the team already liked. Click through: lonely, chaos, installing, blissful, restoration failure, rollback. Keep the innuendo just below the surface: a tiny 'Ahhh...' at the stable state is enough for a mixed-age room. Note that the restoration failure is based on a failure mode observed in the team's conversations, but the update sequence shown is an artistic representation. Pause on the manic grin. Then say, suddenly without joking: 'Of course, none of this matters if we don't solve the clinical workflow.'">
+    <div class="eyebrow dark">02 / EMOTIONAL TELEMETRY — EXTREMELY SCIENTIFIC</div>
+    <div class="mood-art" id="mood-art">
+      <img class="update-char" src="assets/lonely.webp" alt="Lonely C-arm">
+      <img class="update-char" src="assets/manic.webp" alt="Chaotic C-arm">
+      <img class="update-char" src="assets/update.webp" alt="Installing software update">
+      <img class="update-char" src="assets/bliss.webp" alt="Suspiciously blissful C-arm">
+      <img class="update-char" src="assets/failure.webp" alt="Restoration error">
+      <img class="update-char" src="assets/rollback.webp" alt="Rolling back software">
+    </div>
+    <div class="mood-copy"><div class="mood-count" id="mood-count">01 / 06</div><h2 id="mood-title">GHOSTED BY<br>THE NETWORK.</h2><p id="mood-line">“It's been 43 days since someone connected me.”</p><div class="mood-progress"><i id="mood-progress"></i></div><div id="mood-system">STATE / DISCONNECTED</div></div>
+    <div class="mood-foot">THE PERSONALITY IS FICTIONAL. THE CONNECTIVITY PROBLEM IS NOT.</div>
+  </section>
+
+  <!-- 07 / TONE CUT -->
+  <section class="slide scene-cut theme-dark" data-title="NOW THE REAL PROBLEM" data-steps="2" data-note="[SHIFT IN TONE, 7 seconds] Leave a small silence after the last manic pose. No jokes here. First step: 'That was entertaining.' Second: 'But here is the real problem.' Let the room feel the switch. The remaining presentation is evidence-driven: clinical scheduling, secure connectivity, isolated testing, risk controls and human responsibility. This is the hinge from brand mascot to serious service design.">
+    <div class="cut-ruler"></div><div class="cut-kicker">THE ENTERTAINMENT ENDS HERE.</div>
+    <h2 class="cut-head"><span class="reveal cut-now" data-at="0">NOW.</span><br><span class="reveal cut-real" data-at="1">THE <em>REAL</em> PROBLEM.</span></h2>
+    <div class="cut-foot reveal" data-at="1">INVISIBLE CONNECTIVITY / NOT INVISIBLE RESPONSIBILITY.</div>
+  </section>
+
+  <!-- 08 / CLINICAL REALITY -->
+  <section class="slide scene-problem theme-paper" data-title="INVISIBLE CONNECTIVITY" data-steps="4" data-note="[TECHNICAL, 20 seconds] Name the need plainly. Mobile C-arms follow the clinical day: active in surgery, then moved, parked and often switched off. Device service needs a narrow opportunity to connect and exchange logs; radiographers are occupied with patient care. We cannot assume powered-off devices can be contacted. The problem is a mismatch of two timelines, the clinical schedule and the maintenance schedule. Our system identifies when the two can safely meet. Every diagram shown is synthetic and illustrative, not a live hospital schedule.">
+    <div class="eyebrow dark">03 / WHAT SIEMENS ACTUALLY ASKED FOR</div>
+    <h2 class="problem-head">CLINICAL TIME<br>IS <em>NOT</em> SERVICE TIME.</h2>
+    <div class="problem-timeline">
+      <div class="pt-label">A C-ARM'S DAY</div>
+      <div class="pt-track"><div class="pt-block busy" style="--left:0%;--width:27.27%">SURGERY</div><div class="pt-block move" style="--left:27.27%;--width:9.09%">MOVE</div><div class="pt-block off" style="--left:36.36%;--width:27.27%">PARKED / OFF</div><div class="pt-block busy" style="--left:63.63%;--width:36.37%">NEXT CASE</div></div>
+      <div class="pt-times"><span>08:00</span><span>11:00</span><span>12:00</span><span>15:00</span><span>19:00</span></div>
+    </div>
+    <div class="problem-under">
+      <div class="problem-fact reveal" data-at="1"><span class="num">01</span><b>CARE FIRST.</b><p>Clinical staff cannot become part-time IT operators.</p></div>
+      <div class="problem-fact reveal" data-at="2"><span class="num">02</span><b>POWER IS REAL.</b><p>Offline means offline. Software cannot connect to an unpowered machine.</p></div>
+      <div class="problem-fact reveal" data-at="3"><span class="num">03</span><b>UPDATES ARE COMPLEX.</b><p>Backup → install → restore → verify; some steps require supervision.</p></div>
+    </div>
+    <div class="problem-foot">THE OPPORTUNITY ISN'T A BIGGER DOWNLOAD. IT'S A BETTER MOMENT.</div>
+  </section>
+
+  <!-- 09 / AGENT ARCHITECTURE -->
+  <section class="slide scene-brain theme-dark" data-title="THE INVISIBLE AGENTIC SERVICE LAYER" data-steps="5" data-note="[TECHNICAL, 25 seconds] Introduce the architecture as a concept, not an installed Siemens service stack. Source inputs: an approved hospital theatre schedule, device identity/version/power/connectivity status, maintenance catalog, plus hospital-specific clearance policy. Three specialist agent roles: Schedule Scout finds idle windows; Risk Sentinel discounts emergency and overrun exposure; Preflight checks service compatibility in an isolated shadow environment. An orchestrator combines suggestions. Crucially, a deterministic safety policy and authorized humans gate the plan; LLM agents do not sign firmware or unilaterally deploy it. The robot is an optional physical endpoint. These are proposed modules, not deployed AI agents.">
+    <div class="eyebrow white">04 / THE SYSTEM — NOT THE MASCOT</div>
+    <h2 class="brain-head">THE WORK HAPPENS<br><span>BETWEEN</span> SURGERIES.</h2>
+    <div class="brain-diagram">
+      <div class="brain-inputs reveal" data-at="1"><div class="tiny">TRUSTED INPUTS</div><b>OR SCHEDULE</b><b>DEVICE INVENTORY</b><b>MAINTENANCE RULES</b></div>
+      <div class="brain-swarm"><div class="swarm-caption">SPECIALIST ANALYSIS</div><div class="swarm-agent a-schedule reveal" data-at="2"><small>A1</small><b>SCHEDULE<br>SCOUT</b><span>IDLE WINDOWS</span></div><div class="swarm-agent a-risk reveal" data-at="2"><small>A2</small><b>RISK<br>SENTINEL</b><span>EMERGENCY BUFFER</span></div><div class="swarm-agent a-preflight reveal" data-at="3"><small>A3</small><b>PREFLIGHT<br>AGENT</b><span>SHADOW TESTS</span></div></div>
+      <svg class="brain-lines" viewBox="0 0 1700 450" preserveAspectRatio="none" aria-hidden="true">
+      <path class="signal-path input-path" pathLength="100" d="M346 227 H405" />
+      <path class="signal-path fan-path" pathLength="100" d="M405 136 V390 M405 136 H462 M405 263 H462 M405 390 H462" />
+      <path class="signal-path analysis-path" pathLength="100" d="M684 136 H891 L1006 227 M684 263 H950 L1006 227 M684 390 H891 L1006 227" />
+      <path class="signal-path approval-path" pathLength="100" d="M1321 227 H1370" />
+      <circle class="signal-packet pkt-a" cx="405" cy="136" r="6" />
+      <circle class="signal-packet pkt-b" cx="405" cy="263" r="6" />
+      <circle class="signal-packet pkt-c" cx="405" cy="390" r="6" />
+    </svg>
+    <div class="brain-core reveal" data-at="3"><small>DECISION LAYER</small><strong>ORCHESTRATOR</strong><span>RECOMMENDATION ≠ AUTHORIZATION</span></div>
+      <div class="brain-output reveal" data-at="4"><small>HUMAN + POLICY GATE</small><b>APPROVE<br>MISSION</b><span>OR BLOCK</span></div>
+    </div>
+    <div class="brain-caption reveal" data-at="4">AGENTS PROPOSE. RULES CONSTRAIN. PEOPLE AUTHORIZE.</div>
+  </section>
+
+  <!-- 10 / GOLDEN WINDOWS -->
+  <section class="slide scene-schedule theme-paper" data-title="THE GOLDEN WINDOW" data-steps="5" data-note="[TECHNICAL LIVE SIMULATION, 30 seconds] This schedule is SYNTHETIC, not real patient data. Show that the AI is not merely looking for empty white space. Schedule Scout proposes idle windows. Risk Sentinel rejects a short midday gap and a high-uncertainty on-call interval; estimated emergency exposure is a scenario input, not a clinically validated prediction. Device Preflight checks whether the specific C-arm is available, powered, compatible and eligible for the task. The recommended 19:30–22:45 slot is marked pending approval. Distinguish short log-sync tasks from long backup/install/restore updates. Tell the audience: 'A golden window is a safe candidate, not permission to start an update.'">
+    <div class="eyebrow dark">05 / FINDING THE GOLDEN WINDOW</div>
+    <h2 class="schedule-head">NOT EVERY EMPTY SLOT<br>IS AN <em>OPPORTUNITY.</em></h2>
+    <div class="schedule-workbench">
+      <div class="schedule-chart"><div class="schedule-header"><span>THEATRE / DEVICE</span><div id="schedule-hours"></div></div><div id="schedule-lanes"></div><div class="sched-scanbeam" aria-hidden="true"></div><div class="schedule-legend"><i></i> BOOKED SURGERY <i></i> IDLE <i></i> CANDIDATE <i></i> APPROVAL REQUIRED</div></div>
+      <aside class="schedule-insights"><div class="insights-index">ANALYSIS <span id="insight-number">00 / 04</span></div><div class="insight-name" id="insight-name">FULL THEATRE DAY</div><p id="insight-summary">Five C-arms, overlapping cases, uncertainty and a maintenance backlog.</p><div class="insight-mini" id="insight-mini">AWAITING ANALYSIS</div><div class="candidate-box"><small>HIGHEST-RANKED ELIGIBLE WINDOW</small><div class="candidate-time" id="candidate-time">—</div><div class="candidate-desc" id="candidate-desc">No recommendation before constraints are checked.</div></div><div class="insight-disclaimer">SYNTHETIC DATA · HEURISTIC SCORES FOR DEMONSTRATION ONLY</div></aside>
+    </div>
+    <div class="schedule-foot">AVAILABILITY <span>×</span> RISK <span>×</span> READINESS <span>×</span> SUPERVISION</div>
+  </section>
+
+  <!-- 11 / SHADOW PREFLIGHT -->
+  <section class="slide scene-sandbox theme-dark" data-title="THE SHADOW ENVIRONMENT" data-steps="4" data-note="[TECHNICAL, 23 seconds] Here is the sandboxing concept. Before an authorized update window, capture an approved configuration snapshot or use authorized test data. In a segregated test environment, verify package identity and test the configuration migration against the proposed software version. If rehydration is incompatible, surface the exception before touching the clinical device. Critical caveat: this needs manufacturer-supplied compatibility hooks and test fidelity; it cannot establish device safety on its own or substitute for a validated update procedure. The real device stays unchanged until the service gate is approved.">
+    <div class="eyebrow white">06 / FAIL EARLY. BEFORE THE DEVICE DOES.</div>
+    <h2 class="sandbox-head">A DRY RUN IS<br>CHEAPER THAN <em>DOWNTIME.</em></h2>
+    <div class="sandbox-workbench"><div class="live-device"><div class="window-bar"><i></i><span>CLINICAL DEVICE / CRM—041</span><small>ISOLATED</small></div><div class="live-graphic"><div class="device-ring"></div><span>IN SERVICE</span></div><div class="live-note">NO UPDATE EXECUTED HERE UNTIL APPROVAL.</div></div>
+      <div class="sandbox-arrow"><svg viewBox="0 0 110 80"><path d="M0 40 H96 M78 22 L96 40 L78 58" fill="none" stroke="currentColor" stroke-width="6"/></svg><b>SNAPSHOT</b></div>
+      <div class="shadow-device"><div class="window-bar"><i></i><span>ISOLATED PREFLIGHT / SHADOW ENVIRONMENT</span><small>SIMULATED</small></div><div class="shadow-log"><div class="log-line reveal" data-at="0"><code>01</code><span>Load approved configuration snapshot</span><b>READY</b></div><div class="log-line reveal" data-at="1"><code>02</code><span>Check package identity &amp; signature</span><b>PASS*</b></div><div class="log-line reveal" data-at="2"><code>03</code><span>Test parameter restoration</span><b class="error">CONFLICT</b></div><div class="log-line reveal" data-at="3"><code>04</code><span>Prevent deployment, escalate ticket</span><b class="hold">HALT</b></div></div><div class="shadow-status" id="shadow-status">SANDBOX AWAITS TEST SEQUENCE</div><div class="sandbox-progress"><i></i></div></div>
+    </div><div class="sandbox-foot reveal" data-at="3">THE SAFE OUTCOME OF A FAILED PREFLIGHT IS <strong>NO DEPLOYMENT.</strong></div>
+  </section>
+
+  <!-- 12 / EXECUTION -->
+  <section class="slide scene-robot theme-paper" data-title="THE ROBOT GOES TO WORK" data-steps="5" data-note="[WORKFLOW, 22 seconds] It is now time to show the physical service hypothesis. A hospital IT user approves a job. A service robot navigates to a parked machine where this is allowed, identifies the specific device, establishes a physically and cryptographically approved connection, and transmits permitted logs or stages an approved package. Mechanically supervised recalibration remains a technician task. This animation is a concept; we have not demonstrated a KettyBot navigating and connecting to a Siemens C-arm. Use the sound effect 'beep' and give the robot one moment to dock. Keep the actors' exaggeration for the intro, not this technical section.">
+    <div class="eyebrow dark">07 / THE MISSION — NO CLINICAL INTERRUPTION</div><h2 class="robot-head">SERVICE COMES<br>TO THE MACHINE.</h2>
+    <div class="service-map" id="service-map">
+      <div class="map-floor-lines" aria-hidden="true"></div><div class="map-room-label">PARKING BAY / MAINTENANCE-ELIGIBLE DEVICE</div>
+      <div class="map-device"><img class="service-carm-lonely" src="assets/lonely.webp" alt="Illustrated parked C-arm"><img class="service-carm-happy" src="assets/bliss.webp" alt="C-arm after completed routine service"></div><div class="map-auth-tag" aria-live="polite"><span>DEVICE CRM—041</span><b>IDENTITY VERIFIED · AUTHORIZED</b></div><div class="map-ketty" id="map-ketty"><img src="assets/ketty.webp" alt="Illustrated maintenance robot"/></div>
+      <svg class="map-connection" viewBox="0 0 1694 420" preserveAspectRatio="none" aria-hidden="true"><path class="map-cable" d="M 737 211 C 879 220 1022 325 1255 286" stroke="#00a89e" stroke-width="9" fill="none" stroke-linecap="round"/><circle cx="1255" cy="286" r="13" fill="#fa7b39"/></svg>
+      <div class="map-status" id="map-status" aria-live="polite">AWAITING AN APPROVED MISSION</div>
+    </div>
+    <div class="service-pipeline"><div class="mission-step" data-mission="0">01 / IDENTIFY</div><div class="mission-step" data-mission="1">02 / DISPATCH</div><div class="mission-step" data-mission="2">03 / AUTHENTICATE</div><div class="mission-step" data-mission="3">04 / SYNCHRONIZE</div><div class="mission-step" data-mission="4">05 / HANDOFF</div></div>
+    <div class="service-disclaimer">PHYSICAL DOCKING &amp; INTERFACES ARE A PROTOTYPE HYPOTHESIS, NOT A VERIFIED DEVICE CAPABILITY.</div>
+  </section>
+
+  <!-- 13 / SAFETY -->
+  <section class="slide scene-boundary theme-paper" data-title="HUMAN IN CONTROL" data-steps="3" data-note="[SERIOUS, 18 seconds] The robot should take the boring part, never the responsibility. Data access stays on approved manufacturer and hospital interfaces, with role-scoped authentication and audit logs. The planner must not assume that a powered-off device can be contacted. Anything involving motion, room clearance, parameter mismatch or clinical readiness routes to authorized people. The distinction between 'can recommend' and 'can execute' is a feature, not a failure of our design. The predictive risk values were synthetic. No actual patient data is in the demo.">
+    <div class="eyebrow dark">08 / NO SHORTCUTS AROUND SAFETY</div>
+    <h2 class="boundary-head">AUTOMATE THE <em>CHORE.</em><br>KEEP THE <i>AUTHORITY.</i></h2>
+    <div class="boundary-rows"><div class="boundary-row reveal" data-at="1"><span>CAN BE AUTOMATED — IF APPROVED</span><b>Locate · Authenticate · Sync logs · Stage an eligible package</b><i>01</i></div><div class="boundary-row critical reveal" data-at="2"><span>HUMAN + MANUFACTURER PROCEDURE</span><b>Room clearance · Mechanical calibration · Exceptions · Release</b><i>02</i></div></div>
+    <div class="boundary-footer">SCHEDULE RECOMMENDATION ≠ UPDATE AUTHORIZATION.</div>
+  </section>
+
+  <!-- 14 / FINAL -->
+  <section class="slide scene-final theme-dark" data-title="INVISIBLE AGENTIC INTELLIGENCE / THANK YOU" data-steps="4" data-note="[FINALE, 20 seconds] Silence first. 'Surgeons need time. Their job is to save human lives. Our job is to give them that time back.' Reveal the contrast: 'AI is everywhere.' Then say 'What hospitals need is IAI'—tiny pause—'Invisible Agentic Intelligence.' On the last click, KettyBot winks. End deadpan: 'Thank you for listening. Do you have any TECHNICAL questions?' Do not claim results or imply the system is deployed; it is a tested conceptual workflow and a hypothesis for the next pilot. The wink is the only joke in the technical ending.">
+    <div class="eyebrow white">09 / THE POINT OF ALL OF THIS</div>
+    <h2 class="final-line reveal" data-at="0">SURGEONS NEED TIME.<br><em>HUMANS NEED SURGEONS.</em></h2>
+    <div class="final-contrast reveal" data-at="1">AI IS EVERYWHERE.</div>
+    <div class="final-iai reveal" data-at="2"><small>IT IS TIME FOR</small><strong>I<span>A</span>I.</strong><p>INVISIBLE AGENTIC INTELLIGENCE</p></div>
+    <div class="final-thanks reveal" data-at="3">THANK YOU. <span>ANY <b>TECHNICAL</b> QUESTIONS?</span></div>
+    <div class="final-ketty reveal" data-at="3"><img src="assets/ketty.webp" alt="KettyBot mascot looking toward the audience"><span class="ketty-eye-wink" aria-hidden="true"></span><div class="wink-light" aria-hidden="true">♡</div></div>
+    <div class="final-credit">C-ARMAGOTCHI / UNOFFICIAL CONCEPT / NO DEVICE CONNECTION OR CLINICAL CLAIMS</div>
+  </section>
+
+  <!-- TECHNICAL APPENDIX A -->
+  <section class="slide scene-appendix theme-paper" data-appendix data-title="APPENDIX / SYSTEM INTERFACES" data-steps="3" data-note="[TECHNICAL Q&A] Interfaces require owner-approved access. No actual manufacturer API has been obtained. The proposed event schema needs device ID, firmware version, connection status, power state, update class, package eligibility, maintenance constraints, permitted roles, and audit trail. Clinical systems remain authoritative for schedule, not the LLM. The physical robot is an optional service endpoint, not a substitute for existing remote services. The recommendation becomes a work order only after human authorization.">
+    <div class="eyebrow dark">APPENDIX A / PROPOSED DATA CONTRACTS</div><h2 class="appendix-head">THE SYSTEM IS ONLY AS GOOD<br>AS ITS <em>INTERFACES.</em></h2>
+    <div class="appendix-grid"><div class="appendix-panel reveal" data-at="0"><small>DEVICE</small><b>identity · model · version<br>power · network · service class</b></div><div class="appendix-panel reveal" data-at="1"><small>HOSPITAL</small><b>theatre booking · time buffer<br>service area · clinical clearance</b></div><div class="appendix-panel reveal" data-at="2"><small>SERVICE</small><b>signed packages · audit log<br>rollback protocol · human authority</b></div></div>
+    <div class="appendix-foot">NO DIRECT PATIENT RECORD ACCESS IS ASSUMED.</div>
+  </section>
+  <section class="slide scene-appendix theme-paper" data-appendix data-title="APPENDIX / WHAT TO VALIDATE" data-steps="3" data-note="[TECHNICAL Q&A] Next pilot questions: what exact C-arm model, which power states permit connectivity, what hardware connection is possible, what service APIs are approved, and what update classes permit remote handling? We must measure staff touches, sync coverage, aborted maintenance jobs, early-detected incompatibilities, manual exception rates and device availability. Emergency-risk values and schedules in the presentation are synthetic and NOT clinically validated forecasts. Only an approved pilot can establish ROI.">
+    <div class="eyebrow dark">APPENDIX B / NEXT EXPERIMENTS</div><h2 class="appendix-head">ASSUMPTIONS TO TEST.<br><em>NOT RESULTS TO CLAIM.</em></h2>
+    <div class="appendix-grid"><div class="appendix-panel reveal" data-at="0"><small>TECHNICAL</small><b>model support · docking feasibility<br>power constraints · security controls</b></div><div class="appendix-panel reveal" data-at="1"><small>CLINICAL</small><b>emergency buffers · OR handoff<br>technician supervision</b></div><div class="appendix-panel reveal" data-at="2"><small>ECONOMIC</small><b>minutes saved · sync coverage<br>cost per successful visit</b></div></div>
+    <div class="appendix-foot">SYNTHETIC DEMO DATA / NO PATIENT DATA / NO AUTONOMOUS FIRMWARE DEPLOYMENT.</div>
+  </section>
+
+  <div class="footer"><div class="footer-progress"><i id="progress-line"></i></div><span id="footer-hint">→ NEXT REVEAL &nbsp; F FULLSCREEN &nbsp; N NOTES &nbsp; A APPENDIX &nbsp; ? HELP</span></div>
+</div>
+<div id="notes-panel"><div class="notes-title">PRESENTER NOTES <span>N TO CLOSE</span></div><div id="notes-text"></div></div>
+<div id="black-screen">BLACKOUT · PRESS B TO RETURN</div>
+<div id="help-panel"><div class="help-body"><button id="help-close" type="button">CLOSE ×</button><h2>PRESENTATION CONTROLS</h2><p><b>→ / Space</b> Next reveal &nbsp;&nbsp; <b>←</b> Previous reveal</p><p><b>F</b> Fullscreen &nbsp; <b>N</b> Notes &nbsp; <b>A</b> Technical appendix</p><p><b>B</b> Blackout &nbsp; <b>R</b> Restart &nbsp; <b>Home / End</b> First / last</p><p><b>S</b> Video sound &nbsp; <b>P</b> Video play / pause &nbsp; <b>V</b> Video restart</p><p>On the team slide, replace the three TEAMMATE labels with actual names before presenting.</p></div></div>
+<audio id="impact-sound" preload="auto" src="media/impact.wav"></audio><audio id="screech-sound" preload="auto" src="media/screech.wav"></audio>
+<script src="deck.js"></script>
+</body></html>

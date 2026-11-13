@@ -92,3 +92,20 @@ The project preserves the previous character assets in `pitch/assets/` and the o
 - `README.md`, `DEPLOY.md`, `index.html` — refreshed launch and usage instructions.
 
 The original art is used unchanged under `pitch/assets/`.
+
+
+## v2.1 presentation polish (2026-11-13)
+
+This is a targeted, non-destructive update of the existing 14-scene website:
+
+- Phone personality layers now crossfade instead of swapping `img.src` abruptly.
+- The technical tone-shift has its own controlled typographic reveal.
+- The schedule first scans candidates, then visibly rejects risky idle windows, then proposes an authorization-pending window.
+- The multi-agent diagram draws distinct signal paths per click.
+- The isolated preflight adds visible verification and a no-deployment failure state.
+- The service robot moves first, docks second, and only then reveals a cable for permitted log sync. A completed job changes the C-arm expression.
+- Team entrances settle with subtle impact cues. The closing KettyBot receives one brief wink.
+- Jumping backwards or using deep links settles visual states instantly; forward clicker steps animate normally.
+- Both the inline notes and the second-screen teleprompter include per-click performance cues.
+
+Preserved without changes: supplied chaos MP4, original character image assets, scene and appendix ordering, presentation controls and project design language. This revision does not claim device integration, validated emergency predictions, or autonomous software deployment.

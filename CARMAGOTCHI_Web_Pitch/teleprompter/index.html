@@ -11,7 +11,7 @@ header{position:sticky;top:0;z-index:3;background:#0d2531f5;border-bottom:1px so
 button{font:700 13px 'SFMono-Regular',Consolas,monospace;background:#1c4250;border:1px solid #487681;color:var(--ink);border-radius:6px;padding:11px 15px;cursor:pointer}button:hover{background:#285568}#clock{margin-left:auto;font:800 23px monospace;color:var(--orange)}.live{font:700 12px monospace;color:#b7ccd0}.live.connected{color:var(--teal)}
 main{max-width:1100px;margin:50px auto;padding:0 30px}.meta{font:700 16px monospace;letter-spacing:.18em;color:var(--orange)}
 h1{font-size:clamp(38px,6vw,75px);letter-spacing:-.06em;line-height:.99;margin:24px 0 33px}
-.note{background:#112d39;border-left:5px solid var(--teal);border-radius:0 12px 12px 0;padding:34px 40px;font-size:clamp(23px,2.9vw,36px);line-height:1.5;white-space:pre-wrap}
+.note{font-feature-settings:'kern';background:#112d39;border-left:5px solid var(--teal);border-radius:0 12px 12px 0;padding:34px 40px;font-size:clamp(23px,2.9vw,36px);line-height:1.5;white-space:pre-wrap}
 .footer{font:14px monospace;color:var(--muted);line-height:1.65;margin-top:25px}.counter{display:flex;flex-wrap:wrap;gap:7px;margin-top:35px}.dot{height:7px;width:20px;border-radius:4px;background:#345965}.dot.on{background:var(--teal)}
 kbd{color:#edf9f5;background:#254350;border-radius:4px;padding:4px 6px}
 @media(max-width:750px){header{flex-wrap:wrap}.brand{width:100%}#clock{font-size:18px}main{margin-top:28px}.note{padding:25px}}
@@ -45,7 +45,8 @@ kbd{color:#edf9f5;background:#254350;border-radius:4px;padding:4px 6px}
   const row=notes()[index];
   $('#position').textContent=`${appendix?'TECHNICAL Q&A':'FINAL PITCH'} · SCENE ${String(index+1).padStart(2,'0')} / ${notes().length} · REVEAL ${step+1}`;
   $('#title').textContent=row?.title||'';
-  $('#script').textContent=row?.note||'';
+  const cue=(!appendix ? window.PITCH_BEATS?.[index+1]?.[step] : null);
+  $('#script').textContent=(cue ? 'CURRENT CLICK: '+cue+'\n\n' : '')+(row?.note||'');
   $('#sync').textContent=connected?'● SYNCED TO PITCH':'○ MANUAL MODE';
   $('#sync').classList.toggle('connected',connected);
   $('#counter').innerHTML=notes().map((_,i)=>`<span class="dot ${i===index?'on':''}"></span>`).join('');

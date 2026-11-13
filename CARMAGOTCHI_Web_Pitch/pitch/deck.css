@@ -54,3 +54,147 @@ strong,b{font-weight:850}em{font-style:normal;color:var(--orange)}h1,h2,h3,p{mar
 
 /* Final projector QA: schedule candidates appear in distinct analysis passes. */
 .sched-row.scout .sched-candidate{opacity:.8}.sched-row.risk .sched-rejected{opacity:1}.sched-row.recommended .sched-candidate{opacity:1;background:#00bfaf50}
+
+/* V2.1 / precise interaction refinements, deliberately layered over the existing design. */
+/* One expressive transition per action. No restless animations in the clinical half. */
+:root { --precision-ease:cubic-bezier(.22,1,.36,1); }
+
+/* 03. Military-tech cameo: true typography impact, not a generic fade-up. */
+.scene-america .america-word.a1.reveal {transform:translate3d(-95px,0,0) scaleX(.94);filter:blur(3px);transition:opacity .16s linear,transform .48s var(--precision-ease),filter .32s ease;}
+.scene-america .america-word.a2.reveal {transform:translate3d(110px,0,0) scaleX(1.09);filter:blur(5px);transition:opacity .10s,transform .40s cubic-bezier(.1,1.1,.3,1),filter .28s ease;}
+.scene-america .america-word.a1.reveal.on,.scene-america .america-word.a2.reveal.on {transform:translate3d(0,0,0) scaleX(1);filter:blur(0);}
+.scene-america .us-lines {transition:transform 1s cubic-bezier(.22,1,.24,1),opacity .5s ease;}
+.scene-america[data-step="2"] .us-lines{transform:skewX(-25deg) translateX(600px);opacity:.96;}
+.scene-team[data-step="1"] .team-stage {animation:teamNudgeLeft .35s ease-out;}
+.scene-team[data-step="2"] .team-stage {animation:teamNudgeRight .35s ease-out;}
+.scene-team[data-step="3"] .team-stage {animation:teamNudgeCenter .37s ease-out;}
+@keyframes teamNudgeLeft {0%,100%{transform:translateX(0)}12%{transform:translateX(-8px)}46%{transform:translateX(4px)}}
+@keyframes teamNudgeRight {0%,100%{transform:translateX(0)}12%{transform:translateX(8px)}46%{transform:translateX(-4px)}}
+@keyframes teamNudgeCenter {0%,100%{transform:translateY(0)}18%{transform:translateY(6px)}55%{transform:translateY(-2px)}}
+.team-member.slam.on {will-change:transform,opacity;}
+.team-member.slam.on::before {content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,transparent,#fff7,transparent);opacity:0;animation:impactFlash .42s ease-out .22s;z-index:4;pointer-events:none;}
+@keyframes impactFlash {0%,100%{opacity:0}20%{opacity:.8}}
+
+/* 05. The live phone is still the same mockup. Its DEVICE art now really crossfades. */
+.phone-image {isolation:isolate;}
+.phone-image .phone-layer{position:absolute;left:50%;top:0;width:285px;max-width:none;height:100%;object-fit:contain;opacity:0;transform:translateX(-50%) translateY(13px) scale(.95);transition:opacity .45s ease,transform .7s var(--precision-ease),filter .3s ease;will-change:opacity,transform;}
+.phone-image .phone-layer.current{opacity:1;transform:translateX(-50%) translateY(0) scale(1);}
+.phone-shell[data-mode="queued"] .phone-image .phone-layer.current {transform:translateX(-50%) translateY(-8px) scale(1.035);}
+.phone-shell[data-mode="connected"] .phone-image .phone-layer.current {transform:translateX(-50%) translateY(-12px) scale(1.045);}
+.phone-image::after{content:"";position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:230px;height:10px;border-radius:50%;background:radial-gradient(ellipse,#00a99b25,transparent 70%);z-index:-1;}
+.phone-shell{transition:transform .75s var(--precision-ease),box-shadow .75s var(--precision-ease);}
+.scene-phone.active .phone-shell{transform:rotate(1.6deg) translateY(-5px);}
+.scene-phone .phone-action{transition:background .3s,color .3s,transform .20s,box-shadow .3s;}
+.scene-phone .phone-action:active{transform:scale(.975)}
+#phone-shell[data-mode="connected"] .phone-action{background:#0c6d66;}
+#phone-shell[data-mode="connected"] .phone-status i{background:#00ba9d;box-shadow:0 0 0 5px #00ba9d23;}
+
+/* 07. The comedy dies on a hard, silent typographic cut. */
+.cut-head .cut-now,.cut-head .cut-real{display:inline-block;}
+.cut-head .cut-now{opacity:0;transform:translateY(35px);filter:blur(7px);transition:opacity .18s ease,transform .75s var(--precision-ease),filter .65s ease;}
+.scene-cut.active .cut-now{opacity:1;transform:translateY(0);filter:blur(0)}
+.cut-head .cut-real{opacity:0;transform:translateY(45px);filter:blur(9px);transition:opacity .15s ease,transform .70s var(--precision-ease),filter .55s ease;}
+.scene-cut[data-step="1"] .cut-real{opacity:1;transform:translateY(0);filter:blur(0)}
+
+/* 09. Three analysts route signals through deterministic constraints. */
+.brain-diagram .brain-lines{opacity:.9;}
+.brain-lines .signal-path{stroke:#42cfc4;stroke-width:4;fill:none;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:.2;transition:stroke-dashoffset 1s var(--precision-ease),opacity .55s ease;}
+.brain-lines .signal-packet{fill:#baffef;filter:drop-shadow(0 0 5px #5cebd9);opacity:0;transition:opacity .25s;}
+.brain-diagram[data-analysis="1"] .input-path,.brain-diagram[data-analysis="2"] .input-path,.brain-diagram[data-analysis="3"] .input-path,.brain-diagram[data-analysis="4"] .input-path{stroke-dashoffset:0;opacity:1;}
+.brain-diagram[data-analysis="2"] .fan-path,.brain-diagram[data-analysis="3"] .fan-path,.brain-diagram[data-analysis="4"] .fan-path{stroke-dashoffset:0;opacity:1;}
+.brain-diagram[data-analysis="3"] .analysis-path,.brain-diagram[data-analysis="4"] .analysis-path{stroke-dashoffset:0;opacity:1;}
+.brain-diagram[data-analysis="4"] .approval-path{stroke-dashoffset:0;opacity:1;}
+.brain-diagram[data-analysis="2"] .pkt-a,.brain-diagram[data-analysis="3"] .pkt-a,.brain-diagram[data-analysis="4"] .pkt-a,
+.brain-diagram[data-analysis="2"] .pkt-b,.brain-diagram[data-analysis="3"] .pkt-b,.brain-diagram[data-analysis="4"] .pkt-b,
+.brain-diagram[data-analysis="3"] .pkt-c,.brain-diagram[data-analysis="4"] .pkt-c{opacity:1;}
+.brain-diagram[data-analysis="2"] .a-schedule,.brain-diagram[data-analysis="2"] .a-risk{transition-delay:0s,.1s;}
+.brain-diagram[data-analysis="4"] .brain-output{box-shadow:0 0 0 5px #00b8ac20;}
+
+/* 10. Make the analysis VISIBLE. Candidate windows appear, uncertainty rejects two. */
+.schedule-chart{overflow:hidden;}
+.sched-case{transition:opacity .32s ease;}
+.sched-row.risk .sched-rejected{background:#ff805141;outline:3px dashed #ed6940;opacity:1;}
+.sched-row.recommended .sched-candidate {box-shadow:0 0 0 2px #009a8d inset;}
+.sched-scanbeam{position:absolute;z-index:3;top:78px;bottom:54px;width:3px;left:calc(22px + 186px);background:linear-gradient(0deg,transparent,#0cbcac,#0cbcac,transparent);box-shadow:0 0 26px #00bdad8a;opacity:0;pointer-events:none;}
+.schedule-chart[data-scan="1"] .sched-scanbeam {opacity:1;animation:scheduleSweep 1.1s cubic-bezier(.18,.75,.22,1) forwards;}
+.schedule-chart[data-scan="2"] .sched-scanbeam,.schedule-chart[data-scan="3"] .sched-scanbeam,.schedule-chart[data-scan="4"] .sched-scanbeam{opacity:0;}
+@keyframes scheduleSweep{from{left:calc(22px + 186px)}to{left:calc(100% - 30px)}}
+.schedule-insights .insight-name{transition:color .23s ease;}
+.schedule-insights[data-mode="2"] .insight-name{color:#ffab81;}
+.schedule-insights[data-mode="3"] .insight-name{color:#6ce2d7;}
+.schedule-insights[data-mode="4"] .candidate-time{color:#55ddd0;}
+
+/* 11. Shadows are isolated: the only event on a conflict is a STOP, not an update. */
+.shadow-device{overflow:hidden;}
+.shadow-device::before{content:"";position:absolute;inset:66px 0 17px;pointer-events:none;background:linear-gradient(180deg,transparent 0,#12d6bc0c 45%,#14d9c31c 50%,transparent 55%);transform:translateY(-100%);opacity:0;z-index:2;}
+.shadow-device[data-check="1"]::before,.shadow-device[data-check="2"]::before{opacity:1;animation:shadowScan 1s var(--precision-ease) forwards;}
+@keyframes shadowScan{to{transform:translateY(100%)}}
+.shadow-device[data-check="2"] .window-bar small,.shadow-device[data-check="3"] .window-bar small{color:#ff9678;}
+.shadow-device[data-check="2"] .log-line .error,.shadow-device[data-check="3"] .log-line .error{text-shadow:0 0 13px #ff79565c;}
+.sandbox-progress{position:absolute;bottom:0;left:0;right:0;height:5px;background:#324f53;}
+.sandbox-progress i{display:block;height:100%;width:0;background:#26dbc4;transition:width .67s var(--precision-ease),background .2s;}
+.shadow-device[data-check="0"] .sandbox-progress i{width:16%;}
+.shadow-device[data-check="1"] .sandbox-progress i{width:50%;}
+.shadow-device[data-check="2"] .sandbox-progress i{width:76%;background:#ed7654;}
+.shadow-device[data-check="3"] .sandbox-progress i{width:100%;background:#ed7654;}
+
+/* 12. Robot navigation comes FIRST; a cable only appears AFTER the authenticated dock. */
+.map-device img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .55s ease,transform .72s var(--precision-ease);}
+.map-device .service-carm-happy{opacity:0;transform:translateY(12px) scale(.98)}
+.service-map[data-action="4"] .map-device .service-carm-happy{opacity:1;transform:translateY(-4px) scale(1.015)}
+.service-map[data-action="4"] .map-device .service-carm-lonely{opacity:0}
+.map-ketty{transition:transform 1.16s cubic-bezier(.16,.75,.22,1)!important;}
+.service-map[data-action="1"] .map-ketty{transform:translate3d(170px,0,0)}
+.service-map[data-action="2"] .map-ketty,.service-map[data-action="3"] .map-ketty,.service-map[data-action="4"] .map-ketty{transform:translate3d(410px,0,0)}
+.service-map[data-action="2"] .map-connection{opacity:0}
+.service-map[data-action="3"] .map-connection,.service-map[data-action="4"] .map-connection{opacity:1}
+.service-map[data-action="2"] .map-cable{stroke-dashoffset:650;}
+.service-map[data-action="3"] .map-cable,.service-map[data-action="4"] .map-cable{stroke-dashoffset:0;}
+.map-auth-tag{position:absolute;z-index:3;right:421px;top:130px;background:#f6fbf6;border-left:4px solid #02ada2;padding:11px 15px;opacity:0;transform:translateY(12px);box-shadow:0 6px 18px #193a2d17;transition:opacity .38s,transform .47s var(--precision-ease)}
+.map-auth-tag span{display:block;color:#64807c;font:700 12px 'Courier New',monospace;margin-bottom:6px;}
+.map-auth-tag b{font:800 15px 'Courier New',monospace;color:#0c4d49;}
+.service-map[data-action="2"] .map-auth-tag,.service-map[data-action="3"] .map-auth-tag,.service-map[data-action="4"] .map-auth-tag{opacity:1;transform:translateY(0)}
+.service-map[data-action="4"] .map-status{background:#064d48;}
+.service-map[data-action="4"] .map-device{animation:serviceHappy .7s var(--precision-ease)}
+@keyframes serviceHappy{0%,100%{transform:translateY(0)}55%{transform:translateY(-7px)}}
+
+/* 14. The eye actually WINKS once instead of just displaying a heart forever. */
+.final-ketty{transform-origin:70% 100%;}
+.final-ketty.on{animation:kettyArrival .78s var(--precision-ease) both;}
+@keyframes kettyArrival {0%{transform:translate3d(120px,75px,0) rotate(6deg) scale(.94)}70%{transform:translate3d(-5px,-7px,0) rotate(-1deg) scale(1.015)}100%{transform:none}}
+.ketty-eye-wink{position:absolute;left:344px;top:172px;width:74px;height:22px;background:#141f2b;border-bottom:5px solid #a5fff5;border-radius:20px 15px 25px 28px;transform:rotate(-10deg) scaleY(0);opacity:0;pointer-events:none;}
+.final-ketty.on .ketty-eye-wink{animation:kettyWink 1.9s ease .65s both;}
+@keyframes kettyWink{0%,17%,39%,100%{transform:rotate(-10deg) scaleY(0);opacity:0}24%,31%{transform:rotate(-10deg) scaleY(1);opacity:1}}
+.final-ketty .wink-light{animation:none;opacity:0;}
+.final-ketty.on .wink-light{animation:winkPop 1.1s var(--precision-ease) .86s both;}
+@keyframes winkPop{0%{opacity:0;transform:scale(.3) rotate(-15deg)}44%{opacity:1;transform:scale(1.15) rotate(4deg)}100%{opacity:1;transform:scale(1)}}
+
+/* Preference for reduced motion and resilient clicker performance */
+@media (prefers-reduced-motion:reduce){
+  .slam.on,.scene-team[data-step] .team-stage,.final-ketty.on,.final-ketty.on .ketty-eye-wink,.scene-america .america-word,.shadow-device::before,.sched-scanbeam {animation:none!important;}
+  .phone-image .phone-layer,.cut-head .cut-now,.cut-head .cut-real,.brain-lines .signal-path{transition:none!important;}
+}
+
+/* v2.1: exact instant navigation settle. Clicker transitions animate, deep links do not. */
+#stage.instant *, #stage.instant *::before, #stage.instant *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Docking must finish before any data transfer. No floating plug or early cable. */
+.service-map[data-action="0"] .map-connection,
+.service-map[data-action="1"] .map-connection,
+.service-map[data-action="2"] .map-connection { opacity:0 !important; }
+.service-map[data-action="3"] .map-connection,
+.service-map[data-action="4"] .map-connection { opacity:1; }
+.service-map[data-action="0"] .map-cable,
+.service-map[data-action="1"] .map-cable,
+.service-map[data-action="2"] .map-cable { stroke-dashoffset:650 !important; }
+.service-map[data-action="3"] .map-cable,
+.service-map[data-action="4"] .map-cable { stroke-dashoffset:0; }
+
+/* Maintain readable caption contrast across black-and-white scene transitions. */
+.scene-cut .cut-head .cut-real { white-space:nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  .phone-layer, .final-ketty, .map-connection, .map-cable { animation:none !important;transition:none !important; }
+}
