@@ -37,3 +37,7 @@ ENV/
 *.swp
 *.swo
 *~
+
+# Raw master video exports (keep on local disk; presentation embeds 1080p web-optimized version)
+AIVIDEO_HH2.0*.mp4
+

@@ -71,7 +71,7 @@ Then open in your browser:
 │   │   └── data.js
 │   ├── pitch/                   # Preserved 14-scene full pitch deck
 │   │   ├── assets/              # Character artwork (manic, bliss, rollback, etc.)
-│   │   ├── media/               # 40-second intro video & sound effects
+│   │   ├── media/               # 30-second high-quality intro video (1080p) & sound effects
 │   │   ├── deck.css             # Presentation design & styles
 │   │   ├── deck.js              # Presentation engine
 │   │   └── index.html           # 14-scene slide deck

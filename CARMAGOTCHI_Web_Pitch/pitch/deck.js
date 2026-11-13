@@ -149,7 +149,7 @@
     try{localStorage.setItem(storageKey,JSON.stringify(data));}catch(_){}
   }
   function updateVideoControls(){
-    const t=film.currentTime||0, total=film.duration||41;
+    const t=film.currentTime||0, total=film.duration||30;
     const fmt=n=>`${String(Math.floor(n/60)).padStart(2,'0')}:${String(Math.floor(n%60)).padStart(2,'0')}`;
     $('#video-time').textContent=`${fmt(t)} / ${fmt(total)}`;
     playButton.textContent=film.paused?'▶ PLAY FILM':'❚❚ PAUSE FILM';
