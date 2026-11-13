@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102f32">
+  <meta name="description" content="CARMAGOTCHI by Aloha Robotics. A three-minute interactive pitch about giving mobile medical equipment a service coordinator.">
+  <title>CARMAGOTCHI · ASTRA stage edition</title>
+  <link rel="preload" href="assets/fonts/manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="stage.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <div id="workspace">
+    <main id="viewport" aria-label="CARMAGOTCHI pitch">
+      <div id="stage" data-scene="arrival">
+        <header class="masthead">
+          <a class="wordmark" href="#arrival" aria-label="CARMAGOTCHI opening"><span class="brand-symbol">C<span>•</span></span><span>CARMAGOTCHI<small>ALOHA ROBOTICS</small></span></a>
+          <div class="mast-right"><span class="tiny-dot"></span> INVISIBLE CONNECTIVITY</div>
+        </header>
+
+        <section class="scene arrival active" id="arrival" aria-labelledby="arrival-title">
+          <div class="hero-disc" aria-hidden="true"></div>
+          <div class="arrival-copy"><div class="eyebrow">SHE HAS A SMALL REQUEST</div><h1 id="arrival-title">Meet<br><em>Cora.</em></h1><p>A mobile X-ray machine.<br>A very human problem.</p></div>
+          <img class="hero-cora floating" src="assets/characters/lonely.webp" alt="Cora, an expressive C-arm with sad eyes">
+          <div class="message-bubble"><span class="message-avatar">C</span><div><small>CORA</small><strong>Update available.<br>Anyone?</strong><span class="read-receipt">Delivered. Still waiting.</span></div></div>
+          <div id="film-layer" class="film-layer" hidden>
+            <video id="intro-video" muted playsinline preload="auto" poster="assets/video/cora-poster.jpg" aria-label="Short fictional AI film of Cora racing along a hospital hallway"><source src="assets/video/cora-intro.mp4" type="video/mp4"></video>
+            <span class="film-tag">FICTIONAL CONCEPT FILM</span>
+            <button id="skip-film" class="film-skip">Skip film</button>
+          </div>
+        </section>
+
+        <section class="scene handoff" id="handoff" aria-labelledby="handoff-title" hidden>
+          <div class="eyebrow">THE PROBLEM WE HEARD AT SIEMENS</div>
+          <h2 id="handoff-title">The handover is <em>missing.</em></h2>
+          <svg class="handoff-lines" viewBox="0 0 1440 810" aria-hidden="true"><path d="M353 428 C540 428 540 450 635 450 M806 450 C950 450 925 425 1060 425 M720 552 V655" /></svg>
+          <article class="role role-clinical"><span class="role-icon">+</span><small>CLINICAL TEAM</small><h3>With the<br>patient.</h3><p>Right here.<br>Already occupied.</p></article>
+          <div class="handoff-phone"><div class="phone-island"></div><div class="phone-topline">Cora <span class="offline-dot">OFFLINE</span></div><img src="assets/characters/lonely.webp" alt="Cora waiting for service"><div class="phone-dialogue">“Any time for me?”</div><div class="phone-muted">Parked. Unplugged. Waiting.</div></div>
+          <article class="role role-it"><span class="role-icon">⌘</span><small>IT & BIOMEDICAL</small><h3>Responsible.<br>Elsewhere.</h3><p>The update is visible.<br>The machine is not.</p></article>
+          <div class="service-line"><i></i><span>SERVICE TEAM</span><b>Waiting for a connection.</b></div>
+          <div class="source-tag">Source: team interviews with Siemens challenge owners</div>
+        </section>
+
+        <section class="scene window dark" id="window" aria-labelledby="window-title" hidden>
+          <div class="eyebrow">THE SERVICE COORDINATOR</div>
+          <h2 id="window-title">Find the <em>moment.</em></h2>
+          <p class="scene-subtitle" id="calendar-subtitle">The room is free. The handover isn’t finished.</p>
+          <div class="calendar">
+            <div class="calendar-top"><span>THEATRE & DEVICE PLAN</span><span id="calendar-state" class="calendar-state">LIVE DEMONSTRATION</span></div>
+            <div class="time-axis"><span>DEVICE</span><div><span>17:00</span><span>18:00</span><span>19:00</span><span>20:00</span><span>21:00</span><span>22:00</span><span>23:00</span></div></div>
+            <div id="calendar-rows"></div>
+            <div class="calendar-legend"><span><i class="key-busy"></i> Clinical use</span><span><i class="key-service"></i> Proposed service</span><span><i class="key-reserve"></i> Reserve</span></div>
+          </div>
+          <aside class="plan-aside">
+            <div class="plan-label">PROPOSED APPOINTMENT</div>
+            <strong id="chosen-time">17:30–19:30</strong>
+            <div id="chosen-backup" class="chosen-backup">Fritzi covers Cora.</div>
+            <div id="reason-trace" class="reason-trace"></div>
+            <button type="button" id="emergency-button" class="emergency-button"><span>↯</span> An emergency arrives</button>
+          </aside>
+          <div class="calendar-bottom"><span id="calendar-verdict">A whole service window. An available backup. A proposal.</span><span class="demo-label">SYNTHETIC SCHEDULE · DETERMINISTIC RULES</span></div>
+        </section>
+
+        <section class="scene connect" id="connect" aria-labelledby="connect-title" hidden>
+          <div class="eyebrow">THE LAST METRE</div>
+          <h2 id="connect-title">A calendar can’t <em>plug it in.</em></h2>
+          <div class="connection-stage">
+            <div class="companion-tower"><span class="equipment-label">PROPOSED MOBILE COMPANION</span><img id="robot-art" src="assets/characters/ketty.webp" alt="KettyBot service companion carrying power and network cables"><div class="queue-chip"><i></i> Approved package queued</div></div>
+            <svg class="connection-paths" viewBox="0 0 900 420" aria-hidden="true"><path class="cable power-cable" d="M290 290 C390 405 525 395 638 303"/><path class="cable data-cable" d="M295 240 C405 345 535 350 640 258"/></svg>
+            <div class="connection-labels"><span id="power-label"><i></i> POWER</span><span id="network-label"><i></i> APPROVED ETHERNET</span><span class="return-channel">← PERMITTED LOGS</span></div>
+            <div class="cora-tower"><span class="equipment-label">CORA / PARKED & ACCESSIBLE</span><img id="connection-cora" src="assets/characters/lonely.webp" alt="Cora awaiting a service connection"><div id="connection-status" class="queue-chip">Waiting for a supported connection</div></div>
+          </div>
+          <aside class="physical-note"><small>ONE WORKFLOW.<br>DIFFERENT WAYS TO REACH IT.</small><p>Fixed companion.<br>Mobile companion.<br>Someone on-site.</p><button id="connect-button" class="solid-button">Dispatch companion <span>↗</span></button><span class="demo-label">HARDWARE CONCEPT<br>CONNECTIONS SIMULATED</span></aside>
+          <div class="connect-punch" id="connect-punch">“Finally. Someone who brings a cable.”</div>
+        </section>
+
+        <section class="scene authorize dark" id="authorize" aria-labelledby="authorize-title" hidden>
+          <div class="eyebrow">RECOMMENDATION MEETS RESPONSIBILITY</div>
+          <h2 id="authorize-title">The human<br>has the <em>key.</em></h2>
+          <div class="authority-copy"><span class="keyline"></span><p>Agents coordinate.<br>Rules constrain.<br><strong>People authorize.</strong></p></div>
+          <div class="approval-panel"><div class="approval-person"><span>JL</span><div><b>Jamie Lee</b><small>AUTHORIZED SERVICE LEAD · DEMO ROLE</small></div><i class="shield-icon">✓</i></div>
+            <div class="appointment-row"><span>DEVICE<b>Cora</b></span><span>TASK<b>Security update</b></span></div>
+            <div class="appointment-row"><span>WINDOW<b id="approval-window">—</b></span><span>BACKUP<b id="approval-backup">—</b></span></div>
+            <div id="approval-checks" class="approval-checks"></div>
+            <div class="approval-actions"><button id="approve-button" class="approval-button">Approve this appointment</button><button id="start-button" class="solid-button" disabled>Confirm human start <span>↗</span></button></div>
+            <div id="approval-message" class="approval-message">Approval is tied to this device, task and window.</div>
+          </div>
+          <div class="authority-bottom">Movement and calibration stay with the service technician.</div>
+        </section>
+
+        <section class="scene return" id="return" aria-labelledby="return-title" hidden>
+          <div class="eyebrow">THE LOOP HAS TO CLOSE</div>
+          <h2 id="return-title">We wait for <em>“I’m back.”</em></h2>
+          <div class="return-orbit"><div class="return-ring"></div><img id="return-cora" src="assets/characters/update.webp" alt="Cora during the simulated update"><div id="return-state" class="return-state">INSTALLATION IN PROGRESS</div></div>
+          <div class="return-flow">
+            <div class="return-row" data-return="received"><span>01</span><div><b>Device reports back.</b><small>Technical result recorded.</small></div><i>○</i></div>
+            <div class="return-row" data-return="checked"><span>02</span><div><b>Local checks completed.</b><small>Installation is not clinical release.</small></div><i>○</i></div>
+            <div class="return-row" data-return="released"><span>03</span><div><b>Authorized staff release it.</b><small>The appointment is actually finished.</small></div><i>○</i></div>
+            <button id="return-button" class="solid-button">Receive simulated result <span>↗</span></button>
+            <div id="return-note" class="return-note">Until release, the device stays unavailable.</div>
+          </div>
+          <div class="source-tag">Compressed synthetic sequence · Exceptions remain with the service team</div>
+        </section>
+
+        <section class="scene pilot dark" id="pilot" aria-labelledby="pilot-title" hidden>
+          <div class="eyebrow">A WORKING START</div>
+          <h2 id="pilot-title">Prove the<br><em>handover.</em></h2>
+          <div class="pilot-divider"></div>
+          <article class="proof proof-built"><span class="proof-marker">BUILT</span><h3>The workflow<br>you just saw.</h3><p>Constraint checks. Emergency replanning.<br>Explicit authorization. Verified return.</p><div class="proof-foot"><span class="pulse-dot"></span> RUNS HERE · SYNTHETIC DATA</div></article>
+          <article class="proof proof-next"><span class="proof-marker">NEXT</span><h3>An approved device.<br>A real connection.</h3><p>Start with permitted logs.<br>Validate the handover with the service team.</p><div class="proof-foot">HOSPITAL & MANUFACTURER INTEGRATION</div></article>
+          <div class="pilot-path"><span>Find a window</span><i></i><span>Deliver permitted logs</span><i></i><strong>Confirm the handover</strong></div>
+        </section>
+
+        <section class="scene finale" id="finale" aria-labelledby="finale-title" hidden>
+          <div class="morning-light" aria-hidden="true"></div><div class="theatre-door" aria-hidden="true"><span>THEATRE</span><div></div></div>
+          <div class="finale-copy"><div class="eyebrow">THE NEXT SHIFT</div><h2 id="finale-title">Tomorrow<br><em>morning.</em></h2><p>We take care of the machine,<br>so they can take care of the patient.</p></div>
+          <img id="finale-cora" src="assets/characters/bliss.webp" alt="Cora after the simulated authorized release">
+          <div class="finale-badge" id="finale-badge"><i></i> APPOINTMENT COMPLETE</div>
+          <div class="finale-brand">CARMAGOTCHI</div>
+        </section>
+
+        <footer class="stage-footer"><span id="chapter-name">THE UNANSWERED REQUEST</span><div class="chapter-progress" id="chapter-progress"></div><span class="stage-edition">PROTOTYPE · SYNTHETIC SCENARIO</span></footer>
+      </div>
+    </main>
+
+    <aside id="presenter" hidden aria-label="Presenter notes">
+      <div class="presenter-head"><b>STAGE DESK</b><button id="close-presenter" aria-label="Close presenter notes">×</button></div>
+      <div class="clock"><strong id="clock-time">0:00</strong><span>/ 3:00</span></div>
+      <div class="clock-buttons"><button id="clock-toggle">Start timer</button><button id="clock-reset">Reset</button></div>
+      <div class="pace" id="pace">Ready when you are.</div>
+      <label>CURRENT CUE</label><h2 id="note-title"></h2><div id="note-speech"></div><div id="note-action"></div>
+      <label>NEXT</label><p id="note-next"></p>
+      <a href="research/script.md" target="_blank">Full script & rehearsal notes ↗</a>
+      <p class="presenter-foot">The timer never starts a device action.<br>Arrow keys advance the performance.</p>
+    </aside>
+  </div>
+
+  <nav class="controls" aria-label="Presentation controls">
+    <div class="control-left"><button id="launch" class="launch">Start pitch <span>▶</span></button><button id="previous" aria-label="Previous scene" title="Previous scene · ←">←</button><button id="next" aria-label="Next cue" title="Next cue · → / Space">Next <span>→</span></button><span id="scene-counter">01 / 08</span></div>
+    <div class="control-right"><button id="replay-film" title="Replay opening film">Film</button><button id="notes-button" aria-pressed="false">Notes <kbd>N</kbd></button><button id="lab-button">Under the hood <kbd>Q</kbd></button><button id="fullscreen-button" aria-label="Toggle full screen" title="Fullscreen · F">⛶</button></div>
+  </nav>
+
+  <dialog id="lab" aria-labelledby="lab-title">
+    <div class="lab-header"><div><span class="eyebrow">AFTER THE THREE-MINUTE PITCH</span><h2 id="lab-title">Under the hood.</h2></div><button id="lab-close" class="round-close" aria-label="Close technical appendix">×</button></div>
+    <nav class="lab-tabs" aria-label="Technical appendix"><button data-tab="system" class="selected">System</button><button data-tab="test">Try to break it</button><button data-tab="character">The personality</button><button data-tab="evidence">What we learned</button></nav>
+    <div id="lab-system" class="lab-page">
+      <p class="lab-intro">The model may suggest a plan. It never receives permission to start an update.</p>
+      <div class="architecture-flow"><article><small>APPROVED INPUTS</small><b>Theatre schedule<br>Device state<br>Maintenance catalog</b></article><span>→</span><article><small>PROPOSED AGENTS</small><b>Find opportunities<br>Coordinate owners<br>Explain exceptions</b></article><span>→</span><article class="architecture-gate"><small>DETERMINISTIC POLICY</small><b>Evaluate constraints<br>Bind authorization<br>Reject stale evidence</b></article><span>→</span><article><small>AUTHORIZED WORKFLOW</small><b>Human start<br>Validated procedure<br>Local release</b></article></div>
+      <div class="lab-two"><article><h3>What runs here</h3><p>Local, deterministic JavaScript. Backup calendar coverage, plan invalidation, physical readiness inputs, explicit human actions and an inspectable event trace. All examples are synthetic.</p></article><article><h3>What needs integration</h3><p>Hospital schedule feeds, identity and authorization, manufacturer service interfaces, validated device checks, robot docking and a real agent runtime. No hospital, model, robot or medical device is connected.</p></article></div>
+      <p class="lab-fine">Planning reserve is an illustrative assumption, not a guaranteed rollback duration. Mechanical calibration, motion and radiation remain outside this demonstrator.</p>
+    </div>
+    <div id="lab-test" class="lab-page" hidden>
+      <div class="lab-testbar"><span id="lab-phase"></span><button id="lab-reset">Reset synthetic scenario</button></div>
+      <div class="lab-two test-columns"><div><h3>Change an input</h3><div class="fault-options" id="fault-options"></div><div class="lab-actions"><button data-event="PREPARE">Prepare</button><button data-event="ATTEST">Approve</button><button data-event="START">Human start</button><button data-event="EMERGENCY">Emergency</button><button data-event="VERIFY_SUCCESS">Report success</button><button data-event="VERIFY_FAILURE">Report failure</button><button data-event="RELEASE">Human release</button></div><p id="lab-message" role="status"></p></div><div><h3>Same rules. Visible reasons.</h3><div id="lab-checks"></div></div></div>
+      <details><summary>Inspect the event trace</summary><pre id="event-trace"></pre><button id="export-trace">Download synthetic trace</button></details>
+    </div>
+    <div id="lab-character" class="lab-page" hidden><div class="character-lab"><div class="character-preview"><img id="lab-character-image" src="assets/characters/lonely.webp" alt="Lonely Cora"></div><div><span class="eyebrow">A VOICE FOR THE WORKFLOW</span><h3 id="lab-character-title">“Have you forgotten me?”</h3><p id="lab-character-copy">No contact. Ask for a service handover.</p><div id="mood-buttons" class="mood-buttons"></div><p class="lab-fine">Personality conveys a status. A happy character alone never authorizes clinical use.</p></div></div></div>
+    <div id="lab-evidence" class="lab-page" hidden><p class="lab-intro">The story changed when we listened.</p><div class="evidence-grid"><article><small>WE HEARD</small><h3>When it isn’t used,<br>it’s switched off.</h3><p>A schedule needs a physical route to power and connectivity.</p><a href="research/sources/04_invisible_connectivity_challenge_interview_merged.md" target="_blank">Challenge-owner interview ↗</a></article><article><small>WE LEARNED</small><h3>Remote-capable<br>still needs a person.</h3><p>An available package is not permission to install it. The operator must confirm the moment.</p><a href="research/sources/02_hospital_workflows_updates_and_remote_support.md" target="_blank">Workflow & support interview ↗</a></article><article><small>WE CHANGED</small><h3>The return matters<br>as much as the start.</h3><p>An unattended failure becomes a service task, not a surprise at the next shift.</p><a href="research/technical.md" target="_blank">Evidence and technical boundaries ↗</a></article></div><div class="evidence-links"><a href="research/narrative.md" target="_blank">Editorial reasoning ↗</a><a href="research/media.md" target="_blank">Film & character analysis ↗</a><a href="research/script.md" target="_blank">180-second script ↗</a><a href="engine.mjs" target="_blank">Readable decision engine ↗</a></div></div>
+  </dialog>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <noscript>This interactive pitch needs JavaScript. <a href="research/script.md">Read the complete stage script.</a></noscript>
+</body>
+</html>
