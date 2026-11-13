@@ -1,14 +1,12 @@
-# CARMAGOTCHI — ASTRA stage edition
+# Aloha Robotics / C-ARMAGOTCHI — ASTRA web pitch
 
-A three-minute coded pitch by Aloha Robotics for the Invisible Connectivity challenge. Eight scenes follow Cora from an unanswered service request through scheduling, an emergency replan, a proposed physical connection, explicit authorization, and a verified synthetic handover.
+A three-minute web pitch that improves the team's existing encore: the complete original AI film, six Tamagotchi character states in light mode, a serious dark transition, a visual search for the golden maintenance window, a flowing architecture, and a short return to the patient.
 
-[Open the presentation](https://clschulzer.github.io/Aloha-Robotics-HH2.0/ASTRA/) · [Open with presenter notes](https://clschulzer.github.io/Aloha-Robotics-HH2.0/ASTRA/?notes) · [Read the script](research/script.md)
-
-![Four frames from the rendered ASTRA pitch: Cora’s unanswered request, the calendar, human authorization, and the final care message](research/previews/overview.png)
-
-This edition lives entirely inside `ASTRA/`. The existing presentation, team materials, and backups remain untouched. It uses local assets and standard browser JavaScript; no build step or package installation is required.
+All pitch changes and copies live in `ASTRA/`. The original team files elsewhere in the repository remain untouched.
 
 ## Launch
+
+**[Open the published ASTRA pitch](https://clschulzer.github.io/Aloha-Robotics-HH2.0/ASTRA/)** · **[Presenter desk](https://clschulzer.github.io/Aloha-Robotics-HH2.0/ASTRA/presenter/)**
 
 From the repository root:
 
@@ -16,105 +14,84 @@ From the repository root:
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open [the pitch](http://localhost:8765/ASTRA/) or [the pitch with presenter notes](http://localhost:8765/ASTRA/?notes).
+Open **[http://localhost:8765/ASTRA/](http://localhost:8765/ASTRA/)**. If that server is already running, open the URL directly. Serve over HTTP because the pitch uses JavaScript modules. No package installation or build step is needed.
 
-Use the HTTP server rather than opening `index.html` directly, because the app uses JavaScript modules. Click **Start pitch** to reset the synthetic scenario and begin the rehearsal clock. The opening film starts after the spoken introduction. Its final edit is a muted 5.3-second chase sting; the Cora screen provides a fallback if playback fails.
+- **[Pitch](index.html)** — the audience screen.
+- **[Presenter desk](presenter/index.html)** — open in a second window in the same browser, at `http://localhost:8765/ASTRA/presenter/`. It receives the current cue, clock and notes from the audience screen.
+- **[Team prototype](prototype/index.html)** — the copied interactive service-planning demonstration, separate from the six-act show.
 
-## Rehearsal controls
+Click **START PITCH** for a live presentation with manual cue advances. Click **WATCH TIMED PREVIEW** for the automatic 180-second rehearsal. Both begin with the complete film and its original audio.
+
+## The 180-second clock
+
+| Act | Clock | Duration | On screen |
+|---|---|---:|---|
+| 1 | 0:00–0:34 | 34 s | Full film, then the live **INTRODUCING ALOHA ROBOTICS** title |
+| 2 | 0:34–1:10 | 36 s | Lonely → manic → update → bliss → failure → rollback |
+| 3 | 1:10–1:18 | 8 s | Dark transition to **INVISIBLE CONNECTIVITY** |
+| 4 | 1:18–2:06 | 48 s | Full timetable → searching scouts → rejected gaps and emergency standby → golden candidate → human review |
+| 5 | 2:06–2:46 | 40 s | Inputs → specialists → policy and authorization → physical connection → returning logs |
+| 6 | 2:46–3:00 | 14 s | **THE MACHINE IS READY.** → **NOW, BACK TO THE PATIENT.** |
+| **Total** | **0:00–3:00** | **180 s** | Final image holds |
+
+The current full movie is **30.442667 seconds**. Its native end event reveals the live HTML title, held for **3.557333 seconds** to complete the opening 34 seconds. The title is not burned into the movie. Older backup films are a different generation.
+
+The timed preview follows 21 stage cues from [show.mjs](show.mjs). Its clock measures active playback: pausing or buffering extends wall-clock time. Manual mode uses the same cue order and rehearsal clock; the speaker controls the actual pace. Follow the [speaker script](SPEAKER_SCRIPT.md), including silence and the final hold, to perform the live version in three minutes.
+
+## Controls and rehearsal
 
 | Control | Action |
 |---|---|
-| `→`, `Space`, or `Page Down` | Advance the next intentional cue or workflow action. |
-| `←` or `Page Up` | Return to the previous scene. |
-| `N` | Show or hide presenter notes. |
-| `Q` | Open the technical appendix; its own sandbox is separate from the pitch. |
-| `F` | Toggle fullscreen. |
-| `P` | Start or pause the rehearsal timer. |
-| `Home` / `End` | Jump to the opening / final scene. |
-| **Start pitch** / **Restart pitch** | Reset the stage workflow and start the clock. |
+| **Right / Down / Space / Enter / Page Down** | Advance one cue |
+| **Left / Up / Page Up / Backspace** | Go back one cue |
+| **Click the stage** | Advance; the leftmost edge goes back |
+| **T** | Toggle timed/manual mode; enabling timed mode aligns the clock with the current cue |
+| **P** | Pause/resume the film during the intro, or the cue clock afterward |
+| **N** | Show/hide presenter notes; the clock continues |
+| **F** | Enter/leave fullscreen |
+| **A** | Open the research and prototype links |
+| **B** | Black out the audience screen |
+| **R / Home** | Reset to the launch screen |
+| **V** | Restart the film and clock in the current mode |
+| **S** | Toggle film audio for rehearsal |
+| **? / H** | Show keyboard help |
+| **Escape** | Close help, research or blackout |
 
-When a focused button owns Space or Enter, that key activates the button. Move focus back to the stage for clicker-style advancement. The appendix owns keyboard focus while open; close it to resume stage navigation.
+Manual navigation turns automatic advancing off. The complete movie is protected from ordinary cue advances; wait for its ending and title reveal before advancing into the characters. Research, help and blackout pause playback and the clock while open. The operator controls appear when the pointer moves or the keyboard is used, then hide.
 
-Use one speaker and one operator. The next-cue button labels the upcoming action. Advancing can introduce an emergency, dispatch the companion, approve the appointment, confirm a human start, receive a simulated result, or confirm local checks and release. The clock never authorizes a device action. Going backward or jumping to a scene does not undo or complete the workflow; restart for a fresh run.
+For rehearsal, open the presenter desk first, return focus to the pitch, start the timed preview, and speak only the script's spoken-word column. Use **N** only on a private rehearsal display; the separate presenter window keeps notes off the audience screen.
 
-Keep the opening punchline and final care sentence for their intended reveals. Let the cable joke land silently. Hold the final frame after the last line.
+## Read the work behind the show
 
-## The 180-second story
+- [Research recap](RESEARCH_RECAP.md): challenge evidence, interview findings, existing implementation, proposed architecture, assumptions and source links.
+- [Speaker script](SPEAKER_SCRIPT.md): the complete 180-second show call, exact spoken words, cue timing and technical detail.
+- [Asset review](ASSET_REVIEW.md): current movie identity and duration, original character art, extraction checks and asset provenance.
+- [Prototype README](prototype/README.md): the team's interactive demonstration and its planning model.
 
-| Scene | Start | Duration |
-|---|---:|---:|
-| `arrival` — meet Cora | 0:00 | 18 s |
-| `handoff` — the missing handover | 0:18 | 18 s |
-| `window` — find and revise the appointment | 0:36 | 33 s |
-| `connect` — power and the approved data connection | 1:09 | 26 s |
-| `authorize` — a person confirms the start | 1:35 | 23 s |
-| `return` — result, local checks, release | 1:58 | 21 s |
-| `pilot` — the next integration step | 2:19 | 18 s |
-| `finale` — tomorrow’s patient | 2:37 | 23 s |
-| **Total** | | **180 s** |
+## Provenance and implementation boundary
 
-The [stage script](research/script.md) contains exact spoken words, timing, operator directions, and a single JSON cue block. [story.mjs](story.mjs) supplies the live presenter notes. Keep its `STORY` array aligned with the script when editing.
+The starting point is the team's [encore](../CARMAGOTCHI_Web_Pitch/encore/index.html) and [pitch template](../CARMAGOTCHI_Web_Pitch/pitch/deck.css). Their stage structure, character sequence and presenter pattern are retained and adapted. [polish.css](polish.css), [encore.js](encore.js) and [visuals.mjs](visuals.mjs) provide the ASTRA presentation and interactions.
 
-## What the decision engine demonstrates
+The later [OPUS version](../OPUS/README.md) informed the visual continuity: [continuity.mjs](continuity.mjs) carries the selected gold window into the Aloha core, and fine SVG filaments grow from the architecture's service routes. These effects use ASTRA's existing scenes and timing. The comparison and technical distinctions are recorded in the recap.
 
-[engine.mjs](engine.mjs) evaluates synthetic calendar candidates, handover allowance, contingency time, and available backup coverage. It checks simulated physical readiness, package eligibility, current evidence, authorization, and clinical-use state. Approval is bound to a specific plan. A pre-start emergency invalidates that plan; an emergency after installation starts activates continuity handling rather than pretending the installer can be safely interrupted.
+The full [original film](../CARMAGOTCHI_Web_Pitch/pitch/media/chaos_intro.mp4) is copied to [assets/video/chaos_intro.mp4](assets/video/chaos_intro.mp4) without cutting, speeding up or re-encoding it. The character images are copied from the team's [original artwork](../CARMAGOTCHI_Web_Pitch/pitch/assets/). The [service prototype](../team-material-christian/challenge-4/klickdummy/index.html) is copied into `prototype/`; its deterministic [planner](team/planner.js) and [synthetic data](team/data.js) also power the visual scheduler.
 
-A simulated return is separate from local checks and human release. After installation starts, the device remains unavailable until release. The appendix exposes fault inputs and an event trace so these decisions can be inspected.
+**Implemented here:** a locally served web pitch, presenter controls and notes, the copied working prototype, and visualizations that use the team's planning rules on synthetic schedules. The search samples eligible starts, ranks them using the team's illustrative hourly-usage risk proxy, and shows a candidate for human assessment. It does not measure the probability of the next emergency.
 
-This is a local deterministic workflow prototype. It has no connected hospital feed, medical device, robot, manufacturer service interface, identity provider, or AI model. The companion, agent coordination layer, and real device integrations are proposed work. Demonstration values are not validated clinical timings or impact measurements.
+**Proposed system:** specialist agents, live hospital and manufacturer interfaces, validated emergency forecasting, robot-assisted power/data connection, and a companion that caches packages while the main device sleeps. The architecture illustrates these integrations; this pitch does not execute medical-device updates. Installation authorization, calibration and clinical release remain human responsibilities.
 
-## Tests
+## Source checks and validation
 
-From `ASTRA/`:
-
-```bash
-node --test tests/engine.test.mjs
-```
-
-Or from the repository root:
+The script contains the timing data used to generate the browser cues and presenter notes. After an intentional script edit, regenerate them from the repository root:
 
 ```bash
-node --test ASTRA/tests/engine.test.mjs
+python3 ASTRA/tools/build_notes.py
 ```
 
-The suite exercises the decision engine’s permitted and blocked transitions, including calendar conflicts, backup coverage, authorization, changed evidence, emergencies, and release. All 18 ASTRA tests and the 15 existing planner tests passed.
+With Node.js available, run the scheduler visualization checks and the copied original planner tests:
 
-Firefox 159 also passed the complete stage workflow, keyboard controls and fault scenarios with no console errors. Desktop and narrow-viewport screenshots were visually reviewed. [The validation record](research/validation.md) includes the reproducible browser harness and remaining checks for the actual projector and live delivery. Synthetic tests do not establish hardware behavior or clinical safety.
-
-## Public rehearsal API
-
-[app.mjs](app.mjs) exposes a frozen `window.astra` object for explicit local rehearsal controls. It is a browser API for this demonstration; it does not connect to external systems.
-
-| Member | Behavior |
-|---|---|
-| `version` | API version string. |
-| `getState()` | Return a cloned snapshot with `scene`, `sceneIndex`, `elapsed`, `workflow`, and `lab`. |
-| `start()` | Reset the scenario, go to the opening, start the clock, and schedule the opening film. |
-| `next()` | Run the same next-cue behavior as the stage button. |
-| `previous()` | Show the previous scene without reversing workflow state. |
-| `goTo(id)` | Show one of the eight scene IDs; unknown IDs throw a `RangeError`. |
-| `dispatch(event)` | Apply an explicit synthetic workflow event and render the result. Accepts a type string or an event object. |
-| `notes(force)` | Show or hide notes with `true` / `false`; omit the argument to toggle. |
-| `appendix(tab)` | Open the appendix and pause the clock; tab names are `system`, `test`, `character`, and `evidence`. Defaults to `system`. |
-| `reset()` | Reset the scenario and clock, return to the opening, and leave the timer stopped. |
-
-For example, an authorized rehearsal operator can inspect the state without changing it:
-
-```javascript
-window.astra.getState()
+```bash
+node --test ASTRA/tests/visuals.test.mjs ASTRA/prototype/planner.test.cjs
 ```
 
-Explicit synthetic workflow event types include `PREPARE`, `ATTEST`, `START`, `EMERGENCY`, `VERIFY_SUCCESS`, `VERIFY_FAILURE`, `RELEASE`, and `SET_CONDITION`. The engine still evaluates its rules when events are dispatched; a call is not proof that the requested transition succeeded. Inspect the returned state or `getState().workflow.lastAction`.
-
-## Files and research
-
-- [index.html](index.html), [stage.css](stage.css), [app.mjs](app.mjs): stage, presentation behavior, presenter desk, and appendix.
-- [story.mjs](story.mjs): timed speaking cues.
-- [engine.mjs](engine.mjs) and [tests/engine.test.mjs](tests/engine.test.mjs): deterministic scenario rules and tests.
-- [research/script.md](research/script.md): final spoken script, cues, and Q&A.
-- [research/narrative.md](research/narrative.md): narrative choices, source interpretation, major cuts, and editorial review.
-- [research/technical.md](research/technical.md): technical evidence and claim boundaries.
-- `research/media-review/`: local contact sheets and media inspection artifacts.
-- `assets/`: local character art, the opening film, and font files.
-
-The underlying interviews remain in the repository’s `transcripts/` directory. Their observations ground the pitch; speculative architecture notes are not treated as records of working manufacturer integrations.
+The [validation report](research/VALIDATION.md) records the 20 passing planner/model tests, 20 passing Firefox control and motion checks, and the uninterrupted 180-second browser rehearsal. It includes reproducible harnesses, screenshots and source-file hashes. The full film retains its original bytes and plays with audio enabled. Physical projector quality, room acoustics and the speaker's delivery still require an in-room rehearsal.

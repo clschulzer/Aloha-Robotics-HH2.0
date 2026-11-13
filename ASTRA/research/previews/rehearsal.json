@@ -1,0 +1,178 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "viewport": "1440×810",
+  "kind": "Real-time full-film 180-second rehearsal",
+  "observations": [
+    {
+      "time": 2.02,
+      "index": 0,
+      "step": 0,
+      "name": "01-original-film",
+      "filmTime": 1.940208
+    },
+    {
+      "time": 28.99,
+      "index": 0,
+      "step": 0,
+      "name": "02-film-finale",
+      "filmTime": 28.898416
+    },
+    {
+      "time": 32.08,
+      "index": 0,
+      "step": 0,
+      "name": "03-introducing",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 35.24,
+      "index": 1,
+      "step": 0,
+      "name": "04-lonely",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 41.3,
+      "index": 1,
+      "step": 1,
+      "name": "05-manic",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 47.28,
+      "index": 1,
+      "step": 2,
+      "name": "06-updating",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 53.25,
+      "index": 1,
+      "step": 3,
+      "name": "07-bliss",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 59.22,
+      "index": 1,
+      "step": 4,
+      "name": "08-failure",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 64.24,
+      "index": 1,
+      "step": 5,
+      "name": "09-rollback",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 71.19,
+      "index": 2,
+      "step": 0,
+      "name": "10-dark-shift",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 75.01,
+      "index": 2,
+      "step": 1,
+      "name": "11-invisible-connectivity",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 80.03,
+      "index": 3,
+      "step": 0,
+      "name": "12-surgery-schedule",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 87.1,
+      "index": 3,
+      "step": 1,
+      "name": "13-scout-swarm",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 100,
+      "index": 3,
+      "step": 2,
+      "name": "14-risk-rejection",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 114,
+      "index": 3,
+      "step": 3,
+      "name": "15-golden-window",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 122.08,
+      "index": 3,
+      "step": 4,
+      "name": "16-human-decision",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 128.02,
+      "index": 4,
+      "step": 0,
+      "name": "17-architecture-inputs",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 133.05,
+      "index": 4,
+      "step": 1,
+      "name": "18-architecture-agents",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 143.06,
+      "index": 4,
+      "step": 2,
+      "name": "19-architecture-policy",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 153.09,
+      "index": 4,
+      "step": 3,
+      "name": "20-power-data",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 163.03,
+      "index": 4,
+      "step": 4,
+      "name": "21-verification-return",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 168.08,
+      "index": 5,
+      "step": 0,
+      "name": "22-machine-ready",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 176.06,
+      "index": 5,
+      "step": 1,
+      "name": "23-back-to-patient",
+      "filmTime": 30.442666
+    },
+    {
+      "time": 180,
+      "index": 5,
+      "step": 1,
+      "name": "24-final-hold",
+      "filmTime": 30.442666
+    }
+  ],
+  "wallSeconds": 180.9,
+  "consoleErrors": [],
+  "result": "passed"
+}

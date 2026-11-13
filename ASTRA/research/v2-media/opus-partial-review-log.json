@@ -1,0 +1,36 @@
+{
+  "state": "{\"type\":\"state\",\"id\":\"arch\",\"index\":5,\"beat\":1,\"beats\":5,\"total\":7,\"appendix\":false,\"elapsed\":0,\"running\":false,\"muted\":true,\"armed\":false,\"ids\":[\"standby\",\"film\",\"intro\",\"tama\",\"cut\",\"arch\",\"outro\"],\"at\":1794605686301}",
+  "errors": [
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "javascript",
+        "level": "error",
+        "source": {
+          "realm": "96f1091e-0ae0-4459-8331-2e228ee65a91",
+          "context": "ac42bfbb-71f6-4f48-b61d-2110c6f64c94",
+          "userContext": "default"
+        },
+        "text": "TypeError: can't access property \"hh\", G is undefined",
+        "timestamp": 1794605675062,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 15,
+              "functionName": "",
+              "lineNumber": 15,
+              "url": "http://127.0.0.1:8766/OPUS/js/scenes/swarm.js"
+            },
+            {
+              "columnNumber": 2,
+              "functionName": "",
+              "lineNumber": 353,
+              "url": "http://127.0.0.1:8766/OPUS/js/scenes/swarm.js"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

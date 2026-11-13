@@ -1,0 +1,67 @@
+{
+  "sourceCommit": "c7f125df0e7edf46db4da79b1687e41a8529f280",
+  "verifiedCopies": [
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/media/chaos_intro.mp4",
+      "copy": "ASTRA/assets/video/chaos_intro.mp4",
+      "sha256": "b5ba0eaaaa37c1622e754fc57ca9b9825a2f24554705379b261eb53626299f30"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/deck.css",
+      "copy": "ASTRA/team/deck.css",
+      "sha256": "bae1f7588c21119b66681dd65ea55aa22e3480d2f5bdc27ff4ba2d14619dcf07"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/encore/encore.css",
+      "copy": "ASTRA/encore.css",
+      "sha256": "badfad8e09825cfc60824f0a86f5601a4d404e4c547e59ede16642b25d3628b2"
+    },
+    {
+      "source": "team-material-christian/challenge-4/klickdummy/data.js",
+      "copy": "ASTRA/team/data.js",
+      "sha256": "3e138a7dbb8d6353b88586b95412e23dd830b8c88ccdc79f12d351b2882b2e60"
+    },
+    {
+      "source": "team-material-christian/challenge-4/klickdummy/planner.js",
+      "copy": "ASTRA/team/planner.js",
+      "sha256": "0c32d0e6bba0938a92a7b63e75f25d1d8a78fa50bfbb428accedecc906fc1bda"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/bliss.webp",
+      "copy": "ASTRA/assets/characters/bliss.webp",
+      "sha256": "f0b53f44893390100e85cb4e9539973c0a0f886ff3a6244feacbdb6295d15b85"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/failure.webp",
+      "copy": "ASTRA/assets/characters/failure.webp",
+      "sha256": "5684f629bd38025742ca63ddd12d6fa42b66ae2c2615085f567ec35e1c041ffe"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/ketty.webp",
+      "copy": "ASTRA/assets/characters/ketty.webp",
+      "sha256": "db97e86e293d56b9b5253e0e8cc9c026c83acaa01c4d55263c7eb576ac81fcda"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/lonely.webp",
+      "copy": "ASTRA/assets/characters/lonely.webp",
+      "sha256": "d5c16bc1fc7e40219efe88709c895f3a1d6ba93a4d6264837b5ab3ca7f6bdf89"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/manic.webp",
+      "copy": "ASTRA/assets/characters/manic.webp",
+      "sha256": "19fddd622705576f320e306f1d1a5f34693afc8368daf432a6e5eb7de85aa4a4"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/rollback.webp",
+      "copy": "ASTRA/assets/characters/rollback.webp",
+      "sha256": "803efd3a3fbaa54fd4326e9b4ded8684491d65421d08227f64f6e2dcdf85e93f"
+    },
+    {
+      "source": "CARMAGOTCHI_Web_Pitch/pitch/assets/update.webp",
+      "copy": "ASTRA/assets/characters/update.webp",
+      "sha256": "4c29b5a41620f604b271fafc89686378126e7f1866768a28874c81a3691ad7e7"
+    }
+  ],
+  "unchangedPrototypeFiles": 27,
+  "allChangesInsideASTRA": true
+}

@@ -1,0 +1,135 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "kind": "Firefox manual controls, motion and presenter integration",
+  "results": [
+    {
+      "name": "T from launcher starts the original timed film with audio",
+      "result": "passed",
+      "detail": {
+        "duration": 30.442666,
+        "audioEnabled": true
+      }
+    },
+    {
+      "name": "Manual arrows and remote forward/back cannot interrupt the running film",
+      "result": "passed"
+    },
+    {
+      "name": "P pauses the film and Escape alone does not resume it",
+      "result": "passed"
+    },
+    {
+      "name": "help pauses/resumes playing film and preserves a prior pause",
+      "result": "passed"
+    },
+    {
+      "name": "research pauses/resumes playing film and preserves a prior pause",
+      "result": "passed"
+    },
+    {
+      "name": "blackout pauses/resumes playing film and preserves a prior pause",
+      "result": "passed"
+    },
+    {
+      "name": "Home restarts to a paused zero-clock launcher",
+      "result": "passed"
+    },
+    {
+      "name": "Late start play promise cannot undo restart",
+      "result": "passed"
+    },
+    {
+      "name": "Late pause/resume play promise cannot undo restart",
+      "result": "passed"
+    },
+    {
+      "name": "Late overlay media restoration cannot undo restart",
+      "result": "passed"
+    },
+    {
+      "name": "Arrows traverse all six original moods and return one beat",
+      "result": "passed"
+    },
+    {
+      "name": "Paused non-film clock survives Escape and all overlays",
+      "result": "passed"
+    },
+    {
+      "name": "Swarm scout transforms move; an overlay freezes and resumes them",
+      "result": "passed",
+      "detail": {
+        "before": "translate(466.6681728000004 126.46005613746684) rotate(-5.98539803722021)",
+        "after": "translate(542.0422464000001 117.44105896204105) rotate(-7.097329807051547)"
+      }
+    },
+    {
+      "name": "The actual gold window travels to the architecture core and leaves a pulse",
+      "result": "passed"
+    },
+    {
+      "name": "Architecture branch strokes grow and live signals move",
+      "result": "passed",
+      "detail": {
+        "before": 0.950367,
+        "after": 0.0484386,
+        "fiberBefore": 1,
+        "fiberAfter": 0.212796,
+        "fibers": 104
+      }
+    },
+    {
+      "name": "Hash navigation selects the requested scene/step",
+      "result": "passed"
+    },
+    {
+      "name": "Presenter syncs exact notes; connected timer buttons are disabled; next/prev control the deck",
+      "result": "passed"
+    },
+    {
+      "name": "Headless fullscreen API enters and exits through the real F shortcut",
+      "result": "passed"
+    },
+    {
+      "name": "Narrow viewport keeps launch and operator controls reachable",
+      "result": "passed",
+      "detail": {
+        "launch": {
+          "x": 20.316665649414062,
+          "y": 442.433349609375,
+          "width": 45.06666564941406,
+          "height": 15.23333740234375
+        },
+        "timed-launch": {
+          "x": 68.41667175292969,
+          "y": 442.433349609375,
+          "width": 69.25,
+          "height": 15.23333740234375
+        },
+        "next": {
+          "x": 99.38333129882812,
+          "y": 801,
+          "width": 63.2166748046875,
+          "height": 30
+        },
+        "notes-button": {
+          "x": 266.91668701171875,
+          "y": 801,
+          "width": 52.149993896484375,
+          "height": 30
+        }
+      }
+    },
+    {
+      "name": "Browser console has no errors",
+      "result": "passed"
+    }
+  ],
+  "limitations": [
+    "This complements the separate complete 180-second real-time rehearsal.",
+    "The race tests inject delayed play promises to reproduce media scheduling deterministically.",
+    "Headless fullscreen and viewport checks do not establish physical projector or phone usability."
+  ],
+  "browser": "firefox 159.0.1",
+  "consoleErrors": [],
+  "result": "passed"
+}
