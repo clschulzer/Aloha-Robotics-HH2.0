@@ -42,7 +42,7 @@ A suggested split: **Speaker A** (warm, funny) does Act I and the outro. **Speak
 | 2 · 1:24 | Rules stamp out the impossible, then the swarm hunts | "So we release a swarm of agents. Hard rules kill the impossible first. Then they test every gap: two hours plus a rollback buffer, power, a free backup, someone awake to press start, and the odds an emergency needs this exact machine." |
 | 3 · 1:38 | Swarm turns gold → **GOLDEN WINDOW · C-03 Cio · 19:10 → 21:10 · 96 %** | "Golden window: Cio, tonight. [Ninety-six percent undisturbed.] Nobody on the team is free, and there's no socket in the hallway, so KettyBot goes." |
 
-*UNITED drops OPUS's polytrauma replan and the medical-physics tap here: the replan moves the window to Bogdan, and the next two scenes follow Cio. The replan is still in the code and in the tests, good for Q&A.*
+*UNITED drops OPUS's polytrauma replan and the medical-physics tap here: the replan moves the window to Bogdan, and the next two scenes follow Cio. The replan stays in the code and is pinned by the tests (`UNITED/tests/`), but the deck no longer shows it.*
 
 ### 1:44 · THE LAST METRE: KETTYBOT'S MISSION (11 s, from Christian's click dummy)
 | Beat | On screen | Say |

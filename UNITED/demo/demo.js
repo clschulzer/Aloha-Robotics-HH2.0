@@ -247,19 +247,19 @@
       html: () => `
         <section class="phonescene start">
           <div class="ps-left"><div class="eyebrow">SWITCHING TO</div><h2>Lena's phone</h2><p>She couldn't walk over.<br>30 seconds on the phone are enough.</p>
-            <div class="chainline"><span class="on">Lena</span><i>→</i><span>Medical physics on call</span><i>→</i><span>IT</span></div>
+            <div class="chainline"><span class="on">Lena</span><i>→</i><span>IT on call</span><i>→</i><span>Medical physics (day)</span></div>
             <small class="chain-note">Not reachable or not sure? It passes on, with a short note.</small></div>
           ${phone(`
             <div class="wz w0">${lock('Lena · X-ray nurse', `${push('Update request · Cio', 'The robot is ready. Please check and start.', 'now', 'p-in')}<div class="timer">respond within <b id="countdown">4:59</b></div>`, '19:10')}</div>
             <div class="wz w1"><div class="wz-head"><span>1 / 3</span><b>Right time?</b></div>
-              <div class="wz-card"><div class="wz-row"><span>Window</span><b>19:10–21:40</b></div><div class="wz-row"><span>Next case OR 3</span><b>21:40</b></div><div class="wz-row"><span>Polytrauma</span><b class="g">none incoming</b></div><div class="wz-row"><span>Expected</span><b>18 min</b></div></div>
+              <div class="wz-card"><div class="wz-row"><span>Window</span><b>19:10–21:40</b></div><div class="wz-row"><span>Next case OR 3</span><b>21:40</b></div><div class="wz-row"><span>Polytrauma</span><b class="g">none incoming</b></div><div class="wz-row"><span>Expected</span><b>≈ 2 h + buffer</b></div></div>
               <button class="wz-btn" data-next>Yes, right time</button></div>
             <div class="wz w2"><div class="wz-head"><span>2 / 3</span><b>Surroundings OK?</b></div>
               <div class="cam"><div class="cam-view">${img('manic')}<span class="cam-box"></span><span class="cam-tag">ROBOT CAMERA · LIVE · NOT RECORDED</span></div></div>
               <div class="wz-card small">${['Nobody within 2 m', 'No sterile drapes', 'Brakes on', 'Power stable'].map((t) => `<div class="wz-row"><span>${t}</span>${ok}</div>`).join('')}</div>
               <button class="wz-btn" data-next>Looks good</button></div>
             <div class="wz w3"><div class="wz-head"><span>3 / 3</span><b>Start the update</b></div>
-              <div class="start-art">${img('manic')}</div><div class="wz-rel">Released by Medical physics 19:04<br>signed package · rollback image ready</div>
+              <div class="start-art">${img('manic')}</div><div class="wz-rel">Released by Medical physics 15:24<br>signed package · rollback image ready</div>
               <button class="wz-btn hold" data-next>Start update</button>
               <button class="wz-link">Not sure? Pass on with a note</button></div>
             <div class="wz w4"><div class="started">✓</div><b class="st-t">Update started</b><span class="st-s">by Lena · 19:11 · logged in the audit trail</span></div>

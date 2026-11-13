@@ -104,6 +104,18 @@ test('missing usage data never reads as zero risk', () => {
   assert.strictEqual(e.reason, 'no-data');
 });
 
+test('a gap in the hourly usage or emergency data is rejected, never scored', () => {
+  const devices = clone(D.DEVICES);
+  dev('C-02', devices).use[20] = undefined;
+  assert.strictEqual(G.evaluate(devices, dev('C-02', devices), D.t(20, 0), base()).reason, 'no-data');
+  const rate = D.EMERGENCY_RATE.slice(); rate[20] = undefined;
+  assert.strictEqual(G.evaluate(D.DEVICES, dev('C-02'), D.t(20, 0), Object.assign(base(), { rate })).reason, 'no-data');
+});
+
+test('nobody starts at the minute the last confirmer goes off duty', () => {
+  assert.strictEqual(G.evaluate(D.DEVICES, dev('C-02'), D.t(22, 30), base()).reason, 'nobody');
+});
+
 test('the start gate is still the team rule core: no release or no "area clear" means no start', () => {
   const r = G.golden(D.DEVICES, base());
   assert.strictEqual(G.startGate(r.best, { freigabe: false, umgebungFrei: true }).ok, false);

@@ -24,7 +24,7 @@
 
   /* A start needs a person on duty who may confirm it (the challenge owners: a human presses start). */
   function confirmerAt(t, ctx) {
-    return (ctx.confirmers || []).find((c) => c.from <= t && t <= c.to) || null;
+    return (ctx.confirmers || []).find((c) => c.from <= t && t < c.to) || null;
   }
 
   /* Walk [from, to) hour by hour: P(no unplanned use) and the emergency term. */
@@ -33,8 +33,10 @@
     let noUse = 1, lambda = 0;
     for (let t = from; t < to;) {
       const h = Math.floor(t / 60), next = Math.min(to, (h + 1) * 60), frac = (next - t) / 60;
-      noUse *= Math.pow(1 - d.use[h % 24], frac);
-      lambda += (ctx.rate[h % 24] || 0) * (d.pull || 0) * frac;
+      const u = d.use[h % 24], r = ctx.rate[h % 24];
+      if (!Number.isFinite(u) || !Number.isFinite(r)) return { p: null, missing: true };   // a gap is never zero risk
+      noUse *= Math.pow(1 - u, frac);
+      lambda += r * (d.pull || 0) * frac;
       t = next;
     }
     return { p: noUse * Math.exp(-lambda), noUse, emergency: Math.exp(-lambda) };
@@ -75,6 +77,7 @@
     if (!bk) return no('no-backup', 'NO BACKUP FREE');
     out.backup = bk.id;
     const s = survival(d, from, to, ctx);
+    if (s.missing) return no('no-data', 'GAP IN USAGE DATA');
     out.p = s.p * (1 - overrun(d, from));
     if (out.p < MIN_P) return Object.assign(out, { status: 'risky', reason: 'low-p', label: Math.round(out.p * 100) + '% ONLY' });
     return Object.assign(out, { status: 'ok', reason: null, label: Math.round(out.p * 100) + '%' });
