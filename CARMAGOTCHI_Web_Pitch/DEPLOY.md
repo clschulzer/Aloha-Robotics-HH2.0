@@ -1,29 +1,32 @@
-# Publishing the C-ARMAGOTCHI website
+# Hosting C-ARMAGOTCHI as a website
 
-This is a static site, like TALOS. **No build system, npm install, or backend required**.
+This is a static site: no build command, package manager or external data connection is required.
 
-## Show from a laptop (offline)
+## Local rehearsals
 
-Open `pitch/index.html` in Chrome, Edge or Firefox. Press `F` for fullscreen; use the arrow keys or a clicker. `N` shows speaker notes, `A` opens the technical Q&A appendix and `?` shows the complete controls. Downloaded images are included locally.
+From the project root:
 
-## Presenter + speaker notes sync
-
-For two-window synchronization, open a local terminal in this folder:
-
-```sh
+```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000/pitch/` on the projector and `http://localhost:8000/teleprompter/` on the speaker's screen using the same browser profile. When a scene changes, the teleprompter follows. `file://` tabs may not synchronize reliably because some browsers treat local files as different origins.
+Open `http://localhost:8000/pitch/` and `http://localhost:8000/teleprompter/` on the **same browser origin**. They synchronize slide/step state via `BroadcastChannel` with a localStorage fallback. Do not open the two pages under different domains or ports if you expect synchronization.
 
 ## GitHub Pages
 
-1. Create a new **public or Pages-enabled** GitHub repository.
-2. Copy the contents of this folder (not the enclosing folder) to its main branch.
-3. In the repository's Settings → Pages, choose Deploy from a branch, branch `main`, folder `/ (root)`.
-4. Your website will appear at `https://<username>.github.io/<repository>/` with its deck at `/pitch/` and speaker notes at `/teleprompter/`.
-5. Test both views from the exact same hosted origin and pre-download the archive as a fallback.
+1. Create a repository.
+2. Upload **the contents** of the ZIP's `CARMAGOTCHI_Web_Pitch/` directory to the repository root.
+3. Under **Settings → Pages**, choose Deploy from a branch, `main`, `/ (root)`.
+4. Open `https://<owner>.github.io/<repo>/pitch/` after publishing.
 
-## Assets and claims
+The included `.nojekyll` file prevents Jekyll from interfering with the static asset paths.
 
-All dashboard records and physical robot-to-C-arm service interactions are simulated. The character artwork is original, adapted from the images made in this conversation. The TALOS repository is referenced only for the presentation interaction pattern, not copied in source or visual styling. The Siemens Healthineers and PUDU marks appear as illustrative references, not as endorsements.
+## Final show checklist
+
+- Replace three placeholder teammate names/portraits in `pitch/index.html`.
+- Confirm the attached 40-second `pitch/media/chaos_intro.mp4` plays on the actual projector browser and routes its audio correctly.
+- Test `F`, arrow keys, `S`, `P`, `V`, `N` and `A`.
+- Check the 14 scenes and the two appendix scenes at 1920 × 1080, plus a smaller 16:9 display.
+- Keep a local offline copy in case the event Wi-Fi is unreliable.
+
+Everything rendered by the simulator is synthetic; this project does not connect to real medical devices.

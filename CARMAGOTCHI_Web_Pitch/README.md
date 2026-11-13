@@ -1,60 +1,94 @@
-# C-ARMAGOTCHI — Interactive Web Pitch
+# C-ARMAGOTCHI — Interactive Website Pitch (v2)
 
-An **unofficial concept presentation** for a Siemens Healthineers mobile C-arm challenge. Built with the team's C-ARMAGOTCHI and KettyBot mascots and the supplied performance notes. This is not an endorsed Siemens or PUDU product.
+**Healthcare Hackathon Bayern 2026 · Siemens Healthineers Challenge 04 · Invisible Connectivity for Mobile C-arms**
 
-## Start
+A deliberately theatrical **14-scene, 16:9 website presentation** with a sharply more restrained technical second half. Built on the *presentation approach* showcased by [TALOS](https://github.com/ibrahimify/talos): static HTML/CSS/JS, deterministic per-click reveals, an offline 1920 × 1080 stage, keyboard/clicker navigation, speaker notes and a separate teleprompter. This is an original implementation, **not a copy of the TALOS files**.
 
-Open `pitch/index.html` in Chrome, Edge, or Firefox. For the most reliable presenter sync, run `python3 -m http.server 8000` from this folder and open `http://localhost:8000/pitch/`, then `http://localhost:8000/teleprompter/` in a second window. Internet is not required (system fonts are used as fallbacks).
+## Running it
 
-## Controls
+Unzip the folder. The quickest way is to open `pitch/index.html` in Chrome, Edge or Firefox. All necessary files are local; the presentation does not require a network connection.
 
-- `→` / `Space` / click right side: next reveal
-- `←` / `Backspace` / click left side: previous reveal
-- `F`: fullscreen
-- `N`: speaker notes
-- `A`: technical Q&A appendix
-- `B`: black screen
-- `Home` / `End`: first / final slide
-- `R`: restart
-- `?`: help
-- `U`: optional after-hours joke banner (not recommended for family audience)
+For reliable embedded-film playback and teleprompter synchronization, run from the project root:
 
-## Content
+```bash
+python3 -m http.server 8000
+```
 
-13 main scenes (~4-minute scripted pitch), 2 technical appendix scenes, reactive dashboard demo, 5-state personality-update vignette, animated service-robot docking, and synchronized presenter notes. Images are local under `pitch/assets/`.
+Then open:
 
-## Linkable states and presenter synchronization
+- Project landing: `http://localhost:8000/`
+- Projector: `http://localhost:8000/pitch/`
+- Presenter notes: `http://localhost:8000/teleprompter/`
 
-The website supports direct links like `pitch/index.html#4.3` for scene 4, reveal 3, and `pitch/index.html#A1.2` for technical appendix scene 1, reveal 2. The separate teleprompter follows the deck using `BroadcastChannel` and a same-origin `localStorage` fallback. Both pages should be opened from one local server or the same hosted website. Browser clickers send `ArrowRight` / `ArrowLeft`.
+## Presenter controls
 
-## Source material and creative treatment
+| Key | Action |
+|---|---|
+| `→` / `Space` / click right half | Advance one reveal |
+| `←` / click left edge | Previous reveal |
+| `F` | Fullscreen |
+| `N` | Overlay speaker notes |
+| `A` | Jump to/return from 2-scene technical appendix |
+| `B` | Blackout |
+| `R` | Restart from scene one |
+| `Home` / `End` | First / final scene |
+| `?` | Help |
+| `S`, `P`, `V` | Toggle film audio, play/pause film, restart film |
 
-The story and deliberately theatrical lines come from the supplied [`source/brainstorm.md`](source/brainstorm.md) and the conversation's character images. Its Palmer Luckey moment is a **teammate lookalike**, not a real cameo. The after-hours line is hidden behind `U` so the default run is suitable for a mixed-age audience. The pitch adapts TALOS's **website presentation approach** (offline HTML/CSS/JS, 16:9 canvas, sequential reveals, presenter mode) with an original visual design and new code.
+Direct state links: `pitch/index.html#10.3` (scene 10, reveal 3) and `#A2.1` (appendix scene 2).
 
-## Demo vs. real technology
+## Story / approximate timing
 
-All device records, hospital displays, robot dispatch and interaction are illustrative simulations. Any production integration would require approved Siemens device APIs, hardware interface verification, safety review, security authentication, hospital IT authorization, and human supervision for mechanical calibration and clinical release. We make no claim that KettyBot can currently service a C-arm.
+1. **Title and challenge identity** — 10 seconds. Introduce the team and Siemens Challenge 04.
+2. **Attached chaotic film** — 40 seconds. The original user-supplied MP4, included at `pitch/media/chaos_intro.mp4`.
+3. **Palmer Luckey lookalike / AMERICA!** — 9 seconds; deliberately brief theatrical interruption.
+4. **Three team entrances** — 15 seconds; each deliberately slams onto the screen.
+5. **Live Tamagotchi phone** — 20 seconds; synthetic stateful demonstration.
+6. **C-ARMAGOTCHI mood morphs** — 20 seconds; retains the established character-image transitions.
+7. **Sharp tonal cut** — 7 seconds; intentional silence before technical proof.
+8. **Invisible Connectivity problem** — 20 seconds; clinical time vs maintenance time.
+9. **Proposed multi-agent architecture** — 25 seconds; Scout / Risk / Preflight + deterministic human gate.
+10. **Synthetic surgical schedule and golden window** — 30 seconds; constraints applied across separate reveals.
+11. **Isolated preflight sandbox** — 23 seconds; mocked compatibility mismatch prevents deployment.
+12. **Robot service route** — 22 seconds; proposed physical service endpoint.
+13. **Human authority** — 18 seconds; clear hard limits and safety rules.
+14. **IAI finale** — 20 seconds; Invisible Agentic Intelligence and KettyBot wink.
 
-## Edit
+The 40-second film brings the total to about **4 min 40 seconds** at the suggested pace, plus human pauses and Q&A. Shorten or hide selected steps if the event imposes a stricter time limit.
 
-Content: `pitch/index.html`; styling: `pitch/deck.css`; interactions: `pitch/deck.js`. After changing speaker notes, run `python build_teleprompter.py`.
+## Edit the team identity (important)
 
-Built as a custom HTML/CSS/JavaScript presentation in the spirit of the TALOS website-deck approach, not by copying TALOS source code.
+`C-ARMAGOTCHI` is used as the **working team name** because no official team name was provided. In `pitch/index.html`:
 
-## Project structure
+- Replace `TEAMMATE 01`, `TEAMMATE 02`, `TEAMMATE 03` and their role descriptions with real names.
+- Swap the three inline vector portrait illustrations with actual approved photos or SVGs if desired.
+- Edit the cover team name/challenge label if the official branding changes.
+- Keep the Palmer Luckey moment clearly framed as a **teammate lookalike gag**, not an actual appearance or endorsement.
 
-- `index.html` — project landing page
-- `pitch/index.html` — the interactive presentation
-- `pitch/deck.css` — visual design and step animations
-- `pitch/deck.js` — original navigation engine, live simulated dashboard, Q&A, notes, and route transitions
-- `pitch/assets/` — all images bundled locally, no web dependencies
-- `teleprompter/` — presenter view (follows the deck over a same-origin BroadcastChannel)
-- `speaker_script.md` — full stage cues, including the Palmer Luckey lookalike cameo
-- `sources/original_brainstorm.md` — the supplied brainstorm for future revisions
-- `build_teleprompter.py` — regenerates speaker-note data after editing slides
+After editing `data-note` attributes, regenerate the teleprompter data:
 
-A non-interactive **PowerPoint backup** is provided as a separate `.pptx` download.
+```bash
+python build_teleprompter.py
+```
 
-## Publishing with GitHub Pages
+Or edit `speaker_script.md` as a rehearsal document; the `data-note` attributes in `pitch/index.html` are the teleprompter's source of truth.
 
-Create a repository, place the files from this ZIP at the repository root, and configure GitHub Pages to deploy the main branch's root directory. The published URL will be `https://<account>.github.io/<repository>/` and the actual deck is under `/pitch/`. No build command, backend, or third-party JavaScript packages are needed.
+## Engineering honesty
+
+The connected-device dashboard, OR schedules, interruption percentages, service identities, agent outputs, shadow environment, robotic docking and update actions are **all illustrative**. No hospital API or Siemens/PUDU equipment was accessed. Emergency-risk percentages are **synthetic scenario inputs**, not clinical predictions. The automation never treats an agent recommendation as authorization for a firmware installation.
+
+Real production work would require device-specific connectivity and power support, approved service interfaces, manufacturer update validation, physical robot clearance, hospital cybersecurity/privacy controls and human supervision for mechanical calibration, failure recovery and clinical release.
+
+## Files modified from the original pitch
+
+The project preserves the previous character assets in `pitch/assets/` and the original brainstorm in `source/brainstorm.md` unmodified. Only the following were changed or added:
+
+- `pitch/index.html` — redesigned 14-scene story and notes.
+- `pitch/deck.css` — new editorial design and controlled transitions.
+- `pitch/deck.js` — deterministic navigation, richer simulations and per-scene state.
+- `pitch/media/` — user-supplied intro MP4 + two original short synthesized UI sound effects.
+- `speaker_script.md` — revised stage cues.
+- `teleprompter/data.js` — regenerated from notes.
+- `README.md`, `DEPLOY.md`, `index.html` — refreshed launch and usage instructions.
+
+The original art is used unchanged under `pitch/assets/`.
