@@ -1,0 +1,178 @@
+{
+  "version": "01-ember",
+  "kind": "Native playback; real-time 180-second rehearsal",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "film",
+      "step": 0,
+      "elapsed": 1.458125,
+      "filmTime": 1.458125
+    },
+    {
+      "cue": 1,
+      "scene": "intro",
+      "step": 0,
+      "elapsed": 31.921667,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 2,
+      "scene": "moods",
+      "step": 0,
+      "elapsed": 37.441667000000116,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 3,
+      "scene": "moods",
+      "step": 1,
+      "elapsed": 42.42566700000029,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 4,
+      "scene": "moods",
+      "step": 2,
+      "elapsed": 47.52566700000051,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 5,
+      "scene": "moods",
+      "step": 3,
+      "elapsed": 52.509667000000725,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 6,
+      "scene": "moods",
+      "step": 4,
+      "elapsed": 57.49166700000093,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 7,
+      "scene": "moods",
+      "step": 5,
+      "elapsed": 62.442667000001116,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 8,
+      "scene": "moods",
+      "step": 6,
+      "elapsed": 67.0086670000012,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 9,
+      "scene": "cut",
+      "step": 0,
+      "elapsed": 69.4596670000012,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 10,
+      "scene": "cut",
+      "step": 1,
+      "elapsed": 73.5086670000013,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 11,
+      "scene": "calendar",
+      "step": 0,
+      "elapsed": 77.52566700000138,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 12,
+      "scene": "calendar",
+      "step": 1,
+      "elapsed": 87.47566700000168,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 13,
+      "scene": "calendar",
+      "step": 2,
+      "elapsed": 92.44166700000176,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 14,
+      "scene": "calendar",
+      "step": 3,
+      "elapsed": 105.47466700000193,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 15,
+      "scene": "calendar",
+      "step": 4,
+      "elapsed": 115.50866700000208,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 16,
+      "scene": "calendar",
+      "step": 5,
+      "elapsed": 121.42466700000219,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 17,
+      "scene": "workflow",
+      "step": 0,
+      "elapsed": 125.45866700000225,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 18,
+      "scene": "workflow",
+      "step": 1,
+      "elapsed": 133.4916670000006,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 19,
+      "scene": "workflow",
+      "step": 2,
+      "elapsed": 142.50666699999772,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 20,
+      "scene": "workflow",
+      "step": 3,
+      "elapsed": 150.49166699999526,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 21,
+      "scene": "workflow",
+      "step": 4,
+      "elapsed": 159.45966699999272,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 22,
+      "scene": "outro",
+      "step": 0,
+      "elapsed": 167.42466699999028,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 23,
+      "scene": "outro",
+      "step": 1,
+      "elapsed": 173.4756669999883,
+      "filmTime": 30.442666
+    }
+  ],
+  "averageFps": 57.390593137444526,
+  "wallSeconds": 180.958330078,
+  "consoleErrors": [],
+  "result": "passed"
+}

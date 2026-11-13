@@ -1,0 +1,224 @@
+{
+  "version": "01-ember",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/01-ember/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 30.442667,
+      "scene": "intro",
+      "step": 0,
+      "title": "The landing",
+      "note": "[Let “Based on a true story” land. The embers become Aloha. No extra narration.]",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 36,
+      "scene": "moods",
+      "step": 0,
+      "title": "Meet C-ARMAGOTCHI",
+      "note": "Meet C-ARMAGOTCHI. A machine you can actually care about. Disconnected? It feels ghosted.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 41,
+      "scene": "moods",
+      "step": 1,
+      "title": "Overdue",
+      "note": "Patch overdue? It gets needy. Very needy.",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 46,
+      "scene": "moods",
+      "step": 2,
+      "title": "Updating",
+      "note": "Updating. Personal growth takes a moment.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 51,
+      "scene": "moods",
+      "step": 3,
+      "title": "Connected",
+      "note": "Connected and current. New software, new me.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 56,
+      "scene": "moods",
+      "step": 4,
+      "title": "Failure",
+      "note": "A failed update stays visible.",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 61,
+      "scene": "moods",
+      "step": 5,
+      "title": "Recovery",
+      "note": "Recovery brings our old friend back.",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 66,
+      "scene": "moods",
+      "step": 6,
+      "title": "The loop",
+      "note": "[Let the accelerating character loop and TV shutdown finish.]",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 68,
+      "scene": "cut",
+      "step": 0,
+      "title": "Now",
+      "note": "[Pause. Let the room change.]",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 72,
+      "scene": "cut",
+      "step": 1,
+      "title": "Invisible connectivity",
+      "note": "The personality makes you care. The system takes care of the work.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 76,
+      "scene": "calendar",
+      "step": 0,
+      "title": "A real day",
+      "note": "This is the day the hospital planned. Every case matters. An empty square alone is not permission to update.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 86,
+      "scene": "calendar",
+      "step": 1,
+      "title": "The opening",
+      "note": "Then a case is cancelled. An opportunity appears.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 91,
+      "scene": "calendar",
+      "step": 2,
+      "title": "Search",
+      "note": "Our scheduler searches the operating plan, device use and update requirements together.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 104,
+      "scene": "calendar",
+      "step": 3,
+      "title": "Challenge the gap",
+      "note": "It challenges each gap against emergency demand, recovery time and backup coverage.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 114,
+      "scene": "calendar",
+      "step": 4,
+      "title": "The golden window",
+      "note": "Here is the strongest eligible candidate in this demonstration. Cio can be serviced, and another device remains available.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 120,
+      "scene": "calendar",
+      "step": 5,
+      "title": "The decision",
+      "note": "Medical physics reviews the proposal. A person owns the decision.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 124,
+      "scene": "workflow",
+      "step": 0,
+      "title": "The system",
+      "note": "The workflow is simple to see.",
+      "i": 17
+    },
+    {
+      "n": 18,
+      "at": 132,
+      "scene": "workflow",
+      "step": 1,
+      "title": "The intelligence",
+      "note": "Specialists find the opportunity and check readiness. Tested rules constrain the plan.",
+      "i": 18
+    },
+    {
+      "n": 19,
+      "at": 141,
+      "scene": "workflow",
+      "step": 2,
+      "title": "The human",
+      "note": "People authorize the window and the start.",
+      "i": 19
+    },
+    {
+      "n": 20,
+      "at": 149,
+      "scene": "workflow",
+      "step": 3,
+      "title": "The connection",
+      "note": "Our robot concept brings power and the approved package to the parked machine.",
+      "i": 20
+    },
+    {
+      "n": 21,
+      "at": 158,
+      "scene": "workflow",
+      "step": 4,
+      "title": "The return",
+      "note": "Verification and logs close the loop. Our working prototype demonstrates the planning and handoffs. These live clinical connections are the next step.",
+      "i": 21
+    },
+    {
+      "n": 22,
+      "at": 166,
+      "scene": "outro",
+      "step": 0,
+      "title": "Our job",
+      "note": "We take care of the machine.",
+      "i": 22
+    },
+    {
+      "n": 23,
+      "at": 172,
+      "scene": "outro",
+      "step": 1,
+      "title": "Their job",
+      "note": "You take care of the patient. [Hold. Finish.]",
+      "i": 23
+    }
+  ],
+  "checks": [
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}
