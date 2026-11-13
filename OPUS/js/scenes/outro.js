@@ -57,6 +57,7 @@
     if (i === 0) LINES.forEach((ln, k) => { if (ln.beat === 0) later((ln.d + (S.offset || 0)) * 1000, () => (ln.go = 1)); });
     if (i === 1) LINES.forEach((ln, k) => { if (ln.beat === 1) later(ln.d * 1000, () => { ln.go = 1; A.sfx.tick(0.05, 900); }); });
     if (i === 2) {
+      clearTimers();   // a fast click must not let a pending beat-1 line fade in after the dissolve
       LINES.forEach((ln, k) => { if (ln.beat <= 1) { ln.go = 0; S.lineA[k] = 1; } });
       dissolve();
       later(700, () => (S.invTarget = 0.9));
@@ -80,7 +81,7 @@
     leave() { clearTimers(); return 0; },
     frame(dt, T) {
       S.t += dt;
-      LINES.forEach((ln, k) => { if (ln.go) S.lineA[k] = Math.min(1, S.lineA[k] + dt / 0.75); });
+      LINES.forEach((ln, k) => { if (ln.go && !S.dissolved) S.lineA[k] = Math.min(1, S.lineA[k] + dt / 0.75); });
       const ease = (cur, tgt, sp) => cur + (tgt - cur) * Math.min(1, dt * sp);
       S.inv = ease(S.inv, S.invTarget || 0, S.invTarget ? 2.2 : 3.4);
       S.ai = ease(S.ai, S.aiTarget || 0, 3); S.iai = ease(S.iai, S.iaiTarget || 0, 2.4); S.sub = ease(S.sub, S.subTarget || 0, 2.4);
