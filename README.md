@@ -9,11 +9,11 @@ Team repository for Healthcare Hackathon 2.0 featuring the **C-ARMAGOTCHI** pres
 The latest interactive presentation is deployed live and fully clickable on GitHub Pages:
 
 ### 🌟 Latest (Version 4 — 3-Minute Encore & Full Deck)
-- **🚀 Main Landing Page**: [Open Presentation Hub](https://mteyra.github.io/Aloha-Robotics-HH2.0/)
-- **⚡ 3-Minute Encore Pitch (Recommended for Judges)**: [Launch 3-Min Deck](https://mteyra.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/encore/)
-- **🎙️ 3-Minute Speaker Teleprompter**: [Open 3-Min Prompter](https://mteyra.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/encore-prompter/)
-- **📽️ Full 14-Scene Presentation**: [Launch Full 14-Scene Deck](https://mteyra.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/pitch/)
-- **📝 Full-Deck Speaker Notes**: [Open Full Teleprompter](https://mteyra.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/teleprompter/)
+- **🚀 Main Landing Page**: [Open Presentation Hub](https://clschulzer.github.io/Aloha-Robotics-HH2.0/)
+- **⚡ 3-Minute Encore Pitch (Recommended for Judges)**: [Launch 3-Min Deck](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/encore/)
+- **🎙️ 3-Minute Speaker Teleprompter**: [Open 3-Min Prompter](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/encore-prompter/)
+- **📽️ Full 14-Scene Presentation**: [Launch Full 14-Scene Deck](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/pitch/)
+- **📝 Full-Deck Speaker Notes**: [Open Full Teleprompter](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/teleprompter/)
 - **📋 Run of Show (Script & Timings)**: [`THREE_MINUTE_RUN_OF_SHOW.md`](CARMAGOTCHI_Web_Pitch/THREE_MINUTE_RUN_OF_SHOW.md)
 
 ---
