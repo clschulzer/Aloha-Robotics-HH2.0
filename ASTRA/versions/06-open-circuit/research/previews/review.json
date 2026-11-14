@@ -1,0 +1,171 @@
+{
+  "version": "06-open-circuit",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/06-open-circuit/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 9,
+      "scene": "kernel",
+      "step": 0,
+      "title": "The implemented core",
+      "note": "We built the browser workflow and a deterministic JavaScript rule core. Theatre plans, device state, usage history and alarms become structured inputs.",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 20,
+      "scene": "kernel",
+      "step": 1,
+      "title": "Reject first",
+      "note": "First, reject collisions, thin data, motion updates, unavailable people and missing backup. Missing information never means a free machine.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 33,
+      "scene": "kernel",
+      "step": 2,
+      "title": "Rank what survives",
+      "note": "The team’s scorer then ranks legal windows using unplanned use, emergency demand and case overrun. These inputs are synthetic; clinical calibration is still ahead.",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 45,
+      "scene": "kernel",
+      "step": 3,
+      "title": "An inspectable result",
+      "note": "The result names the device, window and replacement. An explanation can describe that result. It cannot relax the rules.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 56,
+      "scene": "gates",
+      "step": 0,
+      "title": "Device in use",
+      "note": "This is the actual start predicate. A device in use blocks the proposal.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 64,
+      "scene": "gates",
+      "step": 1,
+      "title": "Emergency alarm",
+      "note": "An alarm closes the gate, even when the rest looks ready.",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 72,
+      "scene": "gates",
+      "step": 2,
+      "title": "Package recalled",
+      "note": "A recalled package also blocks it. A persuasive explanation changes nothing.",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 80,
+      "scene": "gates",
+      "step": 3,
+      "title": "Eligible is not started",
+      "note": "All checks pass? The gate becomes eligible. A human still confirms the start. [The active button can start this browser simulation; it controls no device.]",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 90,
+      "scene": "zones",
+      "step": 0,
+      "title": "The proposed pilot stack",
+      "note": "Around that core, our proposed hospital node uses Python and FastAPI, SQLite for local state, and server-sent events for the browser. Local rules keep working without a language model.",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 102,
+      "scene": "zones",
+      "step": 1,
+      "title": "An approved package route",
+      "note": "The node initiates an approved connection to teamplay Fleet and remote services. Packages come inward; permitted technical status goes back.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 112,
+      "scene": "zones",
+      "step": 2,
+      "title": "Transport, not trust",
+      "note": "The robot adapter uses the proposed ROS 2 and Nav2 layer. It carries power and approved data to one device. The handoff is not a network bridge.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 123,
+      "scene": "zones",
+      "step": 3,
+      "title": "Close the loop",
+      "note": "Status and logs return to the hospital node. Exceptions go to a responsible person. Device-side interfaces and power engineering still need validation with Siemens.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 133,
+      "scene": "attest",
+      "step": 0,
+      "title": "Bind the permission",
+      "note": "The proposed authorization contract binds a person, a device, a package and a plan version. Manufacturer signatures establish package origin; hospital identity establishes permission.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 143,
+      "scene": "attest",
+      "step": 1,
+      "title": "Invalidate the old decision",
+      "note": "Change the window, recall the package or lose current readiness, and the old permission cannot authorize a new start.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 153,
+      "scene": "proof",
+      "step": 0,
+      "title": "Run the invariants",
+      "note": "These checks run against the same code on this page. Cases stay protected. Unknown data stays unknown. Alarms block. Replayed inputs reproduce the decision.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 163,
+      "scene": "proof",
+      "step": 1,
+      "title": "The next engineering step",
+      "note": "The next step is a validated hospital adapter and physical handoff, with the decision record preserved from proposal to returned result.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 172,
+      "scene": "engineering-close",
+      "step": 0,
+      "title": "Accountable by design",
+      "note": "An explainable plan. An accountable handoff.",
+      "i": 17
+    }
+  ],
+  "checks": [
+    "Blocked gate disables button; trusted human click starts only eligible local simulation; reset clears it",
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}

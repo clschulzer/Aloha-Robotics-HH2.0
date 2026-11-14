@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#07131c"><title>ALOHA / Open Circuit — ASTRA 06</title>
+ <link rel="stylesheet" href="stage.css"><link rel="stylesheet" href="circuit.css">
+</head>
+<body>
+ <main id="stage" aria-label="Aloha Robotics engineering presentation">
+  <video id="film" hidden preload="none"></video>
+  <section class="scene circuit-scene" data-scene="circuit"></section>
+  <section class="scene kernel-scene" data-scene="kernel"></section>
+  <section class="scene gates-scene" data-scene="gates"></section>
+  <section class="scene zones-scene" data-scene="zones"></section>
+  <section class="scene attest-scene" data-scene="attest"></section>
+  <section class="scene proof-scene" data-scene="proof"></section>
+  <section class="scene engineering-close" data-scene="engineering-close"></section>
+  <canvas id="fx-cv"></canvas>
+  <div id="launch" class="launch"><div class="launch-top">ALOHA ROBOTICS <span>ASTRA 06 / OPEN CIRCUIT</span></div><div class="launch-body"><small>THE THREE-MINUTE ENGINEERING CUT</small><h1>Open the<br><em>black box.</em></h1><div class="launch-actions"><button id="start">Present live <span>↗</span></button><button id="preview">Watch 3-minute preview <span>▶</span></button></div><label class="sound-choice"><input type="checkbox" id="sfx-choice" checked> Optional sound design</label><p>Executable rules. Visible architecture. Press → for the next cue.</p></div><div class="launch-diagram"><div>INPUT</div><span>↓</span><div>RULES</div><span>↓</span><div>HUMAN</div></div></div>
+  <div id="notes" hidden><small id="cue-label"></small><p id="cue-note"></p></div>
+  <div id="blackout" hidden></div>
+  <div id="help" hidden><h2>Ready for the stage.</h2><p>→ / Space advance &nbsp; ← back &nbsp; F fullscreen<br>P pause &nbsp; T timed preview &nbsp; N notes<br>S effects on/off &nbsp; B blackout &nbsp; Home restart</p><p>This cut uses all three minutes for engineering. The active gate button only runs a local demonstration.</p><button id="help-close">Back to the pitch</button></div>
+ </main>
+ <nav id="controls" aria-label="Presenter controls"><a href="../">All versions</a><button id="prev" aria-label="Previous cue">←</button><button id="next" aria-label="Next cue">→</button><span id="time">0:00</span><button id="pause">Pause</button><button id="sound">SFX ON</button><button id="note-toggle">Notes</button><button id="full">Fullscreen</button></nav>
+ <script src="runtime/core.js"></script><script src="engine/planner.js"></script><script src="engine/golden.js"></script><script src="engine/day.js"></script><script src="kernel.js"></script><script src="config.js"></script><script type="module" src="circuit.mjs"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@ These are new, independent presentation folders. The existing ASTRA, OPUS, UNITE
 | [03 — Night Shift](03-night-shift/) | A cinematic evening, a horizontal theatre board, and one golden thread through the service handoff. | Ready |
 | [04 — Constellation](04-constellation/) | A dimensional phone, 144 live scouts, emergency replanning and a service architecture that grows in dependency order. | Ready |
 | [05 — Attachment Issues](05-attachment-issues/) | Machine confessions, bad calendar dates, an audit-log punchline and a human thumb behind the actual start gate. | Ready |
-| 06 | Pure engineering: actual implementation, system boundaries and the proposed stack. | Queued |
+| [06 — Open Circuit](06-open-circuit/) | Pure engineering: executable filtering, an interactive rule gate, proposed stack, signed handoff design and live checks. | Ready |
 | 07 | The final synthesis built around Christian's template. | Queued |
 
 ## Rehearsal

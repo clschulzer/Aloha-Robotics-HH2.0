@@ -1,0 +1,283 @@
+{
+  "version": "06-open-circuit",
+  "captures": [
+    {
+      "scene": "kernel",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "kernel-1-0100.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "kernel-1-0550.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "kernel-1-1100.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "kernel-1-2200.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "kernel-1-3800.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "kernel-2-0100.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "kernel-2-0550.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "kernel-2-1100.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "kernel-2-2200.png"
+    },
+    {
+      "scene": "kernel",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "kernel-2-3800.png"
+    },
+    {
+      "scene": "gates",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "gates-1-0100.png"
+    },
+    {
+      "scene": "gates",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "gates-1-0550.png"
+    },
+    {
+      "scene": "gates",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "gates-1-1100.png"
+    },
+    {
+      "scene": "gates",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "gates-1-2200.png"
+    },
+    {
+      "scene": "gates",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "gates-1-3800.png"
+    },
+    {
+      "scene": "gates",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "gates-3-0100.png"
+    },
+    {
+      "scene": "gates",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "gates-3-0550.png"
+    },
+    {
+      "scene": "gates",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "gates-3-1100.png"
+    },
+    {
+      "scene": "gates",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "gates-3-2200.png"
+    },
+    {
+      "scene": "gates",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "gates-3-3800.png"
+    },
+    {
+      "scene": "zones",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "zones-2-0100.png"
+    },
+    {
+      "scene": "zones",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "zones-2-0550.png"
+    },
+    {
+      "scene": "zones",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "zones-2-1100.png"
+    },
+    {
+      "scene": "zones",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "zones-2-2200.png"
+    },
+    {
+      "scene": "zones",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "zones-2-3800.png"
+    },
+    {
+      "scene": "zones",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "zones-3-0100.png"
+    },
+    {
+      "scene": "zones",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "zones-3-0550.png"
+    },
+    {
+      "scene": "zones",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "zones-3-1100.png"
+    },
+    {
+      "scene": "zones",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "zones-3-2200.png"
+    },
+    {
+      "scene": "zones",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "zones-3-3800.png"
+    },
+    {
+      "scene": "attest",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "attest-1-0100.png"
+    },
+    {
+      "scene": "attest",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "attest-1-0550.png"
+    },
+    {
+      "scene": "attest",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "attest-1-1100.png"
+    },
+    {
+      "scene": "attest",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "attest-1-2200.png"
+    },
+    {
+      "scene": "attest",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "attest-1-3800.png"
+    },
+    {
+      "scene": "proof",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "proof-0-0100.png"
+    },
+    {
+      "scene": "proof",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "proof-0-0550.png"
+    },
+    {
+      "scene": "proof",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "proof-0-1100.png"
+    },
+    {
+      "scene": "proof",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "proof-0-2200.png"
+    },
+    {
+      "scene": "proof",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "proof-0-3800.png"
+    },
+    {
+      "scene": "circuit",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "circuit-0-0100.png"
+    },
+    {
+      "scene": "circuit",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "circuit-0-0550.png"
+    },
+    {
+      "scene": "circuit",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "circuit-0-1100.png"
+    },
+    {
+      "scene": "circuit",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "circuit-0-2200.png"
+    },
+    {
+      "scene": "circuit",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "circuit-0-3800.png"
+    }
+  ],
+  "refreshedThisRun": [
+    {
+      "scene": "circuit",
+      "step": 0
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}

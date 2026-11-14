@@ -1,0 +1,29 @@
+{
+  "checkpoint": "984a20d",
+  "sources": [
+    {
+      "source": "team-material-christian/challenge-4/klickdummy/planner.js",
+      "copy": "ASTRA/versions/06-open-circuit/engine/planner.js",
+      "sha256": "0c32d0e6bba0938a92a7b63e75f25d1d8a78fa50bfbb428accedecc906fc1bda",
+      "identical": true
+    },
+    {
+      "source": "OPUS/v2/js/model/golden.js",
+      "copy": "ASTRA/versions/06-open-circuit/engine/golden.js",
+      "sha256": "1e6c53aac1d13f709163b15bf9ce1b7155a501c8b54c560fd21c74d0bce32a97",
+      "identical": true
+    },
+    {
+      "source": "OPUS/v2/js/data/day.js",
+      "copy": "ASTRA/versions/06-open-circuit/engine/day.js",
+      "sha256": "b30eb432f3eea3a6991c27c1f5a2bc3ee757a89955e9d91406bb55a52532c96a",
+      "identical": true
+    }
+  ],
+  "existingTestCommand": "node --test team-material-christian/challenge-4/klickdummy/planner.test.cjs OPUS/v2/tests/golden.test.cjs",
+  "existingTests": {
+    "passed": 27,
+    "failed": 0
+  },
+  "note": "Existing tests passed in the recorded terminal run. Browser invariant results are in rehearsal/rehearsal.json."
+}

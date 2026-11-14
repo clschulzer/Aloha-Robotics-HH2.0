@@ -1,0 +1,256 @@
+{
+  "version": "06-open-circuit",
+  "kind": "Real-time 180-second engineering rehearsal; no film in this cut",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "circuit",
+      "step": 0,
+      "elapsed": 1.4489999999999998,
+      "filmTime": 0
+    },
+    {
+      "cue": 1,
+      "scene": "kernel",
+      "step": 0,
+      "elapsed": 10.471000000000016,
+      "filmTime": 0
+    },
+    {
+      "cue": 2,
+      "scene": "kernel",
+      "step": 1,
+      "elapsed": 21.449999999999722,
+      "filmTime": 0
+    },
+    {
+      "cue": 3,
+      "scene": "kernel",
+      "step": 2,
+      "elapsed": 34.432999999999254,
+      "filmTime": 0
+    },
+    {
+      "cue": 4,
+      "scene": "kernel",
+      "step": 3,
+      "elapsed": 46.532999999999845,
+      "filmTime": 0
+    },
+    {
+      "cue": 5,
+      "scene": "gates",
+      "step": 0,
+      "elapsed": 57.51600000000039,
+      "filmTime": 0
+    },
+    {
+      "cue": 6,
+      "scene": "gates",
+      "step": 1,
+      "elapsed": 65.4150000000007,
+      "filmTime": 0
+    },
+    {
+      "cue": 7,
+      "scene": "gates",
+      "step": 2,
+      "elapsed": 73.41500000000076,
+      "filmTime": 0
+    },
+    {
+      "cue": 8,
+      "scene": "gates",
+      "step": 3,
+      "elapsed": 81.51600000000096,
+      "filmTime": 0
+    },
+    {
+      "cue": 9,
+      "scene": "zones",
+      "step": 0,
+      "elapsed": 91.41500000000103,
+      "filmTime": 0
+    },
+    {
+      "cue": 10,
+      "scene": "zones",
+      "step": 1,
+      "elapsed": 103.51600000000117,
+      "filmTime": 0
+    },
+    {
+      "cue": 11,
+      "scene": "zones",
+      "step": 2,
+      "elapsed": 113.51400000000133,
+      "filmTime": 0
+    },
+    {
+      "cue": 12,
+      "scene": "zones",
+      "step": 3,
+      "elapsed": 124.43200000000155,
+      "filmTime": 0
+    },
+    {
+      "cue": 13,
+      "scene": "attest",
+      "step": 0,
+      "elapsed": 134.5149999999996,
+      "filmTime": 0
+    },
+    {
+      "cue": 14,
+      "scene": "attest",
+      "step": 1,
+      "elapsed": 144.48199999999622,
+      "filmTime": 0
+    },
+    {
+      "cue": 15,
+      "scene": "proof",
+      "step": 0,
+      "elapsed": 154.4409999999933,
+      "filmTime": 0
+    },
+    {
+      "cue": 16,
+      "scene": "proof",
+      "step": 1,
+      "elapsed": 164.51599999999004,
+      "filmTime": 0
+    },
+    {
+      "cue": 17,
+      "scene": "engineering-close",
+      "step": 0,
+      "elapsed": 173.4989999999873,
+      "filmTime": 0
+    }
+  ],
+  "averageFps": 57.34203828704216,
+  "sceneFps": {
+    "circuit": 53.5,
+    "kernel": 57.4,
+    "gates": 58.6,
+    "zones": 57,
+    "attest": 58,
+    "proof": 57.6,
+    "engineering-close": 55.8
+  },
+  "engineering": {
+    "evaluations": 2368,
+    "gateIndex": 3,
+    "gate": {
+      "ok": true,
+      "gruende": []
+    },
+    "starts": 0,
+    "best": {
+      "id": "C-03",
+      "from": 1150,
+      "to": 1270,
+      "guardEnd": 1300,
+      "status": "ok",
+      "reason": "ok",
+      "label": "NO SOCKET → KETTYBOT · 95% UNDISTURBED",
+      "p": 0.9498060006635761,
+      "parts": {
+        "p": 0.9498060006635761,
+        "use": 0.9751871871081982,
+        "emergency": 0.9749848629021873,
+        "overrun": 0.9989621867990606
+      },
+      "needsRobot": true,
+      "backup": "C-05"
+    },
+    "checks": [
+      {
+        "label": "Cases remain protected",
+        "detail": "All selected windows + recovery margin",
+        "pass": true
+      },
+      {
+        "label": "Backup remains available",
+        "detail": "Entire window + recovery margin",
+        "pass": true
+      },
+      {
+        "label": "Unknown stays unknown",
+        "detail": "Missing usage data → no proposal",
+        "pass": true
+      },
+      {
+        "label": "Motion stays supervised",
+        "detail": "Motor calibration → on-site only",
+        "pass": true
+      },
+      {
+        "label": "Alarm closes the gate",
+        "detail": "Planning + start are blocked",
+        "pass": true
+      },
+      {
+        "label": "A human is required",
+        "detail": "No confirmer → no legal window",
+        "pass": true
+      },
+      {
+        "label": "Recall blocks a start",
+        "detail": "A valid old package is not enough",
+        "pass": true
+      },
+      {
+        "label": "Decisions are replayable",
+        "detail": "Same inputs → same ranked result",
+        "pass": true
+      }
+    ],
+    "displayedChecks": [
+      {
+        "label": "Cases remain protected",
+        "detail": "All selected windows + recovery margin",
+        "pass": true
+      },
+      {
+        "label": "Backup remains available",
+        "detail": "Entire window + recovery margin",
+        "pass": true
+      },
+      {
+        "label": "Unknown stays unknown",
+        "detail": "Missing usage data → no proposal",
+        "pass": true
+      },
+      {
+        "label": "Motion stays supervised",
+        "detail": "Motor calibration → on-site only",
+        "pass": true
+      },
+      {
+        "label": "Alarm closes the gate",
+        "detail": "Planning + start are blocked",
+        "pass": true
+      },
+      {
+        "label": "A human is required",
+        "detail": "No confirmer → no legal window",
+        "pass": true
+      },
+      {
+        "label": "Recall blocks a start",
+        "detail": "A valid old package is not enough",
+        "pass": true
+      },
+      {
+        "label": "Decisions are replayable",
+        "detail": "Same inputs → same ranked result",
+        "pass": true
+      }
+    ]
+  },
+  "wallSeconds": 180.747324639,
+  "consoleErrors": [],
+  "result": "passed"
+}

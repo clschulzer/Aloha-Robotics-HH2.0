@@ -55,6 +55,19 @@ try{
    assert.notEqual(await ev('document.querySelector("#product").contentDocument.querySelector("#pct").textContent'),pct);
    await ev('window.ASTRA.reset()');report.checks.push('Embedded product timers pause and resume');
  }
+ if(await ev('!!window.ENGINEERING')){
+   const blocked=await ev('window.ASTRA.cues.findIndex(c=>c.scene==="gates"&&c.step===2)');
+   const allowed=await ev('window.ASTRA.cues.findIndex(c=>c.scene==="gates"&&c.step===3)');
+   await ev(`window.ASTRA.go(${blocked})`);assert.equal(await ev('document.querySelector(".gate-button").disabled'),true);
+   await ev(`window.ASTRA.go(${allowed})`);await wait(150);
+   assert.equal(await ev('window.ENGINEERING.metrics().starts'),0);
+   const p=await ev('(()=>{const r=document.querySelector(".gate-button").getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()');
+   await call('input.performActions',{context,actions:[{type:'pointer',id:'gate-mouse',parameters:{pointerType:'mouse'},actions:[{type:'pointerMove',x:Math.round(p.x),y:Math.round(p.y),duration:0},{type:'pointerDown',button:0},{type:'pointerUp',button:0}]}]});
+   assert.equal(await ev('window.ENGINEERING.metrics().starts'),1);
+   assert.equal(await ev('document.querySelector(".gate-button").textContent'),'SIMULATION STARTED');
+   await ev('window.ASTRA.reset()');assert.equal(await ev('window.ENGINEERING.metrics().starts'),0);
+   report.checks.push('Blocked gate disables button; trusted human click starts only eligible local simulation; reset clears it');
+ }
  report.checks.push('All cues render','All image assets load','Previous navigation','Notes toggle','Optional sound toggle','Pause freezes cue clock','Home resets launcher');
  report.consoleErrors=logs.filter(e=>e.method==='log.entryAdded'&&e.params.level==='error').map(e=>e.params.text);
  assert.deepEqual(report.consoleErrors,[]);report.result='passed';

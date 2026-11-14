@@ -25,8 +25,13 @@ try{
  await ev('document.fonts.ready.then(()=>true)');await wait(500);await fs.mkdir(output,{recursive:true});
  for(const spec of specs){
   const n=await ev(`window.ASTRA.cues.findIndex(c=>c.scene===${JSON.stringify(spec.scene)}&&c.step===${spec.step})`);
-  assert.ok(n>1,'Use a non-film cue with a preceding cue');
-  await ev(`window.ASTRA.go(${n-1})`);await wait(150);await ev('window.ASTRA.next()');
+  if(n===0){
+   assert.notEqual(spec.scene,'film','Use native rehearsal to review the film');
+   await ev('window.ASTRA.reset()');await ev('window.ASTRA.start(false)');
+  }else{
+   assert.ok(n>1,'Use a non-film cue with a preceding cue');
+   await ev(`window.ASTRA.go(${n-1})`);await wait(150);await ev('window.ASTRA.next()');
+  }
   const start=performance.now();
   for(const ms of [100,550,1100,2200,3800]){
    await wait(Math.max(0,ms-(performance.now()-start)));

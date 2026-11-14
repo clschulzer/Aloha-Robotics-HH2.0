@@ -21,6 +21,7 @@ try{
  await call('browsingContext.navigate',{context,url:`http://127.0.0.1:8766/ASTRA/versions/${slug}/`,wait:'complete'});
  await ev('document.fonts.ready.then(()=>true)');await fs.mkdir(out,{recursive:true});
  const cues=await ev('window.ASTRA.cues');
+ if(cues[0].scene!=='film')report.kind='Real-time 180-second engineering rehearsal; no film in this cut';
  const p=await ev('(()=>{const r=document.querySelector("#preview").getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()');
  await call('input.performActions',{context,actions:[{type:'pointer',id:'mouse',parameters:{pointerType:'mouse'},actions:[{type:'pointerMove',x:Math.round(p.x),y:Math.round(p.y),duration:0},{type:'pointerDown',button:0},{type:'pointerUp',button:0}]}]});
  const began=performance.now();
@@ -52,6 +53,10 @@ try{
        assert.equal(demo.simulatedStart,cues[i].step===3,'Only the illustrated human tap starts the demonstration');
      }
    }
+   if(cues[i].scene==='gates'){
+     const engineering=await ev('window.ENGINEERING?.metrics?.() || null');
+     if(engineering){assert.equal(engineering.gate.ok,cues[i].step===3);assert.equal(engineering.starts,0,'An eligible gate must not automatically start');}
+   }
    const name=`${String(i).padStart(2,'0')}-${cues[i].scene}-${cues[i].step}`;
    await shot(name);report.observations.push({cue:i,scene:s.scene,step:s.step,elapsed:s.elapsed,filmTime:s.film?.currentTime});
    console.log(slug,name,s.elapsed.toFixed(2));
@@ -74,6 +79,12 @@ try{
   assert.equal(comedy.startEvents.length,1,'One illustrated human start in one rehearsal');
   assert.equal(comedy.gate.ok,true);assert.equal(comedy.simulatedStart,true);
   report.comedy=comedy;
+ }
+ const engineering=await ev('window.ENGINEERING?.metrics?.() || null');
+ if(engineering){
+   assert.ok(engineering.evaluations>0);assert.equal(engineering.starts,0);
+   assert.ok(engineering.displayedChecks.length>=8);assert.ok(engineering.displayedChecks.every(c=>c.pass));
+   report.engineering=engineering;
  }
  report.wallSeconds=(performance.now()-began)/1000;
  report.consoleErrors=logs.filter(x=>x.method==='log.entryAdded'&&x.params.level==='error').map(x=>x.params.text);
