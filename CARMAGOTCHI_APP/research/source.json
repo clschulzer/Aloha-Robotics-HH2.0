@@ -1,0 +1,74 @@
+{
+  "pitch": "FINAL/v1",
+  "source_revision": "86c8bda1db0d74db6219a13d08cfd768c38bf39b",
+  "newest_pitch_checked": true,
+  "copies": [
+    {
+      "source": "FINAL/v1/js/model/planner.js",
+      "copy": "CARMAGOTCHI_APP/engine/planner.js",
+      "sha256": "0c32d0e6bba0938a92a7b63e75f25d1d8a78fa50bfbb428accedecc906fc1bda",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/js/model/golden.js",
+      "copy": "CARMAGOTCHI_APP/engine/golden.js",
+      "sha256": "1e6c53aac1d13f709163b15bf9ce1b7155a501c8b54c560fd21c74d0bce32a97",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/js/data/day.js",
+      "copy": "CARMAGOTCHI_APP/engine/day.js",
+      "sha256": "b30eb432f3eea3a6991c27c1f5a2bc3ee757a89955e9d91406bb55a52532c96a",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/bliss.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/bliss.webp",
+      "sha256": "f0b53f44893390100e85cb4e9539973c0a0f886ff3a6244feacbdb6295d15b85",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/failure.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/failure.webp",
+      "sha256": "5684f629bd38025742ca63ddd12d6fa42b66ae2c2615085f567ec35e1c041ffe",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/ketty.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/ketty.webp",
+      "sha256": "db97e86e293d56b9b5253e0e8cc9c026c83acaa01c4d55263c7eb576ac81fcda",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/ketty_wink.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/ketty_wink.webp",
+      "sha256": "55a9beb7b17245a2023ca50da786573cec7b1acb19ce4bbb75a88465f50958ba",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/lonely.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/lonely.webp",
+      "sha256": "d5c16bc1fc7e40219efe88709c895f3a1d6ba93a4d6264837b5ab3ca7f6bdf89",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/manic.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/manic.webp",
+      "sha256": "19fddd622705576f320e306f1d1a5f34693afc8368daf432a6e5eb7de85aa4a4",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/rollback.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/rollback.webp",
+      "sha256": "803efd3a3fbaa54fd4326e9b4ded8684491d65421d08227f64f6e2dcdf85e93f",
+      "unchanged": true
+    },
+    {
+      "source": "FINAL/v1/assets/characters/update.webp",
+      "copy": "CARMAGOTCHI_APP/assets/characters/update.webp",
+      "sha256": "4c29b5a41620f604b271fafc89686378126e7f1866768a28874c81a3691ad7e7",
+      "unchanged": true
+    }
+  ],
+  "app_changes": "Phone UI adapted for real touches and mobile viewport; independent local state; consistent120minute scenario; demo labels; additional app pages."
+}

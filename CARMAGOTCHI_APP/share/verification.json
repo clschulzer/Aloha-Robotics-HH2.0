@@ -1,0 +1,45 @@
+{
+  "url": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/",
+  "generator": "python-qrcode 8.2",
+  "renderer": "Pillow 13.0.0",
+  "independent_decoder": "ZXing-C++ 3.1.1",
+  "qr_version": 8,
+  "error_correction": "H",
+  "quiet_zone_modules": 4,
+  "pixels_per_module": 20,
+  "png_size": [
+    1140,
+    1140
+  ],
+  "card_size": [
+    1300,
+    1680
+  ],
+  "checks": [
+    {
+      "image": "qr-original",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/",
+      "pass": true
+    },
+    {
+      "image": "qr-320px",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/",
+      "pass": true
+    },
+    {
+      "image": "card-original",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/",
+      "pass": true
+    },
+    {
+      "image": "card-600px-wide",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/",
+      "pass": true
+    }
+  ],
+  "files": {
+    "qr.svg": "5c4ceb08ab021d598f6bf9cc332e19d5f29dd3b957645c667b05b24e9e339fb3",
+    "qr.png": "e76a9809b7ddc0f735bc84d7fd8798356b9d5f8a8325f514060d0e1f39611357",
+    "qr-card.png": "67b51a286254315b7eaa4e8796d58df57e29b5af3918e20597e770738e202ff0"
+  }
+}
