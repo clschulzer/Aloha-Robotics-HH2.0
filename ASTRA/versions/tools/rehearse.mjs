@@ -45,6 +45,13 @@ try{
      await ev('window.ASTRA.next()');assert.equal((await ev('window.ASTRA.getState()')).cue,0);assert.equal((await ev('window.ASTRA.getState()')).auto,true);
    }
    if(i===1&&cues[0].scene==='film')assert.ok(s.film.currentTime>=30.4);
+   if(cues[i].scene==='crew'&&(cues[i].step===2||cues[i].step===3)){
+     const demo=await ev('window.COMEDY?.metrics?.() || null');
+     if(demo){
+       assert.equal(demo.gate.ok,cues[i].step===3,'The illustrated start must respect the actual rule gate');
+       assert.equal(demo.simulatedStart,cues[i].step===3,'Only the illustrated human tap starts the demonstration');
+     }
+   }
    const name=`${String(i).padStart(2,'0')}-${cues[i].scene}-${cues[i].step}`;
    await shot(name);report.observations.push({cue:i,scene:s.scene,step:s.step,elapsed:s.elapsed,filmTime:s.film?.currentTime});
    console.log(slug,name,s.elapsed.toFixed(2));
@@ -60,6 +67,13 @@ try{
   const expected=await ev('window.CONSTELLATION.after.best');
   assert.equal(scoring.selected.id,expected.id);assert.equal(scoring.selected.from,expected.from);
   report.scoring=scoring;
+ }
+ const comedy=await ev('window.COMEDY?.metrics?.() || null');
+ if(comedy){
+  assert.ok(comedy.checks>100,'Scouts must call the actual planner');
+  assert.equal(comedy.startEvents.length,1,'One illustrated human start in one rehearsal');
+  assert.equal(comedy.gate.ok,true);assert.equal(comedy.simulatedStart,true);
+  report.comedy=comedy;
  }
  report.wallSeconds=(performance.now()-began)/1000;
  report.consoleErrors=logs.filter(x=>x.method==='log.entryAdded'&&x.params.level==='error').map(x=>x.params.text);

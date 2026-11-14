@@ -11,7 +11,12 @@ ws.onmessage=({data})=>{const m=JSON.parse(data);if(m.id){const p=pending.get(m.
 const call=(method,params={})=>new Promise((r,j)=>{const n=++id;pending.set(n,{r,j});ws.send(JSON.stringify({id:n,method,params}));});
 const ev=async expression=>{const r=await call('script.evaluate',{expression:`(async()=>JSON.stringify(await (${expression}))??'null')()`,target:{context},awaitPromise:true});if(r.type==='exception')throw new Error(JSON.stringify(r));return JSON.parse(r.result.value);};
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
-const report={version:slug,captures:[],errors:[]};
+let retained=[];
+try{
+ const previous=JSON.parse(await fs.readFile(path.join(output,'review.json'),'utf8'));
+ if(previous.result==='passed')retained=previous.captures.filter(c=>!specs.some(s=>s.scene===c.scene&&s.step===c.step));
+}catch{}
+const report={version:slug,captures:retained,refreshedThisRun:specs,errors:[]};
 try{
  await call('session.new',{capabilities:{alwaysMatch:{browserName:'firefox'}}});await call('session.subscribe',{events:['log.entryAdded']});
  ({context}=await call('browsingContext.create',{type:'tab'}));

@@ -1,0 +1,223 @@
+{
+  "version": "05-attachment-issues",
+  "captures": [
+    {
+      "scene": "confessional",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "confessional-1-0100.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "confessional-1-0550.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "confessional-1-1100.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "confessional-1-2200.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "confessional-1-3800.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 6,
+      "milliseconds": 100,
+      "filename": "confessional-6-0100.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 6,
+      "milliseconds": 550,
+      "filename": "confessional-6-0550.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 6,
+      "milliseconds": 1100,
+      "filename": "confessional-6-1100.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 6,
+      "milliseconds": 2200,
+      "filename": "confessional-6-2200.png"
+    },
+    {
+      "scene": "confessional",
+      "step": 6,
+      "milliseconds": 3800,
+      "filename": "confessional-6-3800.png"
+    },
+    {
+      "scene": "match",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "match-2-0100.png"
+    },
+    {
+      "scene": "match",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "match-2-0550.png"
+    },
+    {
+      "scene": "match",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "match-2-1100.png"
+    },
+    {
+      "scene": "match",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "match-2-2200.png"
+    },
+    {
+      "scene": "match",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "match-2-3800.png"
+    },
+    {
+      "scene": "match",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "match-4-0100.png"
+    },
+    {
+      "scene": "match",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "match-4-0550.png"
+    },
+    {
+      "scene": "match",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "match-4-1100.png"
+    },
+    {
+      "scene": "match",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "match-4-2200.png"
+    },
+    {
+      "scene": "match",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "match-4-3800.png"
+    },
+    {
+      "scene": "crew",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "crew-1-0100.png"
+    },
+    {
+      "scene": "crew",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "crew-1-0550.png"
+    },
+    {
+      "scene": "crew",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "crew-1-1100.png"
+    },
+    {
+      "scene": "crew",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "crew-1-2200.png"
+    },
+    {
+      "scene": "crew",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "crew-1-3800.png"
+    },
+    {
+      "scene": "crew",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "crew-3-0100.png"
+    },
+    {
+      "scene": "crew",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "crew-3-0550.png"
+    },
+    {
+      "scene": "crew",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "crew-3-1100.png"
+    },
+    {
+      "scene": "crew",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "crew-3-2200.png"
+    },
+    {
+      "scene": "crew",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "crew-3-3800.png"
+    },
+    {
+      "scene": "crew",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "crew-4-0100.png"
+    },
+    {
+      "scene": "crew",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "crew-4-0550.png"
+    },
+    {
+      "scene": "crew",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "crew-4-1100.png"
+    },
+    {
+      "scene": "crew",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "crew-4-2200.png"
+    },
+    {
+      "scene": "crew",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "crew-4-3800.png"
+    }
+  ],
+  "refreshedThisRun": [
+    {
+      "scene": "crew",
+      "step": 4
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}

@@ -10,7 +10,7 @@ These are new, independent presentation folders. The existing ASTRA, OPUS, UNITE
 | [02 — In Good Hands](02-christian/) | Christian's actual template and his complete responsibility-to-thank-you journey. | Ready |
 | [03 — Night Shift](03-night-shift/) | A cinematic evening, a horizontal theatre board, and one golden thread through the service handoff. | Ready |
 | [04 — Constellation](04-constellation/) | A dimensional phone, 144 live scouts, emergency replanning and a service architecture that grows in dependency order. | Ready |
-| 05 | The deliberately unhinged comedy cut. | Queued |
+| [05 — Attachment Issues](05-attachment-issues/) | Machine confessions, bad calendar dates, an audit-log punchline and a human thumb behind the actual start gate. | Ready |
 | 06 | Pure engineering: actual implementation, system boundaries and the proposed stack. | Queued |
 | 07 | The final synthesis built around Christian's template. | Queued |
 

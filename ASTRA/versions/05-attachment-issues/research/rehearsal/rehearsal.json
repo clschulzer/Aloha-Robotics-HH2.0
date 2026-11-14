@@ -1,0 +1,200 @@
+{
+  "version": "05-attachment-issues",
+  "kind": "Native playback; real-time 180-second rehearsal",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "film",
+      "step": 0,
+      "elapsed": 1.517833,
+      "filmTime": 1.517833
+    },
+    {
+      "cue": 1,
+      "scene": "intro",
+      "step": 0,
+      "elapsed": 31.96566699999999,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 2,
+      "scene": "confessional",
+      "step": 0,
+      "elapsed": 37.500667000000114,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 3,
+      "scene": "confessional",
+      "step": 1,
+      "elapsed": 41.48466700000028,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 4,
+      "scene": "confessional",
+      "step": 2,
+      "elapsed": 49.418667000000646,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 5,
+      "scene": "confessional",
+      "step": 3,
+      "elapsed": 55.50066700000098,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 6,
+      "scene": "confessional",
+      "step": 4,
+      "elapsed": 60.48566700000123,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 7,
+      "scene": "confessional",
+      "step": 5,
+      "elapsed": 65.4346670000015,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 8,
+      "scene": "confessional",
+      "step": 6,
+      "elapsed": 71.40166700000154,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 9,
+      "scene": "confessional",
+      "step": 7,
+      "elapsed": 77.4926670000016,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 10,
+      "scene": "cut",
+      "step": 0,
+      "elapsed": 80.43466700000164,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 11,
+      "scene": "match",
+      "step": 0,
+      "elapsed": 84.43466700000172,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 12,
+      "scene": "match",
+      "step": 1,
+      "elapsed": 92.46766700000185,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 13,
+      "scene": "match",
+      "step": 2,
+      "elapsed": 98.41766700000201,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 14,
+      "scene": "match",
+      "step": 3,
+      "elapsed": 108.41866700000207,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 15,
+      "scene": "match",
+      "step": 4,
+      "elapsed": 115.41766700000225,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 16,
+      "scene": "crew",
+      "step": 0,
+      "elapsed": 122.43466700000238,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 17,
+      "scene": "crew",
+      "step": 1,
+      "elapsed": 130.5016670000017,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 18,
+      "scene": "crew",
+      "step": 2,
+      "elapsed": 138.40166699999915,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 19,
+      "scene": "crew",
+      "step": 3,
+      "elapsed": 146.45166699999655,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 20,
+      "scene": "crew",
+      "step": 4,
+      "elapsed": 154.40166699999398,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 21,
+      "scene": "care",
+      "step": 0,
+      "elapsed": 166.51766699999035,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 22,
+      "scene": "care",
+      "step": 1,
+      "elapsed": 173.50166699998815,
+      "filmTime": 30.442666
+    }
+  ],
+  "averageFps": 57.633526605829125,
+  "sceneFps": {
+    "film": 59.4,
+    "intro": 39.8,
+    "confessional": 56.3,
+    "cut": 59.8,
+    "match": 58.4,
+    "crew": 58.9,
+    "care": 58.2
+  },
+  "comedy": {
+    "checks": 1585,
+    "winner": {
+      "id": "C-03",
+      "from": 1140,
+      "to": 1260
+    },
+    "backup": "C-04",
+    "gate": {
+      "ok": true,
+      "gruende": []
+    },
+    "simulatedStart": true,
+    "startEvents": [
+      {
+        "source": "illustrated human tap",
+        "gatePassed": true
+      }
+    ]
+  },
+  "wallSeconds": 180.96053802,
+  "consoleErrors": [],
+  "result": "passed"
+}

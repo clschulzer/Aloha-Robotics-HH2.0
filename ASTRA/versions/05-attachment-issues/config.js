@@ -1,0 +1,41 @@
+window.PITCH={
+ id:'05-attachment-issues',title:'Attachment Issues',
+ direction:'The comedy cut. An emotionally demanding C-arm, a calendar full of bad dates, and a surprisingly grown-up solution.',
+ accent:'#ffad82',gold:'#f5d294',paper:'#fff4e7',
+ layoutPairs:[['.conf-quote','.conf-state'],['.match-title','.match-sub'],['.crew-title','.crew-sub'],['.crew-bottom','.crew-caption']],
+ moods:[
+  ['lonely','Ghosted.','Disconnected.','I can see your bones. I can’t see your Wi-Fi.'],
+  ['manic','Feed me.','Patch overdue.','Feed me the patch.'],
+  ['update','Growth era.','Updating.','Emotionally unavailable. Technically updating.'],
+  ['bliss','New firmware.','Connected and current.','New firmware. Who dis?'],
+  ['failure','Escalating.','Update failed.','Get me your developer.'],
+  ['rollback','This never happened.','Recovery state.','The audit log disagrees.']
+ ],
+ calendarTitle:'A calendar full of bad dates.',workflowTitle:'An actual care team.',
+ closing:['Less machine drama.','More human care.'],
+ cues:[
+  [0,'film',0,'The original film','[Play the complete original movie. Let the soundtrack do its job.]'],
+  [30.442667,'intro',0,'Introducing Aloha','[The explosion becomes the true-story joke, then Aloha. Say nothing.]'],
+  [36,'confessional',0,'Attachment issues','This is Cio. We gave a C-arm attachment issues.'],
+  [40,'confessional',1,'Disconnected','It can see your bones. It cannot see your Wi-Fi.'],
+  [48,'confessional',2,'Patch overdue','Patch overdue. Feed the beast.'],
+  [54,'confessional',3,'Updating','Emotionally unavailable. Technically updating.'],
+  [59,'confessional',4,'Connected and current','New firmware. Who dis?'],
+  [64,'confessional',5,'Update failed','Something fails? It would like to speak to your developer.'],
+  [70,'confessional',6,'Recovery','Recovery: this never happened. [Beat.] The audit log disagrees.'],
+  [76,'confessional',7,'The personality loop','[Let the accelerating faces and TV shutdown land.]'],
+  [79,'cut',0,'Now','Now. Let’s put the little menace to work.'],
+  [83,'match',0,'The actual problem','Its mood tells us what needs attention. Hospital data tells us when.'],
+  [91,'match',1,'An opening','A cancelled case opens a gap.'],
+  [97,'match',2,'The search','Our scheduler searches the real prototype rules. Most attractive-looking gaps are terrible dates.'],
+  [107,'match',3,'The boundaries','Keep emergency cover, a replacement machine and recovery time available.'],
+  [114,'match',4,'The match','This window survives the checks. Medical physics can review the proposal.'],
+  [121,'crew',0,'The scheduler','Meet the calendar goblins. The joke is optional. The scheduling code runs.'],
+  [129,'crew',1,'The physical helper','Our proposed senior plugging-in engineer brings power and approved data, then checks identity and surroundings.'],
+  [137,'crew',2,'The human gate','We kept one very sophisticated component: a human with a thumb.'],
+  [145,'crew',3,'Start','The rules must pass. A human still presses start.'],
+  [153,'crew',4,'The result','Results, logs and exceptions return to the team. The browser prototype runs the plan; hospital and hardware integration come next.'],
+  [165,'care',0,'Less drama','Less machine drama.'],
+  [172,'care',1,'More care','More human care. [Hold the silence. The pitch is finished.]']
+ ]
+};

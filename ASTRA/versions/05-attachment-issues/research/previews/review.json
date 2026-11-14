@@ -1,0 +1,215 @@
+{
+  "version": "05-attachment-issues",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/05-attachment-issues/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 30.442667,
+      "scene": "intro",
+      "step": 0,
+      "title": "Introducing Aloha",
+      "note": "[The explosion becomes the true-story joke, then Aloha. Say nothing.]",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 36,
+      "scene": "confessional",
+      "step": 0,
+      "title": "Attachment issues",
+      "note": "This is Cio. We gave a C-arm attachment issues.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 40,
+      "scene": "confessional",
+      "step": 1,
+      "title": "Disconnected",
+      "note": "It can see your bones. It cannot see your Wi-Fi.",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 48,
+      "scene": "confessional",
+      "step": 2,
+      "title": "Patch overdue",
+      "note": "Patch overdue. Feed the beast.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 54,
+      "scene": "confessional",
+      "step": 3,
+      "title": "Updating",
+      "note": "Emotionally unavailable. Technically updating.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 59,
+      "scene": "confessional",
+      "step": 4,
+      "title": "Connected and current",
+      "note": "New firmware. Who dis?",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 64,
+      "scene": "confessional",
+      "step": 5,
+      "title": "Update failed",
+      "note": "Something fails? It would like to speak to your developer.",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 70,
+      "scene": "confessional",
+      "step": 6,
+      "title": "Recovery",
+      "note": "Recovery: this never happened. [Beat.] The audit log disagrees.",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 76,
+      "scene": "confessional",
+      "step": 7,
+      "title": "The personality loop",
+      "note": "[Let the accelerating faces and TV shutdown land.]",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 79,
+      "scene": "cut",
+      "step": 0,
+      "title": "Now",
+      "note": "Now. Let’s put the little menace to work.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 83,
+      "scene": "match",
+      "step": 0,
+      "title": "The actual problem",
+      "note": "Its mood tells us what needs attention. Hospital data tells us when.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 91,
+      "scene": "match",
+      "step": 1,
+      "title": "An opening",
+      "note": "A cancelled case opens a gap.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 97,
+      "scene": "match",
+      "step": 2,
+      "title": "The search",
+      "note": "Our scheduler searches the real prototype rules. Most attractive-looking gaps are terrible dates.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 107,
+      "scene": "match",
+      "step": 3,
+      "title": "The boundaries",
+      "note": "Keep emergency cover, a replacement machine and recovery time available.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 114,
+      "scene": "match",
+      "step": 4,
+      "title": "The match",
+      "note": "This window survives the checks. Medical physics can review the proposal.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 121,
+      "scene": "crew",
+      "step": 0,
+      "title": "The scheduler",
+      "note": "Meet the calendar goblins. The joke is optional. The scheduling code runs.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 129,
+      "scene": "crew",
+      "step": 1,
+      "title": "The physical helper",
+      "note": "Our proposed senior plugging-in engineer brings power and approved data, then checks identity and surroundings.",
+      "i": 17
+    },
+    {
+      "n": 18,
+      "at": 137,
+      "scene": "crew",
+      "step": 2,
+      "title": "The human gate",
+      "note": "We kept one very sophisticated component: a human with a thumb.",
+      "i": 18
+    },
+    {
+      "n": 19,
+      "at": 145,
+      "scene": "crew",
+      "step": 3,
+      "title": "Start",
+      "note": "The rules must pass. A human still presses start.",
+      "i": 19
+    },
+    {
+      "n": 20,
+      "at": 153,
+      "scene": "crew",
+      "step": 4,
+      "title": "The result",
+      "note": "Results, logs and exceptions return to the team. The browser prototype runs the plan; hospital and hardware integration come next.",
+      "i": 20
+    },
+    {
+      "n": 21,
+      "at": 165,
+      "scene": "care",
+      "step": 0,
+      "title": "Less drama",
+      "note": "Less machine drama.",
+      "i": 21
+    },
+    {
+      "n": 22,
+      "at": 172,
+      "scene": "care",
+      "step": 1,
+      "title": "More care",
+      "note": "More human care. [Hold the silence. The pitch is finished.]",
+      "i": 22
+    }
+  ],
+  "checks": [
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}
