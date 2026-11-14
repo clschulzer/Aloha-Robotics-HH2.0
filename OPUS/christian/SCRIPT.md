@@ -29,11 +29,9 @@ Christian's words (storyboard v4 and his click dummy), trimmed so they fit after
 | 2:16 | **Update running.** → 100 % → **Today is a good day.** | “It watches and would flag early. Today is a good day.” |
 | 2:21 | **Health check. Report. Next job.** | “Report, audit trail, next job.” |
 | 2:24 | **Loop closed.** · thank-you push · back in the plan | “And the loop closes where it started. Cio is happy, and the person who helped gets a thank-you.” |
-| 2:32 | The three pillars | “Emotional connectivity. AI orchestration with a human in the loop. Physical connectivity. [No patient data, signed packages, rollback ready.]” |
-| 2:40 | **Three minutes only scratch the surface.** | “Three minutes only scratch the surface. We believe robots will be everywhere in hospitals sooner than we think.” |
-| 2:48 | **Let’s brainstorm.** · KettyBot’s calendar invite | “Let’s brainstorm. Our robot already booked the room.” |
-| 2:52 | Everyone talks about AI. **We execute on IA.** INVISIBLE AUTONOMY | “Everyone talks about AI. We execute on IA: invisible autonomy.” |
-| 2:56 | **ALOHA ROBOTICS** · Any technical questions? · KettyBot winks | *(stop, hold the frame)* |
+| 2:32 | **Three minutes only scratch the surface.** | “Three minutes only scratch the surface. We believe robots will be everywhere in hospitals sooner than we think.” |
+| 2:40 | **Let’s brainstorm.** · three asks (status data · a C-arm to test · a pilot, no robot needed to start) · room booked by KettyBot | “Let’s brainstorm. [What we need next: status data, a C-arm to test, and a pilot. No robot needed to start.] Our robot already booked the room.” |
+| 2:49 | **ALOHA ROBOTICS** · Any technical questions? · KettyBot winks | *(stop, hold the frame)* |
 
 ## If you’re running long
 - Drop all [bracketed] words (about 8 s).

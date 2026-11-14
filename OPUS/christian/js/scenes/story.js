@@ -2,7 +2,8 @@
    Acts: statement → emotional connectivity (Cio on the team's phone, the mood becomes priority) →
    AI orchestration with a human in the loop (the window is FOUND from hospital data, medical physics
    publishes, a job card, a ride request) → physical connectivity (KettyBot's mission, 14 checks; a human
-   starts every update; report) → the loop closes → three pillars → call to action, IA, logo.
+   starts every update; report) → the loop closes → call to action (three asks, a room booked by
+   KettyBot) → logo. The pillar slide and the IA line left Christian's pitch in 14ae577, so they left here too.
    Each scene is a set of CSS states: .b0 .b1 … per beat (cumulative) and .k1 .k2 … for automatic steps. */
 (function () {
   'use strict';
@@ -312,20 +313,14 @@
     },
   });
 
-  /* ---------------- ACT 5b · three pillars ---------------- */
-  stateScene({ id: 'pillars', beats: 1,
-    play(i, anim, api) { if (anim) { [0, 450, 900].forEach((t, j) => api.later(t + 150, () => A.sfx.pop(520 + j * 140, 0.22))); api.later(1700, () => A.sfx.chime(0.26, 660)); } },
-  });
-
-  /* ---------------- ACT 5c · call to action → IA → logo ---------------- */
+  /* ---------------- ACT 5b · call to action: three asks, room booked → logo ---------------- */
   function wink() { const k = $('ou-ketty'); k.classList.add('winking'); A.sfx.sparkle(0.2); setTimeout(() => k.classList.remove('winking'), 420); }
-  stateScene({ id: 'outro', beats: 4,
+  stateScene({ id: 'outro', beats: 3,
     play(i, anim, api) {
       if (!anim) return;
       if (i === 0) A.sfx.thump(0.4);
-      if (i === 1) { api.later(900, () => A.sfx.notify(0.24)); api.later(1250, () => A.sfx.boing(0.2)); }
-      if (i === 2) { A.sfx.thump(0.35); api.later(1100, () => A.sfx.shimmer(0.2, 2.2)); }
-      if (i === 3) { api.later(250, () => A.sfx.hit(0.45)); api.later(450, () => A.sfx.whoosh(0.9, 0.14, true)); api.later(2500, wink); api.later(5500, wink); }
+      if (i === 1) { [450, 800, 1150].forEach((t, j) => api.later(t + 100, () => A.sfx.pop(520 + j * 140, 0.22))); api.later(1650, () => A.sfx.notify(0.24)); api.later(2000, () => A.sfx.boing(0.2)); }
+      if (i === 2) { api.later(250, () => A.sfx.hit(0.45)); api.later(450, () => A.sfx.whoosh(0.9, 0.14, true)); api.later(2500, wink); api.later(5500, wink); }
     },
   });
 })();
