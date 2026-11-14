@@ -28,17 +28,23 @@ doppelt so schnell (für Screencasts), `?notes=1` zeigt die Notizen, `?auto=0` s
 
 | Nr. | Akt | Szene |
 | :--- | :--- | :--- |
-| 1–3 | Emotional | App: Cio einsam, hungrig, glücklich |
-| 4 | Emotional | Every mood is a data point: Verantwortung, Stimmung wird Priorität |
-| 5 | KI | Wann ist der beste Moment? OP-Plan, eine OP fällt aus, vier Signale |
-| 6 | KI | Ein Knopfdruck: Fenster finden, prüfen, freigeben (Medizinphysik) |
-| 7 | KI | Lenas Handy: Auftrag, Ablehnen kostet nichts |
-| 8 | KI | Wie ein Fahrdienst: niemand frei → Roboter schicken |
-| 9 | Physisch | Mission: Grundriss plus Roboter-Agent, der 14 Prüfpunkte live abhakt |
-| 10 | KI + Mensch | Handy-Wizard: Mensch startet das Update (Lena → Medizinphysik → IT) |
-| 11–12 | Physisch | Update läuft, Bericht, Audit-Trail, nächster Job |
-| 13 | Emotional | Loop geschlossen: Danke, frische Daten |
-| 14 | Alle drei | Schluss in einem Klick: Call to Action, drei nächste Schritte, KettyBot fährt ein, „Room booked“ |
+| 1 | Aufhänger | Schwarzer Standby, Klick startet das Team-Video mit Ton, danach geht es von selbst weiter |
+| 2 | Aufhänger | Statement: „We are Aloha Robotics … Meet C-ARMAGOTCHI.“ |
+| 3–5 | Emotional | App: Cio einsam, hungrig, glücklich |
+| 6 | Emotional | Every mood is a data point: Verantwortung, Stimmung wird Priorität |
+| 7 | KI | Wann ist der beste Moment? OP-Plan, eine OP fällt aus, vier Signale |
+| 8 | KI | Ein Knopfdruck: Fenster finden, prüfen, freigeben (Medizinphysik) |
+| 9 | KI | Lenas Handy: Auftrag, Ablehnen kostet nichts |
+| 10 | KI | Wie ein Fahrdienst: niemand frei → Roboter schicken |
+| 11 | Physisch | Mission: Grundriss plus Roboter-Agent, der 14 Prüfpunkte live abhakt |
+| 12 | KI + Mensch | Handy-Wizard: Mensch startet das Update (Lena → Medizinphysik → IT) |
+| 13–14 | Physisch | Update läuft, Bericht, Audit-Trail, nächster Job |
+| 15 | Emotional | Loop geschlossen: Danke, frische Daten |
+| 16 | Alle drei | Schluss in einem Klick: Call to Action, drei nächste Schritte, KettyBot, „Room booked“ |
+
+Das Team-Video liegt nicht hier, sondern neben dem Team-Deck im Aloha-Repo
+(`CARMAGOTCHI_Web_Pitch/encore-christian/media/chaos_30s.mp4`, Pfad relativ `../encore-christian/…`).
+Fehlt es, zeigt Szene 1 einen Hinweis und es geht per Klick weiter. Anderer Pfad: `?video=…`.
 
 ## Prüfen
 

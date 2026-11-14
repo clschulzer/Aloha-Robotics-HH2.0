@@ -13,7 +13,8 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
 const errors = [];
 page.on('pageerror', (e) => errors.push(e.message));
-page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+// The team video is only next to the Aloha deck; a missing file shows a fallback and is not an error here.
+page.on('console', (m) => m.type() === 'error' && !/chaos_30s|ERR_FILE_NOT_FOUND/.test(m.text() + (m.location().url || '')) && errors.push(m.text()));
 await page.goto(base + '?speed=4');
 await page.waitForTimeout(800);
 const total = await page.evaluate(() => +document.getElementById('index').textContent.split('/')[1]);
