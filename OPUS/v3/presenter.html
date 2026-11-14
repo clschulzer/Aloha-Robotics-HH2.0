@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aloha Robotics — presenter view</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%233ef0e0%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+:root { --bg: #05080b; --panel: #0c1419; --line: #1d2d35; --teal: #3ef0e0; --orange: #ff8a3d; --gold: #ffc74a; --red: #ff4d5e; --ink: #eef4f6; --mute: #7d8f9a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; }
+body { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; }
+header { display: flex; align-items: center; gap: 12px; padding: 14px 24px; border-bottom: 1px solid var(--line); background: #071015; }
+.brand { font: 800 18px 'Manrope'; letter-spacing: -.01em; margin-right: 10px; }
+.brand span { color: var(--orange); }
+button { font: 700 13px 'JetBrains Mono', monospace; letter-spacing: .06em; background: #12222a; color: var(--ink); border: 1px solid #2a434e; border-radius: 8px; padding: 10px 14px; cursor: pointer; }
+button:hover { background: #1a313b; }
+button.big { padding: 12px 22px; font-size: 15px; }
+#sync { font: 700 12px 'JetBrains Mono', monospace; color: var(--mute); margin-left: 8px; }
+#sync.on { color: var(--teal); }
+.clock { margin-left: auto; text-align: right; }
+#clock { font: 800 46px/1 'Manrope'; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+#clock small { font-size: 22px; color: var(--mute); font-weight: 600; }
+#delta { font: 700 14px 'JetBrains Mono', monospace; margin-top: 4px; }
+main { display: grid; grid-template-columns: 1.6fr 1fr; gap: 0; min-height: 0; }
+.now { padding: 30px 40px; border-right: 1px solid var(--line); overflow: auto; }
+.cue { font: 700 15px 'JetBrains Mono', monospace; letter-spacing: .16em; color: var(--teal); }
+.pos { font: 600 13px 'JetBrains Mono', monospace; color: var(--mute); margin-top: 6px; letter-spacing: .08em; }
+#say { margin-top: 22px; font: 600 clamp(26px, 3.1vw, 46px)/1.36 'Manrope'; letter-spacing: -.01em; }
+#say em { color: var(--mute); font-style: normal; }
+.next { padding: 30px 34px; background: #070d11; overflow: auto; }
+.next .cue { color: var(--orange); }
+#nextSay { margin-top: 16px; font: 500 24px/1.45 'Manrope'; color: #b8c6cd; }
+.list { margin-top: 30px; font: 500 14px/1.9 'JetBrains Mono', monospace; color: #61727c; }
+.list div.cur { color: var(--ink); font-weight: 700; }
+.list div.done { color: #3d4b53; }
+.list b { display: inline-block; width: 64px; color: inherit; }
+footer { padding: 14px 24px 18px; border-top: 1px solid var(--line); }
+.bar { position: relative; height: 34px; background: #0b1419; border-radius: 8px; overflow: hidden; }
+.fill { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, rgba(62,240,224,.18), rgba(62,240,224,.35)); }
+.tick { position: absolute; top: 0; bottom: 0; width: 1px; background: #29414b; }
+.tick span { position: absolute; top: 4px; left: 4px; font: 600 10px 'JetBrains Mono', monospace; color: #557; white-space: nowrap; }
+.tick.sc { background: #3c6a72; }
+.tick.sc span { color: #8fb; }
+.mark { position: absolute; top: -2px; bottom: -2px; width: 3px; background: var(--orange); box-shadow: 0 0 10px var(--orange); }
+.end { position: absolute; top: 0; bottom: 0; right: 0; width: 2px; background: var(--red); }
+.hint { margin-top: 8px; font: 500 12px 'JetBrains Mono', monospace; color: #4f616b; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">ALOHA <span>ROBOTICS</span> · PRESENTER</div>
+  <button class="big" id="prev">◀ BACK</button>
+  <button class="big" id="next">NEXT ▶</button>
+  <button id="restart">RESTART</button>
+  <button id="mute">SFX ON/OFF</button>
+  <button id="pause">CLOCK ⏯</button>
+  <button id="reset">CLOCK 0</button>
+  <span id="sync">○ deck not connected — open index.html on the same origin</span>
+  <div class="clock"><div id="clock">0:00 <small>/ 3:00</small></div><div id="delta">—</div></div>
+</header>
+<main>
+  <section class="now">
+    <div class="cue" id="cue">STANDBY</div>
+    <div class="pos" id="pos">—</div>
+    <div id="say">Open the deck (index.html), press F for fullscreen on the projector, then come back here.</div>
+  </section>
+  <section class="next">
+    <div class="cue">NEXT</div>
+    <div class="pos" id="nextCue">—</div>
+    <div id="nextSay">—</div>
+    <div class="list" id="list"></div>
+  </section>
+</main>
+<footer>
+  <div class="bar" id="bar"><div class="fill" id="fill"></div><div class="end"></div><div class="mark" id="mark"></div></div>
+  <div class="hint">→ / Space = next · ← = back · this window can drive the deck. Words in [brackets] are optional — drop them when you are behind the clock.</div>
+</footer>
+<script src="js/notes.js"></script>
+<script>
+(function () {
+  'use strict';
+  const N = window.OPUS.NOTES, ORDER = ['standby', 'film', 'intro', 'tama', 'now', 'calendar', 'night', 'morning', 'hood', 'outro'];
+  const TOTAL = 180, $ = (id) => document.getElementById(id);
+  const beats = []; ORDER.forEach((id) => (N[id] || []).forEach((n, b) => beats.push({ id, b, n })));
+  let ch = null, st = null, lastAt = 0, localClock = { run: false, t0: 0, acc: 0 };
+  try { ch = new BroadcastChannel('aloha-opus-v3'); } catch (_) {}
+  const send = (m) => { try { ch && ch.postMessage(m); } catch (_) {} try { localStorage.setItem('aloha-opus-v3-cmd', JSON.stringify(Object.assign({ n: Math.random() }, m))); } catch (_) {} };
+  const fmt = (s) => { const neg = s < 0; s = Math.abs(s); return (neg ? '−' : '') + Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0'); };
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\[([^\]]+)\]/g, '<em>[$1]</em>').replace(/\(([^)]+)\)/g, '<em>($1)</em>');
+  // timeline ticks
+  beats.forEach((x) => { if (x.n.at == null) return; const d = document.createElement('div'); d.className = 'tick' + (x.b === 0 ? ' sc' : ''); d.style.left = (x.n.at / TOTAL * 100) + '%'; if (x.b === 0) d.innerHTML = `<span>${x.id}</span>`; $('bar').appendChild(d); });
+  $('list').innerHTML = beats.map((x, i) => `<div data-i="${i}"><b>${x.n.at == null ? '' : fmt(x.n.at)}</b>${x.id} · ${x.n.cue}</div>`).join('');
+  function render() {
+    if (!st) return;
+    const i = beats.findIndex((x) => x.id === st.id && x.b === st.beat);
+    const cur = beats[i] || { id: st.id, b: st.beat, n: (N[st.id] || [{ cue: st.id, say: '' }])[0] }, nx = beats[i + 1];
+    $('cue').textContent = cur.n.cue; $('pos').textContent = `${st.id.toUpperCase()} · BEAT ${st.beat + 1} / ${st.beats}` + (cur.n.at != null ? ` · TARGET ${fmt(cur.n.at)}` : '');
+    $('say').innerHTML = esc(cur.n.say || '');
+    $('nextCue').textContent = nx ? `${nx.id.toUpperCase()} · ${nx.n.cue}` + (nx.n.at != null ? ` · at ${fmt(nx.n.at)}` : '') : 'END — hold the last frame, take questions';
+    $('nextSay').innerHTML = nx ? esc(nx.n.say || '') : '';
+    document.querySelectorAll('#list div').forEach((d) => { const k = +d.dataset.i; d.className = k === i ? 'cur' : k < i ? 'done' : ''; });
+    const cd = document.querySelector('#list .cur'); if (cd) cd.scrollIntoView({ block: 'nearest' });
+  }
+  function tick() {
+    const el = st ? st.elapsed + (st.running ? (Date.now() - lastAt) / 1000 : 0) : 0;
+    $('clock').innerHTML = `${fmt(el)} <small>/ 3:00</small>`;
+    $('clock').style.color = el > TOTAL ? 'var(--red)' : el > TOTAL - 15 ? 'var(--gold)' : 'var(--ink)';
+    $('fill').style.width = Math.min(100, el / TOTAL * 100) + '%';
+    $('mark').style.left = `calc(${Math.min(100, el / TOTAL * 100)}% - 1px)`;
+    if (st) { const i = beats.findIndex((x) => x.id === st.id && x.b === st.beat); const cur = beats[i]; if (cur && cur.n.at != null && st.running) { const d = el - cur.n.at; $('delta').textContent = (d >= 0 ? '+' : '') + d.toFixed(0) + ' s vs plan'; $('delta').style.color = Math.abs(d) < 4 ? 'var(--teal)' : d > 0 ? 'var(--red)' : 'var(--gold)'; } else $('delta').textContent = st.running ? '' : 'clock starts with the film'; }
+    requestAnimationFrame(tick);
+  }
+  function onState(m) { if (!m || m.type !== 'state') return; st = m; lastAt = Date.now(); $('sync').textContent = m.armed === false && m.id === 'standby' ? '⚠ synced · press F on the projector window once (unlocks film sound)' : '● synced to deck'; $('sync').className = m.armed === false && m.id === 'standby' ? '' : 'on'; render(); }
+  if (ch) ch.onmessage = (e) => onState(e.data);
+  window.addEventListener('storage', (e) => { if (e.key === 'aloha-opus-v3-state' && e.newValue) try { onState(JSON.parse(e.newValue)); } catch (_) {} });
+  try { const v = JSON.parse(localStorage.getItem('aloha-opus-v3-state') || 'null'); if (v) onState(v); } catch (_) {}
+  send({ type: 'hello' });
+  $('next').onclick = () => send({ type: 'nav', action: 'next' });
+  $('prev').onclick = () => send({ type: 'nav', action: 'prev' });
+  $('restart').onclick = () => { if (confirm('Restart the deck to the black standby screen?')) send({ type: 'nav', action: 'restart' }); };
+  $('mute').onclick = () => send({ type: 'mute' });
+  $('pause').onclick = () => send({ type: 'clock', action: 'toggle' });
+  $('reset').onclick = () => send({ type: 'clock', action: 'reset' });
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); send({ type: 'nav', action: 'next' }); }
+    if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); send({ type: 'nav', action: 'prev' }); }
+  });
+  tick();
+})();
+</script>
+</body>
+</html>
