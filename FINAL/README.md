@@ -7,6 +7,7 @@ Each version gets its own folder. The latest is **[`finalV2/`](finalV2/)**.
 | [`v2/`](v2/) | Christian's pitch (`CARMAGOTCHI_Web_Pitch/pitch-demo-christian`) with his fine-tuning from 14 Nov: Tamagotchi intro, AI Scheduling Suite, "Who plugs it in?", Aloha PatchRover, new close. See [`v2/README.md`](v2/README.md). |
 | [`v3/`](v3/) | v2, faster: video 1.2×, intro text without animation, faster mission, and v2 scenes 8 + 9 combined into one agent calendar with a polytrauma re-plan and a "Publish update" button. See [`v3/README.md`](v3/README.md). |
 | [`v4/`](v4/) | v3 with the video at 1.4× and the first slot in scene 8 at midday (11:30–13:30), taken by a polytrauma, re-planned to tonight. See [`v4/README.md`](v4/README.md). |
+| [`v5/`](v5/) | v4 with a click after the mission, palm-tree logo, two QR codes on the last slide (fun + technical placeholder) and the team names in the footer. See [`v5/README.md`](v5/README.md). |
 | [`v1/`](v1/) | One pitch assembled from all the existing presentations, following Marc's notes from 14 Nov. Nothing new was invented: every scene comes from code we already had. |
 | [`finalV2/`](finalV2/) | v1 with Marc's notes from 14 Nov, 10:48: the Tamagotchi transition is back and opens into the phone, the top bar is back, the phones look and behave like a real phone with notifications, and the pitch ends on the booked room with a QR code to this repository. See [`finalV2/README.md`](finalV2/README.md). |
 
