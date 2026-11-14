@@ -107,10 +107,10 @@
   const TEAM = [['C-01', 'bliss', 'OR 1', 'all good', ''], ['C-02', 'bliss', 'OR 2', 'all good', ''], ['C-03 Cio', 'manic', 'Corridor B', 'patch due since Mon', '1'], ['C-04', 'lonely', 'Storage 2', 'offline 9 days', '2'], ['C-05', 'bliss', 'Hybrid OR', 'all good', ''], ['C-06', 'update', 'Trauma bay', 'updating now', '']];
 
   // The team video lives next to the Aloha deck (CARMAGOTCHI_Web_Pitch/encore-christian/media). Override with ?video=path.
-  const VIDEO = Q.get('video') || '../../CARMAGOTCHI_Web_Pitch/encore-christian/media/chaos_30s.mp4';
+  const VIDEO = Q.get('video') || 'media/team-video-1.5x.mp4'; // v5: 1.5× baked in, 720p, 4.6 MB instead of 37 MB, so it starts and plays smoothly
   // Top-left name per part of the story: the app, the scheduling suite, the robot service, the company.
   // v3: the team video runs a little faster (v4: 1.4×, 30 s → about 21 s), still easy to follow. Override with ?rate=1.
-  const RATE = +Q.get('rate') || 1.4;
+  const RATE = +Q.get('rate') || 1; // the speed is in the file now (1.5×)
   // v5: two QR codes on the last slide. Swap a file in assets/ (or the path here) to change one.
   const QR = [
     ['assets/qr-fun.png', 'For fun', 'play the arcade'],

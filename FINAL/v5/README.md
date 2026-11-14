@@ -5,7 +5,8 @@ Built from `FINAL/v4/`, which stays unchanged. Changes in v5:
 - Mission (scene 12) no longer moves on to Lena's phone by itself: the last step waits for a click.
 - Aloha Robotics logo on the last slide: a small palm tree in Siemens Healthineers petrol and orange instead of the dot.
 - Last slide: KettyBot and the meeting ticket move up, and two QR codes sit below them: "For fun" (the arcade, `assets/qr-fun.png`) and "Technical" (placeholder `assets/qr-tech.svg`). To swap one, replace the file or change the path in `QR` in `demo.js`.
-- Footer in two lines: the new disclaimer, then Marc, Sid and Chris and the outfit line.
+- Footer: the disclaimer only on the last slide, in two lines (new disclaimer, then Marc, Sid and Chris and the outfit line). Other slides show no disclaimer.
+- Team video: re-encoded with 1.5× baked in, 1280×720, 4.6 MB instead of 37 MB (`media/team-video-1.5x.mp4`), so it loads fast and plays smoothly. The browser plays it at normal rate; `?video=` and `?rate=` still override.
 
 Below, the v4 notes:
 
