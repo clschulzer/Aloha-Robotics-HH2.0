@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish explicit compatibility copies without touching the submitted deck.
+"""Publish explicit compatibility copies without touching the preserved hackathon deck.
 
 Run after editing Website or the detailed Care Companion prototype.
 The legacy phone/arcade deployment is intentionally outside this tool.
@@ -46,7 +46,7 @@ def main():
         count += 1
     if failures:
         raise SystemExit("Compatibility copies need syncing:\n" + "\n".join(failures))
-    print(f"{'Verified' if args.check else 'Published'} {count} compatibility files. FINAL/v5 and CARMAGOTCHI_APP untouched.")
+    print(f"{'Verified' if args.check else 'Published'} {count} compatibility files. Presentation/hackathon and CARMAGOTCHI_APP untouched.")
 
 
 if __name__ == "__main__":

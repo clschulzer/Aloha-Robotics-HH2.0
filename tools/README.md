@@ -1,35 +1,43 @@
 # Repository maintenance
 
-The public source lives in `Website/`, `Care-Companion/` and `C-Arcade/`. The submitted presentation stays in `FINAL/v5/`, at its original URL.
+| Current source | Purpose |
+| --- | --- |
+| `Website/` | Main public website, technical guide and QR kit |
+| `Presentation/hackathon/` | Exact presentation used by the team; preserve as an event record |
+| `Care-Companion/` | Detailed prototype and separate phone experience |
+| `C-Arcade/` | Both games |
+| `Documentation/` | Research, specifications, transcripts and Siemens follow-up |
 
-## Existing QR routes
+GitHub Pages publishes `main` from the repository root. Root `index.html` opens `Website/`; `.nojekyll` preserves the static setup.
 
-Run from the repository root after changing the website or detailed platform:
+## Existing public and QR routes
 
-```bash
+After changing the website or detailed platform, run from the repository root:
+
+```sh
 python3 tools/sync-public-routes.py
 python3 tools/sync-public-routes.py --check
 ```
 
-This makes explicit static copies:
+| Canonical source | Retained public route | Behavior |
+| --- | --- | --- |
+| `Website/` | `ALOHA/` | Generated static copy for previously shared QR links and downloads |
+| `Care-Companion/` (detailed platform) | `CARMAGOTCHI_Web_Pitch/klickdummy-christian/` | Generated static copy for the original app QR |
+| `Presentation/hackathon/` | `FINAL/v5/` | Entry redirect forwards query and fragment; the deck then applies its own navigation |
+| `Archive/FINAL/v1/` | `FINAL/v1/` | Earlier pitch link inside the legacy phone app |
 
-| Source | Existing public route |
-| --- | --- |
-| `Website/` | `ALOHA/` |
-| `Care-Companion/` — detailed platform only | `CARMAGOTCHI_Web_Pitch/klickdummy-christian/` |
+Edit canonical sources, then sync. Never edit generated copies independently. The `FINAL` entry redirects do not preserve old direct asset-download paths; assets travel with their presentation under `Presentation/hackathon/`.
 
-Copies preserve relative assets, query strings, URL fragments, direct downloads and existing QR destinations. There is no redirect between these pairs. Edit the source, then run the script; never edit the generated runtime copy.
-
-`CARMAGOTCHI_APP/` is a separate frozen legacy deployment for installed phone apps and their offline arcade. Its cache and original assets remain intact. Current development lives in `Care-Companion/phone/` and `C-Arcade/`; the new phone uses its own cache namespace.
-
-[Cleanup verification record](CLEANUP-REVIEW.md) · [Rollback instructions](../ROLLBACK.md)
+`CARMAGOTCHI_APP/` is a frozen legacy deployment for existing QR codes and installed/offline apps. Keep its runtime, worker and shared arcade assets intact; replacing it with a redirect would disrupt that installation. Current development lives in `Care-Companion/phone/` and `C-Arcade/`. The new phone has its own worker cache namespace.
 
 ## Preservation audit
 
-```bash
+```sh
 python3 tools/verify-preservation.py
 ```
 
-The manifest records every file tracked immediately before cleanup, its original hash, and where its original bytes were retained. Changed documentation has an untouched copy under `Archive/Originals/`. The checker additionally protects the complete submitted deck, the legacy phone runtime and the existing QR kit.
+[The manifest](preservation-manifest.json) records the 1,162 files present at `backup/post-hackathon-2026-11-14`. It verifies original-byte retention, the exact 14-file presentation at its new location, existing QR assets, legacy phone/arcade runtime, the Pages marker and generated copies. Updated documents retain an original copy in `Archive/Originals/`.
 
-The manifest is an audit receipt, not a baseline to regenerate after future edits. If a protected file needs to change, first review [ROLLBACK.md](../ROLLBACK.md) and the original preservation requirements. Do not weaken checks to make a changed presentation pass.
+The manifest is an immutable audit receipt. Do not regenerate it merely to make an unexpected change pass. The earlier cleanup's receipts are in [Archive/Repository-Cleanup](../Archive/Repository-Cleanup/README.md).
+
+[Rollback and backup instructions](../ROLLBACK.md) · [Post-event verification](POST-EVENT-REVIEW.md)

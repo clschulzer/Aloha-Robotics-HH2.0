@@ -2,7 +2,7 @@
 
 **[Open the app](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/phone/)** · **[QR code](share/qr.png)** · **[Printable QR card](share/qr-card.png)** · **[Vector QR](share/qr.svg)**
 
-A mobile interactive prototype originally built from **`FINAL/v1`** at repository revision `86c8bda`, now copied into the organized Care Companion source folder. The [submitted presentation](../../FINAL/v5/?s=1) remains unchanged. The original OPUS/Christian phone design survives in that pitch: warm cream, Manrope, large pastel character cards, a dark request screen, and the three-step human decision.
+A mobile interactive prototype originally built from **`FINAL/v1`** at repository revision `86c8bda`, now copied into the organized Care Companion source folder. The [presentation used at the hackathon](../../Presentation/hackathon/?s=1) is preserved separately. The original OPUS/Christian phone design survives in that pitch: warm cream, Manrope, large pastel character cards, a dark request screen, and the three-step human decision.
 
 All implementation and copied assets live inside this folder. No presentation files are changed.
 
@@ -65,7 +65,7 @@ Open `http://localhost:8766/Care-Companion/phone/` after starting the repository
 
 ## Canonical source and compatibility
 
-This folder is a self-contained copy of the mobile app, excluding the arcade. [Care Companion's detailed demo](../) is the main professional app; this `phone/` subfolder preserves the separate mobile Cio experience. Navigation links lead to the canonical `C-Arcade/` and the immutable `FINAL/v5/?s=1` presentation.
+This folder is a self-contained copy of the mobile app, excluding the arcade. [Care Companion's detailed demo](../) is the main professional app; this `phone/` subfolder preserves the separate mobile Cio experience. Navigation links lead to the canonical `C-Arcade/` and the old `FINAL/v5/?s=1` entry, which now forwards to the [hackathon presentation](../../Presentation/hackathon/?s=1).
 
 The original `CARMAGOTCHI_APP/` public route stays intact for existing QR codes and installed apps. Do not replace that original with a redirect: its installed service worker and offline cache cover the old URL. New installs from this folder use their own relative manifest identity, start URL and scope.
 

@@ -1,12 +1,12 @@
-# Aloha Robotics — the submitted presentation
+# Aloha Robotics — Presentations
 
-**[Open the submitted pitch from the beginning ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1)**
+**[Watch the presentation used at the hackathon ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Presentation/hackathon/?s=1)**
 
-The submitted version is **`FINAL/v5/`**. This folder is its launch guide. The original 14-file presentation tree—including its video, artwork, QR images, code and README—is preserved unchanged.
+**4th place · Healthcare Hackathon Bavaria · Erlangen 2026.** The three-minute pitch used by Marc, Sid and Chris is preserved in [`hackathon/`](hackathon/). All 14 files—including the film, characters, QR codes, stylesheet, script and speaker notes—match the team's final used version.
 
-## Present it
+The former [FINAL/v5 link](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1) forwards here. Existing shared presentation links remain usable.
 
-Open the link above, focus the presentation window and press **F** for fullscreen. Advance through the story with the arrow keys or a presentation clicker. Several animated steps advance automatically; the mission’s final step waits for your click.
+## Present and rehearse
 
 | Control | Action |
 | --- | --- |
@@ -14,34 +14,30 @@ Open the link above, focus the presentation window and press **F** for fullscree
 | **Click the stage** | Next step; dedicated phone actions retain their own behavior |
 | **← / Page Up** | Previous step or scene |
 | **Home / 0** | Return to the first scene |
-| **N** | Show or hide the speaker notes overlay |
+| **N** | Show or hide speaker notes in the presentation window |
 | **F** | Enter or leave fullscreen |
 
-These controls come from the submitted `demo.js`. The notes overlay appears in the presentation window, so use it on a private rehearsal screen.
-
-## Rehearse locally
+Some animation steps advance automatically; others wait for the presenter. The notes overlay is visible in the presentation window, so use it on a private rehearsal screen.
 
 From the repository root:
 
-```bash
+```sh
 python3 -m http.server 8000
 ```
 
-Open **[http://localhost:8000/FINAL/v5/?s=1](http://localhost:8000/FINAL/v5/?s=1)**.
+Open <http://localhost:8000/Presentation/hackathon/?s=1>. Use `?s=8` to start at scene 8, `&notes=1` for notes, or `&auto=0` to disable timed scene advances. The faster team-video timing is baked into the video file.
 
-For a specific passage, use `?s=8` to start at scene 8. Add `&notes=1` to show notes or `&auto=0` to disable the scene timer advances. The submitted team video has its faster timing baked into the video file; normal playback preserves that timing.
+## The longer Siemens pitch
 
-## Source and supporting material
+Start with the [Siemens follow-up brief](../Documentation/siemens-follow-up.md), [research index](../Documentation/README.md) and [working Care Companion](../Care-Companion/README.md). The follow-up deck has not been created; its audience, duration and meeting date remain open.
 
-- [Submitted source](../FINAL/v5/) · [original version notes](../FINAL/v5/README.md)
-- [Project website](../Website/README.md) · [technical documentation](../Documentation/README.md)
-- [Current QR download kit](../Website/share/) — separate from the frozen presentation’s original final-slide images
-- [Earlier versions and experiments](../Archive/README.md)
+Keep `hackathon/` as the record of what was presented. Develop a future cut in a separate named folder once the team agrees its scope. The existing pitch's scheduling and robot scenes are scripted demonstrations; use the runnable planner and specifications for technical discussion.
 
-The submitted closing slide retains its original arcade QR and technical placeholder. The separate QR kit provides the three working Explore, Play and Try destinations for handouts or future presentations.
+## Source and history
 
-## Preservation
+- [Used presentation source](hackathon/) · [original revision notes](hackathon/README.md)
+- [Project website](../Website/README.md) · [QR kit](../Website/share/)
+- [Earlier presentations](../Archive/README.md)
+- [Used-version recovery tag](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/post-hackathon-2026-11-14) · [rollback guide](../ROLLBACK.md)
 
-The submitted presentation is not copied over, restyled or upgraded during repository organization. Its original public URL remains the canonical launch link. Legacy route folders are retained where existing QR codes, media links or installed companion apps depend on them.
-
-The pre-organization repository is preserved at **[backup/pre-cleanup-2026-11-14](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/pre-cleanup-2026-11-14)**, commit [`01b14a9`](https://github.com/clschulzer/Aloha-Robotics-HH2.0/commit/01b14a9). See [rollback instructions](../ROLLBACK.md).
+The original README inside `hackathon/` remains part of the preserved artifact. Its older version names and paths describe development history; this guide provides the current launch instructions.

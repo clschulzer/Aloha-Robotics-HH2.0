@@ -2,12 +2,17 @@
 
 The evidence, design decisions and engineering proposals behind C-ARMAGOTCHI and Invisible Connectivity. Start with the conversations and synthesis, then follow the specifications into the working browser prototype.
 
-**[Project website](../Website/)** · **[Care Companion](../Care-Companion/)** · **[Phone companion](../Care-Companion/phone/)** · **[Submitted presentation](../FINAL/v5/)**
+**[Project website](../Website/)** · **[Care Companion](../Care-Companion/)** · **[Phone companion](../Care-Companion/phone/)** · **[Hackathon presentation](../Presentation/hackathon/)**
+
+## Preparing the Siemens discussion
+
+**[Start with the follow-up brief](siemens-follow-up.md).** It links the essential evidence, distinguishes the running prototype from proposed integrations, and sets out questions for the longer internal pitch. The hackathon is complete; the next phase is validating the problem, interfaces and a useful first pilot.
 
 ## Start here
 
 | Document | What it provides |
 | --- | --- |
+| [Siemens follow-up brief](siemens-follow-up.md) | Recommended reading, suggested meeting flow, six open questions and a first validation step |
 | [Challenge overview](team-material-christian/challenge-4/README.md) | The original Invisible Connectivity challenge and the team's supporting material |
 | [Briefing](team-material-christian/challenge-4/briefing.md) | Problem, users, proposed solution and demonstration flow |
 | [Conversation synthesis](team-material-christian/challenge-4/synthese-nach-gespraech.md) | Christian's synthesis of the challenge-owner discussions |
@@ -68,4 +73,4 @@ The checks exercise proposed windows, margins, deadline handling, replacement co
 | `breif/` | `Documentation/architecture-options/` |
 | `autonomous_c_arm_fleet_architecture.md` | `Documentation/architecture/autonomous_c_arm_fleet_architecture.md` |
 
-The source documents, transcript files and historical prototype assets have been preserved. The submitted `FINAL/v5/` presentation remains at its original location.
+The source documents, transcript files and historical prototype assets have been preserved. The presentation used at the hackathon now lives in `Presentation/hackathon/`; its former `FINAL/v5/` entry link forwards there.

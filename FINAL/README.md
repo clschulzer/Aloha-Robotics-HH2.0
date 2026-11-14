@@ -1,9 +1,10 @@
-# Submitted presentation — preserved route
+# Previous presentation links
 
-**[Open the submitted final deck](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1)**
+Current source: **[Presentation/hackathon](../Presentation/README.md)**.
 
-`v5/` remains in this directory because its exact URL has already been submitted. Every file in it is unchanged, including its script, stylesheet, video, images and original README.
+| Retained route | Destination |
+| --- | --- |
+| [v5/](v5/?s=1) | The presentation used at the hackathon, now in `Presentation/hackathon/` |
+| [v1/](v1/) | The earlier archived cut linked by the original installed phone app |
 
-See [Presentation](../Presentation/README.md) for controls and rehearsal guidance. Do not move, rename, wrap, redirect or edit `v5/`.
-
-Earlier cuts are in [Archive/FINAL](../Archive/FINAL/). The small `v1/` redirect preserves an old link embedded in the installed companion app and opens its archived source presentation.
+These small redirect pages preserve previously shared links. Edit or rehearse from the current Presentation folder. The 14 used presentation files were relocated without content changes; earlier cuts remain in [Archive/FINAL](../Archive/FINAL/).

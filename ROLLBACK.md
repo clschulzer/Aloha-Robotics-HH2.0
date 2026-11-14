@@ -1,70 +1,76 @@
-# Safe rollback
+# Recovery and preservation
 
-The complete repository before cleanup is preserved at:
+## Current recovery point
 
-- **Tag:** [`backup/pre-cleanup-2026-11-14`](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/pre-cleanup-2026-11-14)
-- **Commit:** [`01b14a9047fe95e192cf013cdbb48d77ddd57517`](https://github.com/clschulzer/Aloha-Robotics-HH2.0/commit/01b14a9047fe95e192cf013cdbb48d77ddd57517)
-- **Submitted deck:** `FINAL/v5/`, all 14 files protected by a byte-for-byte manifest.
+The complete repository immediately before post-event organization is preserved at:
 
-The backup tag was pushed and verified before files were reorganized. It must not be moved or reused.
+- **Tag:** [backup/post-hackathon-2026-11-14](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/post-hackathon-2026-11-14)
+- **Commit:** [3b8065afbe38e6b70054e5b1e8ce5423a448ace6](https://github.com/clschulzer/Aloha-Robotics-HH2.0/commit/3b8065afbe38e6b70054e5b1e8ce5423a448ace6)
+- **Presentation at that point:** `FINAL/v5/`, including the final QR and alignment changes used by the team.
 
-## Inspect the old state alongside the new one
+That tag was pushed before reorganization. It must not be moved or reused. The same 14 presentation files now live unchanged in `Presentation/hackathon/`.
+
+## Inspect or recover beside current work
 
 From an existing clone:
 
-```bash
+```sh
 git fetch origin --tags
-git worktree add ../Aloha-before-cleanup backup/pre-cleanup-2026-11-14
+git worktree add ../Aloha-after-hackathon backup/post-hackathon-2026-11-14
 ```
 
-This creates a separate historical checkout. Your current branch and files stay in place. Serve that checkout with `python3 -m http.server 8001` to inspect the old paths.
+Serve that separate checkout with `python3 -m http.server 8001` to use its old paths. Current work stays in place.
 
-## Undo the cleanup on GitHub
+To inspect a single historical file:
 
-The organization is delivered as one commit named **`Organize Aloha with preserved presentation and rollback archive`**.
+```sh
+git show backup/post-hackathon-2026-11-14:FINAL/v5/demo.css
+```
 
-Start with a clean working tree and pull the latest team changes:
+Recover files into a separate checkout first so later work is not accidentally overwritten.
 
-```bash
+## Undo this organization
+
+The post-event organization is one commit named **`Organize post-hackathon repository and Siemens follow-up`**. Start with a clean working tree:
+
+```sh
 git status
 git switch main
 git pull --ff-only
-git log --oneline --all --grep='Organize Aloha with preserved presentation and rollback archive'
+git log --oneline --grep='Organize post-hackathon repository and Siemens follow-up'
 ```
 
-Copy that cleanup commit’s hash, then:
+Copy its hash, then:
 
-```bash
+```sh
 git revert <cleanup-commit-hash>
 git push origin main
 ```
 
-Revert creates a normal, reviewable commit restoring the previous layout; no history rewriting or force push is needed. If teammates have changed affected files afterward, review the conflicts rather than discarding their work. Wait for GitHub Pages deployment, then verify the submitted URL and the three QR routes.
+This adds a normal recovery commit. No history rewriting or force push is required. If later team changes conflict, review them rather than discarding them. Wait for Pages publication and check the website, pitch and QR destinations.
 
-## Restore only a specific file
+## Verify the organized repository
 
-Review the historical file first:
-
-```bash
-git show backup/pre-cleanup-2026-11-14:path/to/file
-```
-
-Use the manifest’s original path when a file has moved. Recover into a separate checkout or temporary path first so current work is not overwritten accidentally.
-
-## Independent backups on the cleanup workstation
-
-These backups are outside Git and were not published:
-
-- `/home/haunted/Backups/Aloha-Robotics-HH2.0/pre-cleanup-2026-11-14.bundle` — verified complete Git bundle.
-- `/home/haunted/Backups/Aloha-Robotics-HH2.0/pre-cleanup-2026-11-14-local-artifacts.tar` — ignored local screenshots and other generated artifacts.
-
-The Git bundle can be cloned with `git clone /path/to/pre-cleanup-2026-11-14.bundle Aloha-recovered`. It provides an independent recovery route if the remote is unavailable.
-
-## Verify preservation
-
-```bash
+```sh
 python3 tools/verify-preservation.py
 python3 tools/sync-public-routes.py --check
 ```
 
-Every original tracked file has a retained byte-identical copy. Existing QR payloads are unchanged, and the entire submitted presentation stays at **[its exact submitted URL](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1)**.
+[The current manifest](tools/preservation-manifest.json) records all 1,162 files tracked before this cleanup and where their original bytes are retained. Files with updated links or guidance have historical copies under `Archive/Originals/post-hackathon-2026-11-14/`. Moved files retain their bytes at their new locations. The checks additionally protect the complete used deck, legacy app runtime, QR assets and generated compatibility copies.
+
+This is a historical preservation record, not a baseline to regenerate to hide changes. Future development should preserve the used deck and use a separate presentation folder.
+
+## Earlier checkpoint
+
+[backup/pre-cleanup-2026-11-14](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/pre-cleanup-2026-11-14), commit `01b14a9`, preserves the repository before the first cleanup. It predates the team's later authorized QR and alignment edits. Its [manifest and verification receipt](Archive/Repository-Cleanup/README.md) remain unchanged in the archive; run those historical checks in that historical checkout, not against today's presentation.
+
+## Independent local backups
+
+On the cleanup workstation, outside Git:
+
+- `/home/haunted/Backups/Aloha-Robotics-HH2.0/post-hackathon-2026-11-14.bundle` — verified complete Git bundle before this cleanup.
+- `/home/haunted/Backups/Aloha-Robotics-HH2.0/post-hackathon-2026-11-14.manifest.json` — immutable file hashes for the same checkpoint.
+- `/home/haunted/Backups/Aloha-Robotics-HH2.0/pre-cleanup-2026-11-14.bundle` — earlier complete repository backup.
+- `/home/haunted/Backups/Aloha-Robotics-HH2.0/pre-cleanup-2026-11-14-local-artifacts.tar` — earlier ignored screenshots and generated files.
+
+A bundle can be cloned with `git clone /path/to/backup.bundle Aloha-recovered`. The published tags are the recovery route available to every teammate.

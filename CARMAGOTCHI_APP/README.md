@@ -1,6 +1,6 @@
 # C-ARMAGOTCHI — the phone app
 
-> **Preserved legacy deployment.** Existing QR codes and installed/offline apps use this path. Its runtime, service worker and assets were left unchanged during repository organization. Current source and guidance are in **[Care Companion / phone](../Care-Companion/phone/README.md)** and **[C-Arcade](../C-Arcade/README.md)**. The original implementation notes below describe the version when it was built; `FINAL/v1` is now archived. The submitted pitch is **[FINAL/v5/?s=1](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1)**.
+> **Preserved legacy deployment.** Existing QR codes and installed/offline apps use this path. Its runtime, service worker and assets were left unchanged during repository organization. Current source and guidance are in **[Care Companion / phone](../Care-Companion/phone/README.md)** and **[C-Arcade](../C-Arcade/README.md)**. The original implementation notes below describe the version when it was built; `FINAL/v1` is now archived. The presentation used at the hackathon is preserved at **[Presentation/hackathon/?s=1](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Presentation/hackathon/?s=1)**; its old `FINAL/v5/` entry still works.
 
 **[Open the app](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/)** · **[QR code](share/qr.png)** · **[Printable QR card](share/qr-card.png)** · **[Vector QR](share/qr.svg)**
 

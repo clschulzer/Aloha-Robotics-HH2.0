@@ -1,6 +1,6 @@
 # Aloha — let care keep moving
 
-**[Visit the website](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/)** · **[Technical guide](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/technical.html)** · **[Three-QR kit](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/share/)**
+**[Visit the website](https://clschulzer.github.io/Aloha-Robotics-HH2.0/)** · **[Technical guide](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/technical.html)** · **[Three-QR kit](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/share/)**
 
 The public starting point for Aloha: the idea, interactive care loop, source evidence, technical documentation and demos. The repository’s root URL opens this website.
 
@@ -14,7 +14,9 @@ The public starting point for Aloha: the idea, interactive care loop, source evi
 
 The existing QR payloads and artwork are unchanged. The website and detailed platform have static compatibility copies at their original URLs. The old phone/arcade deployment is preserved separately for installed apps.
 
-[Download the three-card PNG](share/three-qr-cards.png), [vector sheet](share/three-qr-cards.svg), or [individual codes](share/README.md). These are standalone assets; the submitted presentation was not edited.
+[Download the three-card PNG](share/three-qr-cards.png), [vector sheet](share/three-qr-cards.svg), or [individual codes](share/README.md). These are standalone assets for presentations and handouts. The [hackathon presentation](../Presentation/hackathon/?s=1) preserves the version the team used.
+
+The [Siemens follow-up brief](../Documentation/siemens-follow-up.md) connects the working prototype, open questions and proposed next steps.
 
 ## Inside the website
 

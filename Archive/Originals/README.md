@@ -1,7 +1,12 @@
-# Original files retained during cleanup
+# Original files retained during organization
 
-This folder preserves the exact pre-cleanup bytes of files that needed updated links, navigation, metadata or documentation. Paths beneath `files/` mirror their original locations in the repository.
+These are historical copies of files whose current guidance, navigation or metadata changed. Paths inside each collection mirror their original repository locations.
 
-The complete original tree is also available in the [backup tag](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/pre-cleanup-2026-11-14). The [preservation manifest](../../tools/pre-cleanup-manifest.json) maps every original tracked file to an unchanged copy.
+| Collection | Baseline |
+| --- | --- |
+| [`files/`](files/) | Before the first cleanup: [backup/pre-cleanup-2026-11-14](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/pre-cleanup-2026-11-14) |
+| [`post-hackathon-2026-11-14/`](post-hackathon-2026-11-14/) | After the presentation was used, before the second cleanup: [backup/post-hackathon-2026-11-14](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/post-hackathon-2026-11-14) |
 
-Use the current folders for development. These files are evidence and recovery material.
+The [current preservation manifest](../../tools/preservation-manifest.json) maps every pre-cleanup file to a byte-identical retained copy. The first cleanup's [historical manifest](../Repository-Cleanup/pre-event/pre-cleanup-manifest.json) is also preserved.
+
+Use the current project folders for development. These files are evidence and recovery material; their links may describe earlier layouts.

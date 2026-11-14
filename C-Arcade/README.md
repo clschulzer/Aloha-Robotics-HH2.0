@@ -33,7 +33,7 @@ Play KettyBot on a two-minute, fast-forward night shift. Find the dramatic C-arm
 
 Fritzi remains protected as backup. Procedures, too-short windows and emergency periods block new maintenance. An already approved update finishes; the game does not teach pulling its power. Close loops, build combos and beat your own score. Sound is optional; **E** is the keyboard action and **Escape** pauses.
 
-The original pitch characters are reused from the app. These are deliberately compressed, invented arcade rules, not the pitch’s production planner or a medical-device procedure.
+The original pitch characters are reused from the app. These are deliberately compressed, invented arcade rules, distinct from the planning prototype and from a medical-device procedure.
 
 ## How this belongs with the pitch
 
@@ -72,7 +72,7 @@ Personal bests stay in browser storage. There is no analytics, multiplayer serve
 
 This is the current arcade source, copied from `CARMAGOTCHI_APP/arcade/` with its own assets. The hub and both games link to `../Care-Companion/phone/` (relative to this folder) for the phone experience. No presentation or legacy application files were changed.
 
-Keep the original public `CARMAGOTCHI_APP/arcade/` route and its games available: it is encoded in previously shared QR codes, including the immutable `FINAL/v5` presentation. That legacy copy also remains inside the original phone app's offline scope. This canonical copy has no service worker and needs a connection to load; it is not covered by the new phone app's separate offline cache.
+Keep the original public `CARMAGOTCHI_APP/arcade/` route and its games available: it is encoded in previously shared QR codes, including the [hackathon presentation](../Presentation/hackathon/). That legacy copy also remains inside the original phone app's offline scope. This canonical copy has no service worker and needs a connection to load; it is not covered by the new phone app's separate offline cache.
 
 Personal-best storage keys are unchanged: `carmagotchi-c-chomp-highscore-v1` and `carmagotchi.plug-panic.best`. Scores remain shared between the canonical and legacy games on the same browser origin.
 
