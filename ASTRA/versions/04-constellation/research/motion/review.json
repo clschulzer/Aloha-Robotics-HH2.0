@@ -1,0 +1,187 @@
+{
+  "version": "04-constellation",
+  "captures": [
+    {
+      "scene": "showcase",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "showcase-1-0100.png"
+    },
+    {
+      "scene": "showcase",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "showcase-1-0550.png"
+    },
+    {
+      "scene": "showcase",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "showcase-1-1100.png"
+    },
+    {
+      "scene": "showcase",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "showcase-1-2200.png"
+    },
+    {
+      "scene": "showcase",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "showcase-1-3800.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "constellation-0-0100.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "constellation-0-0550.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "constellation-0-1100.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "constellation-0-2200.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "constellation-0-3800.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "constellation-3-0100.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "constellation-3-0550.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "constellation-3-1100.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "constellation-3-2200.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "constellation-3-3800.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "constellation-4-0100.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "constellation-4-0550.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "constellation-4-1100.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "constellation-4-2200.png"
+    },
+    {
+      "scene": "constellation",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "constellation-4-3800.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "mycelium-0-0100.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "mycelium-0-0550.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "mycelium-0-1100.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "mycelium-0-2200.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "mycelium-0-3800.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "mycelium-2-0100.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "mycelium-2-0550.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "mycelium-2-1100.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "mycelium-2-2200.png"
+    },
+    {
+      "scene": "mycelium",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "mycelium-2-3800.png"
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}

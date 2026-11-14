@@ -24,7 +24,17 @@ try{
  const p=await ev('(()=>{const r=document.querySelector("#preview").getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()');
  await call('input.performActions',{context,actions:[{type:'pointer',id:'mouse',parameters:{pointerType:'mouse'},actions:[{type:'pointerMove',x:Math.round(p.x),y:Math.round(p.y),duration:0},{type:'pointerDown',button:0},{type:'pointerUp',button:0}]}]});
  const began=performance.now();
- await ev('(()=>{window.__fps={frames:0,start:performance.now()};function tick(){window.__fps.frames++;requestAnimationFrame(tick)}requestAnimationFrame(tick);return true;})()');
+ await ev(`(()=>{
+  window.__fps={frames:0,start:performance.now(),byScene:{}};
+  let scene=window.ASTRA.getState().scene,last=performance.now();
+  document.addEventListener('astra:cue',e=>{scene=e.detail.scene;});
+  function tick(now){
+   const f=window.__fps;f.frames++;
+   const s=f.byScene[scene]??={frames:0,milliseconds:0};s.frames++;s.milliseconds+=now-last;last=now;
+   requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);return true;
+ })()`);
  for(let i=0;i<cues.length;i++){
    const time=cues[i].at+Math.min(1.4,((cues[i+1]?.at??180)-cues[i].at)/2);
    let s;
@@ -43,6 +53,14 @@ try{
  await wait(600);assert.equal((await ev('window.ASTRA.getState()')).elapsed,180);
  await shot('final-hold');
  report.averageFps=await ev('window.__fps.frames/((performance.now()-window.__fps.start)/1000)');
+ report.sceneFps=await ev('Object.fromEntries(Object.entries(window.__fps.byScene).map(([scene,v])=>[scene,Math.round(v.frames/(v.milliseconds/1000)*10)/10]))');
+ const scoring=await ev('window.CONSTELLATION?.metrics?.() || null');
+ if(scoring){
+  assert.ok(scoring.inspected>100,'The visible swarm must actually evaluate candidates');
+  const expected=await ev('window.CONSTELLATION.after.best');
+  assert.equal(scoring.selected.id,expected.id);assert.equal(scoring.selected.from,expected.from);
+  report.scoring=scoring;
+ }
  report.wallSeconds=(performance.now()-began)/1000;
  report.consoleErrors=logs.filter(x=>x.method==='log.entryAdded'&&x.params.level==='error').map(x=>x.params.text);
  assert.deepEqual(report.consoleErrors,[]);report.result='passed';console.log('PASS',slug,report.wallSeconds.toFixed(2),'seconds',report.averageFps.toFixed(1),'fps');

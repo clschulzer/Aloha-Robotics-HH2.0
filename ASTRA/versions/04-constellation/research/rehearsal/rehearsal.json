@@ -1,0 +1,197 @@
+{
+  "version": "04-constellation",
+  "kind": "Native playback; real-time 180-second rehearsal",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "film",
+      "step": 0,
+      "elapsed": 1.473562,
+      "filmTime": 1.513854
+    },
+    {
+      "cue": 1,
+      "scene": "intro",
+      "step": 0,
+      "elapsed": 31.891666999999984,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 2,
+      "scene": "showcase",
+      "step": 0,
+      "elapsed": 37.51666700000014,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 3,
+      "scene": "showcase",
+      "step": 1,
+      "elapsed": 41.498667000000296,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 4,
+      "scene": "showcase",
+      "step": 2,
+      "elapsed": 46.4816670000005,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 5,
+      "scene": "showcase",
+      "step": 3,
+      "elapsed": 51.448667000000704,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 6,
+      "scene": "showcase",
+      "step": 4,
+      "elapsed": 56.4666670000009,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 7,
+      "scene": "showcase",
+      "step": 5,
+      "elapsed": 61.48166700000108,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 8,
+      "scene": "showcase",
+      "step": 6,
+      "elapsed": 66.4486670000013,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 9,
+      "scene": "showcase",
+      "step": 7,
+      "elapsed": 71.53566700000133,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 10,
+      "scene": "cut",
+      "step": 0,
+      "elapsed": 74.48166700000137,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 11,
+      "scene": "constellation",
+      "step": 0,
+      "elapsed": 78.41466700000146,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 12,
+      "scene": "constellation",
+      "step": 1,
+      "elapsed": 85.49866700000155,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 13,
+      "scene": "constellation",
+      "step": 2,
+      "elapsed": 95.46566700000177,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 14,
+      "scene": "constellation",
+      "step": 3,
+      "elapsed": 105.53166700000199,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 15,
+      "scene": "constellation",
+      "step": 4,
+      "elapsed": 112.41666700000212,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 16,
+      "scene": "constellation",
+      "step": 5,
+      "elapsed": 117.48266700000215,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 17,
+      "scene": "constellation",
+      "step": 6,
+      "elapsed": 124.51466700000229,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 18,
+      "scene": "mycelium",
+      "step": 0,
+      "elapsed": 131.41566700000146,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 19,
+      "scene": "mycelium",
+      "step": 1,
+      "elapsed": 141.48466699999813,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 20,
+      "scene": "mycelium",
+      "step": 2,
+      "elapsed": 150.43166699999534,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 21,
+      "scene": "mycelium",
+      "step": 3,
+      "elapsed": 159.46466699999266,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 22,
+      "scene": "afterglow",
+      "step": 0,
+      "elapsed": 168.4486669999903,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 23,
+      "scene": "afterglow",
+      "step": 1,
+      "elapsed": 175.51566699998818,
+      "filmTime": 30.442666
+    }
+  ],
+  "averageFps": 55.32828742885219,
+  "sceneFps": {
+    "film": 59,
+    "intro": 41.3,
+    "showcase": 49.3,
+    "cut": 58.8,
+    "constellation": 56.5,
+    "mycelium": 58,
+    "afterglow": 56.5
+  },
+  "scoring": {
+    "inspected": 7692,
+    "selected": {
+      "id": "C-02",
+      "from": 1340,
+      "to": 1460
+    },
+    "alarm": true,
+    "scouts": 144
+  },
+  "wallSeconds": 181.168329424,
+  "consoleErrors": [],
+  "result": "passed"
+}

@@ -1,0 +1,42 @@
+window.PITCH={
+ id:'04-constellation',title:'Constellation',
+ direction:'The ultra-animated cut: a dimensional character reveal, a coordinated swarm and a living service architecture.',
+ accent:'#94f1d7',gold:'#f4cb83',paper:'#f6f3ed',
+ layoutPairs:[['.const-title','.const-sub'],['.myc-title','.myc-sub'],['.show-title','.show-state']],
+ moods:[
+  ['lonely','Ghosted.','Disconnected.','“You never call.”'],
+  ['manic','Feed me.','Patch overdue.','“I have needs. And firmware.”'],
+  ['update','Growth era.','Updating.','“Give me a moment.”'],
+  ['bliss','Thriving.','Connected and current.','“New software. New me.”'],
+  ['failure','Plot twist.','Update failed.','“This was not in my vision board.”'],
+  ['rollback','We’re back.','Recovery state.','“Character development. Reversed.”']
+ ],
+ calendarTitle:'Find the opportunity.',workflowTitle:'Everything, connected.',
+ closing:['Intelligence that follows through.','Let care keep moving.'],
+ cues:[
+  [0,'film',0,'The original film','[Let the original film and audio play in full.]'],
+  [30.442667,'intro',0,'Introducing','[The explosion lands in the true-story joke and Aloha.]'],
+  [36,'showcase',0,'Your machine','Meet your C-arm. With a little more personality.'],
+  [40,'showcase',1,'Disconnected','Offline? Ghosted.'],
+  [45,'showcase',2,'Overdue','Patch overdue? It has needs. And firmware.'],
+  [50,'showcase',3,'Updating','Updating. Its personal-growth era.'],
+  [55,'showcase',4,'Happy','Connected and current. Thriving.'],
+  [60,'showcase',5,'Failed','Something fails? You see it.'],
+  [65,'showcase',6,'Recovering','Recovery gets a character too.'],
+  [70,'showcase',7,'The switch','[Let the character loop and TV shutdown play.]'],
+  [73,'cut',0,'Now','Now, give that personality a nervous system.'],
+  [77,'constellation',0,'The day','The hospital has a plan. Reality keeps changing it.'],
+  [84,'constellation',1,'Search','Our scouts evaluate candidate windows across the actual prototype rules.'],
+  [94,'constellation',2,'Challenge','They check case conflicts, recovery margin, emergency demand, backup coverage and an available human.'],
+  [104,'constellation',3,'The window','The strongest eligible candidate becomes a clear proposal.'],
+  [111,'constellation',4,'Reality changes','Before anything starts, an emergency changes the plan. Care comes first.'],
+  [116,'constellation',5,'Replan','The trauma equipment stays available. The search finds an alternative.'],
+  [123,'constellation',6,'A new proposal','This is a fresh proposal for review. The emergency never becomes an excuse to bypass approval.'],
+  [130,'mycelium',0,'Connected intelligence','Hospital signals feed the plan. Tested rules contain it.'],
+  [140,'mycelium',1,'Accountability','One person owns the decision.'],
+  [149,'mycelium',2,'Physical help','Connected equipment uses the approved service path. Our robot concept brings power and data where that connection is missing.'],
+  [158,'mycelium',3,'Follow-through','Results and exceptions return to the team. The browser prototype runs the planning logic; hospital and hardware integration are the next step.'],
+  [167,'afterglow',0,'Our promise','Intelligence that follows through.'],
+  [174,'afterglow',1,'The outcome','Let care keep moving. [Hold.]']
+ ]
+};

@@ -1,0 +1,224 @@
+{
+  "version": "04-constellation",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/04-constellation/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 30.442667,
+      "scene": "intro",
+      "step": 0,
+      "title": "Introducing",
+      "note": "[The explosion lands in the true-story joke and Aloha.]",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 36,
+      "scene": "showcase",
+      "step": 0,
+      "title": "Your machine",
+      "note": "Meet your C-arm. With a little more personality.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 40,
+      "scene": "showcase",
+      "step": 1,
+      "title": "Disconnected",
+      "note": "Offline? Ghosted.",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 45,
+      "scene": "showcase",
+      "step": 2,
+      "title": "Overdue",
+      "note": "Patch overdue? It has needs. And firmware.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 50,
+      "scene": "showcase",
+      "step": 3,
+      "title": "Updating",
+      "note": "Updating. Its personal-growth era.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 55,
+      "scene": "showcase",
+      "step": 4,
+      "title": "Happy",
+      "note": "Connected and current. Thriving.",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 60,
+      "scene": "showcase",
+      "step": 5,
+      "title": "Failed",
+      "note": "Something fails? You see it.",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 65,
+      "scene": "showcase",
+      "step": 6,
+      "title": "Recovering",
+      "note": "Recovery gets a character too.",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 70,
+      "scene": "showcase",
+      "step": 7,
+      "title": "The switch",
+      "note": "[Let the character loop and TV shutdown play.]",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 73,
+      "scene": "cut",
+      "step": 0,
+      "title": "Now",
+      "note": "Now, give that personality a nervous system.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 77,
+      "scene": "constellation",
+      "step": 0,
+      "title": "The day",
+      "note": "The hospital has a plan. Reality keeps changing it.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 84,
+      "scene": "constellation",
+      "step": 1,
+      "title": "Search",
+      "note": "Our scouts evaluate candidate windows across the actual prototype rules.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 94,
+      "scene": "constellation",
+      "step": 2,
+      "title": "Challenge",
+      "note": "They check case conflicts, recovery margin, emergency demand, backup coverage and an available human.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 104,
+      "scene": "constellation",
+      "step": 3,
+      "title": "The window",
+      "note": "The strongest eligible candidate becomes a clear proposal.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 111,
+      "scene": "constellation",
+      "step": 4,
+      "title": "Reality changes",
+      "note": "Before anything starts, an emergency changes the plan. Care comes first.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 116,
+      "scene": "constellation",
+      "step": 5,
+      "title": "Replan",
+      "note": "The trauma equipment stays available. The search finds an alternative.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 123,
+      "scene": "constellation",
+      "step": 6,
+      "title": "A new proposal",
+      "note": "This is a fresh proposal for review. The emergency never becomes an excuse to bypass approval.",
+      "i": 17
+    },
+    {
+      "n": 18,
+      "at": 130,
+      "scene": "mycelium",
+      "step": 0,
+      "title": "Connected intelligence",
+      "note": "Hospital signals feed the plan. Tested rules contain it.",
+      "i": 18
+    },
+    {
+      "n": 19,
+      "at": 140,
+      "scene": "mycelium",
+      "step": 1,
+      "title": "Accountability",
+      "note": "One person owns the decision.",
+      "i": 19
+    },
+    {
+      "n": 20,
+      "at": 149,
+      "scene": "mycelium",
+      "step": 2,
+      "title": "Physical help",
+      "note": "Connected equipment uses the approved service path. Our robot concept brings power and data where that connection is missing.",
+      "i": 20
+    },
+    {
+      "n": 21,
+      "at": 158,
+      "scene": "mycelium",
+      "step": 3,
+      "title": "Follow-through",
+      "note": "Results and exceptions return to the team. The browser prototype runs the planning logic; hospital and hardware integration are the next step.",
+      "i": 21
+    },
+    {
+      "n": 22,
+      "at": 167,
+      "scene": "afterglow",
+      "step": 0,
+      "title": "Our promise",
+      "note": "Intelligence that follows through.",
+      "i": 22
+    },
+    {
+      "n": 23,
+      "at": 174,
+      "scene": "afterglow",
+      "step": 1,
+      "title": "The outcome",
+      "note": "Let care keep moving. [Hold.]",
+      "i": 23
+    }
+  ],
+  "checks": [
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}
