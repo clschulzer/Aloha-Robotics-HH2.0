@@ -350,7 +350,7 @@
         <section class="robot run">
           ${mission(6, 'Update running.')}
           <div class="run-body">
-            <div class="run-cio">${img('update')}</div>
+            <div class="run-cio">${img('update', 'busy')}${img('bliss', 'done')}</div>
             <div class="run-right">
               <div class="eyebrow">CARM-SEC 2026.11 · STARTED BY LENA 19:31</div>
               <div class="pbar"><i></i></div>
