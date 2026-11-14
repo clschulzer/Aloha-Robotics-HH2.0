@@ -1,5 +1,5 @@
 /* C-ARMAGOTCHI pitch demo. One file, no build, runs offline from disk.
-   14 scenes in 5 acts, each scene has a few steps. Keys: → / Space / click = next step,
+   16 scenes in 5 acts (video and statement first), each scene has a few steps. Keys: → / Space / click = next step,
    ← = previous step, Home = restart, N = speaker notes, F = fullscreen.
    URL: ?s=5 jumps to scene 5, ?auto=0 stops automatic steps, ?speed=2 runs the automatic parts twice as fast (for screencasts).
    All data is invented. No patient data anywhere. */
@@ -60,7 +60,7 @@
     ['Room & robot', 'corridor free at night, robot charged'],
   ];
 
-  /* ---------- the 14 scenes ---------- */
+  /* ---------- the 16 scenes ---------- */
   const MOODS = {
     lonely: { key: 'lonely', img: 'lonely', word: 'Lonely', state: 'No connection · last logs 9 days ago', quote: 'Nobody has connected me for days. Is anyone out there?', data: [['Network', 'off'], ['Last logs', '9 days'], ['Location', 'Corridor B']], cta: 'Wake me up', point: [['Network', 'off'], ['Last logs', '9 days ago']] },
     hungry: { key: 'hungry', img: 'manic', word: 'Hungry', state: 'Unplugged · security patch due', quote: 'Plug me in! My security patch is waiting and I am starving.', data: [['Power', 'unplugged'], ['Patch', 'due'], ['Location', 'Corridor B']], cta: 'Feed me power', point: [['Power', 'unplugged since 17:00'], ['Security patch', 'due since Mon']] },
@@ -83,7 +83,26 @@
 
   const TEAM = [['C-01', 'bliss', 'OR 1', 'all good', ''], ['C-02', 'bliss', 'OR 2', 'all good', ''], ['C-03 Cio', 'manic', 'Corridor B', 'patch due since Mon', '1'], ['C-04', 'lonely', 'Storage 2', 'offline 9 days', '2'], ['C-05', 'bliss', 'Hybrid OR', 'all good', ''], ['C-06', 'update', 'Trauma bay', 'updating now', '']];
 
+  // The team video lives next to the Aloha deck (CARMAGOTCHI_Web_Pitch/encore-christian/media). Override with ?video=path.
+  const VIDEO = Q.get('video') || '../encore-christian/media/chaos_30s.mp4';
   const SCENES = [
+    {
+      act: 'INTRO', theme: 'dark', title: 'Team video', steps: 2,
+      say: '(Black standby. When the jury is ready, click once: the team video plays with sound. Do not speak. It moves on by itself.)',
+      html: () => `<section class="film"><div class="standby"><i></i></div><video id="film" src="${VIDEO}" playsinline preload="auto"></video><div class="film-missing">Team video not found · click to go on</div></section>`,
+      onStep: (s) => {
+        const v = $('film'); if (!v) return;
+        if (s === 0) { v.pause(); v.currentTime = 0; return; }
+        v.onended = () => { if (SCENES[cur].act === 'INTRO' && step === 1) next(); };
+        v.onerror = () => v.closest('.film').classList.add('missing');
+        v.play().catch(() => v.closest('.film').classList.add('missing'));
+      },
+    },
+    {
+      act: 'INTRO', theme: 'dark', title: 'Statement', steps: 1,
+      say: 'We are Aloha Robotics. We root for the invisible underdogs who keep hospitals running. They deserve technology they don\'t fear, but love to use. Meet C-ARMAGOTCHI.',
+      html: () => `<section class="statement">${['We are <b>Aloha Robotics.</b>', 'We root for the <em>invisible underdogs</em><br>who keep hospitals running.', 'They deserve technology they don\'t fear,<br>but love to use.', 'Meet <b>C-ARMAGOTCHI.</b>'].map((t, i) => `<p class="sl${i}">${t}</p>`).join('')}</section>`,
+    },
     moodScene(MOODS.lonely, 1),
     moodScene(MOODS.hungry, 2),
     moodScene(MOODS.happy, 3),
@@ -341,7 +360,7 @@
 
   /* ---------- engine ---------- */
   const N = SCENES.length;
-  const AUDIT = [0, 0, 0, 0, 0, 1, 1, 2, 5, 5, 6, 7, 7, 0];
+  const AUDIT = [0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 5, 5, 6, 7, 7, 0];
   let cur = 0, step = 0, timers = [];
   const later = (fn, ms) => timers.push(setTimeout(fn, ms / SPEED));
   const clear = () => { timers.forEach(clearTimeout); timers = []; };
