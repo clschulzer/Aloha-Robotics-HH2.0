@@ -38,8 +38,7 @@ doppelt so schnell (für Screencasts), `?notes=1` zeigt die Notizen, `?auto=0` s
 | 10 | KI + Mensch | Handy-Wizard: Mensch startet das Update (Lena → Medizinphysik → IT) |
 | 11–12 | Physisch | Update läuft, Bericht, Audit-Trail, nächster Job |
 | 13 | Emotional | Loop geschlossen: Danke, frische Daten |
-| 14 | Alle drei | Zusammenfassung: drei Säulen, dann Architektur in einer Zeile (Klinik → Aloha-Kern → Gerät und Roboter ⇄ Siemens Healthineers) und Leitplanken |
-| 15 | Alle drei | Call to Action: Roboter überall im Krankenhaus, drei konkrete nächste Schritte, „Raum gebucht“, dann IA: invisible autonomy |
+| 14 | Alle drei | Schluss in einem Klick: Call to Action, drei nächste Schritte, KettyBot fährt ein, „Room booked“ |
 
 ## Prüfen
 
