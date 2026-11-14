@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aloha Robotics · OPUS pitch versions</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%23ec6602%22/%3E%3Ctext x=%2232%22 y=%2243%22 font-size=%2232%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22white%22%3EA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="v2/css/fonts.css">
+<style>
+  :root { --teal: #3ef0e0; --orange: #ff8a3d; --gold: #ffc74a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(120% 80% at 50% 0%, #0d151c, #05070a 70%); color: #e9eef2; font-family: Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  main { max-width: 1180px; margin: 0 auto; padding: 72px 28px 90px; }
+  .eyebrow { font: 600 13px 'JetBrains Mono', monospace; letter-spacing: .24em; text-transform: uppercase; color: #7d8a96; }
+  h1 { margin: 12px 0 0; font-size: clamp(40px, 6vw, 76px); font-weight: 800; letter-spacing: -.045em; line-height: 1; }
+  h1 b { color: var(--teal); }
+  .lead { margin: 22px 0 0; max-width: 760px; font-size: 20px; line-height: 1.5; color: #9aa6b2; }
+  .grid { margin-top: 48px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  .card { position: relative; padding: 28px 28px 26px; border-radius: 24px; background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.08); transition: transform .2s, border-color .2s; }
+  .card:hover { transform: translateY(-3px); border-color: rgba(62,240,224,.4); }
+  .tag { display: inline-block; padding: 5px 11px; border-radius: 999px; font: 700 12px 'JetBrains Mono', monospace; letter-spacing: .12em; background: rgba(62,240,224,.12); color: var(--teal); }
+  .tag.o { background: rgba(255,138,61,.14); color: var(--orange); } .tag.g { background: rgba(255,199,74,.14); color: var(--gold); } .tag.m { background: rgba(255,255,255,.08); color: #b8c3cc; }
+  .card h2 { margin: 16px 0 0; font-size: 32px; font-weight: 800; letter-spacing: -.03em; }
+  .card p { margin: 12px 0 0; font-size: 16.5px; line-height: 1.55; color: #a7b2bc; }
+  .flow { margin-top: 14px; font: 500 13px/1.7 'JetBrains Mono', monospace; color: #6f7c88; }
+  .links { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .links a { padding: 10px 16px; border-radius: 12px; font-weight: 800; font-size: 15px; text-decoration: none; color: #04211f; background: var(--teal); }
+  .links a.s { color: #dfe8ec; background: rgba(255,255,255,.07); }
+  .how { margin-top: 46px; padding: 22px 26px; border-radius: 18px; border: 1px dashed rgba(255,255,255,.14); font-size: 16px; line-height: 1.6; color: #9aa6b2; }
+  .how b { color: #e9eef2; } kbd { font: 600 13px 'JetBrains Mono', monospace; padding: 2px 8px; border-radius: 6px; background: #17262d; border: 1px solid #2f4f58; color: var(--teal); }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Aloha Robotics · Healthcare Hackathon Bavaria 2026 · Siemens Healthineers Challenge 04</div>
+  <h1>Four pitches<b>.</b> Pick one<b>.</b></h1>
+  <p class="lead">The OPUS versions of our 3-minute pitch. All of them use the team's film, the team's characters and the same coded keynote engine, with a presenter view, sound design and a hands-free rehearsal mode. They differ in the story they tell.</p>
+  <div class="grid">
+    <div class="card"><span class="tag m">V1 · THE ORIGINAL</span><h2>OPUS</h2>
+      <p>The first full version: an unhinged Tamagotchi ring, a live golden-window swarm with a polytrauma re-plan, and a mycelium architecture.</p>
+      <div class="flow">film → title → Tamagotchi ring → “Finding the window is.” → swarm → mycelium → invisible / IAI</div>
+      <div class="links"><a href="./">Open</a><a class="s" href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/OPUS/SCRIPT.md">Script</a></div></div>
+    <div class="card"><span class="tag">V2 · FROM YOUR FEEDBACK</span><h2>Simpler, bigger</h2>
+      <p>One idea per screen. The toy's screen becomes the slide, one face and one line per click, <i>Now.</i> / <i>When?</i>, a realistic OR calendar with cursor-agents, a workflow that grows from the golden window, then <i>Nobody babysits a C-arm again.</i></p>
+      <div class="flow">film → title → C-ARMAGOTCHI → Now. → When? → calendar swarm → SEE·FIND·ASK·BRING·UPDATE·REPORT → outro</div>
+      <div class="links"><a href="v2/">Open</a><a class="s" href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/OPUS/v2/SCRIPT.md">Script</a></div></div>
+    <div class="card"><span class="tag o">CHRISTIAN'S STORYBOARD</span><h2>Care journey</h2>
+      <p>Christian's storyboard v4 as a live keynote: his statement, Cio on the team's phone (the mood becomes priority), a window <i>found</i> from a cancellation, Lena's job card, a ride request, KettyBot's 14-check mission, a human starts every update, the loop closes, his three pillars, <i>IA: invisible autonomy</i>.</p>
+      <div class="flow">film → statement → emotional → AI orchestration + human in the loop → physical → loop → pillars → IA</div>
+      <div class="links"><a href="christian/">Open</a><a class="s" href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/OPUS/christian/SCRIPT.md">Script</a></div></div>
+    <div class="card"><span class="tag g">V3 · ONE NIGHT</span><h2>Nobody noticed</h2>
+      <p>The free version. <i>Now.</i> becomes a ticking 24-style clock, and we follow one C-arm through one night: the swarm, the polytrauma re-plan, KettyBot docking, a human starting it, done by 00:20. At 07:00 the morning team rolls it in. <i>Nobody noticed.</i></p>
+      <div class="flow">film → title → C-ARMAGOTCHI → Now. → 15:20 → 15:26 → 22:00 → 00:20 → 07:00 → Brain·Hands·Heart</div>
+      <div class="links"><a href="v3/">Open</a><a class="s" href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/OPUS/v3/SCRIPT.md">Script</a></div></div>
+  </div>
+  <div class="how"><b>Presenting:</b> open the version in Chrome or Edge, press <kbd>F</kbd> on the projector window (fullscreen; this also allows sound), and <kbd>P</kbd> for the presenter view. The black screen is standby: <kbd>→</kbd> starts the film. Add <kbd>?auto</kbd> to the address to rehearse hands-free. <kbd>A</kbd> opens the Q&amp;A appendix (V1–V3).</div>
+</main>
+</body>
+</html>

@@ -13,6 +13,8 @@ FILM (0:00) → BASED ON A TRUE STORY → INTRODUCING ALOHA ROBOTICS (0:30)
 → OUTRO · their words · invisible · IAI · Aloha + wink (2:30 → 2:53)
 ```
 
+**Other versions:** [`versions.html`](versions.html) lists all four: this one (V1), [`v2/`](v2/) (simpler, from the team's feedback), [`christian/`](christian/) (Christian's storyboard v4) and [`v3/`](v3/) (*One night*).
+
 | Read this | For |
 |---|---|
 | [`SCRIPT.md`](SCRIPT.md) | the exact words, beat by beat, with target times |
