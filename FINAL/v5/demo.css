@@ -643,6 +643,8 @@ img{display:block;user-select:none}
 .cta-right{align-items:flex-start;padding-top:10px}
 .booked{gap:18px}
 .booked img{width:300px;height:300px}
+.cta-scene .booked>img,.cta-scene .booked>.ticket{position:relative;top:54px}
+.cta-scene .booked>img{left:12px}
 .qrs{display:flex;gap:30px;align-self:flex-start;margin-top:92px;animation:pcIn calc(.6s * var(--sp)) var(--ease) calc(1.7s * var(--sp)) both}
 .qr{display:flex;gap:14px;align-items:center;margin:0}
 .qr img{width:150px;height:150px;background:#fff;border-radius:14px;padding:10px;object-fit:contain;filter:none;animation:none}
