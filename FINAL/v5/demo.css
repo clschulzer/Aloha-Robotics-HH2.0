@@ -650,3 +650,10 @@ img{display:block;user-select:none}
 .cta-scene{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
 .qrs{gap:22px}.qr{gap:12px}.qr img{width:140px;height:140px}
 .qr small{white-space:normal}
+/* v5: at 100 % the updating Cio turns into the happy, updated Cio */
+.run-cio{position:relative}
+.run-cio img.done{position:absolute;left:0;top:0;opacity:0;animation:bob 1.6s ease-in-out infinite,show .5s forwards calc(var(--sp)*4.6s)}
+.run-cio img.busy{animation:bob 1.6s ease-in-out infinite,fadeOut .5s forwards calc(var(--sp)*4.6s)}
+.at-1 .run-cio img.done{opacity:1;animation:bob 1.6s ease-in-out infinite}
+.at-1 .run-cio img.busy{opacity:0}
+.footer .audit{margin-left:auto}
