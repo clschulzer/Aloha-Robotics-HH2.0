@@ -16,7 +16,7 @@
   const TITLE = 'ALOHA ROBOTICS', TITLE_FONT = '800 150px Manrope', TITLE_Y = 600;
   const STORY = 'BASED ON A TRUE STORY.', STORY_FONT = '500 37px ' + "'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif", STORY_SP = 13, STORY_Y = 556;
   const INTRO = 'INTRODUCING', INTRO_FONT = '600 27px Manrope', INTRO_SP = 17, INTRO_Y = 414;
-  const SUB = 'SIEMENS HEALTHINEERS  ·  CHALLENGE 04  ·  INVISIBLE CONNECTIVITY', SUB_FONT = '600 21px "JetBrains Mono"', SUB_SP = 6, SUB_Y = 712;
+  const SUB = 'SIEMENS HEALTHINEERS  ·  CHALLENGE 04  ·  INVISIBLE CONNECTIVITY', SUB_FONT = '600 21px "JetBrains Mono",monospace', SUB_SP = 6, SUB_Y = 712;
 
   /* letter-spaced text that renders identically everywhere (no reliance on ctx.letterSpacing) */
   function spacedWidth(ctx, text, sp) { let w = 0; for (const ch of text) w += ctx.measureText(ch).width + sp; return w - sp; }

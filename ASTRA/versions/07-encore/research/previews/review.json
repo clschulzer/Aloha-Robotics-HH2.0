@@ -1,0 +1,288 @@
+{
+  "version": "07-encore",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/07-encore/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 30.442667,
+      "scene": "intro",
+      "step": 0,
+      "title": "Introducing Aloha",
+      "note": "[Let the true-story joke turn into the title.]",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 36,
+      "scene": "demo",
+      "step": 0,
+      "title": "Meet Cio",
+      "note": "Meet Cio. A C-arm on its team’s phone. It has been left on read.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 43,
+      "scene": "demo",
+      "step": 1,
+      "title": "Patch overdue",
+      "note": "Patch due. Subtle, isn’t it?",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 48,
+      "scene": "demo",
+      "step": 2,
+      "title": "A new personality",
+      "note": "Updated. Connected. An entirely new personality.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 53,
+      "scene": "demo",
+      "step": 3,
+      "title": "Someone cares",
+      "note": "The joke does a serious job. Somebody feels responsible.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 58,
+      "scene": "demo",
+      "step": 4,
+      "title": "Need becomes priority",
+      "note": "The mood tells us who needs care. Hospital data tells us when.",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 64,
+      "scene": "cut",
+      "step": 0,
+      "title": "Now",
+      "note": "[Silence. The stage turns dark.]",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 67,
+      "scene": "opportunity",
+      "step": 0,
+      "title": "An actual day of care",
+      "note": "This is the hard part: finding the right moment.",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 72,
+      "scene": "opportunity",
+      "step": 1,
+      "title": "The day changes",
+      "note": "A case is cancelled. An opportunity opens.",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 76,
+      "scene": "opportunity",
+      "step": 2,
+      "title": "Find and challenge",
+      "note": "Our working rule core checks cases, backup and available people. The scorer weighs emergency demand and overruns.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 84,
+      "scene": "opportunity",
+      "step": 3,
+      "title": "The golden window",
+      "note": "The window is a result, not a time we made up first.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 90,
+      "scene": "opportunity",
+      "step": 4,
+      "title": "A human publishes",
+      "note": "Medical physics reviews the proposal and publishes it.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 95,
+      "scene": "demo",
+      "step": 5,
+      "title": "One small request",
+      "note": "Lena gets one request: Cio needs a hand.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 101,
+      "scene": "demo",
+      "step": 6,
+      "title": "Not today",
+      "note": "Not today? No guilt. Ask the circle.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 105,
+      "scene": "demo",
+      "step": 7,
+      "title": "The circle",
+      "note": "Nobody can make the trip.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 109,
+      "scene": "demo",
+      "step": 8,
+      "title": "Help arrives",
+      "note": "Send the invisible helper.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 113,
+      "scene": "demo",
+      "step": 9,
+      "title": "Check",
+      "note": "In our mission demo, it checks what it needs before leaving.",
+      "i": 17
+    },
+    {
+      "n": 18,
+      "at": 118,
+      "scene": "demo",
+      "step": 10,
+      "title": "Find",
+      "note": "Finds the machine where it actually is.",
+      "i": 18
+    },
+    {
+      "n": 19,
+      "at": 124,
+      "scene": "demo",
+      "step": 11,
+      "title": "Connect",
+      "note": "Then the proposed dock supplies power and approved data.",
+      "i": 19
+    },
+    {
+      "n": 20,
+      "at": 130,
+      "scene": "demo",
+      "step": 12,
+      "title": "Ready to ask",
+      "note": "Checks first. A failed check stops the request.",
+      "i": 20
+    },
+    {
+      "n": 21,
+      "at": 135,
+      "scene": "demo",
+      "step": 13,
+      "title": "Lena gets the decision",
+      "note": "Lena couldn’t make the trip. She can still review the request.",
+      "i": 21
+    },
+    {
+      "n": 22,
+      "at": 140,
+      "scene": "demo",
+      "step": 14,
+      "title": "Time and surroundings",
+      "note": "The right time. Clear surroundings.",
+      "i": 22
+    },
+    {
+      "n": 23,
+      "at": 144,
+      "scene": "demo",
+      "step": 15,
+      "title": "A human starts",
+      "note": "A human starts every update.",
+      "i": 23
+    },
+    {
+      "n": 24,
+      "at": 149,
+      "scene": "demo",
+      "step": 16,
+      "title": "The decision is recorded",
+      "note": "[Let the named approval land.]",
+      "i": 24
+    },
+    {
+      "n": 25,
+      "at": 151,
+      "scene": "demo",
+      "step": 17,
+      "title": "Watch",
+      "note": "It watches, then returns the result. [Time-compressed simulation.]",
+      "i": 25
+    },
+    {
+      "n": 26,
+      "at": 156,
+      "scene": "demo",
+      "step": 18,
+      "title": "Report",
+      "note": "Results and exceptions reach the responsible team.",
+      "i": 26
+    },
+    {
+      "n": 27,
+      "at": 161,
+      "scene": "demo",
+      "step": 19,
+      "title": "Thanks",
+      "note": "Fresh data. A thank-you. The loop closes where it started.",
+      "i": 27
+    },
+    {
+      "n": 28,
+      "at": 166,
+      "scene": "synthesis",
+      "step": 0,
+      "title": "One care loop",
+      "note": "Emotional connection. Intelligent coordination. Physical help. One care loop.",
+      "i": 28
+    },
+    {
+      "n": 29,
+      "at": 172,
+      "scene": "care",
+      "step": 0,
+      "title": "For the people",
+      "note": "We take care of the machine.",
+      "i": 29
+    },
+    {
+      "n": 30,
+      "at": 176,
+      "scene": "care",
+      "step": 1,
+      "title": "Who care",
+      "note": "You take care of the patient. [Hold. End.]",
+      "i": 30
+    }
+  ],
+  "checks": [
+    "Embedded product timers pause and resume",
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}

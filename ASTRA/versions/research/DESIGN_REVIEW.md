@@ -26,7 +26,7 @@ This is a different presentation argument from “show scheduler, then architect
 
 The comprehensive [research recap](../../RESEARCH_RECAP.md) remains the evidence base. The working deliverable is an interactive prototype with real deterministic planning functions and synthetic data. Live hospital interfaces, a physical cable dock, validated emergency prediction and autonomous update execution are not demonstrated by this repository. Architecture proposals remain proposals.
 
-No made-up savings, clinical success rates or AI confidence percentages appear as achieved results. The full original film and original characters are preserved. Hardware calibration remains supervised. A selected window is a proposal, not authorization.
+No made-up savings, clinical success rates or AI confidence percentages appear as achieved results. The six pitch cuts preserve the full original film and original characters. Open Circuit is the requested technical presentation and spends its entire duration on engineering. Hardware calibration remains supervised. A selected window is a proposal, not authorization.
 
 ## Review approach
 
@@ -35,3 +35,15 @@ Each version is developed sequentially, refreshed against GitHub before work beg
 Repository checkpoint: `6a58092`. PR 7, Claude's missing OPUS planner/library files, was reviewed and merged under the user's explicit instruction. Further checkpoints are recorded per version.
 
 Second repository check: PR 8 (`570db7b`), Claude’s OPUS v2, contained only the new `OPUS/v2/` presentation. Reviewed its scope and merged at `9e6e849`. Version 1 remained based on its earlier checkpoint; version 2 will review the new work before starting.
+
+## What changed across the seven builds
+
+The first version established the pace and readable stage. The second rendered Christian’s actual product journey. The third experimented with an evening setting and a single golden handoff. The fourth increased the animation and connected the swarm to the actual scorer, including a changed result after an emergency. The fifth made the machine’s personality the comedy engine. The sixth put the executable rules, authorization boundary and proposed stack on stage.
+
+The final version returns to Christian’s template with those lessons. It removes competing text around the phone, shows only each mission phase’s active checks, and carries a calculated cancellation result into the job card and report. The source and all intermediate versions remain intact.
+
+One consequential performance finding: a persistent perspective transform on the large calendar layer substantially reduced Firefox’s frame rate. Removing it after the entrance restored smooth playback. More animation did not require more simultaneous compositing.
+
+The final cut’s [detailed review](../07-encore/research/REVIEW.md) explains the source/template decision and the evidence corrections. The [comparison guide](../README.md) gives a suggested order for rehearsal.
+
+The final delivery pass also supplied a generic monospace fallback for the six cinematic intro captions. Without the named font installed, canvas had used a serif default. All six introductions were captured again through the settled title; this typography correction does not change their cue timing.

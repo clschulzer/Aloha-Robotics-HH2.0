@@ -1,0 +1,28 @@
+{
+  "change": "Cache the formed title and its glow; retain the same choreography and timing.",
+  "before": {
+    "averageFps": 56.8826268287839,
+    "sceneFps": {
+      "film": 59.3,
+      "intro": 37.5,
+      "demo": 57.4,
+      "cut": 56.3,
+      "opportunity": 57.1,
+      "synthesis": 54,
+      "care": 55.8
+    }
+  },
+  "note": "Observed Firefox rehearsal rates, not a benchmark guarantee. Both runs precede the final monospace fallback correction, which was checked in the subsequent introduction motion capture.",
+  "after": {
+    "averageFps": 57.12582255001546,
+    "sceneFps": {
+      "film": 59.5,
+      "intro": 42,
+      "demo": 57.4,
+      "cut": 57.7,
+      "opportunity": 56.9,
+      "synthesis": 56.7,
+      "care": 56.5
+    }
+  }
+}

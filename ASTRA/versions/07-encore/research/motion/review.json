@@ -1,0 +1,457 @@
+{
+  "version": "07-encore",
+  "captures": [
+    {
+      "scene": "demo",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "demo-0-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "demo-0-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "demo-0-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "demo-0-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "demo-0-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "demo-1-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "demo-1-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "demo-1-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "demo-1-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "demo-1-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "demo-4-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "demo-4-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "demo-4-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "demo-4-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "demo-4-3800.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "opportunity-1-0100.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "opportunity-1-0550.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "opportunity-1-1100.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "opportunity-1-2200.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "opportunity-1-3800.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "opportunity-2-0100.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "opportunity-2-0550.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "opportunity-2-1100.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "opportunity-2-2200.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "opportunity-2-3800.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "opportunity-3-0100.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "opportunity-3-0550.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "opportunity-3-1100.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "opportunity-3-2200.png"
+    },
+    {
+      "scene": "opportunity",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "opportunity-3-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 5,
+      "milliseconds": 100,
+      "filename": "demo-5-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 5,
+      "milliseconds": 550,
+      "filename": "demo-5-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 5,
+      "milliseconds": 1100,
+      "filename": "demo-5-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 5,
+      "milliseconds": 2200,
+      "filename": "demo-5-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 5,
+      "milliseconds": 3800,
+      "filename": "demo-5-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 10,
+      "milliseconds": 100,
+      "filename": "demo-10-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 10,
+      "milliseconds": 550,
+      "filename": "demo-10-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 10,
+      "milliseconds": 1100,
+      "filename": "demo-10-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 10,
+      "milliseconds": 2200,
+      "filename": "demo-10-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 10,
+      "milliseconds": 3800,
+      "filename": "demo-10-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 11,
+      "milliseconds": 100,
+      "filename": "demo-11-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 11,
+      "milliseconds": 550,
+      "filename": "demo-11-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 11,
+      "milliseconds": 1100,
+      "filename": "demo-11-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 11,
+      "milliseconds": 2200,
+      "filename": "demo-11-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 11,
+      "milliseconds": 3800,
+      "filename": "demo-11-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 12,
+      "milliseconds": 100,
+      "filename": "demo-12-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 12,
+      "milliseconds": 550,
+      "filename": "demo-12-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 12,
+      "milliseconds": 1100,
+      "filename": "demo-12-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 12,
+      "milliseconds": 2200,
+      "filename": "demo-12-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 12,
+      "milliseconds": 3800,
+      "filename": "demo-12-3800.png"
+    },
+    {
+      "scene": "demo",
+      "step": 15,
+      "milliseconds": 100,
+      "filename": "demo-15-0100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 15,
+      "milliseconds": 550,
+      "filename": "demo-15-0550.png"
+    },
+    {
+      "scene": "demo",
+      "step": 15,
+      "milliseconds": 1100,
+      "filename": "demo-15-1100.png"
+    },
+    {
+      "scene": "demo",
+      "step": 15,
+      "milliseconds": 2200,
+      "filename": "demo-15-2200.png"
+    },
+    {
+      "scene": "demo",
+      "step": 15,
+      "milliseconds": 3800,
+      "filename": "demo-15-3800.png"
+    },
+    {
+      "scene": "synthesis",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "synthesis-0-0100.png"
+    },
+    {
+      "scene": "synthesis",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "synthesis-0-0550.png"
+    },
+    {
+      "scene": "synthesis",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "synthesis-0-1100.png"
+    },
+    {
+      "scene": "synthesis",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "synthesis-0-2200.png"
+    },
+    {
+      "scene": "synthesis",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "synthesis-0-3800.png"
+    },
+    {
+      "scene": "care",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "care-1-0100.png"
+    },
+    {
+      "scene": "care",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "care-1-0550.png"
+    },
+    {
+      "scene": "care",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "care-1-1100.png"
+    },
+    {
+      "scene": "care",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "care-1-2200.png"
+    },
+    {
+      "scene": "care",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "care-1-3800.png"
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "intro-0-0100.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "intro-0-0550.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "intro-0-1100.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "intro-0-2200.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "intro-0-3800.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 4800,
+      "filename": "intro-0-4800.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    }
+  ],
+  "refreshedThisRun": [
+    {
+      "scene": "intro",
+      "step": 0
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}

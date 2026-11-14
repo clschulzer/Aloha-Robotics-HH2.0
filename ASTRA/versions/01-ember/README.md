@@ -1,6 +1,6 @@
 # 01 — Ember
 
-**The feedback-led cut.** [Open the presentation](https://clschulzer.github.io/Aloha-Robotics-HH2.0/ASTRA/versions/01-ember/) · [Speaker script](SCRIPT.md) · [Design review](../research/DESIGN_REVIEW.md)
+**The feedback-led cut.** [Open the presentation](https://clschulzer.github.io/Aloha-Robotics-HH2.0/ASTRA/versions/01-ember/) · [Speaker script](SCRIPT.md) · [Design review](research/REVIEW.md)
 
 Original film → fast ember title → one character at a time → CRT shutdown → Now. → a readable theatre calendar → a growing service workflow → patient-facing close.
 

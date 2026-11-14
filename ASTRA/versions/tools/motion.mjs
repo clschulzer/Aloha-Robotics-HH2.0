@@ -18,7 +18,7 @@ try{
 }catch{}
 const report={version:slug,captures:retained,refreshedThisRun:specs,errors:[]};
 try{
- await call('session.new',{capabilities:{alwaysMatch:{browserName:'firefox'}}});await call('session.subscribe',{events:['log.entryAdded']});
+ await call('session.new',{capabilities:{alwaysMatch:{browserName:'firefox'}}});await call('network.setCacheBehavior',{cacheBehavior:'bypass'});await call('session.subscribe',{events:['log.entryAdded']});
  ({context}=await call('browsingContext.create',{type:'tab'}));
  await call('browsingContext.setViewport',{context,viewport:{width:1440,height:810},devicePixelRatio:1});
  await call('browsingContext.navigate',{context,url:`http://127.0.0.1:8766/ASTRA/versions/${slug}/`,wait:'complete'});
@@ -28,18 +28,24 @@ try{
   if(n===0){
    assert.notEqual(spec.scene,'film','Use native rehearsal to review the film');
    await ev('window.ASTRA.reset()');await ev('window.ASTRA.start(false)');
+  }else if(n===1&&spec.scene==='intro'){
+   await ev('window.ASTRA.go(1)');
+   await ev('(()=>{window.OPUS.embers.reset();window.OPUS.embers.runIntro(false);return true;})()');
   }else{
    assert.ok(n>1,'Use a non-film cue with a preceding cue');
    await ev(`window.ASTRA.go(${n-1})`);await wait(150);await ev('window.ASTRA.next()');
   }
   const start=performance.now();
-  for(const ms of [100,550,1100,2200,3800]){
+  for(const ms of spec.scene==='intro'?[100,550,1100,2200,3800,4800]:[100,550,1100,2200,3800]){
    await wait(Math.max(0,ms-(performance.now()-start)));
-   assert.equal((await ev('window.ASTRA.getState()')).cue,n);
+   const actual=await ev('window.ASTRA.getState()');
+   const crtCut=spec.scene==='moods'&&spec.step===6&&ms>=2000&&actual.cue===n+1&&actual.scene==='cut';
+   assert.ok(actual.cue===n||crtCut,`Unexpected cue during ${spec.scene}:${spec.step} at ${ms} ms: ${actual.cue}`);
    const image=await call('browsingContext.captureScreenshot',{context,origin:'viewport',format:{type:'image/png'}});
    const filename=`${spec.scene}-${spec.step}-${String(ms).padStart(4,'0')}.png`;
-   await fs.writeFile(path.join(output,filename),Buffer.from(image.data,'base64'));report.captures.push({scene:spec.scene,step:spec.step,milliseconds:ms,filename});
+   await fs.writeFile(path.join(output,filename),Buffer.from(image.data,'base64'));report.captures.push({scene:spec.scene,step:spec.step,milliseconds:ms,filename,actualCue:actual.cue,actualScene:actual.scene,actualStep:actual.step});
   }
+  if(spec.scene==='intro')assert.equal(await ev('window.OPUS.embers.locked'),true,'The title must settle before the next cue');
   console.log(slug,spec.scene,spec.step,'motion captured');
  }
  report.errors=logs.filter(m=>m.method==='log.entryAdded'&&m.params.level==='error').map(m=>m.params.text);assert.deepEqual(report.errors,[]);report.result='passed';

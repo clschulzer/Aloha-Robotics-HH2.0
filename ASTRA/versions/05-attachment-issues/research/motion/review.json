@@ -210,12 +210,66 @@
       "step": 4,
       "milliseconds": 3800,
       "filename": "crew-4-3800.png"
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "intro-0-0100.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "intro-0-0550.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "intro-0-1100.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "intro-0-2200.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "intro-0-3800.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 4800,
+      "filename": "intro-0-4800.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
     }
   ],
   "refreshedThisRun": [
     {
-      "scene": "crew",
-      "step": 4
+      "scene": "intro",
+      "step": 0
     }
   ],
   "errors": [],

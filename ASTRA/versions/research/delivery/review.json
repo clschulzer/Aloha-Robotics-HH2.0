@@ -1,0 +1,165 @@
+{
+  "gallery": {
+    "versions": [
+      "01-ember",
+      "02-christian",
+      "03-night-shift",
+      "04-constellation",
+      "05-attachment-issues",
+      "06-open-circuit",
+      "07-encore"
+    ],
+    "coversLoaded": true,
+    "mobileWidth": 390,
+    "noHorizontalOverflow": true,
+    "recommendation": "07-encore"
+  },
+  "presenters": [
+    {
+      "version": "01-ember",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    },
+    {
+      "version": "02-christian",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    },
+    {
+      "version": "03-night-shift",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    },
+    {
+      "version": "04-constellation",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    },
+    {
+      "version": "05-attachment-issues",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    },
+    {
+      "version": "06-open-circuit",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    },
+    {
+      "version": "07-encore",
+      "titleAndNotesMatch": true,
+      "next": true,
+      "previous": true
+    }
+  ],
+  "embedded": [
+    {
+      "cue": 2,
+      "title": "Meet Cio",
+      "result": "passed"
+    },
+    {
+      "cue": 3,
+      "title": "Patch overdue",
+      "result": "passed"
+    },
+    {
+      "cue": 4,
+      "title": "A new personality",
+      "result": "passed"
+    },
+    {
+      "cue": 5,
+      "title": "Someone cares",
+      "result": "passed"
+    },
+    {
+      "cue": 6,
+      "title": "Need becomes priority",
+      "result": "passed"
+    },
+    {
+      "cue": 13,
+      "title": "One small request",
+      "result": "passed"
+    },
+    {
+      "cue": 14,
+      "title": "Not today",
+      "result": "passed"
+    },
+    {
+      "cue": 15,
+      "title": "The circle",
+      "result": "passed"
+    },
+    {
+      "cue": 16,
+      "title": "Help arrives",
+      "result": "passed"
+    },
+    {
+      "cue": 17,
+      "title": "Check",
+      "result": "passed"
+    },
+    {
+      "cue": 18,
+      "title": "Find",
+      "result": "passed"
+    },
+    {
+      "cue": 19,
+      "title": "Connect",
+      "result": "passed"
+    },
+    {
+      "cue": 20,
+      "title": "Ready to ask",
+      "result": "passed"
+    },
+    {
+      "cue": 21,
+      "title": "Lena gets the decision",
+      "result": "passed"
+    },
+    {
+      "cue": 22,
+      "title": "Time and surroundings",
+      "result": "passed"
+    },
+    {
+      "cue": 23,
+      "title": "A human starts",
+      "result": "passed"
+    },
+    {
+      "cue": 24,
+      "title": "The decision is recorded",
+      "result": "passed"
+    },
+    {
+      "cue": 25,
+      "title": "Watch",
+      "result": "passed"
+    },
+    {
+      "cue": 26,
+      "title": "Report",
+      "result": "passed"
+    },
+    {
+      "cue": 27,
+      "title": "Thanks",
+      "result": "passed"
+    }
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}

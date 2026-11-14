@@ -1,0 +1,79 @@
+{
+  "checkpoint": "fb1ea2304f3d9f2f0e3915ba8b6257cdb42039a6",
+  "sources": [
+    {
+      "source": "team-material-christian/challenge-4/klickdummy/planner.js",
+      "copy": "ASTRA/versions/07-encore/engine/planner.js",
+      "sha256": "0c32d0e6bba0938a92a7b63e75f25d1d8a78fa50bfbb428accedecc906fc1bda",
+      "identical": true
+    },
+    {
+      "source": "OPUS/v2/js/model/golden.js",
+      "copy": "ASTRA/versions/07-encore/engine/golden.js",
+      "sha256": "1e6c53aac1d13f709163b15bf9ce1b7155a501c8b54c560fd21c74d0bce32a97",
+      "identical": true
+    },
+    {
+      "source": "OPUS/v2/js/data/day.js",
+      "copy": "ASTRA/versions/07-encore/engine/day.js",
+      "sha256": "b30eb432f3eea3a6991c27c1f5a2bc3ee757a89955e9d91406bb55a52532c96a",
+      "identical": true
+    }
+  ],
+  "existingTestCommand": "node --test team-material-christian/challenge-4/klickdummy/planner.test.cjs OPUS/v2/tests/golden.test.cjs",
+  "existingTests": {
+    "passed": 27,
+    "failed": 0
+  },
+  "scenario": {
+    "checks": [
+      {
+        "name": "Cancellation opens Cio\u2019s evening",
+        "pass": true
+      },
+      {
+        "name": "Result is the highest-ranked eligible Cio window",
+        "pass": true
+      },
+      {
+        "name": "Backup stays free through recovery margin",
+        "pass": true
+      },
+      {
+        "name": "Emergency hold removes Cio\u2019s proposal",
+        "pass": true
+      },
+      {
+        "name": "No confirmer means no proposal",
+        "pass": true
+      },
+      {
+        "name": "Missing authorization blocks the start gate",
+        "pass": true
+      },
+      {
+        "name": "Recalled package blocks the start",
+        "pass": true
+      }
+    ],
+    "winner": {
+      "id": "C-03",
+      "from": 1260,
+      "to": 1380,
+      "guardEnd": 1410,
+      "status": "ok",
+      "reason": "ok",
+      "label": "NO SOCKET \u2192 KETTYBOT \u00b7 96% UNDISTURBED",
+      "p": 0.9577654460644683,
+      "parts": {
+        "p": 0.9577654460644683,
+        "use": 0.9751871871081982,
+        "emergency": 0.9821610323583008,
+        "overrun": 0.999973471903402
+      },
+      "needsRobot": true,
+      "backup": "C-01"
+    },
+    "backup": "C-01"
+  }
+}

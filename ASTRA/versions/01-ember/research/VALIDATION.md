@@ -15,3 +15,5 @@ The full numerical receipt is [rehearsal.json](rehearsal/rehearsal.json); the [c
 Visual corrections made before this run: initialize new canvases at stage size, separate the three workflow inputs, anchor lines to icon centres, and use wall time for the presentation clock while retaining bounded animation steps.
 
 Source audit: new work only in `ASTRA/versions/`. All shared media is referenced, not modified. OPUS PR 8 was merged while this version was being verified.
+
+The final collection review also captured the character loop and automatic CRT cut, calendar search and convergence, and all service-workflow stages between 0.1 and 3.8 seconds. [Motion receipt](motion/review.json) · [Motion frames](motion-contact.webp).

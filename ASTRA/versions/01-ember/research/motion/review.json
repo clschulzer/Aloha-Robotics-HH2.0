@@ -1,0 +1,427 @@
+{
+  "version": "01-ember",
+  "captures": [
+    {
+      "scene": "moods",
+      "step": 6,
+      "milliseconds": 100,
+      "filename": "moods-6-0100.png",
+      "actualCue": 8,
+      "actualScene": "moods",
+      "actualStep": 6
+    },
+    {
+      "scene": "moods",
+      "step": 6,
+      "milliseconds": 550,
+      "filename": "moods-6-0550.png",
+      "actualCue": 8,
+      "actualScene": "moods",
+      "actualStep": 6
+    },
+    {
+      "scene": "moods",
+      "step": 6,
+      "milliseconds": 1100,
+      "filename": "moods-6-1100.png",
+      "actualCue": 8,
+      "actualScene": "moods",
+      "actualStep": 6
+    },
+    {
+      "scene": "moods",
+      "step": 6,
+      "milliseconds": 2200,
+      "filename": "moods-6-2200.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "moods",
+      "step": 6,
+      "milliseconds": 3800,
+      "filename": "moods-6-3800.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "cut",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "cut-0-0100.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "cut",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "cut-0-0550.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "cut",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "cut-0-1100.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "cut",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "cut-0-2200.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "cut",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "cut-0-3800.png",
+      "actualCue": 9,
+      "actualScene": "cut",
+      "actualStep": 0
+    },
+    {
+      "scene": "calendar",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "calendar-2-0100.png",
+      "actualCue": 13,
+      "actualScene": "calendar",
+      "actualStep": 2
+    },
+    {
+      "scene": "calendar",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "calendar-2-0550.png",
+      "actualCue": 13,
+      "actualScene": "calendar",
+      "actualStep": 2
+    },
+    {
+      "scene": "calendar",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "calendar-2-1100.png",
+      "actualCue": 13,
+      "actualScene": "calendar",
+      "actualStep": 2
+    },
+    {
+      "scene": "calendar",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "calendar-2-2200.png",
+      "actualCue": 13,
+      "actualScene": "calendar",
+      "actualStep": 2
+    },
+    {
+      "scene": "calendar",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "calendar-2-3800.png",
+      "actualCue": 13,
+      "actualScene": "calendar",
+      "actualStep": 2
+    },
+    {
+      "scene": "calendar",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "calendar-4-0100.png",
+      "actualCue": 15,
+      "actualScene": "calendar",
+      "actualStep": 4
+    },
+    {
+      "scene": "calendar",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "calendar-4-0550.png",
+      "actualCue": 15,
+      "actualScene": "calendar",
+      "actualStep": 4
+    },
+    {
+      "scene": "calendar",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "calendar-4-1100.png",
+      "actualCue": 15,
+      "actualScene": "calendar",
+      "actualStep": 4
+    },
+    {
+      "scene": "calendar",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "calendar-4-2200.png",
+      "actualCue": 15,
+      "actualScene": "calendar",
+      "actualStep": 4
+    },
+    {
+      "scene": "calendar",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "calendar-4-3800.png",
+      "actualCue": 15,
+      "actualScene": "calendar",
+      "actualStep": 4
+    },
+    {
+      "scene": "workflow",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "workflow-1-0100.png",
+      "actualCue": 18,
+      "actualScene": "workflow",
+      "actualStep": 1
+    },
+    {
+      "scene": "workflow",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "workflow-1-0550.png",
+      "actualCue": 18,
+      "actualScene": "workflow",
+      "actualStep": 1
+    },
+    {
+      "scene": "workflow",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "workflow-1-1100.png",
+      "actualCue": 18,
+      "actualScene": "workflow",
+      "actualStep": 1
+    },
+    {
+      "scene": "workflow",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "workflow-1-2200.png",
+      "actualCue": 18,
+      "actualScene": "workflow",
+      "actualStep": 1
+    },
+    {
+      "scene": "workflow",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "workflow-1-3800.png",
+      "actualCue": 18,
+      "actualScene": "workflow",
+      "actualStep": 1
+    },
+    {
+      "scene": "workflow",
+      "step": 2,
+      "milliseconds": 100,
+      "filename": "workflow-2-0100.png",
+      "actualCue": 19,
+      "actualScene": "workflow",
+      "actualStep": 2
+    },
+    {
+      "scene": "workflow",
+      "step": 2,
+      "milliseconds": 550,
+      "filename": "workflow-2-0550.png",
+      "actualCue": 19,
+      "actualScene": "workflow",
+      "actualStep": 2
+    },
+    {
+      "scene": "workflow",
+      "step": 2,
+      "milliseconds": 1100,
+      "filename": "workflow-2-1100.png",
+      "actualCue": 19,
+      "actualScene": "workflow",
+      "actualStep": 2
+    },
+    {
+      "scene": "workflow",
+      "step": 2,
+      "milliseconds": 2200,
+      "filename": "workflow-2-2200.png",
+      "actualCue": 19,
+      "actualScene": "workflow",
+      "actualStep": 2
+    },
+    {
+      "scene": "workflow",
+      "step": 2,
+      "milliseconds": 3800,
+      "filename": "workflow-2-3800.png",
+      "actualCue": 19,
+      "actualScene": "workflow",
+      "actualStep": 2
+    },
+    {
+      "scene": "workflow",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "workflow-3-0100.png",
+      "actualCue": 20,
+      "actualScene": "workflow",
+      "actualStep": 3
+    },
+    {
+      "scene": "workflow",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "workflow-3-0550.png",
+      "actualCue": 20,
+      "actualScene": "workflow",
+      "actualStep": 3
+    },
+    {
+      "scene": "workflow",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "workflow-3-1100.png",
+      "actualCue": 20,
+      "actualScene": "workflow",
+      "actualStep": 3
+    },
+    {
+      "scene": "workflow",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "workflow-3-2200.png",
+      "actualCue": 20,
+      "actualScene": "workflow",
+      "actualStep": 3
+    },
+    {
+      "scene": "workflow",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "workflow-3-3800.png",
+      "actualCue": 20,
+      "actualScene": "workflow",
+      "actualStep": 3
+    },
+    {
+      "scene": "workflow",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "workflow-4-0100.png",
+      "actualCue": 21,
+      "actualScene": "workflow",
+      "actualStep": 4
+    },
+    {
+      "scene": "workflow",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "workflow-4-0550.png",
+      "actualCue": 21,
+      "actualScene": "workflow",
+      "actualStep": 4
+    },
+    {
+      "scene": "workflow",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "workflow-4-1100.png",
+      "actualCue": 21,
+      "actualScene": "workflow",
+      "actualStep": 4
+    },
+    {
+      "scene": "workflow",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "workflow-4-2200.png",
+      "actualCue": 21,
+      "actualScene": "workflow",
+      "actualStep": 4
+    },
+    {
+      "scene": "workflow",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "workflow-4-3800.png",
+      "actualCue": 21,
+      "actualScene": "workflow",
+      "actualStep": 4
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 100,
+      "filename": "intro-0-0100.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 550,
+      "filename": "intro-0-0550.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 1100,
+      "filename": "intro-0-1100.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 2200,
+      "filename": "intro-0-2200.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 3800,
+      "filename": "intro-0-3800.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    },
+    {
+      "scene": "intro",
+      "step": 0,
+      "milliseconds": 4800,
+      "filename": "intro-0-4800.png",
+      "actualCue": 1,
+      "actualScene": "intro",
+      "actualStep": 0
+    }
+  ],
+  "refreshedThisRun": [
+    {
+      "scene": "intro",
+      "step": 0
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}

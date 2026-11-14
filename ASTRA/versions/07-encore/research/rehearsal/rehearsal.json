@@ -1,0 +1,312 @@
+{
+  "version": "07-encore",
+  "kind": "Native playback; real-time 180-second rehearsal",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "film",
+      "step": 0,
+      "elapsed": 1.453437,
+      "filmTime": 1.453437
+    },
+    {
+      "cue": 1,
+      "scene": "intro",
+      "step": 0,
+      "elapsed": 31.966667000000005,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 2,
+      "scene": "demo",
+      "step": 0,
+      "elapsed": 37.452667000000176,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 3,
+      "scene": "demo",
+      "step": 1,
+      "elapsed": 44.50366700000052,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 4,
+      "scene": "demo",
+      "step": 2,
+      "elapsed": 49.4206670000007,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 5,
+      "scene": "demo",
+      "step": 3,
+      "elapsed": 54.41966700000094,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 6,
+      "scene": "demo",
+      "step": 4,
+      "elapsed": 59.40266700000115,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 7,
+      "scene": "cut",
+      "step": 0,
+      "elapsed": 65.50366700000141,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 8,
+      "scene": "opportunity",
+      "step": 0,
+      "elapsed": 68.40366700000145,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 9,
+      "scene": "opportunity",
+      "step": 1,
+      "elapsed": 73.50266700000147,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 10,
+      "scene": "opportunity",
+      "step": 2,
+      "elapsed": 77.40266700000156,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 11,
+      "scene": "opportunity",
+      "step": 3,
+      "elapsed": 85.51966700000165,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 12,
+      "scene": "opportunity",
+      "step": 4,
+      "elapsed": 91.50366700000178,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 13,
+      "scene": "demo",
+      "step": 5,
+      "elapsed": 96.50266700000189,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 14,
+      "scene": "demo",
+      "step": 6,
+      "elapsed": 102.47066700000197,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 15,
+      "scene": "demo",
+      "step": 7,
+      "elapsed": 106.40366700000202,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 16,
+      "scene": "demo",
+      "step": 8,
+      "elapsed": 110.50766700000196,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 17,
+      "scene": "demo",
+      "step": 9,
+      "elapsed": 114.42066700000201,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 18,
+      "scene": "demo",
+      "step": 10,
+      "elapsed": 119.50266700000222,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 19,
+      "scene": "demo",
+      "step": 11,
+      "elapsed": 125.46966700000227,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 20,
+      "scene": "demo",
+      "step": 12,
+      "elapsed": 131.40366700000138,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 21,
+      "scene": "demo",
+      "step": 13,
+      "elapsed": 136.51966699999986,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 22,
+      "scene": "demo",
+      "step": 14,
+      "elapsed": 141.45366699999832,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 23,
+      "scene": "demo",
+      "step": 15,
+      "elapsed": 145.45366699999715,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 24,
+      "scene": "demo",
+      "step": 16,
+      "elapsed": 150.08666699999574,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 25,
+      "scene": "demo",
+      "step": 17,
+      "elapsed": 152.50366699999515,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 26,
+      "scene": "demo",
+      "step": 18,
+      "elapsed": 157.52066699999367,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 27,
+      "scene": "demo",
+      "step": 19,
+      "elapsed": 162.40366699999228,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 28,
+      "scene": "synthesis",
+      "step": 0,
+      "elapsed": 167.4876669999908,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 29,
+      "scene": "care",
+      "step": 0,
+      "elapsed": 173.43666699998926,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 30,
+      "scene": "care",
+      "step": 1,
+      "elapsed": 177.436666999988,
+      "filmTime": 30.442666
+    }
+  ],
+  "averageFps": 57.12582255001546,
+  "sceneFps": {
+    "film": 59.5,
+    "intro": 42,
+    "demo": 57.4,
+    "cut": 57.7,
+    "opportunity": 56.9,
+    "synthesis": 56.7,
+    "care": 56.5
+  },
+  "encore": {
+    "evaluations": 1302,
+    "winner": {
+      "id": "C-03",
+      "from": 1260,
+      "to": 1380,
+      "guardEnd": 1410,
+      "status": "ok",
+      "reason": "ok",
+      "label": "NO SOCKET → KETTYBOT · 96% UNDISTURBED",
+      "p": 0.9577654460644683,
+      "parts": {
+        "p": 0.9577654460644683,
+        "use": 0.9751871871081982,
+        "emergency": 0.9821610323583008,
+        "overrun": 0.999973471903402
+      },
+      "needsRobot": true,
+      "backup": "C-01"
+    },
+    "backup": "C-01",
+    "checks": [
+      {
+        "name": "Cancellation opens Cio’s evening",
+        "pass": true
+      },
+      {
+        "name": "Result is the highest-ranked eligible Cio window",
+        "pass": true
+      },
+      {
+        "name": "Backup stays free through recovery margin",
+        "pass": true
+      },
+      {
+        "name": "Emergency hold removes Cio’s proposal",
+        "pass": true
+      },
+      {
+        "name": "No confirmer means no proposal",
+        "pass": true
+      },
+      {
+        "name": "Missing authorization blocks the start gate",
+        "pass": true
+      },
+      {
+        "name": "Recalled package blocks the start",
+        "pass": true
+      }
+    ],
+    "proposal": {
+      "from": "21:00",
+      "to": "23:00",
+      "guard": "23:30",
+      "backup": "Cora",
+      "eligible": true
+    },
+    "humanShown": true,
+    "product": {
+      "proposal": {
+        "from": "21:00",
+        "to": "23:00",
+        "guard": "23:30",
+        "backup": "Cora",
+        "eligible": true
+      },
+      "approvals": 1,
+      "approved": true,
+      "scene": {
+        "scene": 13,
+        "step": 1
+      },
+      "lastKey": "13:1"
+    }
+  },
+  "wallSeconds": 181.15073416200002,
+  "consoleErrors": [],
+  "result": "passed"
+}

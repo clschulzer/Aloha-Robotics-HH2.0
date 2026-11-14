@@ -57,6 +57,14 @@ try{
      const engineering=await ev('window.ENGINEERING?.metrics?.() || null');
      if(engineering){assert.equal(engineering.gate.ok,cues[i].step===3);assert.equal(engineering.starts,0,'An eligible gate must not automatically start');}
    }
+   if(cues[i].scene==='demo'){
+     const encore=await ev('window.ENCORE?.metrics?.() || null');
+     if(encore&&cues[i].step>=13){
+       assert.equal(encore.product.approvals,cues[i].step>=16?1:0,'Only the single illustrated human decision records approval');
+       assert.equal(encore.product.proposal.from,encore.proposal.from,'The phone must carry the calculated window');
+       assert.equal(encore.product.proposal.to,encore.proposal.to,'The report must carry the same update interval');
+     }
+   }
    const name=`${String(i).padStart(2,'0')}-${cues[i].scene}-${cues[i].step}`;
    await shot(name);report.observations.push({cue:i,scene:s.scene,step:s.step,elapsed:s.elapsed,filmTime:s.film?.currentTime});
    console.log(slug,name,s.elapsed.toFixed(2));
@@ -85,6 +93,16 @@ try{
    assert.ok(engineering.evaluations>0);assert.equal(engineering.starts,0);
    assert.ok(engineering.displayedChecks.length>=8);assert.ok(engineering.displayedChecks.every(c=>c.pass));
    report.engineering=engineering;
+ }
+ const encore=await ev('window.ENCORE?.metrics?.() || null');
+ if(encore){
+   assert.ok(encore.evaluations>100,'The final-cut swarm must evaluate actual candidates');
+   assert.ok(encore.checks.length>=7&&encore.checks.every(c=>c.pass),'Cancellation, backup, emergency and authorization scenarios');
+   assert.equal(encore.product.approvals,1,'Exactly one illustrated approval during the entire show');
+   assert.equal(encore.product.approved,true);
+   assert.equal(encore.product.proposal.from,encore.proposal.from);
+   assert.equal(encore.product.proposal.to,encore.proposal.to);
+   report.encore=encore;
  }
  report.wallSeconds=(performance.now()-began)/1000;
  report.consoleErrors=logs.filter(x=>x.method==='log.entryAdded'&&x.params.level==='error').map(x=>x.params.text);
