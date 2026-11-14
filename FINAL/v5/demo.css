@@ -643,7 +643,7 @@ img{display:block;user-select:none}
 .cta-right{align-items:flex-start;padding-top:10px}
 .booked{gap:18px}
 .booked img{width:300px;height:300px}
-.qrs{display:flex;gap:30px;align-self:flex-start;margin-top:38px;animation:pcIn calc(.6s * var(--sp)) var(--ease) calc(1.7s * var(--sp)) both}
+.qrs{display:flex;gap:30px;align-self:flex-start;margin-top:92px;animation:pcIn calc(.6s * var(--sp)) var(--ease) calc(1.7s * var(--sp)) both}
 .qr{display:flex;gap:14px;align-items:center;margin:0}
 .qr img{width:150px;height:150px;background:#fff;border-radius:14px;padding:10px;object-fit:contain;filter:none;animation:none}
 .qr b{display:block;font-size:24px;font-weight:900;letter-spacing:-.02em}.qr small{display:block;white-space:nowrap;font:700 15px 'Courier New',monospace;color:#9fb2b4;margin-top:4px}
