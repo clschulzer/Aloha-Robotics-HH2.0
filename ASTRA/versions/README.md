@@ -8,7 +8,7 @@ These are new, independent presentation folders. The existing ASTRA, OPUS, UNITE
 |---|---|---|
 | [01 — Ember](01-ember/) | The user's feedback: cinematic continuity, clean character portraits, theatre-calendar swarm and a sparse service loop. | Ready |
 | [02 — In Good Hands](02-christian/) | Christian's actual template and his complete responsibility-to-thank-you journey. | Ready |
-| 03 | A distinct creative interpretation of the same evidence. | Queued |
+| [03 — Night Shift](03-night-shift/) | A cinematic evening, a horizontal theatre board, and one golden thread through the service handoff. | Ready |
 | 04 | Maximum motion, with visual causality and readable choreography. | Queued |
 | 05 | The deliberately unhinged comedy cut. | Queued |
 | 06 | Pure engineering: actual implementation, system boundaries and the proposed stack. | Queued |

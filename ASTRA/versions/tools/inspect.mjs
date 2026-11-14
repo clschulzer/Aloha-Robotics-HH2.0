@@ -29,6 +29,8 @@ try{
  for(let n=1;n<cues.length;n++){
    await ev(`window.ASTRA.go(${n})`);await wait(cues[n].scene==='calendar'?1300:900);
    const s=await ev('window.ASTRA.getState()');assert.equal(s.cue,n);
+   const collisions=await ev(`(window.PITCH.layoutPairs||[]).flatMap(([sa,sb])=>{const a=document.querySelector(sa),b=document.querySelector(sb);if(!a||!b||!a.closest('.scene.active')||!b.closest('.scene.active'))return[];const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();return x.left<y.right&&x.right>y.left&&x.top<y.bottom&&x.bottom>y.top?[sa+' overlaps '+sb]:[];})`);
+   assert.deepEqual(collisions,[],cues[n].title+' layout');
    const absent=await ev('[...document.images,...[...document.querySelectorAll("iframe")].flatMap(f=>[...f.contentDocument.images])].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)');assert.deepEqual(absent,[]);
    if(cues[n].scene==='demo'){
      const inside=await ev('document.querySelector("#product").contentWindow.DEMO.getState()');

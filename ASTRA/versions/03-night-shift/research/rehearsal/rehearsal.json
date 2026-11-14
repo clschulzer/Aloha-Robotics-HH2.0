@@ -1,0 +1,157 @@
+{
+  "version": "03-night-shift",
+  "kind": "Native playback; real-time 180-second rehearsal",
+  "observations": [
+    {
+      "cue": 0,
+      "scene": "film",
+      "step": 0,
+      "elapsed": 1.441645,
+      "filmTime": 1.441645
+    },
+    {
+      "cue": 1,
+      "scene": "intro",
+      "step": 0,
+      "elapsed": 31.995667,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 2,
+      "scene": "moods",
+      "step": 0,
+      "elapsed": 37.41666700000013,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 3,
+      "scene": "moods",
+      "step": 1,
+      "elapsed": 42.51566700000036,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 4,
+      "scene": "moods",
+      "step": 2,
+      "elapsed": 47.46566700000063,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 5,
+      "scene": "moods",
+      "step": 3,
+      "elapsed": 52.43166700000082,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 6,
+      "scene": "moods",
+      "step": 4,
+      "elapsed": 57.51466700000103,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 7,
+      "scene": "moods",
+      "step": 5,
+      "elapsed": 62.44866700000124,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 8,
+      "scene": "moods",
+      "step": 6,
+      "elapsed": 67.0316670000014,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 9,
+      "scene": "cut",
+      "step": 0,
+      "elapsed": 69.51466700000144,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 10,
+      "scene": "night",
+      "step": 0,
+      "elapsed": 73.43266700000152,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 11,
+      "scene": "night",
+      "step": 1,
+      "elapsed": 84.48266700000177,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 12,
+      "scene": "night",
+      "step": 2,
+      "elapsed": 91.41566700000176,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 13,
+      "scene": "night",
+      "step": 3,
+      "elapsed": 103.44866700000193,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 14,
+      "scene": "night",
+      "step": 4,
+      "elapsed": 115.48166700000226,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 15,
+      "scene": "relay",
+      "step": 0,
+      "elapsed": 123.51466700000252,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 16,
+      "scene": "relay",
+      "step": 1,
+      "elapsed": 132.51466700000125,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 17,
+      "scene": "relay",
+      "step": 2,
+      "elapsed": 141.5016669999983,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 18,
+      "scene": "relay",
+      "step": 3,
+      "elapsed": 152.47266699999474,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 19,
+      "scene": "dawn",
+      "step": 0,
+      "elapsed": 163.46566699999133,
+      "filmTime": 30.442666
+    },
+    {
+      "cue": 20,
+      "scene": "dawn",
+      "step": 1,
+      "elapsed": 172.50366699998892,
+      "filmTime": 30.442666
+    }
+  ],
+  "averageFps": 57.61366834614557,
+  "wallSeconds": 181.21542041400002,
+  "consoleErrors": [],
+  "result": "passed"
+}

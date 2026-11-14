@@ -1,0 +1,197 @@
+{
+  "version": "03-night-shift",
+  "url": "http://127.0.0.1:8766/ASTRA/versions/03-night-shift/",
+  "cues": [
+    {
+      "n": 1,
+      "at": 30.442667,
+      "scene": "intro",
+      "step": 0,
+      "title": "Aloha",
+      "note": "[The explosion becomes the true-story joke, then Aloha.]",
+      "i": 1
+    },
+    {
+      "n": 2,
+      "at": 36,
+      "scene": "moods",
+      "step": 0,
+      "title": "A new contact",
+      "note": "Your C-arm has entered the chat. Disconnected. Feeling ghosted.",
+      "i": 2
+    },
+    {
+      "n": 3,
+      "at": 41,
+      "scene": "moods",
+      "step": 1,
+      "title": "The message",
+      "note": "Patch overdue. It needs to talk. About its firmware.",
+      "i": 3
+    },
+    {
+      "n": 4,
+      "at": 46,
+      "scene": "moods",
+      "step": 2,
+      "title": "Space",
+      "note": "Updating. Personal growth in progress.",
+      "i": 4
+    },
+    {
+      "n": 5,
+      "at": 51,
+      "scene": "moods",
+      "step": 3,
+      "title": "Care",
+      "note": "Connected and current. Somebody cared.",
+      "i": 5
+    },
+    {
+      "n": 6,
+      "at": 56,
+      "scene": "moods",
+      "step": 4,
+      "title": "The honest state",
+      "note": "When something fails, it says so.",
+      "i": 6
+    },
+    {
+      "n": 7,
+      "at": 61,
+      "scene": "moods",
+      "step": 5,
+      "title": "Recovery",
+      "note": "Recovery gets its own personality too.",
+      "i": 7
+    },
+    {
+      "n": 8,
+      "at": 66,
+      "scene": "moods",
+      "step": 6,
+      "title": "Switch",
+      "note": "[Let the accelerating loop collapse.]",
+      "i": 8
+    },
+    {
+      "n": 9,
+      "at": 68,
+      "scene": "cut",
+      "step": 0,
+      "title": "Now",
+      "note": "[Pause. The room turns dark.]",
+      "i": 9
+    },
+    {
+      "n": 10,
+      "at": 72,
+      "scene": "night",
+      "step": 0,
+      "title": "The night shift",
+      "note": "Now the hospital has an evening to plan. Care continues. Our work has to fit around it.",
+      "i": 10
+    },
+    {
+      "n": 11,
+      "at": 83,
+      "scene": "night",
+      "step": 1,
+      "title": "An opening",
+      "note": "A cancellation opens a gap.",
+      "i": 11
+    },
+    {
+      "n": 12,
+      "at": 90,
+      "scene": "night",
+      "step": 2,
+      "title": "The scouts",
+      "note": "Specialists search the plan, device state and maintenance requirements together.",
+      "i": 12
+    },
+    {
+      "n": 13,
+      "at": 102,
+      "scene": "night",
+      "step": 3,
+      "title": "Protect the care",
+      "note": "Then they challenge the opportunity: enough time to recover, emergency demand, another device available.",
+      "i": 13
+    },
+    {
+      "n": 14,
+      "at": 114,
+      "scene": "night",
+      "step": 4,
+      "title": "The thread",
+      "note": "This is the eligible window our prototype finds. A proposal, with a reason.",
+      "i": 14
+    },
+    {
+      "n": 15,
+      "at": 122,
+      "scene": "relay",
+      "step": 0,
+      "title": "Find",
+      "note": "Now follow the handoff. The opportunity enters one coordinated service plan.",
+      "i": 15
+    },
+    {
+      "n": 16,
+      "at": 131,
+      "scene": "relay",
+      "step": 1,
+      "title": "Decide",
+      "note": "Medical physics reviews it. A named person authorizes the start.",
+      "i": 16
+    },
+    {
+      "n": 17,
+      "at": 140,
+      "scene": "relay",
+      "step": 2,
+      "title": "Help",
+      "note": "Our robot concept brings power and an approved data connection to the parked machine.",
+      "i": 17
+    },
+    {
+      "n": 18,
+      "at": 151,
+      "scene": "relay",
+      "step": 3,
+      "title": "Account",
+      "note": "The result comes back. A problem stays open until someone owns it. Our working demo makes those handoffs visible; clinical integrations come next.",
+      "i": 18
+    },
+    {
+      "n": 19,
+      "at": 162,
+      "scene": "dawn",
+      "step": 0,
+      "title": "The next case",
+      "note": "The machine has a care team, too.",
+      "i": 19
+    },
+    {
+      "n": 20,
+      "at": 171,
+      "scene": "dawn",
+      "step": 1,
+      "title": "Ready",
+      "note": "So your attention can stay on what comes next. [Hold the final image.]",
+      "i": 20
+    }
+  ],
+  "checks": [
+    "All cues render",
+    "All image assets load",
+    "Previous navigation",
+    "Notes toggle",
+    "Optional sound toggle",
+    "Pause freezes cue clock",
+    "Home resets launcher"
+  ],
+  "consoleErrors": [],
+  "result": "passed"
+}

@@ -1,0 +1,127 @@
+{
+  "version": "03-night-shift",
+  "captures": [
+    {
+      "scene": "night",
+      "step": 4,
+      "milliseconds": 100,
+      "filename": "night-4-0100.png"
+    },
+    {
+      "scene": "night",
+      "step": 4,
+      "milliseconds": 550,
+      "filename": "night-4-0550.png"
+    },
+    {
+      "scene": "night",
+      "step": 4,
+      "milliseconds": 1100,
+      "filename": "night-4-1100.png"
+    },
+    {
+      "scene": "night",
+      "step": 4,
+      "milliseconds": 2200,
+      "filename": "night-4-2200.png"
+    },
+    {
+      "scene": "night",
+      "step": 4,
+      "milliseconds": 3800,
+      "filename": "night-4-3800.png"
+    },
+    {
+      "scene": "relay",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "relay-1-0100.png"
+    },
+    {
+      "scene": "relay",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "relay-1-0550.png"
+    },
+    {
+      "scene": "relay",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "relay-1-1100.png"
+    },
+    {
+      "scene": "relay",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "relay-1-2200.png"
+    },
+    {
+      "scene": "relay",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "relay-1-3800.png"
+    },
+    {
+      "scene": "relay",
+      "step": 3,
+      "milliseconds": 100,
+      "filename": "relay-3-0100.png"
+    },
+    {
+      "scene": "relay",
+      "step": 3,
+      "milliseconds": 550,
+      "filename": "relay-3-0550.png"
+    },
+    {
+      "scene": "relay",
+      "step": 3,
+      "milliseconds": 1100,
+      "filename": "relay-3-1100.png"
+    },
+    {
+      "scene": "relay",
+      "step": 3,
+      "milliseconds": 2200,
+      "filename": "relay-3-2200.png"
+    },
+    {
+      "scene": "relay",
+      "step": 3,
+      "milliseconds": 3800,
+      "filename": "relay-3-3800.png"
+    },
+    {
+      "scene": "dawn",
+      "step": 1,
+      "milliseconds": 100,
+      "filename": "dawn-1-0100.png"
+    },
+    {
+      "scene": "dawn",
+      "step": 1,
+      "milliseconds": 550,
+      "filename": "dawn-1-0550.png"
+    },
+    {
+      "scene": "dawn",
+      "step": 1,
+      "milliseconds": 1100,
+      "filename": "dawn-1-1100.png"
+    },
+    {
+      "scene": "dawn",
+      "step": 1,
+      "milliseconds": 2200,
+      "filename": "dawn-1-2200.png"
+    },
+    {
+      "scene": "dawn",
+      "step": 1,
+      "milliseconds": 3800,
+      "filename": "dawn-1-3800.png"
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}
