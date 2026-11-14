@@ -18,6 +18,8 @@ During the update, **Explore an interrupted update** opens a separate failure/se
 
 Other screens include the six C-arms, all five pitch moods plus recovery, the care circle, the golden-window explanation, request status, activity, availability, sound/motion preferences, and sharing. Mood previews never change an ongoing task. You can leave a screen or refresh and resume the same local story.
 
+**[The after-hours arcade](arcade/)** adds two standalone games: **C-CHOMP**, a retro C-arm maze chomper, and **PLUG PANIC**, KettyBot’s hospital night shift. Find them from the app’s home screen or **You** tab. [Arcade QR card](arcade/share/qr-card.png).
+
 The **You** tab can reset the demo. Preferences survive a reset. Use the browser's **Add to Home Screen** option to launch it like an app. Its own service worker caches the app shell; its scope is confined to `CARMAGOTCHI_APP/`.
 
 ## Latest-pitch fidelity

@@ -33,6 +33,7 @@ const shapes={
  close:'<path d="m6 6 12 12M6 18 18 6"/>',
  location:'<path d="M19 9c0 6-7 13-7 13S5 15 5 9a7 7 0 0 1 14 0Z"/><circle cx="12" cy="9" r="2"/>',
  link:'<path d="m10 13 4-4m-5 7-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 8a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-2 2"/>',
+ game:'<path d="M7 7h10a4 4 0 0 1 4 3l2 8a2 2 0 0 1-3 2l-4-3H8l-4 3a2 2 0 0 1-3-2l2-8a4 4 0 0 1 4-3ZM8 10v5m-3-2.5h6M16 11h.01M19 14h.01"/>',
 };
 const icon=(name,cls='')=>`<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true">${shapes[name]||shapes.info}</svg>`;
 const button=(label,action,cls='primary',extra='')=>`<button class="${cls}" data-action="${action}" ${extra}>${label}</button>`;
@@ -102,6 +103,7 @@ function home(){
  <a class="window-link" href="#/window">${icon('sparkle')}<div><b>${state.phase==='complete'?'A little care made a difference.':'A golden window for Cio.'}</b><span>${W.from}–${W.to} · ${W.backup} stays available</span></div>${icon('arrow','chevron')}</a>
  <div class="section-heading"><h2>One machine. A whole team.</h2></div>
  <a class="card compact row" href="#/carecircle" style="text-decoration:none"><span class="avatar">L</span><div><h3>You’re in Cio’s circle.</h3><p>No one has to carry it alone.</p></div>${icon('arrow')}</a>
+ <a class="card compact row" href="arcade/" style="text-decoration:none;background:#e9dff7;margin-top:12px"><span class="avatar" style="background:#d1bce9">${icon('game')}</span><div><h3>The after-hours arcade.</h3><p>Cio ate the update. Literally. Two games to try.</p></div>${icon('arrow')}</a>
  <p class="small-footer">From Aloha Robotics’ latest pitch.<br>All devices, requests and actions here are simulated.</p>`;
 }
 function request(){
@@ -229,6 +231,7 @@ function profile(){
  ${setting('sound','Little sounds','Soft taps and happy moments. Off by default.','sound')}${setting('haptics','A little tap back','Gentle vibration where your phone supports it.','phone')}${setting('motion','Character animations','Your system’s reduced-motion setting also applies.','motion')}</div>
  <div class="section-heading"><h2>A little more to explore.</h2></div><div class="settings-list">
  ${[['moods','Every mood','Meet all five pitch personalities, plus recovery.','heart'],['carecircle','Cio’s care circle','The people behind a small good deed.','people'],['share','Share the experience','A QR code for your team.','share']].map(([to,h,p,i])=>`<a class="setting" href="#/${to}" style="text-decoration:none">${icon(i)}<div><b>${h}</b><small>${p}</small></div>${icon('arrow')}</a>`).join('')}
+ <a class="setting" href="arcade/" style="text-decoration:none">${icon('game')}<div><b>The after-hours arcade</b><small>C-CHOMP + PLUG PANIC. Care, then chaos.</small></div>${icon('arrow')}</a>
  ${button(`${icon('refresh')}<div><b>Start the story again</b><small>Reset this browser’s demo progress.</small></div>${icon('arrow')}`,'reset','setting')}</div>
  <div class="section-heading"><h2>Made for the invisible underdogs.</h2></div><p class="tiny">A touchable version of the phone app in Aloha Robotics’ <a href="../FINAL/v1/" target="_blank" rel="noopener">latest pitch</a>. Original characters. The team’s real browser planner. A simulated hospital.</p>
  <p class="tiny space-top">Progress stays in this browser. No login, patient data, real notifications, robot dispatch, or medical-device connection.</p>

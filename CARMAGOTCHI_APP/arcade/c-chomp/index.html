@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ded2f7">
+  <meta name="description" content="C-CHOMP — a tiny C-arm, an enormous appetite. Eat patch bits and chase software bugs in an original pocket arcade maze.">
+  <title>C-CHOMP · Aloha Pocket Arcade</title>
+  <link rel="icon" href="../../assets/icon.svg">
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="cabinet">
+    <nav class="outside-nav" aria-label="Arcade navigation">
+      <a href="../"><span aria-hidden="true">←</span> Arcade</a>
+      <span>ALOHA POCKET ARCADE</span>
+      <a href="../../">Phone app <span aria-hidden="true">↗</span></a>
+    </nav>
+    <section class="toy" aria-label="C-CHOMP game console">
+      <i class="screw screw-a" aria-hidden="true"></i><i class="screw screw-b" aria-hidden="true"></i>
+      <header class="toy-brand">
+        <div><p>VERY IMPORTANT FIRMWARE BUSINESS</p><h1>C-CHOMP<span>™</span></h1></div>
+        <div class="brand-seal" aria-hidden="true"><span>C</span><i></i></div>
+      </header>
+      <div class="screen-rim">
+        <div class="lcd">
+          <div class="scoreboard" aria-label="Game score">
+            <div><span>SCORE</span><strong id="score">00000</strong></div>
+            <div class="score-best"><span>BEST</span><strong id="best">00000</strong></div>
+            <div class="score-lives"><span>LIVES</span><strong id="lives" aria-label="3 lives">♥♥♥</strong></div>
+          </div>
+          <div class="maze-wrap" id="maze-wrap">
+            <canvas id="maze" width="304" height="336" aria-label="C-CHOMP maze. Move with arrow keys, WASD, swipe or the buttons below."></canvas>
+            <div class="screen-lines" aria-hidden="true"></div>
+            <div class="overlay" id="overlay" role="dialog" aria-modal="false" aria-labelledby="overlay-title">
+              <canvas id="mascot" width="96" height="80" aria-hidden="true"></canvas>
+              <p class="overlay-kicker" id="overlay-kicker">PATCH 1 OF 3</p>
+              <h2 id="overlay-title">Got bugs?<br>Eat them.</h2>
+              <p class="overlay-copy" id="overlay-copy">Gobble every patch bit. Grab a plug.<br>Make the software bugs regret it.</p>
+              <div class="legend" id="legend">
+                <span><i class="legend-bit"></i> Patch bits</span>
+                <span><i class="legend-plug">↯</i> Bite back</span>
+              </div>
+              <button type="button" class="play-button" id="play-button">LET’S CHOMP <span aria-hidden="true">→</span></button>
+              <p class="overlay-hint" id="overlay-hint">Swipe · arrows · WASD · D-pad</p>
+            </div>
+            <div class="power-strip" id="power-strip" hidden><span>BUG BUFFET</span><i><b id="power-fill"></b></i><strong id="power-seconds">7s</strong></div>
+          </div>
+          <div class="screen-footer"><span id="round-label">01 / PATCH TUESDAY</span><span id="remaining">— BITS LEFT</span></div>
+        </div>
+      </div>
+      <div class="speech" aria-live="polite"><span class="talk-dot" aria-hidden="true"></span><p id="quip">“My warranty does not cover this.”</p></div>
+      <div class="controls">
+        <div class="dpad" role="group" aria-label="Direction controls">
+          <button type="button" class="dir up" data-dir="up" aria-label="Move up"><span aria-hidden="true">▲</span></button>
+          <button type="button" class="dir left" data-dir="left" aria-label="Move left"><span aria-hidden="true">◀</span></button>
+          <span class="dpad-center" aria-hidden="true"><i></i></span>
+          <button type="button" class="dir right" data-dir="right" aria-label="Move right"><span aria-hidden="true">▶</span></button>
+          <button type="button" class="dir down" data-dir="down" aria-label="Move down"><span aria-hidden="true">▼</span></button>
+        </div>
+        <div class="control-right">
+          <p>SMALL MACHINE.<br><b>UNSUPERVISED APPETITE.</b></p>
+          <div class="round-buttons">
+            <button type="button" id="pause-button" aria-label="Pause game"><span aria-hidden="true">Ⅱ</span><small>PAUSE</small></button>
+            <button type="button" id="sound-button" aria-pressed="false" aria-label="Enable sound"><span aria-hidden="true">♪</span><small id="sound-label">SOUND OFF</small></button>
+          </div>
+        </div>
+      </div>
+      <footer class="toy-footer"><span>3 PATCHES · ZERO MEDICAL VALUE</span><button type="button" id="restart-button">↻ REBOOT</button></footer>
+    </section>
+    <p class="under-console">Eat dots. Dodge bugs. <b>Keep your C-arm emotionally stable.</b></p>
+  </main>
+  <script type="module" src="game.mjs"></script>
+</body>
+</html>
