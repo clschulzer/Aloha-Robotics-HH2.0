@@ -1,0 +1,45 @@
+{
+  "url": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/C-Arcade/",
+  "generator": "python-qrcode 8.2",
+  "renderer": "Pillow 13.0.0",
+  "independent_decoder": "ZXing-C++ 3.1.1",
+  "qr_version": 7,
+  "error_correction": "H",
+  "quiet_zone_modules": 4,
+  "pixels_per_module": 20,
+  "png_size": [
+    1060,
+    1060
+  ],
+  "card_size": [
+    1300,
+    1720
+  ],
+  "checks": [
+    {
+      "image": "qr-original",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/C-Arcade/",
+      "pass": true
+    },
+    {
+      "image": "qr-320px",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/C-Arcade/",
+      "pass": true
+    },
+    {
+      "image": "card-original",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/C-Arcade/",
+      "pass": true
+    },
+    {
+      "image": "card-600px-wide",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/C-Arcade/",
+      "pass": true
+    }
+  ],
+  "files": {
+    "qr.svg": "44a8c7867ef6e15de96125545d8216e3bf6fe2a66dd4214749db5155214d342e",
+    "qr.png": "3899d898e28f69482f298c0e59ae678ee27f21301319bf13c53cf7fc0cb89fc7",
+    "qr-card.png": "c389c17b53e79f7e044811d215184b34b91e77e647688a194ef887d052bbc334"
+  }
+}

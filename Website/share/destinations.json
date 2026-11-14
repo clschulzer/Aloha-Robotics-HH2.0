@@ -1,0 +1,339 @@
+{
+  "title": "Aloha final QR destinations",
+  "generator": "python-qrcode 8.2",
+  "renderer": "Pillow 13.0.0",
+  "independent_decoder": "ZXing-C++ 3.1.1",
+  "card_size": [
+    1200,
+    1700
+  ],
+  "sheet_size": [
+    3840,
+    2160
+  ],
+  "destinations": [
+    {
+      "id": "explore",
+      "title": "Explore Aloha.",
+      "eyebrow": "01 / INSIDE THE SYSTEM",
+      "tag": "BUILD",
+      "description": [
+        "The thinking. The architecture.",
+        "The code behind the care."
+      ],
+      "cta": "Technical deep dive + GitHub",
+      "footer": "LOOK UNDER THE HOOD",
+      "url": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/",
+      "ink": "#285e59",
+      "tint": "#e3ece5",
+      "accent": "#bc654d",
+      "qr_version": 6,
+      "files": {
+        "qr.png": "explore-qr.png",
+        "qr.svg": "explore-qr.svg",
+        "card.png": "explore-card.png",
+        "card.svg": "explore-card.svg"
+      },
+      "error_correction": "H",
+      "quiet_zone_modules": 4
+    },
+    {
+      "id": "play",
+      "title": "Play the chaos.",
+      "eyebrow": "02 / THE AFTER-HOURS ARCADE",
+      "tag": "PLAY",
+      "description": [
+        "C-CHOMP. PLUG PANIC.",
+        "A very unserious little care break."
+      ],
+      "cta": "Two games. One hungry C-arm.",
+      "footer": "INSERT ABSOLUTELY NO COINS",
+      "url": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/",
+      "ink": "#281b3b",
+      "tint": "#e5dbf2",
+      "accent": "#9975bb",
+      "reused_from": "CARMAGOTCHI_APP/arcade/share/qr",
+      "qr_version": 8,
+      "files": {
+        "qr.png": "play-qr.png",
+        "qr.svg": "play-qr.svg",
+        "card.png": "play-card.png",
+        "card.svg": "play-card.svg"
+      },
+      "error_correction": "H",
+      "quiet_zone_modules": 4
+    },
+    {
+      "id": "app",
+      "title": "Try the app.",
+      "eyebrow": "03 / THE HANDS-ON EXPERIENCE",
+      "tag": "TRY",
+      "description": [
+        "Follow a C-arm’s care journey.",
+        "Make the next move yourself."
+      ],
+      "cta": "Open the interactive clickdummy",
+      "footer": "THE IDEA, AT YOUR FINGERTIPS",
+      "url": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/",
+      "ink": "#285e59",
+      "tint": "#f1e5da",
+      "accent": "#bc654d",
+      "qr_version": 9,
+      "files": {
+        "qr.png": "app-qr.png",
+        "qr.svg": "app-qr.svg",
+        "card.png": "app-card.png",
+        "card.svg": "app-card.svg"
+      },
+      "error_correction": "H",
+      "quiet_zone_modules": 4
+    }
+  ],
+  "combined": {
+    "png": "three-qr-cards.png",
+    "svg": "three-qr-cards.svg"
+  },
+  "checks": [
+    {
+      "image": "explore-qr-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-qr-320px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-qr-240px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-qr-160px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-card-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-card-480px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-qr-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-qr-320px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-qr-240px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-qr-160px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-card-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-card-480px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-qr-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-qr-320px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-qr-240px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-qr-160px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-card-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-card-480px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "three-card-sheet-original",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "three-card-sheet-1920px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "three-card-sheet-1280px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-svg-rendered-320px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-svg-rendered-240px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "explore-svg-rendered-160px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-svg-rendered-320px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-svg-rendered-240px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "play-svg-rendered-160px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-svg-rendered-320px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-svg-rendered-240px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "app-svg-rendered-160px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    },
+    {
+      "image": "three-card-svg-rendered-1920px",
+      "decoded": [
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/",
+        "https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"
+      ],
+      "pass": true
+    }
+  ],
+  "sha256": {
+    "app-card.png": "78d660ceb2414295fc2baa1358229c4662f09e6220fcfdf1ea675a3202194098",
+    "app-card.svg": "550ffabcde2f32c1a68fbdc5d7cebada0d77e9fb6e6796f22662ab96d43f38aa",
+    "app-qr.png": "e9677fa7a9adb33d47f88a236786762c5d7edf4ab0f673ccee6c12deb3c8a890",
+    "app-qr.svg": "c212ea6cd1b43acf6fc53a256363a82642edd2476cdd79fc6316eb06c8de871c",
+    "explore-card.png": "af89a41461e817413a9779c1170cc050edf08837b6b163f143383d61870a6e6f",
+    "explore-card.svg": "b6d3830578da7ce4092ccf43e15c5fdb0df03701dfa9cdd826f6d22f3041f3ad",
+    "explore-qr.png": "407259e69a8a37b04335551e64a00e50818496c11f8cfe99d48f3c3d7f68e3ac",
+    "explore-qr.svg": "81e2fc2f1cc3862343269cad9f5e9bf527a567df4dd5b17cc077299a974b91ee",
+    "play-card.png": "4ace0a222f7bb2d099f280483925ccb41c328cadc0973f47f1af2ba3235a861c",
+    "play-card.svg": "fbd46d90fa02596e0dca375acde395f83fc4f07c0ef849b0fd6f9defe22947f8",
+    "play-qr.png": "3bab45f32358f178d2b3398999b761be15e9307e501955dcc89aa4b44f07d803",
+    "play-qr.svg": "aeaf7569d06fd3a234828a3d254e89bfd5da5f11947fa936ede428dc32444a27",
+    "three-qr-cards.png": "d49b61b28397c794f4d85c7cf0dfab22f14b8bec51881fef6bfdad2d3d87f68f",
+    "three-qr-cards.svg": "b01d66ef60d38b88907669a5427ba9ecaa0d13684a0860dbb681607507dea6b6"
+  }
+}

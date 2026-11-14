@@ -14,7 +14,7 @@
   <a class="skip" href="#brief">Skip to the technical brief</a>
   <header class="masthead shell">
     <a class="brand" href="./" aria-label="Aloha Robotics home"><img src="site/icon.svg" alt="" width="32" height="32"><b>ALOHA<span>ROBOTICS</span></b></a>
-    <nav aria-label="Main navigation"><a href="./#how">The idea</a><a href="../CARMAGOTCHI_Web_Pitch/klickdummy-christian/">Try the app ↗</a><a class="nav-source" href="https://github.com/clschulzer/Aloha-Robotics-HH2.0">GitHub ↗</a></nav>
+    <nav aria-label="Main navigation"><a href="./#how">The idea</a><a href="../Care-Companion/">Try the app ↗</a><a class="nav-source" href="https://github.com/clschulzer/Aloha-Robotics-HH2.0">GitHub ↗</a></nav>
   </header>
   <main class="shell" id="brief">
     <div class="doc-hero"><a class="doc-back" href="./">← ALOHA / THE OPEN NOTEBOOK</a><h1>Friendly on the surface.<br><em>Explicit underneath.</em></h1><p class="lead">A technical map of what we built, what the rules do, and what a real integration would need. Start here, then follow the source.</p></div>
@@ -23,28 +23,28 @@
       <div class="doc-body">
         <section id="built">
           <p class="eyebrow">01 / WHAT RUNS TODAY</p><h2>A working prototype.<br>A readable codebase.</h2>
-          <p>C-ARMAGOTCHI connects a friendly device companion to a planning board, task offers, local confirmations and a visible result. Christian’s detailed click dummy includes the fleet, device files, robot view, control room and guided journeys in English and German.</p>
+          <p>C-ARMAGOTCHI connects a friendly device companion to a planning board, task offers, local confirmations and a visible result. Christian’s Care Companion platform includes the fleet, device files, robot view, control room and guided journeys in English and German.</p>
           <div class="doc-table-wrap"><table><thead><tr><th>PART</th><th>IMPLEMENTATION</th><th>OPEN IT</th></tr></thead><tbody>
-            <tr><td>Interface</td><td>Buildless HTML, CSS and JavaScript. Synthetic devices, procedures and notifications.</td><td><a href="../CARMAGOTCHI_Web_Pitch/klickdummy-christian/">Detailed click dummy ↗</a></td></tr>
-            <tr><td>Planner</td><td>Pure JavaScript functions. The same module runs in the browser and Node.</td><td><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.js">planner.js ↗</a></td></tr>
-            <tr><td>Rule checks</td><td>Node’s test runner checks planning and start conditions against invented cases.</td><td><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.test.cjs">Rule tests ↗</a></td></tr>
-            <tr><td>Pitch calendar</td><td>The swarm visualises candidate exploration around the pitch’s <code>golden.js</code> and <code>planner.js</code> models.</td><td><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/FINAL/finalV2/js/model">Pitch model ↗</a></td></tr>
-            <tr><td>Phone companion</td><td>A separate mobile demo with browser-local progress and an app-scoped offline shell.</td><td><a href="../CARMAGOTCHI_APP/">Phone app ↗</a></td></tr>
+            <tr><td>Interface</td><td>Buildless HTML, CSS and JavaScript. Synthetic devices, procedures and notifications.</td><td><a href="../Care-Companion/">Care Companion ↗</a></td></tr>
+            <tr><td>Planner</td><td>Pure JavaScript functions. The same module runs in the browser and Node.</td><td><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Care-Companion/planner.js">planner.js ↗</a></td></tr>
+            <tr><td>Rule checks</td><td>Node’s test runner checks planning and start conditions against invented cases.</td><td><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Care-Companion/planner.test.cjs">Rule tests ↗</a></td></tr>
+            <tr><td>Pitch calendar</td><td>The swarm visualises candidate exploration around the pitch’s <code>golden.js</code> and <code>planner.js</code> models.</td><td><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/Archive/FINAL/finalV2/js/model">Pitch model ↗</a></td></tr>
+            <tr><td>Phone companion</td><td>A separate mobile demo with browser-local progress and an app-scoped offline shell.</td><td><a href="../Care-Companion/phone/">Phone app ↗</a></td></tr>
           </tbody></table></div>
-          <p class="source-note">The click dummy, phone app and pitch are related demo surfaces. Their local state is separate. They do not dispatch a real robot or connect to a hospital, device or manufacturer backend.</p>
+          <p class="source-note">The detailed platform, phone app and pitch are related demo surfaces. Their local state is separate. They do not dispatch a real robot or connect to a hospital, device or manufacturer backend.</p>
           <h3>Run it locally</h3>
           <pre><code>git clone https://github.com/clschulzer/Aloha-Robotics-HH2.0.git
 cd Aloha-Robotics-HH2.0
 python3 -m http.server 8000
 
-# Open http://localhost:8000/ALOHA/
-# Run the detailed click dummy's rule checks:
-node --test CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.test.cjs</code></pre>
+# Open http://localhost:8000/Website/
+# Run Care Companion's planning rule checks:
+node --test Care-Companion/planner.test.cjs</code></pre>
         </section>
 
         <section id="planner">
           <p class="eyebrow">02 / THE PLANNING CORE</p><h2>An empty slot<br>is only one input.</h2>
-          <p>The current click dummy uses a deterministic scheduler. It is not a trained emergency predictor or an LLM. The “agentic” architecture is a proposed layer around explicit rules.</p>
+          <p>The current platform uses a deterministic scheduler. It is not a trained emergency predictor or an LLM. The “agentic” architecture is a proposed layer around explicit rules.</p>
           <ol>
             <li><strong>Find a candidate.</strong> <code>findWindow</code> scans in fixed time steps, checks planned cases and alarm blocks, and reserves preparation and rollback margins.</li>
             <li><strong>Check the evidence.</strong> Missing plan or usage data produces no proposal. Sparse history is rejected rather than interpreted as availability.</li>
@@ -55,7 +55,7 @@ node --test CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.test.cjs</code></
           <p><code>windowRisk</code> takes the highest hourly share of historical use inside a proposed window. That is a lower bound for use at any point in the entire window, not a calibrated probability that the whole update will finish undisturbed. The sample history and thresholds are invented.</p>
           <div class="doc-callout"><strong>A rule engine is a useful foundation, not a clinical validation.</strong> For example, the current replacement-device selection filters outage and update conflicts; it does not fully establish procedure compatibility or check every planned use of the substitute.</div>
           <p>The development specification separates a hard rule core, an optimiser, a usage model and an LLM for explanation. It also records gaps in the current planner and proposed evaluations.</p>
-          <p><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/team-material-christian/challenge-4/entwicklung/spec-scheduling-ki.md">Read the scheduling specification ↗</a></p>
+          <p><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Documentation/team-material-christian/challenge-4/entwicklung/spec-scheduling-ki.md">Read the scheduling specification ↗</a></p>
         </section>
 
         <section id="approval">
@@ -68,7 +68,7 @@ node --test CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.test.cjs</code></
             <li>The package is unchecked or has been recalled.</li>
           </ul>
           <p>The interface demonstrates role-specific decisions. In the browser these are local flags, not authenticated clinical approvals. Production would need verified identity, fresh device and alarm state, audit records and enforcement at the actual start boundary.</p>
-          <p class="source-note">Source: <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.js">canStart in planner.js</a>. A proposed AI helper cannot override these rules; plugging in must not stand in for a human start decision.</p>
+          <p class="source-note">Source: <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Care-Companion/planner.js">canStart in planner.js</a>. A proposed AI helper cannot override these rules; plugging in must not stand in for a human start decision.</p>
         </section>
 
         <section id="architecture">
@@ -85,8 +85,8 @@ node --test CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.test.cjs</code></
           <p>The device’s update mechanism stays responsible for installation and recovery. The coordinator helps arrange a suitable moment and tracks the outcome. A robot is one possible way to deliver power and data; the first pilot can begin with people performing that step.</p>
           <h3>Design for the actual hospital</h3>
           <p>The proposal minimises data to room, time and equipment need, plus role, shift and area. It anticipates intermittent connectivity, retained packages and logs, and hospital-approved data flows. Sites that prohibit connectivity require an authorised on-site service route.</p>
-          <p><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/team-material-christian/challenge-4/architektur-skizze.md">Read the four-layer architecture sketch ↗</a></p>
-          <p><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/team-material-christian/challenge-4/entwicklung/architektur-klinik-it-security.md">Read the clinical IT and security design ↗</a></p>
+          <p><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Documentation/team-material-christian/challenge-4/architektur-skizze.md">Read the four-layer architecture sketch ↗</a></p>
+          <p><a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Documentation/team-material-christian/challenge-4/entwicklung/architektur-klinik-it-security.md">Read the clinical IT and security design ↗</a></p>
           <p class="source-note">The team’s security document identifies regulatory questions and assumptions. It does not establish certification or compliance. Manufacturer API access, physical interfaces, power requirements and site policies still need confirmation.</p>
         </section>
 
@@ -99,17 +99,17 @@ node --test CARMAGOTCHI_Web_Pitch/klickdummy-christian/planner.test.cjs</code></
             <li><strong>Test the physical bridge.</strong> Measure supply needs, access to plugs and ports, cable hazards and confirmation behavior with a training system.</li>
             <li><strong>Close failure paths.</strong> Prove how failed or interrupted updates are detected, recovered and handed to service.</li>
           </ol>
-          <a class="button dark" href="../CARMAGOTCHI_Web_Pitch/klickdummy-christian/">Explore the prototype <span>↗</span></a>
+          <a class="button dark" href="../Care-Companion/">Explore the prototype <span>↗</span></a>
         </section>
 
         <section id="sources">
           <p class="eyebrow">06 / SOURCE NOTEBOOK</p><h2>The reasoning<br>is open, too.</h2>
           <div class="doc-links">
-            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/transcripts">Challenge-owner interviews and team debrief ↗</a>
-            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/team-material-christian/challenge-4/synthese-nach-gespraech.md">Christian’s synthesis after the conversations · German ↗</a>
-            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/team-material-christian/challenge-4/personas/user-journeys.md">Personas and user journeys · German ↗</a>
-            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/team-material-christian/challenge-4/entwicklung">Development specifications and QA notebook · German ↗</a>
-            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/CARMAGOTCHI_Web_Pitch/klickdummy-christian">Public click dummy source and rule tests ↗</a>
+            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/Documentation/transcripts">Challenge-owner interviews and team debrief ↗</a>
+            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Documentation/team-material-christian/challenge-4/synthese-nach-gespraech.md">Christian’s synthesis after the conversations · German ↗</a>
+            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/blob/main/Documentation/team-material-christian/challenge-4/personas/user-journeys.md">Personas and user journeys · German ↗</a>
+            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/Documentation/team-material-christian/challenge-4/entwicklung">Development specifications and QA notebook · German ↗</a>
+            <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/main/Care-Companion">Care Companion source and rule tests ↗</a>
             <a href="https://github.com/clschulzer/Aloha-Robotics-HH2.0">The complete Aloha Robotics repository ↗</a>
           </div>
           <p class="source-note">Brief assembled from the repository’s code and design notes, 14 November 2026. The requested source path <code>challenges/04-invisible-connectivity/klickdummy/</code> is published in this repository as <code>CARMAGOTCHI_Web_Pitch/klickdummy-christian/</code>. That public copy is the destination of our app QR.</p>

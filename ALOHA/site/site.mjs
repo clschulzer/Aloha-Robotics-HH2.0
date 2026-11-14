@@ -32,11 +32,11 @@ if (palmContainer) {
 }
 
 const steps = [
-  {kicker:'01 / THE HUMAN INTERFACE',title:'“A little attention?”',body:'C-ARMAGOTCHI gives the machine a personality. Its mood turns a hidden maintenance need into something a person can understand and act on.',character:'lonely',alt:'Cio, the lonely C-arm',tag:'A LITTLE LONELY',link:'../CARMAGOTCHI_Web_Pitch/klickdummy-christian/',label:'Meet Cio in the click dummy',proof:'Interactive prototype · invented device states'},
+  {kicker:'01 / THE HUMAN INTERFACE',title:'“A little attention?”',body:'C-ARMAGOTCHI gives the machine a personality. Its mood turns a hidden maintenance need into something a person can understand and act on.',character:'lonely',alt:'Cio, the lonely C-arm',tag:'A LITTLE LONELY',link:'../Care-Companion/',label:'Meet Cio in Care Companion',proof:'Interactive prototype · invented device states'},
   {kicker:'02 / THE PLANNING CORE',title:'Find a gap that holds.',body:'The planner looks beyond an empty calendar slot. It considers update duration, recovery time, emergency pressure and whether enough equipment stays available.',character:'manic',alt:'Cio asking for an update',tag:'LOOKING FOR A GOLDEN WINDOW',link:'technical.html#planner',label:'Read how the planner works',proof:'Deterministic browser rules · illustrative schedules'},
-  {kicker:'03 / THE HUMAN HANDOVER',title:'Ask someone who can help.',body:'A clear request reaches the person who can act locally. The demo makes ownership visible and lets them accept or decline, without turning the machine’s needs into everyone’s responsibility.',character:'ketty',alt:'KettyBot ready to help',tag:'A CLEAR NEXT STEP',link:'../CARMAGOTCHI_Web_Pitch/klickdummy-christian/',label:'Follow a guided journey',proof:'Simulated notifications · no messages sent'},
+  {kicker:'03 / THE HUMAN HANDOVER',title:'Ask someone who can help.',body:'A clear request reaches the person who can act locally. The demo makes ownership visible and lets them accept or decline, without turning the machine’s needs into everyone’s responsibility.',character:'ketty',alt:'KettyBot ready to help',tag:'A CLEAR NEXT STEP',link:'../Care-Companion/',label:'Follow a guided journey',proof:'Simulated notifications · no messages sent'},
   {kicker:'04 / THE PHYSICAL LAST METRE',title:'Ready is a human decision.',body:'The proposed robot brings power and data. Someone at the device checks the surroundings and explicitly approves the start. Connecting the cable never counts as approval.',character:'update',alt:'Cio installing an update',tag:'CONNECTED. CHECKED. CONFIRMED.',link:'technical.html#architecture',label:'Explore the physical bridge',proof:'Robot and hospital connections are proposed integrations'},
-  {kicker:'05 / THE FEEDBACK PATH',title:'“I’m ready for my next patient.”',body:'A completed task needs a result. The concept returns the outcome and logs, makes the machine’s state visible, and closes the care loop for the team.',character:'bliss',alt:'Cio happy and ready',tag:'LOOP CLOSED',link:'../CARMAGOTCHI_APP/arcade/plug-panic/',label:'Play the care loop',proof:'Demonstrated UI and game flow · no live device telemetry'}
+  {kicker:'05 / THE FEEDBACK PATH',title:'“I’m ready for my next patient.”',body:'A completed task needs a result. The concept returns the outcome and logs, makes the machine’s state visible, and closes the care loop for the team.',character:'bliss',alt:'Cio happy and ready',tag:'LOOP CLOSED',link:'../C-Arcade/plug-panic/',label:'Play the care loop',proof:'Demonstrated UI and game flow · no live device telemetry'}
 ];
 let currentStep = 0;
 const stepButtons = [...document.querySelectorAll('[data-step]')];
@@ -46,7 +46,7 @@ function selectStep(index) {
   stepButtons.forEach((button, i) => {button.classList.toggle('active', i===index);button.setAttribute('aria-pressed',String(i===index));});
   for (const [id,key] of [['step-kicker','kicker'],['step-title','title'],['step-body','body'],['step-tag','tag'],['step-proof','proof']]) document.getElementById(id).textContent = step[key];
   const character = document.getElementById('loop-character');
-  character.src = `../CARMAGOTCHI_APP/assets/characters/${step.character}.webp`;
+  character.src = `site/characters/${step.character}.webp`;
   character.alt = step.alt;
   character.classList.remove('pop');
   if (!reducedMotion) requestAnimationFrame(() => character.classList.add('pop'));

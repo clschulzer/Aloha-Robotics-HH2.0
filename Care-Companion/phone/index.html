@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f3ec">
+  <meta name="description" content="Meet your team's C-arms. A touchable C-ARMAGOTCHI demo from Aloha Robotics: a little care for the machines that care for us.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>C-ARMAGOTCHI · Aloha Robotics</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-action="skip">Skip to app</a>
+  <div class="desktop-note" aria-hidden="true"><span>ALOHA ROBOTICS</span><p>A little care.<br>A big difference.</p><img src="assets/characters/ketty_wink.webp" alt=""></div>
+  <div class="app-shell">
+    <header id="header"></header>
+    <main id="main" tabindex="-1"><div class="boot"><img src="assets/characters/bliss.webp" alt="Cio"><b>C-ARMAGOTCHI</b><p>Waking up your care circle…</p></div></main>
+    <nav id="navigation" aria-label="Main navigation"></nav>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="effects" aria-hidden="true"></div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <noscript>This interactive demo needs JavaScript. Enable it to meet Cio.</noscript>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="wireframe" viewBox="0 0 600 550" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">ALOHA palm exhibit</title>
+  <desc id="desc">A curved palm with teal fronds stands on a circular sand-colored instrument pedestal.</desc>
+  <style>svg:target path,svg:target ellipse{fill:none;stroke:#37695b;stroke-width:.8}</style>
+  <defs>
+    <linearGradient id="wood" x1="255" y1="414" x2="336" y2="189" gradientUnits="userSpaceOnUse"><stop stop-color="#967b55"/><stop offset=".5" stop-color="#c6a776"/><stop offset="1" stop-color="#9a8056"/></linearGradient>
+    <linearGradient id="leaf" x1="292" y1="184" x2="342" y2="98" gradientUnits="userSpaceOnUse"><stop stop-color="#164d42"/><stop offset="1" stop-color="#497e62"/></linearGradient>
+    <radialGradient id="shadow"><stop stop-color="#395448" stop-opacity=".13"/><stop offset="1" stop-color="#395448" stop-opacity="0"/></radialGradient>
+    <g id="frond">
+      <path d="M0 0C43-60 113-68 175-4C107-51 51-47 0 0Z" fill="url(#leaf)"/>
+      <path d="M0 0C55-45 106-54 175-4" stroke="#73967a" stroke-width="2"/>
+      <path d="M18-17L19-49L25-23ZM32-27L38-65L42-32ZM48-35L57-76L61-40ZM66-41L82-81L80-44ZM85-44L107-78L100-44ZM104-42L131-70L119-39ZM122-35L154-55L137-30ZM138-24L169-35L149-18ZM29-22L38 8L41-31ZM49-34L67 4L61-40ZM70-42L89-1L81-44ZM93-43L116-2L106-42ZM114-38L141 1L127-33ZM134-28L160 10L146-20Z" fill="#2f6c55"/>
+    </g>
+  </defs>
+  <ellipse cx="297" cy="460" rx="184" ry="44" fill="url(#shadow)"/>
+  <path d="M161 429V442C161 474 435 474 435 442V429" fill="#dfccaa"/>
+  <ellipse cx="298" cy="428" rx="137" ry="39" fill="#eee7d5"/>
+  <ellipse cx="298" cy="428" rx="126" ry="33" stroke="#b9ad91"/>
+  <ellipse cx="298" cy="428" rx="111" ry="28" stroke="#d5c9b1" stroke-width=".7"/>
+  <path d="M166 442C193 473 405 470 430 444" stroke="#ce6144" stroke-width="2"/>
+  <path d="M250 423C274 360 293 277 310 185L325 185C319 285 288 365 269 427Z" fill="url(#wood)"/>
+  <path d="M257 400L275 406M264 378L282 384M272 355L291 361M279 333L298 339M285 310L305 316M291 287L310 292M296 264L315 269M302 242L319 246M306 220L321 224" stroke="#8f7955" stroke-width="4"/>
+  <path d="M306 196L313 163L330 171L324 201Z" fill="#718853"/>
+  <g transform="translate(319 182)">
+    <use href="#frond" transform="rotate(-16) scale(1.05 .8)"/>
+    <use href="#frond" transform="rotate(155) scale(.96 .75)"/>
+    <use href="#frond" transform="rotate(192) scale(1 .95)"/>
+    <use href="#frond" transform="rotate(216) scale(.9 .8)"/>
+    <use href="#frond" transform="rotate(31) scale(.91 .85)"/>
+    <use href="#frond" transform="rotate(-47) scale(.62 .7)"/>
+    <use href="#frond" transform="rotate(126) scale(.64 .7)"/>
+  </g>
+  <path d="M315 179Q291 123 310 97L323 180Z" fill="#43745b"/>
+  <path d="M320 180Q331 118 349 116L331 180Z" fill="#648869"/>
+  <ellipse cx="312" cy="189" rx="10" ry="12" fill="#a38b52"/>
+  <ellipse cx="327" cy="189" rx="8" ry="11" fill="#b39b5c"/>
+  <path d="M208 432L215 424L229 427L233 436L217 439Z" fill="#c8baa0"/>
+  <ellipse cx="374" cy="434" rx="6" ry="3" fill="#ce6144"/>
+</svg>

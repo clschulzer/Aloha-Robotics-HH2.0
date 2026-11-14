@@ -1,145 +1,64 @@
-# Aloha Robotics — Healthcare Hackathon 2.0 (HH2.0)
+# Aloha Robotics
 
-Team repository for Healthcare Hackathon 2.0 featuring the **C-ARMAGOTCHI** presentation series, interactive web pitch decks, synchronized teleprompters, media assets, run-of-show cues, and hackathon project materials.
+### Let care keep moving.
 
----
+Mobile C-arms deserve a little care of their own. Aloha brings together a character people understand, a planner that finds an opportunity for maintenance, and a clear handover to someone who can help. **The system gets attention. The clinical team gets back to the patient.**
 
-## 🚀 Live Presentation & Demo (GitHub Pages)
+Built for **Healthcare Hackathon Bavaria · Erlangen 2026**, Siemens Healthineers Challenge 04: *Invisible Connectivity*.
 
-The latest interactive presentation is deployed live and fully clickable on GitHub Pages:
+## Explore Aloha
 
-### 🌟 Latest (Version 4 — 3-Minute Encore & Full Deck)
-- **🚀 Main Landing Page**: [Open Presentation Hub](https://clschulzer.github.io/Aloha-Robotics-HH2.0/)
-- **⚡ 3-Minute Encore Pitch (Recommended for Judges)**: [Launch 3-Min Deck](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/encore/)
-- **🎙️ 3-Minute Speaker Teleprompter**: [Open 3-Min Prompter](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/encore-prompter/)
-- **📽️ Full 14-Scene Presentation**: [Launch Full 14-Scene Deck](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/pitch/)
-- **📝 Full-Deck Speaker Notes**: [Open Full Teleprompter](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/teleprompter/)
-- **📋 Run of Show (Script & Timings)**: [`THREE_MINUTE_RUN_OF_SHOW.md`](CARMAGOTCHI_Web_Pitch/THREE_MINUTE_RUN_OF_SHOW.md)
+| Start here | What you’ll find |
+| --- | --- |
+| **[Watch the submitted presentation ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1)** | The team’s final three-minute pitch, preserved exactly as submitted. |
+| **[Visit the website ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/)** | The idea, an interactive care loop, technical explanations and the code behind them. |
+| **[Play C-Arcade ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/C-Arcade/)** | C-CHOMP and PLUG PANIC. One very hungry C-arm; one very busy KettyBot. |
+| **[Try Care Companion ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/)** | The phone experience and the detailed platform prototype, ready to explore. |
 
----
+**[Read the documentation](Documentation/README.md)** · **[Browse the archive](Archive/README.md)** · **[Download the QR kit](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/share/)**
 
-## 💻 Local Presentation & Two-Screen Sync
+## Take a little Aloha with you
 
-For the most reliable offline presentation and multi-screen synchronization (projector + speaker display):
+| Explore the system | Play the chaos | Try the platform |
+| :---: | :---: | :---: |
+| <a href="https://clschulzer.github.io/Aloha-Robotics-HH2.0/ALOHA/"><img src="Website/share/explore-card.png" width="240" alt="QR card: Explore Aloha — technical guide and source code"></a> | <a href="https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/arcade/"><img src="Website/share/play-card.png" width="240" alt="QR card: Play C-CHOMP and PLUG PANIC"></a> | <a href="https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_Web_Pitch/klickdummy-christian/"><img src="Website/share/app-card.png" width="240" alt="QR card: Try Christian’s interactive planning platform"></a> |
+| [PNG](Website/share/explore-qr.png) · [SVG](Website/share/explore-qr.svg) | [PNG](Website/share/play-qr.png) · [SVG](Website/share/play-qr.svg) | [PNG](Website/share/app-qr.png) · [SVG](Website/share/app-qr.svg) |
+
+[Download the full three-card sheet](Website/share/three-qr-cards.png) · [Vector sheet for slides or print](Website/share/three-qr-cards.svg)
+
+The codes retain their original public destinations. Existing QR links and installed companion apps continue to work through the preserved legacy routes.
+
+## What we built
+
+The project combines a cinematic web pitch, an interactive service-planning prototype, a mobile companion and two original games. The planning prototype uses explicit JavaScript rules for maintenance windows and human approval; its rules can be run and tested separately from the interface.
+
+**HTML · CSS · JavaScript · Canvas · WebGL · Node’s test runner.** The public experiences run without a build step. Schedules, notifications, robot checks and device updates are demonstrations using invented data; live hospital and manufacturer integrations remain proposed work.
+
+[Explore the technical guide ↗](https://clschulzer.github.io/Aloha-Robotics-HH2.0/Website/technical.html) for the implementation, architecture, source evidence and next steps.
+
+## Find your way around
+
+| Folder | Purpose |
+| --- | --- |
+| [Presentation/](Presentation/README.md) | Launch instructions and controls for the unchanged submitted pitch in `FINAL/v5/`. |
+| [Website/](Website/README.md) | Public project website, technical guide and downloadable QR assets. |
+| [Care-Companion/](Care-Companion/README.md) | Companion experiences and their source code. |
+| [C-Arcade/](C-Arcade/README.md) | Both games, controls and implementation notes. |
+| [Documentation/](Documentation/README.md) | Research, transcripts, architecture options, specifications and evidence. |
+| [Archive/](Archive/README.md) | Earlier presentations, experiments and preserved development history. |
+
+## Run locally
+
+From the repository root:
 
 ```bash
-# 1. Run local web server from repo root
 python3 -m http.server 8000
 ```
 
-Then open in your browser:
-- **Presentation Hub**: `http://localhost:8000/CARMAGOTCHI_Web_Pitch/`
-- **Projector (3-Min Pitch)**: `http://localhost:8000/CARMAGOTCHI_Web_Pitch/encore/`
-- **Speaker Screen (3-Min Prompter)**: `http://localhost:8000/CARMAGOTCHI_Web_Pitch/encore-prompter/`
-- **Full Deck (Projector)**: `http://localhost:8000/CARMAGOTCHI_Web_Pitch/pitch/`
-- **Full Deck Notes**: `http://localhost:8000/CARMAGOTCHI_Web_Pitch/teleprompter/`
+Open [the website](http://localhost:8000/Website/), [Care Companion](http://localhost:8000/Care-Companion/), [C-Arcade](http://localhost:8000/C-Arcade/) or [the submitted pitch](http://localhost:8000/FINAL/v5/?s=1). Each project’s README contains its controls and relevant checks.
 
-*(When opened in the same browser, speaker notes advance automatically as you step through the deck!)*
+## Preservation and credits
 
----
+The submitted presentation and its dependencies are frozen. The full state before repository organization is preserved by **[backup/pre-cleanup-2026-11-14](https://github.com/clschulzer/Aloha-Robotics-HH2.0/tree/backup/pre-cleanup-2026-11-14)** at commit [`01b14a9`](https://github.com/clschulzer/Aloha-Robotics-HH2.0/commit/01b14a9). See [ROLLBACK.md](ROLLBACK.md) for restoration instructions.
 
-## 🎮 Presentation Controls
-
-| Key | Action |
-| :--- | :--- |
-| `→` / `Space` / Click right | Next beat / reveal |
-| `←` / Click left edge | Previous reveal |
-| `F` | Toggle fullscreen |
-| `N` | Toggle speaker notes overlay |
-| `A` | Jump to / return from Technical Q&A Appendix |
-| `B` | Blackout screen |
-| `R` | Restart presentation from Scene 1 |
-| `P` | Play / Pause embedded video |
-| `S` | Toggle video audio |
-| `V` | Replay video from beginning |
-| `?` | Show on-screen keyboard shortcuts help |
-
----
-
-## 📁 Repository Structure
-
-```
-├── CARMAGOTCHI_Web_Pitch/       # Active presentation website & deck (Version 4)
-│   ├── index.html               # Hub landing page (Encore vs Full Deck)
-│   ├── encore/                  # ★ NEW: 3-Minute 9-scene Encore deck
-│   │   ├── index.html           # 3-Minute deck HTML
-│   │   ├── encore.css           # 3-Minute deck styles
-│   │   ├── encore.js            # 3-Minute interaction engine
-│   │   └── media/chaos_30s.mp4  # 30-second opening film
-│   ├── encore-prompter/         # ★ NEW: 3-Minute synchronized teleprompter
-│   │   ├── index.html
-│   │   └── data.js
-│   ├── pitch/                   # Preserved 14-scene full pitch deck
-│   │   ├── assets/              # Character artwork (manic, bliss, rollback, etc.)
-│   │   ├── media/               # 30-second high-quality intro video (1080p) & sound effects
-│   │   ├── deck.css             # Presentation design & styles
-│   │   ├── deck.js              # Presentation engine
-│   │   └── index.html           # 14-scene slide deck
-│   ├── teleprompter/            # 14-scene synchronized teleprompter
-│   ├── THREE_MINUTE_RUN_OF_SHOW.md # Timing cues and stage directions
-│   ├── speaker_script.md        # Full stage cues for 14-scene deck
-│   ├── source/brainstorm.md     # Concept & brainstorming notes
-│   └── build_teleprompter.py    # Script to regenerate teleprompter data
-├── backups/                     # Frozen snapshots for rollback
-│   ├── presentation_original_v0/ # Frozen snapshot: Version 1 (baseline)
-│   ├── presentation_v2/         # Frozen snapshot: Version 2
-│   ├── presentation_v3/         # Frozen snapshot: Version 3
-│   └── presentation_v4/         # Frozen snapshot: Version 4
-└── index.html                   # Root redirect for GitHub Pages
-```
-
----
-
-## ⏪ Rollback & Version Matrix
-
-Every version is preserved across multiple layers (Git tags, GitHub branches, and local frozen folders):
-
-| Version | Description | Git Tags | GitHub Branch | Local Backup Snapshot |
-| :--- | :--- | :--- | :--- | :--- |
-| **V1** | Initial presentation baseline (13 scenes) | `v1`, `v1.0-presentation`, `v0-presentation-baseline` | `backup/presentation-v1`, `backup/presentation-original` | `backups/presentation_original_v0/` |
-| **V2** | 14 scenes + chaos intro film & sound effects | `v2`, `v2.0-presentation` | `backup/presentation-v2` | `backups/presentation_v2/` |
-| **V3** | Refined 14-scene CSS, JS & teleprompter data | `v3`, `v3.0-presentation` | `backup/presentation-v3` | `backups/presentation_v3/` |
-| **V4 (Latest)** | 3-minute encore (`encore/`), 3-min prompter, run-of-show | `v4`, `v4.0-presentation`, `latest` | `main`, `backup/presentation-v4` | `backups/presentation_v4/` |
-
----
-
-## 🔄 How to Roll Back Between Versions
-
-You can roll back the working tree to any version at any time:
-
-### To roll back to Version 1:
-```bash
-git checkout v1 -- CARMAGOTCHI_Web_Pitch/
-git commit -m "Rollback to Version 1"
-git push origin main
-```
-
-### To roll back to Version 2:
-```bash
-git checkout v2 -- CARMAGOTCHI_Web_Pitch/
-git commit -m "Rollback to Version 2"
-git push origin main
-```
-
-### To roll back to Version 3:
-```bash
-git checkout v3 -- CARMAGOTCHI_Web_Pitch/
-git commit -m "Rollback to Version 3"
-git push origin main
-```
-
-### To restore the latest Version 4:
-```bash
-git checkout v4 -- CARMAGOTCHI_Web_Pitch/
-git commit -m "Restore Version 4"
-git push origin main
-```
-
-### Compare versions:
-```bash
-# Compare Version 1 against Version 4
-git diff v1 v4 -- CARMAGOTCHI_Web_Pitch/
-
-# Compare Version 3 against Version 4
-git diff v3 v4 -- CARMAGOTCHI_Web_Pitch/
-```
+**Marc, Sid and Chris · Aloha Robotics.** Team-created film, characters, prototypes and presentation code are preserved with their source material. Font licenses and asset provenance remain beside the relevant assets. This repository documents a hackathon concept; it is not a medical device or a Siemens Healthineers product.

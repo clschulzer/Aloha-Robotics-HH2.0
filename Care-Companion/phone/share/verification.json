@@ -1,0 +1,45 @@
+{
+  "url": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/phone/",
+  "generator": "python-qrcode 8.2",
+  "renderer": "Pillow 13.0.0",
+  "independent_decoder": "ZXing-C++ 3.1.1",
+  "qr_version": 8,
+  "error_correction": "H",
+  "quiet_zone_modules": 4,
+  "pixels_per_module": 20,
+  "png_size": [
+    1140,
+    1140
+  ],
+  "card_size": [
+    1300,
+    1680
+  ],
+  "checks": [
+    {
+      "image": "qr-original",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/phone/",
+      "pass": true
+    },
+    {
+      "image": "qr-320px",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/phone/",
+      "pass": true
+    },
+    {
+      "image": "card-original",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/phone/",
+      "pass": true
+    },
+    {
+      "image": "card-600px-wide",
+      "decoded": "https://clschulzer.github.io/Aloha-Robotics-HH2.0/Care-Companion/phone/",
+      "pass": true
+    }
+  ],
+  "files": {
+    "qr.svg": "d5b1678a513b183c990bbf3c6a4887a0a85ee93c1c2f6a7fde4a7d3f9d80a60d",
+    "qr.png": "bf32727b1b2e042e732ac88517f184c8e952e22601c8755b4d9cb8780df6ca3a",
+    "qr-card.png": "702947998652524cb97c0e1438e229a417ad3a0384a8eefe6c817df24110bf10"
+  }
+}

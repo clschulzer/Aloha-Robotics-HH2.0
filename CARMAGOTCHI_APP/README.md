@@ -1,5 +1,7 @@
 # C-ARMAGOTCHI — the phone app
 
+> **Preserved legacy deployment.** Existing QR codes and installed/offline apps use this path. Its runtime, service worker and assets were left unchanged during repository organization. Current source and guidance are in **[Care Companion / phone](../Care-Companion/phone/README.md)** and **[C-Arcade](../C-Arcade/README.md)**. The original implementation notes below describe the version when it was built; `FINAL/v1` is now archived. The submitted pitch is **[FINAL/v5/?s=1](https://clschulzer.github.io/Aloha-Robotics-HH2.0/FINAL/v5/?s=1)**.
+
 **[Open the app](https://clschulzer.github.io/Aloha-Robotics-HH2.0/CARMAGOTCHI_APP/)** · **[QR code](share/qr.png)** · **[Printable QR card](share/qr-card.png)** · **[Vector QR](share/qr.svg)**
 
 A mobile clickdummy built from the **newest assembled pitch, `FINAL/v1`**, at repository revision `86c8bda`. The original OPUS/Christian phone design survives in that pitch: warm cream, Manrope, large pastel character cards, a dark request screen, and the three-step human decision.

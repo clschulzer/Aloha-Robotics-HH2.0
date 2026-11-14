@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aloha Robotics · How a parked C-arm gets its update · architecture brief</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #fcfcfb; --surface-2: #f3f3f1; --card: #ffffff; --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #75746f;
+    --rule: #e4e3df; --grid: #e8e7e3; --accent: #00706f; --accent-soft: #e3f1f0; --warn-soft: #fff4d6;
+    --s0: #9a9893; --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6;
+    --q1: #cde2fb; --q2: #9ec5f4; --q3: #6da7ec; --q4: #3987e5; --q5: #256abf; --q6: #184f95; --q7: #0d366b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --surface: #1a1a19; --surface-2: #232322; --card: #20201f; --ink: #f0efec; --ink-2: #c3c2b7; --ink-3: #9a998f;
+      --rule: #34332f; --grid: #2e2d2a; --accent: #4cc2b9; --accent-soft: #17302e; --warn-soft: #3a3220;
+      --s0: #7a7974; --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #0ca30c; --s7: #9085e9;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--surface); color: var(--ink); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  header.hero { padding: 56px 0 28px; border-bottom: 1px solid var(--rule); }
+  .kicker { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 12px; }
+  h1 { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.06; margin: 0 0 18px; letter-spacing: -.02em; max-width: 18ch; }
+  .lede { font-size: 19px; color: var(--ink-2); max-width: 70ch; margin: 0 0 18px; }
+  .answer { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 16px 20px; border-radius: 0 10px 10px 0; max-width: 92ch; }
+  .answer strong { color: var(--ink); }
+  .asks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); color: var(--ink-2); font-size: 14px; text-decoration: none; }
+  .chip b { color: var(--ink); font-weight: 600; }
+  section { padding: 40px 0 8px; }
+  h2 { font-size: 28px; letter-spacing: -.01em; margin: 0 0 6px; }
+  .sub { color: var(--ink-2); margin: 0 0 22px; max-width: 80ch; }
+  .four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .tile { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px; }
+  .tile h3 { margin: 0 0 4px; font-size: 18px; }
+  .tile p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  .tile .who { margin-top: 10px; font-size: 13px; color: var(--ink-3); }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 18px 14px; display: flex; flex-direction: column; }
+  .card.rec { border: 2px solid var(--accent); }
+  .card .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-3); }
+  .sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; flex: none; }
+  .card h3 { margin: 6px 0 6px; font-size: 21px; }
+  .card .one { color: var(--ink-2); margin: 0 0 10px; font-size: 15px; }
+  .card .verdict { font-size: 14px; background: var(--surface-2); border-radius: 8px; padding: 8px 10px; margin: 0 0 10px; }
+  .card ul { margin: 0 0 10px 18px; padding: 0; font-size: 14px; color: var(--ink-2); }
+  .card .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13.5px; }
+  .card .pc h4 { margin: 0 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+  .card .pc ul { margin-left: 16px; }
+  .card .foot { margin-top: auto; display: flex; gap: 12px; flex-wrap: wrap; font-size: 14px; padding-top: 6px; border-top: 1px solid var(--rule); }
+  .card .num { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
+  details.dia { margin-top: 10px; }
+  details.dia summary { cursor: pointer; font-size: 14px; color: var(--accent); }
+  .diagram { background: #ffffff; border: 1px solid var(--rule); border-radius: 10px; padding: 10px; margin: 10px 0; overflow-x: auto; }
+  .diagram img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  .bigdia { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 14px; overflow-x: auto; }
+  .bigdia img { display: block; width: 100%; min-width: 760px; height: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; color: var(--ink-2); font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .matrix td.dots { font-size: 15px; letter-spacing: 1px; white-space: nowrap; color: var(--ink); }
+  .matrix tr.total td { font-weight: 700; border-top: 2px solid var(--ink-3); }
+  .matrix tr.extra td { color: var(--ink-3); font-style: italic; }
+  .tablewrap { overflow-x: auto; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 4px 6px; }
+  .sim { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 22px; align-items: start; }
+  .sim > * { min-width: 0; }
+  .controls { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; position: sticky; top: 12px; }
+  .ctl { margin: 0 0 12px; }
+  .ctl label { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--ink-2); gap: 8px; }
+  .ctl label b { color: var(--ink); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .ctl input[type=range] { width: 100%; accent-color: var(--accent); }
+  .ctl.check label { justify-content: flex-start; align-items: center; gap: 8px; }
+  .ctl .why { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  button { font: inherit; font-size: 14px; border-radius: 8px; border: 1px solid var(--rule); background: var(--surface-2); color: var(--ink); padding: 7px 12px; cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .status { font-size: 13px; color: var(--ink-3); margin-top: 8px; min-height: 1.4em; }
+  .panel { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px 10px; margin-bottom: 18px; position: relative; }
+  .panel h3 { margin: 0 0 2px; font-size: 17px; }
+  .panel .cap { margin: 0 0 8px; font-size: 13.5px; color: var(--ink-3); }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 6px 0 4px; }
+  .legend button { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; font-size: 13px; border-radius: 999px; background: var(--card); }
+  .legend button[aria-pressed=false] { opacity: .45; }
+  svg text { fill: var(--ink-2); font-size: 12px; }
+  svg .axis line, svg .grid line { stroke: var(--grid); stroke-width: 1; }
+  svg .lbl { fill: var(--ink); font-weight: 600; }
+  .tip { position: absolute; pointer-events: none; background: var(--card); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 10px; font-size: 13px; box-shadow: 0 6px 20px rgba(0,0,0,.12); display: none; z-index: 5; min-width: 180px; }
+  .tip .row { display: flex; align-items: center; gap: 6px; justify-content: space-between; }
+  .tip .row span:first-child { display: inline-flex; align-items: center; gap: 6px; }
+  .heat td.cell { text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; border: 2px solid var(--card); border-radius: 6px; }
+  .heat td.best { font-weight: 700; white-space: nowrap; }
+  .note { font-size: 13.5px; color: var(--ink-2); background: var(--warn-soft); border-radius: 10px; padding: 10px 14px; margin: 12px 0; }
+  .physics { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; align-items: center; }
+  .stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: st; }
+  .stage { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; }
+  .stage .k { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+  .stage h3 { margin: 4px 0 6px; font-size: 17px; }
+  .stage p { margin: 0; font-size: 14px; color: var(--ink-2); }
+  .stage .num { font-weight: 700; color: var(--ink); }
+  ol.qs { margin: 0; padding-left: 20px; }
+  ul.reasons { margin: 6px 0 4px; padding-left: 0; list-style: none; font-size: 13.5px; color: var(--ink-2); }
+  ul.reasons li { margin: 0 0 6px; }
+  ol.qs li { margin-bottom: 8px; }
+  footer { border-top: 1px solid var(--rule); margin-top: 40px; padding: 22px 0 60px; color: var(--ink-3); font-size: 13.5px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
+  @media (max-width: 980px) { .cards { grid-template-columns: 1fr 1fr; } .sim { grid-template-columns: minmax(0, 1fr); } .controls { position: static; } .four, .stages { grid-template-columns: 1fr 1fr; } .physics { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .cards, .four, .stages { grid-template-columns: 1fr; } .wrap { padding: 0 16px; } .card .pc { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Aloha Robotics · Healthcare Hackathon Bavaria 2026 · Siemens Healthineers challenge 04</p>
+    <h1>How a parked C-arm gets its update</h1>
+    <p class="lede">Six architectures, one shared brain, and a simulator that runs every option once on the same synthetic hospital. It answers Christian's ask: <em>"spin out architecture with a briefing and diagrams for each and give pros and cons · one shot each solution."</em></p>
+    <div class="answer"><strong>Recommendation: F · one brain, many hands.</strong> The brain finds the window and the one person who can say yes. The hand brings power and the package: a person at 17:00, a small data companion on every C-arm, and KettyBot where nobody can power the window. In our synthetic model, stage 1 patches <strong>91 %</strong> by the deadline for about <strong>€7k</strong> of hardware, and stage 2 reaches <strong>92 %</strong> and holds up in every scenario we tried. The pilot starts with no robot.</div>
+    <div class="asks">
+      <a class="chip" href="README.md"><b>Briefing</b> README</a>
+      <a class="chip" href="PROMPT.md"><b>The prompt</b> spin out, one shot each</a>
+      <a class="chip" href="00-reference-architecture.md"><b>Reference</b> shared blocks</a>
+      <a class="chip" href="sim/results/RESULTS.md"><b>Results</b> 200 runs</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Four things must line up for 2.5 hours</h2>
+    <p class="sub">Siemens told us why updates fail. The brain solves time and the "yes" for every option. The options differ only in the <em>hand</em>, meaning how power and data reach the parked C-arm.</p>
+    <div class="four">
+      <div class="tile"><h3>Power</h3><p>Parked in a hallway, switched off, often with no socket. The UPS only covers a safe shutdown.</p><div class="who">Solved by the hand</div></div>
+      <div class="tile"><h3>Data</h3><p>Downloads come in parts and only while it's on and connected. Erlangen has no Wi-Fi in its ORs.</p><div class="who">Solved by the hand</div></div>
+      <div class="tile"><h3>Time</h3><p>About 120 min plus a 30 min rollback buffer, with no case and no emergency. At most ~1 h from plug-in to incision.</p><div class="who">Solved by the brain</div></div>
+      <div class="tile"><h3>A "yes"</h3><p>A human must press start, three roles could, and none feels responsible.</p><div class="who">Solved by the brain: one person, one tap</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The shared reference architecture</h2>
+    <p class="sub">This is Christian's architecture line with the hand made pluggable. Hospital (read only) → Aloha core in the clinic (rule core, window finder, AI explains, signed tap, audit trail) → hands → C-arm ⇄ Siemens (signed packages in, filtered logs out). <a href="00-reference-architecture.md">Full reference →</a></p>
+    <div class="bigdia"><img src="diagrams/00-1-flow.svg" alt="Reference architecture: hospital sources, Aloha core, pluggable hands, C-arm, Siemens"></div>
+  </section>
+
+  <section id="options">
+    <h2>Six architectures, one shot each</h2>
+    <p class="sub">Each brief has the same template: what it looks like, how it works, two diagrams, what it needs, pros, cons, risks, cost, a scorecard, simulator numbers, an 8-week pilot, jury Q&amp;A, open questions for Siemens, and a one-shot build prompt.</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section>
+    <h2>Comparison matrix</h2>
+    <p class="sub">Unweighted, ●●●●● is best. F scores highest because it uses each hand only where that hand is strong. Its real cost is complexity, shown in the extra row.</p>
+    <div class="tablewrap"><table class="matrix" id="matrix"></table></div>
+  </section>
+
+  <section id="sim">
+    <h2>The simulator, live</h2>
+    <p class="sub">Same synthetic hospital, same people, same emergencies for every option. The brain is the team's code, copied unchanged: <code>planner.js</code> for the rules and <code>golden.js</code> for P(undisturbed). Only the hand differs. Change an assumption and the page runs the options again in your browser.</p>
+    <div class="note"><strong>Thinking tool, not a forecast.</strong> Nearly every input is an assumption, and they're all in <code>sim/model.js</code> → <code>PARAMS</code>. Don't put these numbers on a slide. In Q&amp;A, say "in our synthetic model".</div>
+    <div class="sim">
+      <form class="controls" id="controls" onsubmit="return false">
+        <div class="ctl"><label>C-arms in the house <b id="v-fleet"></b></label><input type="range" id="fleet" min="6" max="30" step="1"></div>
+        <div class="ctl"><label>Parking spots with no socket <b id="v-noSocket"></b></label><input type="range" id="noSocket" min="0" max="1" step="0.05"><div class="why">Siemens: "sometimes there is, sometimes not"</div></div>
+        <div class="ctl"><label>C-arms with a network link in use <b id="v-orLan"></b></label><input type="range" id="orLan" min="0" max="1" step="0.05"><div class="why">Does the package reach the device without a hand?</div></div>
+        <div class="ctl"><label>Install time <b id="v-installMin"></b></label><input type="range" id="installMin" min="30" max="150" step="10"><div class="why">Siemens: ~120 min. 30 min with A/B slots</div></div>
+        <div class="ctl"><label>Evening staff say yes <b id="v-acceptEve"></b></label><input type="range" id="acceptEve" min="0.2" max="1" step="0.05"></div>
+        <div class="ctl"><label>Late staff (after 22:00) say yes <b id="v-acceptLate"></b></label><input type="range" id="acceptLate" min="0.1" max="1" step="0.05"></div>
+        <div class="ctl"><label>Robots <b id="v-robots"></b></label><input type="range" id="robots" min="0" max="3" step="1"></div>
+        <div class="ctl"><label>Max installs per night <b id="v-maxPerNight"></b></label><input type="range" id="maxPerNight" min="1" max="6" step="1"><div class="why">Team rule: 2</div></div>
+        <div class="ctl check"><label><input type="checkbox" id="remoteWake"> Remote switch-on is possible</label><div class="why">Ask Siemens. Without it, a person must switch the C-arm on</div></div>
+        <div class="ctl"><label>Runs <b id="v-runs"></b></label><input type="range" id="runs" min="10" max="120" step="10"></div>
+        <div class="btns"><button type="button" class="primary" id="run">Run again</button><button type="button" id="reset">Base case</button></div>
+        <div class="status" id="status" aria-live="polite"></div>
+      </form>
+      <div>
+        <div class="panel" id="p-bars">
+          <h3>Share of the fleet patched by the deadline</h3>
+          <p class="cap" id="cap-bars"></p>
+          <svg id="bars" width="100%" height="320" role="img" aria-label="Share of the fleet patched by the deadline, per option"></svg>
+          <div class="tip" id="tip-bars"></div>
+        </div>
+        <div class="panel" id="p-lines">
+          <h3>Share of the fleet patched, day by day</h3>
+          <p class="cap">Mean over all runs. Hover for the values. Click a legend entry to hide or show it.</p>
+          <div class="legend" id="legend"></div>
+          <svg id="lines" width="100%" height="320" role="img" aria-label="Share of the fleet patched per day, per option"></svg>
+          <div class="tip" id="tip-lines"></div>
+        </div>
+        <div class="panel">
+          <h3>Table view</h3>
+          <p class="cap">Every number behind the charts. "Escalations" means dead on arrival plus missed deadline: someone goes on site, or a manual plan is needed.</p>
+          <div class="tablewrap" style="border:0;padding:0"><table id="table" style="min-width:720px"></table></div>
+          <h3 style="margin-top:14px">Why windows were lost</h3>
+          <ul class="reasons" id="reasons"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What changes the answer</h2>
+    <p class="sub">Precomputed in <code>sim/run.cjs</code>. Each cell shows the share patched by the deadline. "Best buy" is the cheapest option within 3 points of the best coverage.</p>
+    <div class="tablewrap"><table class="heat" id="heat"></table></div>
+    <p class="cap" id="heat-cap" style="color:var(--ink-3);font-size:13px;margin-top:8px"></p>
+  </section>
+
+  <section>
+    <h2>The physics that decides C and D</h2>
+    <div class="physics">
+      <div>
+        <p class="sub" style="margin-bottom:10px">A Cios Select data sheet lists <strong>713 W standby at 230 V</strong>. A full install on battery is 713 W × 2.5 h ≈ <strong>1.8 kWh</strong>, about <strong>2.1 kWh</strong> from the pack, which is roughly <strong>18–22 kg</strong> of LiFePO4. KettyBot carries 30 kg spread over three 10-kg trays. One robot trip means one install.</p>
+        <p class="sub" style="margin:0">If Siemens has a service mode that powers only the workstation and the flashed subsystems, or if installs shrink to ~30 min, the battery falls to well under 1 kWh. <strong>Ask Siemens first: what does an update draw?</strong></p>
+      </div>
+      <svg id="payload" width="100%" height="150" role="img" aria-label="Battery for one install versus KettyBot payload"></svg>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recommendation: F, in stages</h2>
+    <p class="sub">Buy the brain first, then let its data decide which hands to buy.</p>
+    <div class="stages">
+      <div class="stage"><div class="k">Stage 0 · pilot</div><h3>Brain + people</h3><p>1 hospital · 4–6 C-arms · 8 weeks · no robot needed. Christian's three asks: SRS status data, a C-arm to test, a pilot.</p><p style="margin-top:8px">Hardware <span class="num">€0</span></p></div>
+      <div class="stage"><div class="k">Stage 1</div><h3>+ data companion</h3><p>Package and logs always on board, plus a display that guards the install. Siemens' own favourite idea, in its cheap form.</p><p style="margin-top:8px">≈ <span class="num">€7k</span> for 12 C-arms · <span class="num">91 %</span> in the model</p></div>
+      <div class="stage"><div class="k">Stage 2</div><h3>+ one KettyBot</h3><p>Only for the C-arms the pilot shows are never powered in time: nights, no socket, thin staff.</p><p style="margin-top:8px">≈ <span class="num">€49k</span> · <span class="num">92 %</span>, robust in every scenario</p></div>
+      <div class="stage"><div class="k">Later</div><h3>Bays, built-in</h3><p>Bays in renovations, built-in hands in Siemens' next generation. Same brain, same hand contract.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ask Siemens first</h2>
+    <ol class="qs">
+      <li><strong>What does a Cios draw during an update?</strong> Is there a service mode with only the workstation and the flashed subsystems powered?</li>
+      <li><strong>Can the C-arm switch on without a person</strong>, for example when mains returns, by Wake-on-LAN, or by an SRS command? In the model, "nobody to switch it on" is the top lost-window reason for bays, companions and robots.</li>
+      <li><strong>Can a package be handed over point-to-point on the LAN port</strong> from a local mirror (our cache) instead of from SRS directly?</li>
+      <li><strong>Would you release an isolated battery inverter</strong> as the C-arm's mains source at the parking position, never with a patient (IEC 60601-1)?</li>
+      <li><strong>Are A/B slots or install-while-off on the roadmap?</strong> At ~30 min, people plus data covers almost everything.</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Files: <a href="README.md">README</a> · <a href="PROMPT.md">PROMPT</a> · <a href="00-reference-architecture.md">00 reference</a> · <a href="01-people.md">01 A</a> · <a href="02-bays.md">02 B</a> · <a href="03-companion.md">03 C</a> · <a href="04-robot.md">04 D</a> · <a href="05-built-in.md">05 E</a> · <a href="06-hybrid.md">06 F</a> · <a href="sim/model.js">sim/model.js</a> · <a href="sim/results/RESULTS.md">RESULTS</a>.<br>
+    Sources: Siemens interview (transcripts 02, 04), Christian's architecture and security docs, Cios Select data sheet, 2026 dealer listings for KettyBot Pro, 2026 listings for 2 kWh LiFePO4 stations. The details are in <a href="00-reference-architecture.md#sources">00 reference</a>.<br>
+    Run locally: <code>node --test Documentation/architecture-options/sim/sim.test.cjs</code> · <code>node Documentation/architecture-options/sim/run.cjs</code>. Everything in the simulator is synthetic. No patient data exists anywhere in it.
+  </div>
+</footer>
+
+<script src="sim/engine/planner.js"></script>
+<script src="sim/engine/golden.js"></script>
+<script src="sim/model.js"></script>
+<script src="sim/results/results.js"></script>
+<script>
+(function () {
+  'use strict';
+  const S = window.BreifSim;
+  const $ = (id) => document.getElementById(id);
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const COLOR = { today: '--s0', people: '--s1', bays: '--s2', companion: '--s3', robot: '--s4', builtin: '--s5', hybrid1: '--s6', hybrid2: '--s7' };
+  const pct = (x) => (Number.isFinite(x) ? Math.round(100 * x) + ' %' : 'n/a');
+  const eur = (x) => (x ? '€' + Math.round(x / 1000) + 'k' : '€0');
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+
+  /* ---------- option cards ---------- */
+  const OPT = [
+    { id: 'A', key: 'people', file: '01-people.md', name: 'People-powered', one: 'One named person at the right minute: leave it plugged after the last case, plug it in, or push it to a socket.',
+      verdict: 'The first stage, not the whole answer. People bring power, not data.', hw: '€0', sim: '45 %',
+      pros: ['No hardware, no new network path', 'Hits "nobody feels responsible"', 'Pilot in weeks'], cons: ['Only reaches C-arms that already have the package', 'Pushing 300 kg is the top loss', 'Nothing guards the install'] },
+    { id: 'B', key: 'bays', file: '02-bays.md', name: 'Smart parking bays', one: 'Bays with a socket, a wired port, a presence sensor and a status light. Parking is plugging in.',
+      verdict: 'Most reliable per C-arm, but it is building work. For renovations and new builds.', hw: '≈ €30k', sim: '91 %',
+      pros: ['Power and data where it rests', 'Least clinic time once built', 'Easy for IT: one port, one segment'], cons: ['Months of facilities work', '"Not parked in its bay" is the top loss', 'A network port in a public corridor'] },
+    { id: 'C', key: 'companion', file: '03-companion.md', name: 'Companion', one: 'C1: cache, link, display and logs on the cart. C2: adds a ~2 kWh battery to run a full install anywhere.',
+      verdict: 'Siemens’ favourite. C1 on every C-arm, C2 only for lone C-arms far from sockets.', hw: 'C1 ≈ €7k · C2 ≈ €54k', sim: '92 %',
+      pros: ['Works wherever it parks (C2)', 'Display guards the install', 'Logs come home every visit'], cons: ['C2 is ~20 kg and ≈ €4.5k per C-arm', 'Power combination needs Siemens release', 'One more device to charge and patch'] },
+    { id: 'D', key: 'robot', file: '04-robot.md', name: 'Robot courier', one: 'KettyBot brings power and the package, docks, reports "area clear", guards the install, takes logs home.',
+      verdict: 'The demo and the scale hand for nights. Not the whole answer: one install per trip, and one robot can’t keep up on big sites.', hw: '≈ €42k', sim: '92 % (68 % at 30 C-arms)',
+      pros: ['One robot, many C-arms', 'Best guard: the robot screen', 'Night-capable with remote wake'], cons: ['~20 kg pack on a 30 kg payload', 'No arm: docking adapter or a person', 'Lifts, doors, bridge risk, regulation'] },
+    { id: 'E', key: 'builtin', file: '05-built-in.md', name: 'Built-in, next gen', one: 'Service controller, maintenance power, A/B slots and a dock inside the next C-arm.',
+      verdict: 'The right end state and Siemens’ roadmap. Nothing for the installed base today.', hw: 'In the device price', sim: '12 % today',
+      pros: ['Cleanest experience', 'One owner, one regulatory file', 'Install while off with A/B'], cons: ['Only new C-arms', 'Years of R&D', 'A modem looks like a hole to IT'] },
+    { id: 'F', key: 'hybrid2', file: '06-hybrid.md', name: 'One brain, many hands', one: 'One brain, one hand contract. The router picks the cheapest hand that really powers each window.',
+      verdict: 'Recommended. Stage 1: people + data companion. Stage 2: + one KettyBot where needed.', hw: '≈ €7k, then ≈ €49k', sim: '91 % then 92 %', rec: true,
+      pros: ['Value on day one, no hardware', 'Spending follows evidence', 'Resilient: another hand takes over'], cons: ['More moving parts', 'Stage 1 leans on people', 'Harder to say in 30 seconds'] },
+  ];
+  const DIA = { A: '01', B: '02', C: '03', D: '04', E: '05', F: '06' };
+  $('cards').innerHTML = OPT.map((o) => `
+    <article class="card${o.rec ? ' rec' : ''}">
+      <span class="tag"><span class="sw" style="background:var(${COLOR[o.key]})"></span>Option ${o.id}${o.rec ? ' · recommended' : ''}</span>
+      <h3>${esc(o.name)}</h3>
+      <p class="one">${esc(o.one)}</p>
+      <p class="verdict">${esc(o.verdict)}</p>
+      <div class="pc"><div><h4>Pros</h4><ul>${o.pros.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div><div><h4>Cons</h4><ul>${o.cons.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div></div>
+      <details class="dia"><summary>Architecture and sequence diagrams</summary>
+        <div class="diagram"><img loading="lazy" src="diagrams/${DIA[o.id]}-1-flow.svg" alt="Option ${o.id} architecture"></div>
+        <div class="diagram"><img loading="lazy" src="diagrams/${DIA[o.id]}-2-seq.svg" alt="Option ${o.id} sequence"></div>
+      </details>
+      <div class="foot"><span>Hardware <span class="num">${esc(o.hw)}</span></span><span>Model <span class="num">${esc(o.sim)}</span></span><a href="${o.file}">Full brief →</a></div>
+    </article>`).join('');
+
+  /* ---------- matrix ---------- */
+  const CRIT = [
+    ['Works on today’s C-arms unchanged', [5, 4, 4, 3, 1, 5]], ['Power without a socket', [1, 4, 5, 4, 5, 4]], ['Data without OR Wi-Fi', [2, 5, 5, 5, 3, 5]],
+    ['Guards the install', [2, 3, 4, 5, 4, 4]], ['Low clinic effort', [2, 4, 4, 4, 5, 3]], ['Hospital IT acceptance', [5, 3, 3, 2, 2, 4]],
+    ['Light regulatory load', [5, 4, 2, 2, 3, 3]], ['Time to a pilot', [5, 2, 3, 3, 1, 5]], ['Low hardware cost', [5, 3, 2, 3, 4, 4]], ['Scales to many sites', [3, 2, 4, 3, 5, 5]],
+  ];
+  const dots = (n) => '●'.repeat(n) + '○'.repeat(5 - n);
+  const heads = ['A People', 'B Bays', 'C Companion', 'D Robot', 'E Built-in', 'F Hybrid'];
+  const totals = heads.map((_, k) => CRIT.reduce((s, c) => s + c[1][k], 0));
+  $('matrix').innerHTML = '<thead><tr><th>Criterion</th>' + heads.map((h) => `<th>${h}</th>`).join('') + '</tr></thead><tbody>' +
+    CRIT.map((c) => `<tr><td>${esc(c[0])}</td>${c[1].map((n) => `<td class="dots" aria-label="${n} of 5">${dots(n)}</td>`).join('')}</tr>`).join('') +
+    `<tr class="total"><td>Total of 50</td>${totals.map((t) => `<td>${t}</td>`).join('')}</tr>` +
+    `<tr class="extra"><td>Extra: simple to build, certify and run</td>${[5, 4, 3, 2, 4, 2].map((n) => `<td class="dots">${dots(n)}</td>`).join('')}</tr></tbody>`;
+
+  /* ---------- simulator ---------- */
+  const KNOBS = ['fleet', 'noSocket', 'orLan', 'installMin', 'acceptEve', 'acceptLate', 'robots', 'maxPerNight', 'runs'];
+  const FMT = { fleet: (v) => v, noSocket: (v) => Math.round(v * 100) + ' %', orLan: (v) => Math.round(v * 100) + ' %', installMin: (v) => v + ' min',
+    acceptEve: (v) => Math.round(v * 100) + ' %', acceptLate: (v) => Math.round(v * 100) + ' %', robots: (v) => v, maxPerNight: (v) => v, runs: (v) => v };
+  const BASE = Object.assign({}, S.PARAMS, { runs: 30 });
+  let hidden = new Set();
+  let last = null;
+  function setControls(p) {
+    for (const k of KNOBS) { $(k).value = p[k]; $('v-' + k).textContent = FMT[k](p[k]); }
+    $('remoteWake').checked = !!p.remoteWake;
+  }
+  function readControls() {
+    const p = {};
+    for (const k of KNOBS) p[k] = Number($(k).value);
+    p.remoteWake = $('remoteWake').checked;
+    return p;
+  }
+  for (const k of KNOBS) $(k).addEventListener('input', () => { $('v-' + k).textContent = FMT[k](Number($(k).value)); schedule(); });
+  $('remoteWake').addEventListener('change', schedule);
+  $('run').addEventListener('click', () => go());
+  $('reset').addEventListener('click', () => { setControls(BASE); go(); });
+  let timer = null;
+  function schedule() { clearTimeout(timer); timer = setTimeout(go, 450); }
+  function go() {
+    const p = readControls();
+    $('status').textContent = 'Running ' + p.runs + ' runs × 8 options…';
+    setTimeout(() => {
+      const t0 = performance.now();
+      const out = S.simulate(p);
+      last = out;
+      draw(out);
+      $('status').textContent = `${p.runs} runs × 8 options in ${Math.round(performance.now() - t0)} ms. Same seed, so the same inputs give the same answer.`;
+    }, 30);
+  }
+
+  function bestBuy(results) {
+    const top = Math.max(...results.map((r) => r.patchedByDeadline));
+    const near = results.filter((r) => r.patchedByDeadline >= top - 0.03).sort((a, b) => a.capexEUR - b.capexEUR || a.staffMinutes - b.staffMinutes);
+    return near[0];
+  }
+
+  function draw(out) {
+    const R = out.results, p = out.params;
+    const bb = bestBuy(R);
+    $('cap-bars').textContent = `${p.fleet} C-arms, deadline day ${p.deadline}, at most ${p.maxPerNight} installs a night. Best buy here: ${bb.short} (cheapest within 3 points of the top).`;
+    drawBars(R, bb);
+    drawLegend(R);
+    drawLines(R, p);
+    drawTable(R);
+  }
+
+  function drawBars(R, bb) {
+    const svg = $('bars'); svg.innerHTML = '';
+    const W = svg.clientWidth || 800, rowH = 34, top = 8, left = 130, right = 70;
+    const H = top + R.length * rowH + 26; svg.setAttribute('height', H);
+    const x = (v) => left + v * (W - left - right);
+    const g = el('g', { class: 'grid' }, svg);
+    [0, 0.25, 0.5, 0.75, 1].forEach((t) => { el('line', { x1: x(t), x2: x(t), y1: top, y2: H - 22 }, g); const tx = el('text', { x: x(t), y: H - 6, 'text-anchor': 'middle' }, svg); tx.textContent = Math.round(t * 100) + ' %'; });
+    const tip = $('tip-bars');
+    R.forEach((r, i) => {
+      const y = top + i * rowH + 6, h = Math.min(22, rowH - 10), w = Math.max(0, x(r.patchedByDeadline) - x(0));
+      const lab = el('text', { x: left - 10, y: y + h / 2 + 4, 'text-anchor': 'end' }, svg); lab.textContent = r.short; if (r.key === 'hybrid1' || r.key === 'hybrid2') lab.setAttribute('class', 'lbl');
+      const rr = Math.min(4, w / 2);
+      const path = w > 0 ? `M${x(0)},${y} H${x(0) + w - rr} Q${x(0) + w},${y} ${x(0) + w},${y + rr} V${y + h - rr} Q${x(0) + w},${y + h} ${x(0) + w - rr},${y + h} H${x(0)} Z` : '';
+      if (path) el('path', { d: path, fill: css(COLOR[r.key]) }, svg);
+      const v = el('text', { x: x(0) + w + 6, y: y + h / 2 + 4 }, svg); v.textContent = pct(r.patchedByDeadline) + (r === bb ? '  ★ best buy' : ''); v.setAttribute('class', 'lbl');
+      const hit = el('rect', { x: 0, y: y - 5, width: W, height: rowH, fill: 'transparent' }, svg);
+      hit.addEventListener('mousemove', (ev) => {
+        tip.style.display = 'block';
+        tip.innerHTML = `<strong>${esc(r.name)}</strong><div class="row"><span>Patched by the deadline</span><b>${pct(r.patchedByDeadline)}</b></div>` +
+          `<div class="row"><span>Median days to 90 %</span><b>${r.reached90Share >= 0.5 ? Math.round(r.daysTo90Median) : 'not reached'}</b></div>` +
+          `<div class="row"><span>Clinic min per patched</span><b>${Number.isFinite(r.staffPerPatched) ? r.staffPerPatched.toFixed(1) : 'n/a'}</b></div>` +
+          `<div class="row"><span>Escalations per round</span><b>${r.visits.toFixed(1)}</b></div><div class="row"><span>Hardware</span><b>${eur(r.capexEUR)}</b></div>`;
+        place(tip, ev, $('p-bars'));
+      });
+      hit.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+    });
+  }
+
+  function drawLegend(R) {
+    $('legend').innerHTML = R.map((r) => `<button type="button" data-k="${r.key}" aria-pressed="${!hidden.has(r.key)}"><span class="sw" style="background:var(${COLOR[r.key]})"></span>${esc(r.short)}</button>`).join('');
+    $('legend').querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
+      const k = b.dataset.k; if (hidden.has(k)) hidden.delete(k); else hidden.add(k);
+      drawLegend(last.results); drawLines(last.results, last.params);
+    }));
+  }
+
+  function drawLines(R, p) {
+    const svg = $('lines'); svg.innerHTML = '';
+    const W = svg.clientWidth || 800, H = 320, L = 44, Rm = 64, T = 12, B = 30;
+    const days = p.days;
+    const x = (d) => L + (d / (days - 1)) * (W - L - Rm);
+    const y = (v) => T + (1 - v) * (H - T - B);
+    const g = el('g', { class: 'grid' }, svg);
+    [0, 0.25, 0.5, 0.75, 1].forEach((t) => { el('line', { x1: L, x2: W - Rm, y1: y(t), y2: y(t) }, g); const tx = el('text', { x: L - 8, y: y(t) + 4, 'text-anchor': 'end' }, svg); tx.textContent = Math.round(t * 100) + ' %'; });
+    for (let d = 0; d < days; d += 7) { const tx = el('text', { x: x(d), y: H - 8, 'text-anchor': 'middle' }, svg); tx.textContent = 'day ' + (d + 1); }
+    const dl = p.deadline - 1;
+    el('line', { x1: x(dl), x2: x(dl), y1: T, y2: H - B, stroke: css('--ink-3'), 'stroke-width': 1 }, svg);
+    const dt = el('text', { x: x(dl) + 4, y: T + 12 }, svg); dt.textContent = 'deadline';
+    const vis = R.filter((r) => !hidden.has(r.key));
+    for (const r of vis) {
+      const d = r.curve.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+      el('path', { d, fill: 'none', stroke: css(COLOR[r.key]), 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
+      const lv = r.curve[days - 1];
+      el('circle', { cx: x(days - 1), cy: y(lv), r: 4, fill: css(COLOR[r.key]), stroke: css('--card'), 'stroke-width': 2 }, svg);
+    }
+    // selective direct labels: the two stages of the recommendation only
+    const placed = [];
+    for (const r of vis.filter((r) => r.key === 'hybrid1' || r.key === 'hybrid2')) {
+      let yy = y(r.curve[days - 1]) + 4; while (placed.some((q) => Math.abs(q - yy) < 14)) yy += 14; placed.push(yy);
+      const t = el('text', { x: x(days - 1) + 8, y: yy }, svg); t.textContent = r.id; t.setAttribute('class', 'lbl');
+    }
+    const cross = el('line', { x1: 0, x2: 0, y1: T, y2: H - B, stroke: css('--ink-3'), 'stroke-width': 1, visibility: 'hidden' }, svg);
+    const hit = el('rect', { x: L, y: T, width: W - L - Rm, height: H - T - B, fill: 'transparent' }, svg);
+    const tip = $('tip-lines');
+    hit.addEventListener('mousemove', (ev) => {
+      const box = svg.getBoundingClientRect();
+      const d = Math.max(0, Math.min(days - 1, Math.round(((ev.clientX - box.left - L) / (W - L - Rm)) * (days - 1))));
+      cross.setAttribute('x1', x(d)); cross.setAttribute('x2', x(d)); cross.setAttribute('visibility', 'visible');
+      const rows = vis.slice().sort((a, b) => b.curve[d] - a.curve[d]);
+      tip.innerHTML = `<strong>Day ${d + 1}${d === dl ? ' · deadline' : ''}</strong>` + rows.map((r) => `<div class="row"><span><span class="sw" style="background:var(${COLOR[r.key]})"></span>${esc(r.short)}</span><b>${pct(r.curve[d])}</b></div>`).join('');
+      tip.style.display = 'block'; place(tip, ev, $('p-lines'));
+    });
+    hit.addEventListener('mouseleave', () => { tip.style.display = 'none'; cross.setAttribute('visibility', 'hidden'); });
+  }
+
+  function drawTable(R) {
+    $('table').innerHTML = '<thead><tr><th>Option</th><th class="n">Patched by deadline</th><th class="n">Median days to 90 %</th><th class="n">Clinic min per patched</th><th class="n">Pulled per 100 starts</th><th class="n">Escalations</th><th class="n">Robot missions</th><th class="n">Hardware</th></tr></thead><tbody>' +
+      R.map((r) => `<tr><td title="${esc(r.name)}" style="white-space:nowrap"><span class="sw" style="background:var(${COLOR[r.key]});margin-right:6px"></span>${esc(r.short)}</td><td class="n">${pct(r.patchedByDeadline)}</td><td class="n">${r.reached90Share >= 0.5 ? Math.round(r.daysTo90Median) : 'not reached'}</td><td class="n">${Number.isFinite(r.staffPerPatched) ? r.staffPerPatched.toFixed(1) : 'n/a'}</td><td class="n">${r.pulledPer100.toFixed(1)}</td><td class="n">${r.visits.toFixed(1)}</td><td class="n">${r.robotJobs.toFixed(1)}</td><td class="n">${eur(r.capexEUR)}</td></tr>`).join('') + '</tbody>';
+    $('reasons').innerHTML = R.map((r) => `<li><span class="sw" style="background:var(${COLOR[r.key]});margin-right:6px"></span><b>${esc(r.short)}</b>: ${r.topReasons.slice(0, 3).map((x) => esc(x.why) + ' (' + x.perRun.toFixed(1) + ' per round)').join(' · ') || 'none'}</li>`).join('');
+  }
+
+  function place(tip, ev, panel) {
+    const pb = panel.getBoundingClientRect();
+    let left = ev.clientX - pb.left + 14, top = ev.clientY - pb.top + 14;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    if (left + w > pb.width - 6) left = ev.clientX - pb.left - w - 14;
+    if (top + h > pb.height - 6) top = Math.max(6, pb.height - h - 6);
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  }
+
+  /* ---------- precomputed scenarios ---------- */
+  function drawHeat() {
+    const D = window.BREIF_RESULTS;
+    if (!D) { $('heat').innerHTML = '<tr><td>Run <code>node Documentation/architecture-options/sim/run.cjs</code> to generate the scenario table.</td></tr>'; return; }
+    const ids = D.scenarios[0].results.map((r) => r.id);
+    const ramp = ['--q1', '--q2', '--q3', '--q4', '--q5', '--q6', '--q7'];
+    const cell = (v) => { const k = Math.max(0, Math.min(6, Math.floor(v * 7 - 1e-9))); return `background:var(${ramp[k]});color:${k >= 4 ? '#ffffff' : '#0b0b0b'}`; };
+    $('heat').innerHTML = '<thead><tr><th>Scenario</th>' + ids.map((i) => `<th class="n">${i}</th>`).join('') + '<th>Best buy</th></tr></thead><tbody>' +
+      D.scenarios.map((sc) => `<tr><td>${esc(sc.name)}</td>${sc.results.map((r) => `<td class="cell" style="${cell(r.patchedByDeadline)}" title="${esc(r.name)}: ${pct(r.patchedByDeadline)}, ${eur(r.capexEUR)}">${pct(r.patchedByDeadline)}</td>`).join('')}<td class="best">★ ${esc(sc.best.buy)}</td></tr>`).join('') + '</tbody>';
+    $('heat-cap').textContent = `0 = today (illustrative), A–E single hands, F1/F2 = the two stages of F. ${D.runs} runs for the base case, ${D.scenarioRuns} per scenario. Generated ${D.generated.slice(0, 16).replace('T', ' ')} UTC.`;
+  }
+
+  /* ---------- payload picture ---------- */
+  function drawPayload() {
+    const svg = $('payload'); svg.innerHTML = '';
+    const W = svg.clientWidth || 420, L = Math.min(150, Math.round(W * 0.4)), Rm = 12, x = (kg) => L + (kg / 46) * (W - L - Rm);
+    const rows = [['KettyBot payload', 30, '--s0', '30 kg'], ['Battery, 120 min', 20, '--s4', '≈ 20 kg'], ['Battery, 30 min', 5, '--s3', '≈ 5 kg']];
+    rows.forEach((r, i) => {
+      const y = 14 + i * 42;
+      const t = el('text', { x: L - 10, y: y + 15, 'text-anchor': 'end' }, svg); t.textContent = r[0];
+      const w = x(r[1]) - x(0);
+      el('path', { d: `M${x(0)},${y} H${x(0) + w - 4} Q${x(0) + w},${y} ${x(0) + w},${y + 4} V${y + 18} Q${x(0) + w},${y + 22} ${x(0) + w - 4},${y + 22} H${x(0)} Z`, fill: css(r[2]) }, svg);
+      const v = el('text', { x: x(0) + w + 6, y: y + 15 }, svg); v.textContent = r[3]; v.setAttribute('class', 'lbl');
+    });
+  }
+
+  setControls(BASE);
+  drawHeat();
+  drawPayload();
+  go();
+  let rs = null;
+  window.addEventListener('resize', () => { clearTimeout(rs); rs = setTimeout(() => { if (last) draw(last); drawPayload(); }, 150); });
+})();
+</script>
+</body>
+</html>
