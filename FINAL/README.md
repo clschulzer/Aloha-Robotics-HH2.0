@@ -4,6 +4,7 @@ Each version gets its own folder. Start with **[`v1/`](v1/)**.
 
 | Version | What it is |
 |---|---|
+| [`v2/`](v2/) | Christian's pitch (`CARMAGOTCHI_Web_Pitch/pitch-demo-christian`) with his fine-tuning from 14 Nov: Tamagotchi intro, AI Scheduling Suite, "Who plugs it in?", Aloha PatchRover, new close. See [`v2/README.md`](v2/README.md). |
 | [`v1/`](v1/) | One pitch assembled from all the existing presentations, following Marc's notes from 14 Nov. Nothing new was invented: every scene comes from code we already had. |
 
 ## v1 at a glance
