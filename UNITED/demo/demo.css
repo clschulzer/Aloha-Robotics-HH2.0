@@ -7,7 +7,7 @@ button{font:inherit;cursor:pointer;border:0}
 h1,h2,h3,p{margin:0}h1,h2{font-weight:900;letter-spacing:-.06em}
 em{font-style:normal;color:var(--orange)}
 img{display:block;user-select:none}
-#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;overflow:hidden;transform-origin:center;transform:translate(-50%,-50%);background:var(--night);color:var(--white);cursor:pointer;transition:background .4s,color .4s}
+#stage{position:fixed;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;background:var(--night);color:var(--white);cursor:pointer;transition:background .4s,color .4s}
 #stage[data-theme="paper"]{background:var(--paper);color:var(--ink)}
 .eyebrow{font:700 20px/1.1 'Courier New',monospace;letter-spacing:.18em;color:#8fa3a5;text-transform:uppercase}
 #stage[data-theme="paper"] .eyebrow{color:#4c6466}
