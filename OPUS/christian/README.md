@@ -21,11 +21,10 @@ PHYSICAL CONNECTIVITY
 → Update running · today is a good day · report, audit trail, next job
 CLOSE THE LOOP
 → Loop closed: a thank-you, fresh data, a safe current C-arm (light)
-→ The three pillars · no patient data · signed packages · rollback ready
-→ Three minutes only scratch the surface · Let's brainstorm, our robot booked the room · Everyone talks about AI, we execute on IA: invisible autonomy · ALOHA ROBOTICS
+→ Three minutes only scratch the surface · Let's brainstorm: status data, a C-arm to test, a pilot (no robot needed to start) · room booked by KettyBot · ALOHA ROBOTICS
 ```
 
-The three pillars ride along as a small strip at the top and light up per act. At the end they grow into the pillar slide.
+The three pillars ride along as a small strip at the top and light up per act.
 
 | Read this | For |
 |---|---|
@@ -46,7 +45,7 @@ Christian's storyboard has the real **KettyBot drive to a C-arm on stage** durin
 - **The film is the full 30 s** (his storyboard planned 20 s). To make room, a few words are optional in the script (marked [ ]).
 - **"BASED ON A TRUE STORY"** stays before the statement because UNITED kept it. Cut it if he prefers the statement straight after the film.
 - **Update duration:** his click dummy says *expected 18 min (manufacturer)*, and the run shows 17 min 40 s. Siemens said about 2 h for an install in the interviews, and his own rule core (`planner.js`) also uses 120 min. Decide which number to say. The golden window (19:30–22:45) fits either.
-- **Ending:** his storyboard ends on the logo and KettyBot's wink. "Any technical questions?" is added under the logo (team preference).
+- **Ending:** follows his latest pitch demo (`14ae577`, 14 Nov 08:06). The pillar summary slide and the "AI → IA" line are gone. The close is one call to action with his three asks and the room booked by KettyBot, then the logo and KettyBot's wink. "Any technical questions?" stays under the logo (team preference). The architecture he cut from the pitch is in `breif/` for Q&A.
 
 All data is invented. No patient data. Not a Siemens Healthineers or PUDU product. The characters carry the Siemens Healthineers logo: for the pitch only.
 

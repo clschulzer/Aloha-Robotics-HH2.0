@@ -81,7 +81,7 @@ footer { padding: 14px 24px 18px; border-top: 1px solid var(--line); }
 <script>
 (function () {
   'use strict';
-  const N = window.OPUS.NOTES, ORDER = ['standby', 'film', 'intro', 'statement', 'app', 'plan', 'lena', 'radar', 'mission', 'start', 'running', 'loop', 'pillars', 'outro'];
+  const N = window.OPUS.NOTES, ORDER = ['standby', 'film', 'intro', 'statement', 'app', 'plan', 'lena', 'radar', 'mission', 'start', 'running', 'loop', 'outro'];
   const TOTAL = 180, $ = (id) => document.getElementById(id);
   const beats = []; ORDER.forEach((id) => (N[id] || []).forEach((n, b) => beats.push({ id, b, n })));
   let ch = null, st = null, lastAt = 0, localClock = { run: false, t0: 0, acc: 0 };

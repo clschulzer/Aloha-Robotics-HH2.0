@@ -46,12 +46,10 @@
       { at: 141.5, cue: 'REPORT · NEXT JOB', say: 'Report, audit trail, next job.' },
     ],
     loop: [{ at: 144, cue: 'LOOP CLOSED', say: 'And the loop closes where it started. Cio is happy, and the person who helped gets a thank-you.' }],
-    pillars: [{ at: 152, cue: 'THREE PILLARS', say: 'Emotional connectivity. AI orchestration with a human in the loop. Physical connectivity. [No patient data, signed packages, rollback ready.]' }],
     outro: [
-      { at: 160, cue: 'THREE MINUTES', say: 'Three minutes only scratch the surface. We believe robots will be everywhere in hospitals sooner than we think.' },
-      { at: 168, cue: 'LET’S BRAINSTORM · invite', say: 'Let’s brainstorm. Our robot already booked the room.' },
-      { at: 172, cue: 'AI → IA', say: 'Everyone talks about AI. We execute on IA: invisible autonomy.' },
-      { at: 176.5, cue: 'ALOHA ROBOTICS · KettyBot winks', say: '(Logo. Stop. Hold the frame for questions.)' },
+      { at: 152, cue: 'THREE MINUTES', say: 'Three minutes only scratch the surface. We believe robots will be everywhere in hospitals sooner than we think.' },
+      { at: 160, cue: 'LET’S BRAINSTORM · three asks · room booked', say: 'Let’s brainstorm. [What we need next: status data, a C-arm to test, and a pilot. No robot needed to start.] Our robot already booked the room.' },
+      { at: 169, cue: 'ALOHA ROBOTICS · KettyBot winks', say: '(Logo. Stop. Hold the frame for questions.)' },
     ],
   };
 })();
