@@ -1,0 +1,18 @@
+{
+  "note": "Unchanged copies of the team's code, so the simulator runs in this sandbox folder. The brain in the simulator is the same rule core and scorer as the live demo. Copied from origin/main at 2a2b60d.",
+  "sources": [
+    {
+      "source": "team-material-christian/challenge-4/klickdummy/planner.js",
+      "copy": "breif/sim/engine/planner.js",
+      "sha256": "0c32d0e6bba0938a92a7b63e75f25d1d8a78fa50bfbb428accedecc906fc1bda",
+      "identical": true
+    },
+    {
+      "source": "OPUS/v2/js/model/golden.js",
+      "copy": "breif/sim/engine/golden.js",
+      "sha256": "1e6c53aac1d13f709163b15bf9ce1b7155a501c8b54c560fd21c74d0bce32a97",
+      "identical": true
+    }
+  ],
+  "check": "sha256sum breif/sim/engine/planner.js team-material-christian/challenge-4/klickdummy/planner.js"
+}
