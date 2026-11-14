@@ -630,8 +630,15 @@ img{display:block;user-select:none}
 #stage[data-act="ALL"] .brand .dot{display:none}
 #stage[data-act="ALL"] .brand .palm{display:block}
 /* two-line disclaimer with the team */
-.footer{height:66px}
-.disclaimer{line-height:1.55}.disclaimer b{color:#a9b9bb}
+/* v5.1: the long disclaimer with the team only on the last slide, the short one everywhere else */
+.disclaimer.long{display:none;line-height:1.55;max-width:1520px}.disclaimer b{color:#a9b9bb}
+.disclaimer.short{display:none} /* Christian: the disclaimer only on the last slide */
+#stage[data-act="ALL"] .disclaimer.long{display:block}
+#stage[data-act="ALL"] .footer{height:auto;min-height:58px;padding-top:10px;padding-bottom:16px;align-items:flex-end}
+/* room for two footer lines on the last slide, even with a wider fallback font */
+.cta-scene{inset:60px 110px 110px}
+.cta-h{margin:22px 0 34px}
+.asks{gap:8px}
 /* last slide: robot moves up, two QR codes below */
 .cta-right{align-items:flex-start;padding-top:10px}
 .booked{gap:18px}
@@ -640,3 +647,6 @@ img{display:block;user-select:none}
 .qr{display:flex;gap:14px;align-items:center;margin:0}
 .qr img{width:150px;height:150px;background:#fff;border-radius:14px;padding:10px;object-fit:contain;filter:none;animation:none}
 .qr b{display:block;font-size:24px;font-weight:900;letter-spacing:-.02em}.qr small{display:block;white-space:nowrap;font:700 15px 'Courier New',monospace;color:#9fb2b4;margin-top:4px}
+.cta-scene{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
+.qrs{gap:22px}.qr{gap:12px}.qr img{width:140px;height:140px}
+.qr small{white-space:normal}
