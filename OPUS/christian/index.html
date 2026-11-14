@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Aloha Robotics — C-ARMAGOTCHI · 3-minute pitch (Christian's storyboard)</title>
+<meta name="description" content="Aloha Robotics · Healthcare Hackathon Bavaria, Erlangen 2026 · Siemens Healthineers Challenge 04. The 3-minute pitch following Christian's storyboard v4: emotional connectivity, AI orchestration with a human in the loop, physical connectivity.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%23ec6602%22/%3E%3Ctext x=%2232%22 y=%2243%22 font-size=%2232%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22white%22%3EA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/christian.css">
+</head>
+<body class="nocursor">
+<div id="stage" data-theme="dark" role="application" aria-label="Aloha Robotics three-minute pitch">
+
+  <section class="scene" id="s-standby" aria-hidden="true"><i class="ready-dot"></i></section>
+  <section class="scene" id="s-film" aria-hidden="true">
+    <video id="film" preload="auto" playsinline src="../assets/video/aloha_intro.mp4"></video>
+    <button id="film-play" class="film-play" type="button" aria-label="Play film">▶</button>
+  </section>
+  <section class="scene" id="s-intro" aria-hidden="true"></section>
+
+  <!-- ACT 1 · the statement, one sentence at a time -->
+  <section class="scene" id="s-statement" aria-hidden="true">
+    <h1 class="st-line l0">We root for the <em>invisible underdogs</em><br>who keep hospitals running<b>.</b></h1>
+    <h1 class="st-line l1">They deserve technology<br>they don’t fear — but <em class="o">love</em> to use<b>.</b></h1>
+  </section>
+
+  <!-- ACT 2 · emotional connectivity: Cio on the phone of its team -->
+  <section class="scene" id="s-app" aria-hidden="true">
+    <div class="ap-moods">
+      <div class="ap-left"><div class="eyebrow" id="ap-moodn">MOOD 1 OF 3</div><div class="ap-word" id="ap-word">Lonely<b>.</b></div></div>
+      <div class="ap-right">
+        <div class="eyebrow">THE DATA POINT BEHIND IT</div>
+        <div class="dp" id="ap-dp"></div>
+      </div>
+    </div>
+    <div class="phone ap-phone" id="ap-phone">
+      <div class="ph-bezel"><div class="ph-island"></div><div class="ph-status"><span>19:24</span><span>●●● ▮</span></div>
+        <div class="ph-screen">
+          <div class="splash" id="ap-splash"><div class="egg"></div><b>C-ARMAGOTCHI</b><small>your team’s C-arms</small></div>
+          <div class="app mood-lonely" id="ap-app">
+            <div class="app-head"><b>C-ARMAGOTCHI</b><span>C-03 · Corridor B</span></div>
+            <div class="pet"><img id="ap-pet" alt="" src="assets/characters/lonely.webp"></div>
+            <div class="pet-name">Cio</div>
+            <div class="pet-state" id="ap-state"><i></i>No connection · last logs 9 days ago</div>
+            <p class="pet-quote" id="ap-quote">“Nobody has connected me for days. Is anyone out there?”</p>
+            <div class="pet-data" id="ap-data"></div>
+            <div class="cta" id="ap-cta">Wake me up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ap-team" id="ap-team">
+      <div class="eyebrow">YOUR TEAM’S C-ARMS · TODAY</div>
+      <div class="tiles" id="ap-tiles"></div>
+    </div>
+    <div class="ap-claim" id="ap-claim">
+      <h1>Every mood is<br>a <em>data point.</em></h1>
+      <div class="why"><b>Not a gimmick.</b> You feel responsible for <em>your</em> C-arm.</div>
+      <div class="chain"><span>a bond</span><i>→</i><span>you look after it</span><i>→</i><span>it tells you how it is</span></div>
+      <div class="queue">
+        <div class="eyebrow">PRIORITY FOR THE NEXT WINDOW</div>
+        <div class="q"><em>1</em><b>C-03 Cio</b><span>security patch due since Mon</span></div>
+        <div class="q"><em>2</em><b>C-04</b><span>no connection for 9 days</span></div>
+        <small>The mood sets the priority. The window itself comes from hospital data.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 3a · when is the best moment? the window is found, not given -->
+  <section class="scene" id="s-plan" aria-hidden="true">
+    <header class="pl-head"><div class="eyebrow">UPDATE COCKPIT · TODAY</div><h1 id="pl-title"><span class="cur">When is the <em>best</em> moment?</span><span></span></h1></header>
+    <div class="pl-chips">
+      <span class="chip ok"><i></i>OR plan from the hospital system · live · synced 19:24</span>
+      <span class="chip gold" id="pl-cxl"><i></i>OR 3 · evening case cancelled 19:12</span>
+      <span class="chip ok"><i></i>Polytrauma: none incoming</span>
+    </div>
+    <div class="pl-board" id="pl-board"></div>
+    <canvas id="pl-cv"></canvas>
+    <div class="pl-signals" id="pl-signals">
+      <div class="eyebrow">FOUR SIGNALS</div>
+      <div class="sig"><i></i><div><b>Usage pattern</b><small>C-03 rarely used after 19:00 · last 8 weeks</small></div></div>
+      <div class="sig"><i></i><div><b>Cancellation</b><small>OR 3 evening case cancelled 19:12</small></div></div>
+      <div class="sig"><i></i><div><b>Device state</b><small>idle, parked, patch due (C-ARMAGOTCHI)</small></div></div>
+      <div class="sig"><i></i><div><b>Room &amp; robot</b><small>corridor free at night, robot charged</small></div></div>
+    </div>
+    <div class="pl-decide">
+      <div class="big-btn" id="pl-go">Plan &amp; prioritise</div>
+      <div class="analysing" id="pl-ana"><span class="spin"></span>Searching · OR plan · cancellations · usage · device state…</div>
+      <div class="proposal" id="pl-prop">
+        <div class="eyebrow">PROPOSAL 1 OF 1 · SECURITY PATCH</div>
+        <div class="prop-main"><img alt="" src="assets/characters/manic.webp"><div><b>C-03 Cio · 19:30–22:45</b><span>Security patch · 18 min (manufacturer) · device stays put</span></div></div>
+        <div class="prop-why"><b>Why:</b> OR 3 case cancelled 19:12 · Cio idle since 17:00 · rarely used after 19:00 · robot charged</div>
+        <div class="prop-note">Backup: C-01 free · rollback image ready</div>
+        <div class="big-btn small" id="pl-pub">Publish<i class="ripple" id="pl-rip"></i></div>
+      </div>
+      <div class="published" id="pl-done"><b>✓ Published</b><span>by Medical physics · IT agreed</span><div class="next-q">Who plugs Cio in?</div></div>
+    </div>
+    <div class="finger" id="pl-finger"></div>
+  </section>
+
+  <!-- ACT 3b · a job card for the X-ray nurse; declining costs nothing -->
+  <section class="scene" id="s-lena" aria-hidden="true">
+    <div class="ps-left"><div class="eyebrow">SWITCHING TO</div><h2>Lena’s phone</h2><p>X-ray nurse · selected circle for Cio</p></div>
+    <div class="phone lena-phone dark">
+      <div class="ph-bezel"><div class="ph-island"></div><div class="ph-status"><span>19:24</span><span>●●● ▮</span></div>
+        <div class="ph-screen">
+          <div class="lock"><div class="lock-who">LENA · X-RAY NURSE</div><div class="lock-time">19:24</div><div class="lock-date">Wednesday, 18 November</div>
+            <div class="push" id="ln-push"><div class="push-head"><img alt="" src="assets/characters/bliss.webp"><b>C-ARMAGOTCHI</b><span>now</span></div><div class="push-title">Cio needs a hand</div><div class="push-body">Plug in C-03 in Corridor B · 20 min · 19:30–22:45</div></div>
+            <div class="job" id="ln-job">
+              <div class="job-top"><img alt="" src="assets/characters/manic.webp"><div><b>Cio needs a hand</b><span>C-03 · Corridor B, outside OR 3</span></div></div>
+              <ul><li><span>When</span><b>19:30–22:45</b></li><li><span>Effort</span><b>20 min · plug in, stay near</b></li><li><span>Why you</span><b>trained on C-arms · 40 m away</b></li></ul>
+              <div class="job-btns"><div class="take">Take it</div><div class="nope" id="ln-nope">Not today<i class="ripple" id="ln-rip"></i></div></div>
+            </div>
+            <div class="declined" id="ln-dec"><b>No problem.</b><span>Asking the next people.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ps-right" id="ln-quote">Declining<br>costs <em>nothing.</em></div>
+    <div class="finger" id="ln-finger"></div>
+  </section>
+
+  <!-- ACT 3c · like a ride request: nobody available → the invisible helper -->
+  <section class="scene" id="s-radar" aria-hidden="true">
+    <header class="rd-head"><div class="eyebrow">LIKE A RIDE REQUEST</div><h1 id="rd-title"><span class="cur">Asking 6 people nearby…</span><span></span></h1></header>
+    <div class="radar" id="rd-radar">
+      <i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i><i class="sweep" id="rd-sweep"></i>
+      <div class="center"><img alt="" src="assets/characters/manic.webp"><b>Cio</b></div>
+    </div>
+    <div class="rd-nobody" id="rd-nobody">Nobody available.</div>
+    <div class="rd-send" id="rd-send"><img alt="" src="assets/characters/ketty.webp"><span>Send the invisible helper <em>→</em></span></div>
+  </section>
+
+  <!-- ACT 4a · KettyBot's mission: 14 checks as it goes -->
+  <section class="scene" id="s-mission" aria-hidden="true">
+    <header class="ms-head"><div class="eyebrow">MISSION · C-03 CIO · SECURITY PATCH</div><h1 id="ms-title"><span class="cur">Do I have everything?</span><span></span></h1>
+      <ol class="pearls" id="ms-pearls"><li>Check</li><li>Find</li><li>Dock</li><li>Wake</li><li>Safe?</li><li>Start</li><li>Update</li><li>Report</li></ol>
+    </header>
+    <div class="ms-map" id="ms-map">
+      <svg viewBox="0 0 1040 600" aria-hidden="true">
+        <rect x="10" y="10" width="1020" height="580" rx="20" class="floor"/>
+        <rect x="30" y="30" width="220" height="170" rx="8" class="room"/><text x="52" y="72">OR 1</text>
+        <rect x="270" y="30" width="220" height="170" rx="8" class="room"/><text x="292" y="72">OR 2</text>
+        <rect x="510" y="30" width="220" height="170" rx="8" class="room"/><text x="532" y="72">OR 3</text>
+        <rect x="750" y="30" width="260" height="170" rx="8" class="room"/><text x="772" y="72">STORAGE 2</text>
+        <rect x="30" y="400" width="340" height="170" rx="8" class="room"/><text x="52" y="442">STATION · ROBOT DOCK</text>
+        <rect x="750" y="400" width="260" height="170" rx="8" class="room"/><text x="772" y="442">HYBRID OR</text>
+        <text x="410" y="312" class="corr">CORRIDOR B</text>
+        <path id="ms-route" d="M200 470 L200 300 L420 300 L640 300 L790 300" class="route"/>
+      </svg>
+      <div class="spot last" id="ms-last" style="left:420px;top:300px"><i>✕</i><span>last known · not here</span></div>
+      <div class="spot usual" id="ms-usual" style="left:905px;top:300px"><i></i><span>usual spot · 62 %</span></div>
+      <div class="ms-cio" id="ms-cio" style="left:905px;top:300px"><img class="sleep" alt="" src="assets/characters/lonely.webp"><img class="awake" alt="" src="assets/characters/manic.webp"></div>
+      <div class="ms-bot" id="ms-bot"><img alt="" src="assets/characters/ketty.webp"><i class="cone"></i></div>
+      <div class="ms-plug" id="ms-plug"></div>
+      <p class="ms-cap" id="ms-cap">Patch on board. Cable packed. Battery 82 %.</p>
+    </div>
+    <div class="ms-agent">
+      <div class="ag-h"><i></i>KETTYBOT AGENT · CHECKS AS IT GOES</div>
+      <ul class="ag" id="ms-checks"></ul>
+      <div class="ag-res" id="ms-res"><b>✓ 14 / 14 checks · 0 warnings</b><span>One fail = no request. Now a human decides.</span></div>
+    </div>
+  </section>
+
+  <!-- ACT 4b · a human starts every update -->
+  <section class="scene" id="s-start" aria-hidden="true">
+    <div class="ps-left"><div class="eyebrow">SWITCHING TO</div><h2>Lena’s phone</h2><p>She couldn’t walk over.<br>Thirty seconds on the phone are enough.</p>
+      <div class="chainline"><span class="on">Lena</span><i>→</i><span>Medical physics on call</span><i>→</i><span>IT</span></div>
+      <small class="passon">Not reachable, or not sure? It passes on, with a short note.</small>
+    </div>
+    <div class="phone wiz-phone">
+      <div class="ph-bezel"><div class="ph-island"></div><div class="ph-status"><span>19:30</span><span>●●● ▮</span></div>
+        <div class="ph-screen light">
+          <div class="wz" id="wz1"><div class="wz-n">1 / 3</div><h3>Right time?</h3>
+            <ul><li><span>Window</span><b>19:30–22:45</b></li><li><span>Next case OR 3</span><b>22:45</b></li><li><span>Polytrauma</span><b class="g">none incoming</b></li><li><span>Expected</span><b>18 min</b></li></ul>
+            <div class="wz-btn" id="wz1b">Yes, right time</div></div>
+          <div class="wz" id="wz2"><div class="wz-n">2 / 3</div><h3>Surroundings OK?</h3>
+            <div class="cam"><img alt="" src="assets/characters/manic.webp"><i class="grid"></i><span>KETTYBOT CAMERA · LIVE</span></div>
+            <ul class="ticks"><li>Nobody within 2 m</li><li>No sterile drapes</li><li>Brakes on</li><li>Power stable</li></ul>
+            <div class="wz-btn" id="wz2b">Looks good</div></div>
+          <div class="wz" id="wz3"><div class="wz-n">3 / 3</div><h3>Start the update</h3>
+            <div class="wz-pet"><img alt="" src="assets/characters/update.webp"></div>
+            <small>Released by medical physics 19:24 · signed package · rollback image ready</small>
+            <div class="wz-btn o" id="wz3b">Start update</div></div>
+          <div class="wz done" id="wz4"><div class="wz-ok">✓</div><h3>Update started</h3><small>by Lena · 19:31 · logged in the audit trail</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="ps-right big" id="st-claim">A human<br>starts <em>every</em><br>update<b>.</b></div>
+    <div class="finger" id="wz-finger"></div>
+  </section>
+
+  <!-- ACT 4c · update running → report → next job -->
+  <section class="scene" id="s-running" aria-hidden="true">
+    <header class="ms-head"><div class="eyebrow">MISSION · C-03 CIO · SECURITY PATCH</div><h1 id="rn-title"><span class="cur">Update running.</span><span></span></h1>
+      <ol class="pearls done6"><li>Check</li><li>Find</li><li>Dock</li><li>Wake</li><li>Safe?</li><li>Start</li><li>Update</li><li>Report</li></ol>
+    </header>
+    <div class="rn-run" id="rn-run">
+      <div class="rn-pet"><img class="a" alt="" src="assets/characters/update.webp"><img class="b" alt="" src="assets/characters/bliss.webp"></div>
+      <div class="rn-info">
+        <div class="eyebrow">CARM-SEC 2026.11 · STARTED BY LENA 19:31</div>
+        <div class="bar"><i id="rn-fill"></i></div>
+        <div class="rn-pct"><b id="rn-pct">0</b><span>%</span><em>expected 18 min (manufacturer) · on track</em></div>
+        <p class="rn-note">Cio checks the manufacturer signature itself. <b>The robot is only the courier.</b></p>
+        <div class="rn-pills"><span><i></i>Surroundings: watching</span><span><i></i>Duration: within expected</span></div>
+        <div class="rn-good" id="rn-good">Today is a good day.</div>
+      </div>
+    </div>
+    <div class="rn-report" id="rn-report">
+      <div class="rp-tiles">
+        <div><span>RESULT</span><b class="g">success</b></div><div><span>DURATION</span><b>17 min 40 s</b></div>
+        <div><span>ROLLBACK IMAGE</span><b>kept</b></div><div><span>CLINICAL USE</span><b class="g">ready ✓</b></div>
+      </div>
+      <div class="rp-audit"><div class="eyebrow">AUDIT TRAIL · C-03</div>
+        <div><i>19:24</i>Window published by medical physics</div><div><i>19:24</i>Request sent to 7 · none available</div><div><i>19:26</i>Robot dispatched · self-check passed</div>
+        <div><i>19:29</i>Cio found · identity verified</div><div><i>19:30</i>Surroundings 4/4 · start requested</div><div><i>19:31</i>Rollback image · started by Lena</div><div><i>19:49</i>Ready for clinical use · reported</div>
+      </div>
+      <div class="rp-next" id="rp-next"><img alt="" src="assets/characters/ketty.webp"><span>On to the next job — C-04</span></div>
+    </div>
+  </section>
+
+  <!-- ACT 5a · the loop closes where it started -->
+  <section class="scene" id="s-loop" aria-hidden="true">
+    <div class="lp-left"><div class="eyebrow">BACK IN THE APP</div><div class="lp-word">Loop<br>closed<b>.</b></div></div>
+    <div class="phone lp-phone dark">
+      <div class="ph-bezel"><div class="ph-island"></div><div class="ph-status"><span>19:50</span><span>●●● ▮</span></div>
+        <div class="ph-screen">
+          <div class="lock"><div class="lock-who">LENA · X-RAY NURSE</div><div class="lock-time">19:50</div><div class="lock-date">Wednesday, 18 November</div>
+            <div class="push p1"><div class="push-head"><img alt="" src="assets/characters/bliss.webp"><b>C-ARMAGOTCHI</b><span>now</span></div><div class="push-title">Thanks to you, Cio is up to date</div><div class="push-body">You helped from afar. Team streak +1 ♥</div></div>
+            <div class="push p2"><div class="push-head"><img alt="" src="assets/characters/bliss.webp"><b>C-ARMAGOTCHI</b><span>now</span></div><div class="push-title">Back in the plan</div><div class="push-body">New data from Cio: version, logs, health. Next window ready.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lp-right"><div class="eyebrow">WHAT COMES BACK</div>
+      <div class="cb"><span>For the person</span><b>a thank-you</b></div>
+      <div class="cb"><span>For the plan</span><b>fresh data</b></div>
+      <div class="cb"><span>For the hospital</span><b>a safe, current C-arm</b></div>
+    </div>
+  </section>
+
+  <!-- ACT 5b · the three pillars -->
+  <section class="scene" id="s-pillars" aria-hidden="true">
+    <div class="pillars">
+      <div class="pil p1"><div class="pic"><img alt="" src="assets/characters/bliss.webp"></div><h2>Emotional<br>connectivity</h2><p>People feel responsible.<br>The mood sets the priority.</p></div>
+      <div class="pil p2"><div class="pic gold"><i></i></div><h2>AI orchestration<br><em>human in the loop</em></h2><p>The window is found.<br>A human publishes and starts.</p></div>
+      <div class="pil p3"><div class="pic"><img alt="" src="assets/characters/ketty.webp"></div><h2>Physical<br>connectivity</h2><p>The robot brings power,<br>cable and package.</p></div>
+    </div>
+    <div class="pil-foot" id="pil-foot">No patient data · signed packages · rollback ready</div>
+  </section>
+
+  <!-- ACT 5c · call to action → IA → logo -->
+  <section class="scene" id="s-outro" aria-hidden="true">
+    <div class="oc-lines" id="oc-a"><h1>Three minutes only<br>scratch the surface<b>.</b></h1><p>We believe robots will be everywhere in hospitals —<br>sooner than we think.</p></div>
+    <div class="oc-book" id="oc-b">
+      <h1>Let’s brainstorm<b>.</b></h1><p>Our robot already booked the room.</p>
+      <div class="invite"><div class="inv-top"><span>CALENDAR INVITE</span><span>booked by KettyBot</span></div><b>Brainstorm · Aloha Robotics × Siemens Healthineers</b><small>Room booked · coffee on its way</small><div class="inv-ok">✓ Accepted?</div></div>
+      <img class="oc-ketty" alt="" src="assets/characters/ketty.webp">
+    </div>
+    <div class="oc-ia" id="oc-c"><p class="ai">Everyone talks about <b>AI</b>.</p><h1>We execute on <em>IA</em><b>.</b></h1><p class="ia">INVISIBLE AUTONOMY</p></div>
+    <div class="ou-logo" id="ou-logo">ALOHA <span>ROBOTICS</span></div>
+    <div class="ou-q" id="ou-q">Any <b>technical</b> questions?</div>
+    <div class="ou-ketty" id="ou-ketty"><img class="open" alt="KettyBot" src="assets/characters/ketty.webp"><img class="wink" alt="" src="assets/characters/ketty_wink.webp"></div>
+    <div class="ou-foot" id="ou-foot">HEALTHCARE HACKATHON BAVARIA · ERLANGEN 2026 · SIEMENS HEALTHINEERS CHALLENGE 04 · CONCEPT &amp; INVENTED DATA</div>
+  </section>
+
+  <!-- the three pillars ride along at the top, from the app to the loop -->
+  <div id="pillbar"><span data-p="E">EMOTIONAL CONNECTIVITY</span><span data-p="A">AI ORCHESTRATION · HUMAN IN THE LOOP</span><span data-p="P">PHYSICAL CONNECTIVITY</span></div>
+  <div id="brandbar">C-ARMAGOTCHI<small>by Aloha Robotics</small></div>
+
+  <canvas id="fx-cv"></canvas>
+  <div id="hud"></div>
+  <div id="notes"><div id="notes-cue"></div><div id="notes-body"></div></div>
+  <div id="toast"></div>
+  <div id="blackout"></div>
+  <div id="help"><div class="box">
+    <h2>Aloha Robotics · pitch controls</h2>
+    <div class="grid">
+      <div><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd> next beat</div><div><kbd>←</kbd> <kbd>PgUp</kbd> previous (settles instantly)</div>
+      <div><kbd>F</kbd> fullscreen (also unlocks sound)</div><div><kbd>P</kbd> open presenter view</div>
+      <div><kbd>N</kbd> script overlay</div><div><kbd>T</kbd> timer HUD</div>
+      <div><kbd>M</kbd> mute sound effects</div><div><kbd>B</kbd> blackout</div>
+      <div><kbd>R</kbd> restart to black</div><div><kbd>C</kbd> pause / resume clock</div>
+    </div>
+    <p style="margin-top:22px;color:#8aa">The black screen is standby: press → to start the film. During the film, press → twice to skip it.</p>
+  </div></div>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/scenes/embers.js"></script>
+<script src="js/scenes/film.js"></script>
+<script src="js/scenes/story.js"></script>
+<script>
+  Promise.race([Promise.all(['800 150px Manrope', '300 40px Manrope', '600 20px "JetBrains Mono"', '700 40px Silkscreen'].map((f) => document.fonts.load(f))), new Promise((r) => setTimeout(r, 1500))]).then(() => OPUS.boot());
+</script>
+</body>
+</html>
