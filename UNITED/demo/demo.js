@@ -389,8 +389,14 @@
   });
 
   // Fit the 1920 × 1080 stage into any window, like the team deck.
-  const fit = () => { stage.style.transform = `translate(-50%,-50%) scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
-  addEventListener('resize', fit); fit();
+  // The stage is position:fixed at 0,0 and scaled from its top-left corner, then centred by hand. A centred
+  // 1920 px box widened the layout viewport on phones in portrait and cut off the left edge.
+  const fit = () => {
+    const vw = document.documentElement.clientWidth || innerWidth, vh = document.documentElement.clientHeight || innerHeight;
+    const k = Math.min(vw / 1920, vh / 1080);
+    stage.style.transform = `translate(${(vw - 1920 * k) / 2}px,${(vh - 1080 * k) / 2}px) scale(${k})`;
+  };
+  addEventListener('resize', fit); addEventListener('orientationchange', fit); fit();
   if (Q.get('notes') === '1') $('notes').hidden = false;
   show((+Q.get('s') || 1) - 1, Math.max(0, +Q.get('step') || 0));
   // Embedded in the UNITED deck: the deck owns navigation and drives this demo by postMessage.

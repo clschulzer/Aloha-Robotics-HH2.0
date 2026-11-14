@@ -12,7 +12,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
 body.nocursor, body.nocursor * { cursor: none !important; }
-#stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: 50% 50%; background: #05070a; overflow: hidden; font-family: var(--sans); color: #eef2f5; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; user-select: none; }
+#stage { position: fixed; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; background: #05070a; overflow: hidden; font-family: var(--sans); color: #eef2f5; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; user-select: none; }
 #stage.instant *, #stage.instant *::before, #stage.instant *::after { transition: none !important; animation-delay: 0s !important; animation-duration: 1ms !important; }
 
 .scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; overflow: hidden; transition: opacity .5s ease, visibility 0s linear .5s; }

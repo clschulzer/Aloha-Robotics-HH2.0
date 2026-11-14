@@ -18,9 +18,12 @@
 
   /* ---------- stage fit ---------- */
   function fit() {
-    const s = Math.min(window.innerWidth / OPUS.W, window.innerHeight / OPUS.H);
+    // Fixed at 0,0 and centred by hand: a centred 1920 px box widened the layout viewport on phones
+    // in portrait and cut off the left edge.
+    const vw = document.documentElement.clientWidth || window.innerWidth, vh = document.documentElement.clientHeight || window.innerHeight;
+    const s = Math.min(vw / OPUS.W, vh / OPUS.H);
     OPUS.stageScale = s;
-    stage.style.transform = `translate(-50%,-50%) scale(${s})`;
+    stage.style.transform = `translate(${(vw - OPUS.W * s) / 2}px,${(vh - OPUS.H * s) / 2}px) scale(${s})`;
     OPUS.fitCanvases();
   }
   window.addEventListener('resize', fit, { passive: true });
