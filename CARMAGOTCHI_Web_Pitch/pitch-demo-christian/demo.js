@@ -1,5 +1,5 @@
 /* C-ARMAGOTCHI pitch demo. One file, no build, runs offline from disk.
-   15 scenes in 5 acts, each scene has a few steps. Keys: → / Space / click = next step,
+   14 scenes in 5 acts, each scene has a few steps. Keys: → / Space / click = next step,
    ← = previous step, Home = restart, N = speaker notes, F = fullscreen.
    URL: ?s=5 jumps to scene 5, ?auto=0 stops automatic steps, ?speed=2 runs the automatic parts twice as fast (for screencasts).
    All data is invented. No patient data anywhere. */
@@ -60,7 +60,7 @@
     ['Room & robot', 'corridor free at night, robot charged'],
   ];
 
-  /* ---------- the 15 scenes ---------- */
+  /* ---------- the 14 scenes ---------- */
   const MOODS = {
     lonely: { key: 'lonely', img: 'lonely', word: 'Lonely', state: 'No connection · last logs 9 days ago', quote: 'Nobody has connected me for days. Is anyone out there?', data: [['Network', 'off'], ['Last logs', '9 days'], ['Location', 'Corridor B']], cta: 'Wake me up', point: [['Network', 'off'], ['Last logs', '9 days ago']] },
     hungry: { key: 'hungry', img: 'manic', word: 'Hungry', state: 'Unplugged · security patch due', quote: 'Plug me in! My security patch is waiting and I am starving.', data: [['Power', 'unplugged'], ['Patch', 'due'], ['Location', 'Corridor B']], cta: 'Feed me power', point: [['Power', 'unplugged since 17:00'], ['Security patch', 'due since Mon']] },
@@ -319,54 +319,29 @@
         </section>`,
     },
     {
-      act: 'ALL', theme: 'dark', title: 'Three connections, one platform', steps: 2,
-      say: 'Three connections make the C-arm invisible. Emotional: people feel responsible. AI with a human in the loop: the platform finds the window, a person decides. Physical: the robot brings cable, power and package. Under the hood: no patient data, signed packages, rollback ready.',
-      html: () => `
-        <section class="summary">
-          <div class="sum-head"><div class="eyebrow">WHAT YOU JUST SAW</div><h2>Three connections. <em>One platform.</em></h2></div>
-          <div class="pillar-cards">
-            ${[['Emotional connectivity', 'lonely', 'People feel responsible', 'Cio\'s mood turns device status into care, and into priority for the next window.'],
-               ['AI orchestration · human in the loop', 'manic', 'Finds the window, a human decides', 'Learns free windows from hospital operations: OR plan, cancellations, trauma alerts.'],
-               ['Physical connectivity', 'ketty', 'The robot brings the connection', 'Cable, power and the signed package to the device. 14 checks, one fail stops it.']]
-              .map(([k, i, t, d], n) => `<div class="pcard pc${n}"><div class="pc-top">${img(i)}<span>${String(n + 1).padStart(2, '0')}</span></div><div class="eyebrow">${k}</div><b>${t}</b><p>${d}</p></div>`).join('')}
-          </div>
-          <div class="arch s1">
-            <div class="ab"><div class="eyebrow">HOSPITAL</div><b>OR plan (read only)</b><b>Duty roster · trauma alert</b><b>Staff phones</b></div>
-            <i class="aa">→</i>
-            <div class="ab core"><div class="eyebrow">ALOHA CORE · IN THE CLINIC</div><b>Rule core, tested code</b><b>Window finder · AI explains</b><b>Audit trail · hash chain</b></div>
-            <i class="aa">→</i>
-            <div class="ab"><div class="eyebrow">DEVICE + ROBOT</div><b>C-arm, point-to-point cable</b><b>KettyBot: never a bridge</b><b>A human presses start</b></div>
-            <i class="aa">⇄</i>
-            <div class="ab"><div class="eyebrow">SIEMENS HEALTHINEERS</div><b>Signed packages</b><b>Filtered logs back home</b><b>Fleet status</b></div>
-          </div>
-          <div class="guard s1">No patient data · signed packages · rollback ready · a human starts every update</div>
-        </section>`,
-    },
-    {
-      act: 'ALL', theme: 'dark', title: 'Let\'s brainstorm', steps: 3,
-      say: 'Three minutes only scratch the surface. We believe robots will be everywhere in hospitals sooner than we think. Let\'s brainstorm. Our robot already booked the room. Everyone talks about AI. We execute on IA: invisible autonomy.',
+      act: 'ALL', theme: 'dark', title: 'Let\'s brainstorm', steps: 1,
+      say: 'Three minutes only scratch the surface. We believe robots will be everywhere in hospitals sooner than we think. Let\'s brainstorm. Our robot already booked the room.',
       html: () => `
         <section class="cta-scene">
           <div class="cta-left">
             <div class="eyebrow">THREE MINUTES ONLY SCRATCH THE SURFACE</div>
             <h2 class="cta-h">Robots will be everywhere in hospitals.<br><em>Sooner than we think.</em></h2>
-            <div class="asks s1">
+            <div class="asks">
               <div class="eyebrow">LET'S BRAINSTORM · WHAT WE NEED NEXT</div>
               ${[['Status data', 'What Smart Remote Services can already read'], ['A C-arm to test', 'in the training center, with KettyBot'], ['A pilot', '1 hospital · 4–6 C-arms · 8 weeks, no robot needed to start']]
-                .map(([t, d], n) => `<div class="ask"><span>${n + 1}</span><div><b>${t}</b><small>${d}</small></div></div>`).join('')}
+                .map(([t, d], n) => `<div class="ask a${n}"><span>${n + 1}</span><div><b>${t}</b><small>${d}</small></div></div>`).join('')}
             </div>
           </div>
           <div class="cta-right">
-            <div class="booked s1">${img('ketty')}<div class="ticket"><div class="eyebrow">ROOM BOOKED</div><b>Brainstorm · Aloha × Siemens Healthineers</b><small>by KettyBot · right after the pitch</small></div></div>
+            <div class="booked">${img('ketty')}<div class="ticket"><div class="eyebrow">ROOM BOOKED</div><b>Brainstorm · Aloha × Siemens Healthineers</b><small>by KettyBot · right after the pitch</small></div></div>
           </div>
-          <div class="ia s2"><span>Everyone talks about AI.</span><b>We execute on <em>IA</em>: invisible autonomy.</b><div class="logo">C-ARMAGOTCHI<i>.</i>${img('bliss', 'wink')}</div></div>
         </section>`,
     },
   ];
 
   /* ---------- engine ---------- */
   const N = SCENES.length;
-  const AUDIT = [0, 0, 0, 0, 0, 1, 1, 2, 5, 5, 6, 7, 7, 0, 0];
+  const AUDIT = [0, 0, 0, 0, 0, 1, 1, 2, 5, 5, 6, 7, 7, 0];
   let cur = 0, step = 0, timers = [];
   const later = (fn, ms) => timers.push(setTimeout(fn, ms / SPEED));
   const clear = () => { timers.forEach(clearTimeout); timers = []; };
